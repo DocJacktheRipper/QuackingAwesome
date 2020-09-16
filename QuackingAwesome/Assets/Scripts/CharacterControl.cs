@@ -13,7 +13,7 @@ public class CharacterControl : MonoBehaviour
     private Vector3 lookDir;
     private Vector3 movement;
 
-    private int dashFrame;
+    private int dashFrame = 0;
 
     void Start()
     {
