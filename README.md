@@ -8,6 +8,9 @@ How to set up:
 3. Click "clone repository". Use this url.
 4. Open Unity Hub. Click "Add".
 5. Navigate to the GitHub repository.
+source: 
+https://www.youtube.com/watch?v=qpXxcvS-g3g
+
 
 How to work:
 
@@ -23,8 +26,6 @@ Rules for commits:
 - always add a useful summary-titles! 
 (no 'lol' or 'I did sth')
 
-- If it's a big feature, add a despription to explain.
+- If it's a big feature, add a despribtion to explain.
 
 
-source: 
-https://www.youtube.com/watch?v=qpXxcvS-g3g
