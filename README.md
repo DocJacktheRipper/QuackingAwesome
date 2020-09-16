@@ -16,12 +16,12 @@ https://www.youtube.com/watch?v=qpXxcvS-g3g
 
 # How to work:
 
-1. For big or unsafe changes, create a new branch.
-2. As long as a feature isn't working yet, just use "commit"
-3. When you want everyone else to have the version too, use "push"
+1. Always "fetch" first, before starting to work.
+2. For big or unsafe changes, create a new branch.
+3. As long as a feature isn't working yet, just use "commit"
+4. When you want everyone else to have the version too, use "push"
 
-# Rules 
-for commits:
+# Rules for commits:
 
 - commit/push only things, that don't have errors in it!
 (The new feature doesn't need to work well yet, but shouldn't cause errors in console either.)
