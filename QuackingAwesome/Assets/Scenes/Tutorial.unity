@@ -183,6 +183,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: aeb0a106720373c48b09b37bc54b3055,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 87aa0494a6d97534693a400a0b35b68e, type: 2}
     - target: {fileID: 919132149155446097, guid: aeb0a106720373c48b09b37bc54b3055,
         type: 3}
       propertyPath: m_Name
@@ -228,7 +233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerTransform: {fileID: 529673311}
-  SmoothFactor: 0.05
+  SmoothFactor: 1
 --- !u!114 &87920178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,7 +259,7 @@ MonoBehaviour:
   m_RenderPostProcessing: 0
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
-  m_StopNaN: 0
+  m_StopNaN: 1
   m_Dithering: 0
   m_ClearDepth: 1
   m_RequiresDepthTexture: 0
