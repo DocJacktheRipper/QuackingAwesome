@@ -24,3 +24,7 @@ Rules for commits:
 (no 'lol' or 'I did sth')
 
 - If it's a big feature, add a despription to explain.
+
+
+source: 
+https://www.youtube.com/watch?v=qpXxcvS-g3g
