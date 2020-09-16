@@ -13,6 +13,8 @@ public class Movement2 : MonoBehaviour
     
     private Vector3 lookDir;
     private Vector3 movement;
+
+    public bool EnableDebugLog = true;
    
     void Start()
     {
@@ -48,21 +50,26 @@ public class Movement2 : MonoBehaviour
             if(DuckSpeed < 1)
             {
                 duck.AddForce(transform.forward * 150f, ForceMode.Impulse);
-                Debug.Log(duck.drag + "PRESSED DRAG");
+                if(EnableDebugLog)
+                    Debug.Log(duck.drag + "PRESSED DRAG");
             }
-            Debug.Log("buttonA");
+            if(EnableDebugLog)
+                Debug.Log("buttonA");
             duck.drag = 50;
             duck.AddForce(transform.forward * 300f, ForceMode.Impulse);
-            Debug.Log(duck.drag + "PRESSED DRAG");
+            if(EnableDebugLog)
+                Debug.Log(duck.drag + "PRESSED DRAG");
         } 
         else
         {
             duck.drag = 1;
-            Debug.Log(duck.drag + "UNPRESSED DRAG");  
+            if(EnableDebugLog)
+                Debug.Log(duck.drag + "UNPRESSED DRAG");  
         }
         if(buttonB == true)
         {
-            Debug.Log("buttonB");
+            if(EnableDebugLog)
+                Debug.Log("buttonB");
         }
 
     }
