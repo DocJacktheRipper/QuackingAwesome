@@ -62,14 +62,11 @@ public class CharacterControl : MonoBehaviour
             if (DuckSpeed < 1f)
             {
                 duck.AddForce(transform.forward * 250f, ForceMode.Impulse);
-                //pressed = false;
-                Debug.Log(duck.drag + "PRESSED DRAG, DUCKSPEED < 1");
             }
             else if (DuckSpeed > 1.01f && DuckSpeed < 8f) //antispam by determining max speed when dash is usable
             {
                 duck.drag = 50f;
                 duck.AddForce(transform.forward * 400f, ForceMode.Impulse);
-                Debug.Log(duck.drag + "PRESSED DRAG, DUCKSPEED < 7");
                 duck.drag = 1f;
             }
         }
