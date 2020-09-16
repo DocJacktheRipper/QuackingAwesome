@@ -136,7 +136,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: aeb0a106720373c48b09b37bc54b3055,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.12
+      value: -0.16
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aeb0a106720373c48b09b37bc54b3055,
         type: 3}
@@ -183,6 +183,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: aeb0a106720373c48b09b37bc54b3055,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: aeb0a106720373c48b09b37bc54b3055,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: aeb0a106720373c48b09b37bc54b3055,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: aeb0a106720373c48b09b37bc54b3055,
         type: 3}
       propertyPath: m_Name
@@ -228,7 +243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerTransform: {fileID: 529673311}
-  SmoothFactor: 0.05
+  SmoothFactor: 0.209
 --- !u!114 &87920178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -848,8 +863,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 000bfe5ebf737954ab5668a45cdfef9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PushForce: 13
-  Rotation: 3.8
+  PushForce: 8
+  Rotation: 3.5
   DuckSpeed: 0
 --- !u!54 &529673310
 Rigidbody:
