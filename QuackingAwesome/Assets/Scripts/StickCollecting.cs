@@ -19,7 +19,6 @@ public class StickCollecting : MonoBehaviour
     // If so, collect it. Otherwise, leave it.
     private void PlayerIsTrigger(Collider other)
     {
-        Debug.Log("HEY!");
         Inventory inventory = other.GetComponent<Inventory>();
 
         if (inventory == null)
