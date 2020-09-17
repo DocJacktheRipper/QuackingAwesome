@@ -220,7 +220,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: aeb0a106720373c48b09b37bc54b3055,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.534
+      value: -4.605
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: aeb0a106720373c48b09b37bc54b3055,
         type: 3}
@@ -1947,7 +1947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 000bfe5ebf737954ab5668a45cdfef9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PushForce: 13
+  PushForce: 20
   Rotation: 3.8
   DuckSpeed: 0
 --- !u!114 &529673309
@@ -1959,9 +1959,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 529673305}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cb9528d322727947acda7b78f3a5443, type: 3}
+  m_Script: {fileID: 11500000, guid: 6439c8c601cf98f4c90aa10c28466112, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numberOfSticks: 0
+  maxCapacityOfSticks: 1
+  display: {fileID: 0}
 --- !u!54 &529673310
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1973,7 +1976,7 @@ Rigidbody:
   m_Mass: 25
   m_Drag: 5
   m_AngularDrag: 0.5
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -2300,7 +2303,7 @@ MeshCollider:
   m_GameObject: {fileID: 670011288}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
