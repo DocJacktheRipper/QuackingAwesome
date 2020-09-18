@@ -9,6 +9,11 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Assets for Level Design" t="Include">
+          <e p="LowPolyTreePack" t="Include">
+            <e p="README.txt" t="Include" />
+          </e>
+        </e>
         <e p="Joystick Pack" t="Include">
           <e p="Examples" t="Include">
             <e p="JoystickPlayerExample.cs" t="Include" />
@@ -77,7 +82,9 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="Movement2.cs" t="Include" />
+          <e p="CharacterControl.cs" t="Include" />
+          <e p="Inventory.cs" t="Include" />
+          <e p="NestBuilding.cs" t="Include" />
           <e p="PlayerFollow.cs" t="Include" />
           <e p="SimpleCameraController.cs" t="Include" />
           <e p="StickCollecting.cs" t="Include" />

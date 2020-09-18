@@ -1,6 +1,6 @@
 ﻿using LeoLuz.PlugAndPlayJoystick;
 using System;
-using UnityEditor.Experimental.GraphView;
+//using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class CharacterControl : MonoBehaviour
@@ -13,7 +13,7 @@ public class CharacterControl : MonoBehaviour
     private Vector3 lookDir;
     private Vector3 movement;
 
-    private int dashFrame;
+    private int dashFrame = 0;
 
     public AudioSource quack_placeholder;
 
