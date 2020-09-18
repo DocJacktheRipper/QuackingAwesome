@@ -15,6 +15,8 @@ public class CharacterControl : MonoBehaviour
 
     private int dashFrame;
 
+    public AudioSource quack_placeholder;
+
     void Start()
     {
         duck = GetComponent<Rigidbody>();
@@ -62,6 +64,7 @@ public class CharacterControl : MonoBehaviour
             if (DuckSpeed < 1f)
             {
                 duck.AddForce(transform.forward * 250f, ForceMode.Impulse);
+                quack_placeholder.Play();
             }
             else if (DuckSpeed > 1.01f && DuckSpeed < 8f) //antispam by determining max speed when dash is usable
             {
@@ -72,8 +75,8 @@ public class CharacterControl : MonoBehaviour
         }
     }
 
-    void quack()
+    public void quack()
     {
-
+        quack_placeholder.Play();
     }
 }
