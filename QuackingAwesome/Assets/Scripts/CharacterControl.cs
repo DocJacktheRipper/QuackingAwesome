@@ -7,7 +7,7 @@ public class CharacterControl : MonoBehaviour
 {
     private Rigidbody duck;
 
-    private float PushForce = 3f; //duck's moving force
+    //private float PushForce = 1f; //duck's moving force
     private float Rotation = 3.8f; //value how fast duck rotates
     public float DuckSpeed;
 
@@ -30,7 +30,7 @@ public class CharacterControl : MonoBehaviour
         float z = Input.GetAxis("Vertical");
 
         //determine vectors for moving and looking
-        movement = new Vector3(x, 0f, z) * PushForce * Time.deltaTime;
+        movement = new Vector3(x, 0f, z) * 1f * Time.deltaTime;
         lookDir = new Vector3(movement.x, 0f, movement.z);
 
 
@@ -47,7 +47,7 @@ public class CharacterControl : MonoBehaviour
         {
             dash();
         }
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown("Fire3"))
         {
             quack_placeholder.Play();
         }
@@ -66,7 +66,7 @@ public class CharacterControl : MonoBehaviour
             {
                 duck.AddForce(transform.forward * 100f, ForceMode.Impulse);
             }
-            else if (DuckSpeed > 0.31f && DuckSpeed < 1.8f) //antispam by determining max speed when dash is usable
+            else if (DuckSpeed > 0.31f && DuckSpeed < 2f) //antispam by determining max speed when dash is usable
             {
                 duck.drag = 25f;
                 duck.AddForce(transform.forward * 100f, ForceMode.Impulse);
