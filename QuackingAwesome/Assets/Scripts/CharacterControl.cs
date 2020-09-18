@@ -7,7 +7,7 @@ public class CharacterControl : MonoBehaviour
 {
     private Rigidbody duck;
 
-    private float PushForce = 3f; //duck's moving force
+    private float PushForce = 1f; //duck's moving force
     private float Rotation = 3.8f; //value how fast duck rotates
     public float DuckSpeed;
 
@@ -47,7 +47,7 @@ public class CharacterControl : MonoBehaviour
         {
             dash();
         }
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown("Fire3"))
         {
             quack_placeholder.Play();
         }
