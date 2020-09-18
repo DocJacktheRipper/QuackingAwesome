@@ -30,7 +30,7 @@ public class CharacterControl : MonoBehaviour
         float z = Input.GetAxis("Vertical");
 
         //determine vectors for moving and looking
-        movement = new Vector3(x, 0f, z) * 1f * Time.deltaTime;
+        movement = new Vector3(x, 0f, z) * 2f * Time.deltaTime;
         lookDir = new Vector3(movement.x, 0f, movement.z);
 
 
