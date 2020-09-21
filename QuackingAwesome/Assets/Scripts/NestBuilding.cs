@@ -18,34 +18,57 @@ public class NestBuilding : MonoBehaviour
     {
         Inventory player = other.GetComponent<Inventory>();
 
+        // does player-inventory exist?
         if (player == null)
         {
             return;
         }
+        // is already built a nest on rock?
+        if (transform.childCount > 0)
+        {
+            return;
+        }
 
-        // check for sticks in duck's inventory
+        // check for sticks in duck's inventory and needed for upgrade
         if (player.numberOfSticks > 0)
         {
-            // only use as much sticks as needed for the nest
-            int diff = neededSticks - numberOfSticks;
-            if ((diff - player.numberOfSticks) < 0)
-            {
-                numberOfSticks = neededSticks;
-                player.numberOfSticks -= diff;
-            }
-            else
-            {
-                numberOfSticks += player.numberOfSticks;
-                player.numberOfSticks = 0;
-            }
-            display.text = "Sticks in Nest: " + numberOfSticks + "/" + neededSticks;
+            TransferSticks(player);
+            
+            PrintText();
             
             if (numberOfSticks >= neededSticks)
             {
-                Vector3 pos = this.gameObject.transform.position;
-                pos = new Vector3(-305f, -25.15f, 25.4f);
-                Instantiate(finishedNest, pos, Quaternion.identity);
+                BuildNest();
             }
         }
+    }
+
+    private void TransferSticks(Inventory player)
+    {
+        // only use as much sticks as needed for the nest
+        int diff = neededSticks - numberOfSticks;
+        if ((diff - player.numberOfSticks) < 0)
+        {
+            numberOfSticks = neededSticks;
+            player.numberOfSticks -= diff;
+        }
+        else
+        {
+            numberOfSticks += player.numberOfSticks;
+            player.numberOfSticks = 0;
+        }
+    }
+
+    private void BuildNest()
+    {
+        Vector3 pos = this.gameObject.transform.localPosition;
+        pos = new Vector3(-244.35f, 0.66f, -12.6f);
+        GameObject nestOfSticks = Instantiate(finishedNest, pos, Quaternion.identity);
+        nestOfSticks.transform.parent = this.transform;
+    }
+
+    private void PrintText()
+    {
+        display.text = "Sticks in Nest: " + numberOfSticks + "/" + neededSticks;
     }
 }

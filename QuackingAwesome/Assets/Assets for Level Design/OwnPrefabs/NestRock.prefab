@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7874745194227144284}
   - component: {fileID: 7874745194227144224}
   m_Layer: 0
-  m_Name: Nest
+  m_Name: NestRock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7028393720987733115}
   m_LocalRotation: {x: 0.0000000218557, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -61.6, y: -25.88, z: 39.76}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.939069, y: 0.939069, z: 0.939069}
   m_Children: []
   m_Father: {fileID: 0}
@@ -108,3 +108,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberOfSticks: 0
+  neededSticks: 0
+  display: {fileID: 0}
+  finishedNest: {fileID: 0}
