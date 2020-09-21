@@ -8,10 +8,17 @@ using UnityEngine.UI;
 public class Inventory : MonoBehaviour
 {
     public int numberOfSticks = 0;
-    public int maxCapacityOfSticks = 1;
+    public int maxCapacityOfSticks = 1;    
+    
+    public ProgressBar Pb;
     
     // Display (debugging purpose)
     public Text display;
+
+    private void Start()
+    {
+        Pb.BarValue = 10f;
+    }
 
     private void Update()
     {

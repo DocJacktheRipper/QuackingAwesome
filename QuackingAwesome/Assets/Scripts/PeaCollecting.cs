@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Diagnostics;
 
-public class StickCollecting : MonoBehaviour
+public class PeaCollecting : MonoBehaviour
 {
-    //public int count = 0;
-
     private void OnTriggerEnter(Collider other)
     {
         PlayerIsTrigger(other);
@@ -25,14 +21,7 @@ public class StickCollecting : MonoBehaviour
             return;
         }
 
-        if (inventory.numberOfSticks < inventory.maxCapacityOfSticks)
-        {
-            inventory.numberOfSticks++;
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            Debug.Log("Can't collect any more sticks. I'm a frikkin duck!");
-        }
+        inventory.Pb.BarValue += 1;
+        Destroy(this.gameObject);
     }
 }

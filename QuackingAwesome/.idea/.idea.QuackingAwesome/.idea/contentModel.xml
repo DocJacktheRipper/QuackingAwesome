@@ -81,10 +81,17 @@
             </e>
           </e>
         </e>
+        <e p="ProgressBar" t="Include">
+          <e p="Script" t="Include">
+            <e p="ProgressBar.cs" t="Include" />
+            <e p="ProgressBarCircle.cs" t="Include" />
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="CharacterControl.cs" t="Include" />
           <e p="Inventory.cs" t="Include" />
           <e p="NestBuilding.cs" t="Include" />
+          <e p="PeaCollecting.cs" t="Include" />
           <e p="PlayerFollow.cs" t="Include" />
           <e p="SimpleCameraController.cs" t="Include" />
           <e p="StickCollecting.cs" t="Include" />
