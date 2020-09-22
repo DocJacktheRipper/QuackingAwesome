@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Diagnostics;
+﻿using UnityEngine;
 
 public class StickCollecting : MonoBehaviour
 {
@@ -28,7 +24,7 @@ public class StickCollecting : MonoBehaviour
         if (inventory.numberOfSticks < inventory.maxCapacityOfSticks)
         {
             inventory.numberOfSticks++;
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
         else
         {

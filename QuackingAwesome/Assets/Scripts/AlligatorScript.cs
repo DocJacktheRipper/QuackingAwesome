@@ -1,23 +1,20 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
-using UnityEngine;
-using Random = UnityEngine.Random;
+﻿using UnityEngine;
 
 public class AlligatorScript : MonoBehaviour
 {
-    private Transform target;
-    private int targetIndex;
+    public Transform _target;
+    private bool _isFocussingDuck;
+    private int _targetIndex;
     public Transform[] moveSpots;
 
     public float speed;
-    public float speedboost;
+    public float speedBoost;
     
     // Start is called before the first frame update
     void Start()
     {
-        target = moveSpots[0];
+        _isFocussingDuck = false;
+        _target = moveSpots[0];
         GetNewTarget();
     }
 
@@ -25,11 +22,26 @@ public class AlligatorScript : MonoBehaviour
     void FixedUpdate()
     {
         // get to next spot
-        transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, _target.position, speed * Time.deltaTime);
 
+        if (_isFocussingDuck)
+        {
+            
+        }
+        
+        if (Vector3.Distance(transform.position, _target.position) < 0.2f)
+        {
+
+            _targetIndex++;
+            if (_targetIndex >= moveSpots.Length)
+            {
+                _targetIndex = 0;
+            }
+
+        }
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         Inventory playerDuck = other.GetComponent<Inventory>();
 
@@ -44,29 +56,30 @@ public class AlligatorScript : MonoBehaviour
 
     private void AimForDuck(Inventory playerDuck)
     {
-        target = playerDuck.transform;
-        speed += speedboost;
+        _isFocussingDuck = true;
+        _target = playerDuck.transform;
+        speed += speedBoost;
     }
-/*
+
     private void OnTriggerExit(Collider other)
     {
         Inventory playerDuck = other.GetComponent<Inventory>();
 
-        // check, if duck is still in range
-        if (playerDuck == null)
+        // check, if duck has exited detection range
+        if (_isFocussingDuck && playerDuck == null)
         {
-            speed -= speedboost;
+            speed -= speedBoost;
             GetNewTarget();
             
             return;
         }
     }
-    */
+    
 
     // select randomly the new target
     private void GetNewTarget()
     {
-        targetIndex = Random.Range(0, moveSpots.Length);
-        target = moveSpots[targetIndex];
+        _targetIndex = Random.Range(0, moveSpots.Length);
+        _target = moveSpots[_targetIndex];
     }
 }

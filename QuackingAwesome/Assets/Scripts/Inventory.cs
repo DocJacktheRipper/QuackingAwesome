@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Serialization;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-    public int numberOfSticks = 0;
+    public int numberOfSticks;
     public int maxCapacityOfSticks = 1;    
     
     public ProgressBar Pb;

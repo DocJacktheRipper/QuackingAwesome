@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PeaCollecting : MonoBehaviour
 {
@@ -22,6 +20,6 @@ public class PeaCollecting : MonoBehaviour
         }
 
         inventory.Pb.BarValue += 1;
-        Destroy(this.gameObject);
+        Destroy(gameObject);
     }
 }

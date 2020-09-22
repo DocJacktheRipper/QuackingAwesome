@@ -1,13 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
 
     //protected MenuButton menubutton;
-    public static bool GameIsPaused = false;
+    public static bool GameIsPaused;
 
     public GameObject PauseMenuUi;
 

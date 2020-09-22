@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class NestBuilding : MonoBehaviour
 {
-    public int numberOfSticks = 0;
+    public int numberOfSticks;
     public int neededSticks;
     public Text display;
 
@@ -61,10 +61,10 @@ public class NestBuilding : MonoBehaviour
 
     private void BuildNest()
     {
-        Vector3 pos = this.gameObject.transform.localPosition;
+        Vector3 pos = gameObject.transform.localPosition;
         pos = new Vector3(-244.35f, 0.66f, -12.6f);
         GameObject nestOfSticks = Instantiate(finishedNest, pos, Quaternion.identity);
-        nestOfSticks.transform.parent = this.transform;
+        nestOfSticks.transform.parent = transform;
     }
 
     private void PrintText()

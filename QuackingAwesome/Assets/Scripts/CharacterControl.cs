@@ -1,7 +1,4 @@
-﻿using LeoLuz.PlugAndPlayJoystick;
-using System;
-//using UnityEditor.Experimental.GraphView;
-using UnityEngine;
+﻿using UnityEngine; //using UnityEditor.Experimental.GraphView;
 
 public class CharacterControl : MonoBehaviour
 {
