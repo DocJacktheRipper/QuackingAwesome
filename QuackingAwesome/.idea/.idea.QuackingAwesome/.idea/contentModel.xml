@@ -14,29 +14,6 @@
             <e p="README.txt" t="Include" />
           </e>
         </e>
-        <e p="Joystick Pack" t="Include">
-          <e p="Examples" t="Include">
-            <e p="JoystickPlayerExample.cs" t="Include" />
-            <e p="JoystickSetterExample.cs" t="Include" />
-          </e>
-          <e p="Scripts" t="Include">
-            <e p="Base" t="Include">
-              <e p="Joystick.cs" t="Include" />
-            </e>
-            <e p="Editor" t="Include">
-              <e p="DynamicJoystickEditor.cs" t="Include" />
-              <e p="FloatingJoystickEditor.cs" t="Include" />
-              <e p="JoystickEditor.cs" t="Include" />
-              <e p="VariableJoystickEditor.cs" t="Include" />
-            </e>
-            <e p="Joysticks" t="Include">
-              <e p="DynamicJoystick.cs" t="Include" />
-              <e p="FixedJoystick.cs" t="Include" />
-              <e p="FloatingJoystick.cs" t="Include" />
-              <e p="VariableJoystick.cs" t="Include" />
-            </e>
-          </e>
-        </e>
         <e p="plugins" t="Include">
           <e p="LeoLuz" t="Include">
             <e p="Virtual Plug and Play Joystick" t="Include">
@@ -81,13 +58,8 @@
             </e>
           </e>
         </e>
-        <e p="ProgressBar" t="Include">
-          <e p="Script" t="Include">
-            <e p="ProgressBar.cs" t="Include" />
-            <e p="ProgressBarCircle.cs" t="Include" />
-          </e>
-        </e>
         <e p="Scripts" t="Include">
+          <e p="AlligatorScript.cs" t="Include" />
           <e p="CharacterControl.cs" t="Include" />
           <e p="EnemyAI.cs" t="Include" />
           <e p="Inventory.cs" t="Include" />
@@ -96,6 +68,37 @@
           <e p="PlayerFollow.cs" t="Include" />
           <e p="SimpleCameraController.cs" t="Include" />
           <e p="StickCollecting.cs" t="Include" />
+        </e>
+        <e p="UI Elements" t="Include">
+          <e p="Joystick Pack" t="Include">
+            <e p="Examples" t="Include">
+              <e p="JoystickPlayerExample.cs" t="Include" />
+              <e p="JoystickSetterExample.cs" t="Include" />
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="Base" t="Include">
+                <e p="Joystick.cs" t="Include" />
+              </e>
+              <e p="Editor" t="Include">
+                <e p="DynamicJoystickEditor.cs" t="Include" />
+                <e p="FloatingJoystickEditor.cs" t="Include" />
+                <e p="JoystickEditor.cs" t="Include" />
+                <e p="VariableJoystickEditor.cs" t="Include" />
+              </e>
+              <e p="Joysticks" t="Include">
+                <e p="DynamicJoystick.cs" t="Include" />
+                <e p="FixedJoystick.cs" t="Include" />
+                <e p="FloatingJoystick.cs" t="Include" />
+                <e p="VariableJoystick.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="ProgressBar" t="Include">
+            <e p="Script" t="Include">
+              <e p="ProgressBar.cs" t="Include" />
+              <e p="ProgressBarCircle.cs" t="Include" />
+            </e>
+          </e>
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />

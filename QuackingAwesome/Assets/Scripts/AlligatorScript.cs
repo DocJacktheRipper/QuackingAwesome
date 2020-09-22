@@ -3,10 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class AlligatorScript : MonoBehaviour
 {
     private Transform target;
+    private int targetIndex;
     public Transform[] moveSpots;
 
     public float speed;
@@ -15,7 +17,8 @@ public class AlligatorScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        target = moveSpots[0];
+        GetNewTarget();
     }
 
     // Update is called once per frame
@@ -44,7 +47,7 @@ public class AlligatorScript : MonoBehaviour
         target = playerDuck.transform;
         speed += speedboost;
     }
-
+/*
     private void OnTriggerExit(Collider other)
     {
         Inventory playerDuck = other.GetComponent<Inventory>();
@@ -58,10 +61,12 @@ public class AlligatorScript : MonoBehaviour
             return;
         }
     }
+    */
 
     // select randomly the new target
     private void GetNewTarget()
     {
-        // TODO
+        targetIndex = Random.Range(0, moveSpots.Length);
+        target = moveSpots[targetIndex];
     }
 }
