@@ -5,14 +5,18 @@ using UnityEngine;
 
 public class CharacterControl : MonoBehaviour
 {
+
+    //DONT CHANGE THE SPEED OR REMOVE GRAVITY FROM UNITY
+    //DUCK DOESNT FLY AWAY WHEN USING GRAVITY AND A BOX COLLIDER FOR WATER
     private Rigidbody duck;
 
-    //private float PushForce = 1f; //duck's moving force
     private float Rotation = 3.8f; //value how fast duck rotates
-    public float DuckSpeed;
+    public float DuckSpeed; //for debugging to see the speed
 
     private Vector3 lookDir;
     private Vector3 movement;
+    private float x;
+    private float z;
 
     private int dashFrame = 0;
 
@@ -26,13 +30,11 @@ public class CharacterControl : MonoBehaviour
     void Update()
     {
         DuckSpeed = duck.velocity.magnitude;
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        x = Input.GetAxis("Horizontal");
+        z = Input.GetAxis("Vertical");
 
-        //determine vectors for moving and looking
-        movement = new Vector3(x, 0f, z) * 2f * Time.deltaTime;
+        //determine vector for looking
         lookDir = new Vector3(movement.x, 0f, movement.z);
-
 
         // determine method of rotation
         if (x != 0 || z != 0)
@@ -54,6 +56,7 @@ public class CharacterControl : MonoBehaviour
     }
     void FixedUpdate()
     {
+        movement = new Vector3(x, 0f, z) * 2f * Time.deltaTime;
         duck.AddForce(movement, ForceMode.VelocityChange);
     }
 
