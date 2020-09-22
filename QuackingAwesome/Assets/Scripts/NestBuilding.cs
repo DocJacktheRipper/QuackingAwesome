@@ -5,8 +5,7 @@ public class NestBuilding : MonoBehaviour
 {
     public int numberOfSticks;
     public int neededSticks;
-    public Text display;
-
+    
     public GameObject finishedNest;
 
     private void OnTriggerEnter(Collider other)
@@ -69,6 +68,7 @@ public class NestBuilding : MonoBehaviour
 
     private void PrintText()
     {
-        display.text = "Sticks in Nest: " + numberOfSticks + "/" + neededSticks;
+        var text = "Sticks in Nest: " + numberOfSticks + "/" + neededSticks;
+        Debug.Log(text);
     }
 }

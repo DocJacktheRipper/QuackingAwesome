@@ -8,16 +8,8 @@ public class Inventory : MonoBehaviour
     
     public ProgressBar Pb;
     
-    // Display (debugging purpose)
-    public Text display;
-
     private void Start()
     {
         Pb.BarValue = 10f;
-    }
-
-    private void Update()
-    {
-        display.text = "Collected Sticks: " + numberOfSticks + "/" + maxCapacityOfSticks;
     }
 }
