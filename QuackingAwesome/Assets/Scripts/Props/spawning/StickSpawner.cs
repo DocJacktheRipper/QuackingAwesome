@@ -1,10 +1,15 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Props.spawning;
 using UnityEngine;
 
-public class StickSpawner : ISpawner
+public class StickSpawner : Spawner
 {
+    public void Reset()
+    {
+        SpawnObject();
+    }
 
     public void SpawnStick()
     {
@@ -19,5 +24,6 @@ public class StickSpawner : ISpawner
         }
     }
 
+    // add position too pool of spawn-points
     
 }
