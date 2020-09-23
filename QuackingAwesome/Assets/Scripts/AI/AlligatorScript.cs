@@ -27,9 +27,11 @@ public class AlligatorScript : MonoBehaviour
         
         (transform1 = transform).position = Vector3.MoveTowards(transform.position, position, speed * Time.deltaTime);
         
+        /*
         // rotate aligator to face direction
         var lookDir = position.normalized - transform1.position.normalized ; ///new Vector3(movement.x, 0f, movement.z);
         transform.rotation = Quaternion.LookRotation(lookDir);
+        */
         
         if (_isFocussingDuck)
         {
@@ -72,14 +74,16 @@ public class AlligatorScript : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        GameObject playerDuck = GameObject.FindWithTag("Player");
+        string triggerTag = other.tag;
         
-        Debug.Log("fucus: "+_isFocussingDuck);
-
+        bool isPlayer = triggerTag.Equals("Player");
+        
+        // Debug.Log("fucus: "+_isFocussingDuck + "\nIs player: "+isPlayer);
+        
         // check, if duck has exited detection range
-        if (_isFocussingDuck && playerDuck == null)
+        if (_isFocussingDuck && isPlayer)
         {
-            Debug.Log("HERE");
+            Debug.Log("Can't find duck anymore. Go back to my place.");
             speed -= speedBoost;
             GetNewTarget();
             

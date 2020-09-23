@@ -24,12 +24,10 @@ public class NestBuilding : MonoBehaviour
     private void PlayerIsTrigger(Collider other)
     {
         Inventory player = other.GetComponent<Inventory>();
-
-        Debug.Log("Nest is triggered ");
+        
         // does player-inventory exist?
         if (player == null)
         {
-            Debug.Log("not by the Duck.");
             return;
         }
         // is already built a nest on rock?
@@ -42,7 +40,7 @@ public class NestBuilding : MonoBehaviour
         // check for sticks in duck's inventory and needed for upgrade
         if (player.numberOfSticks > 0)
         {
-            Debug.Log("Transfering sticks now");
+            //Debug.Log("Transfering sticks now");
             TransferSticks(player);
             
             PrintText();
@@ -51,10 +49,6 @@ public class NestBuilding : MonoBehaviour
             {
                 BuildNest();
             }
-        }
-        else
-        {
-            Debug.Log("No sticks in inventory");
         }
     }
 
