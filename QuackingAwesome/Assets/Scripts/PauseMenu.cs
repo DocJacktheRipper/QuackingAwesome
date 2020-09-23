@@ -3,18 +3,17 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-
-    //protected MenuButton menubutton;
     public static bool GameIsPaused;
 
     public GameObject PauseMenuUi;
+    public GameObject Controls;
 
     private void Start()
     {
         
     }
 
-    // Update is called once per frame
+    //Checks input from the menubutton
     void Update()
     {
         if (Input.GetButtonDown("Cancel"))
@@ -33,6 +32,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
+        Controls.SetActive(true);
         PauseMenuUi.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
@@ -40,6 +40,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Restart()
     {
+        Controls.SetActive(true);
         PauseMenuUi.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
@@ -48,6 +49,7 @@ public class PauseMenu : MonoBehaviour
 
     void Pause()
     {
+        Controls.SetActive(false);
         PauseMenuUi.SetActive(true);
         Time.timeScale = 0;
         GameIsPaused = true;
