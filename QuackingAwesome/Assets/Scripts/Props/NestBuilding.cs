@@ -73,9 +73,10 @@ public class NestBuilding : MonoBehaviour
     private void RespawnSticksInWorld(int numberOfTransferedSticks)
     {
         GameObject spawner = GameObject.Find("SpawningBehaviour");
-        StickSpawner sp = spawner.GetComponent<StickSpawner>();
-        if (sp == null)
+        if (spawner == null)
             return;
+        StickSpawner sp = spawner.GetComponent<StickSpawner>();
+        
         
         sp.SpawnStick(numberOfTransferedSticks);
     }
