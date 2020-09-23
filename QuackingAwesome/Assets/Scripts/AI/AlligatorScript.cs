@@ -26,7 +26,7 @@ public class AlligatorScript : MonoBehaviour
 
         if (_isFocussingDuck)
         {
-            
+            return;
         }
         
         if (Vector3.Distance(transform.position, _target.position) < 0.2f)
@@ -37,6 +37,8 @@ public class AlligatorScript : MonoBehaviour
             {
                 _targetIndex = 0;
             }
+
+            _target = moveSpots[_targetIndex];
 
         }
     }
@@ -63,11 +65,14 @@ public class AlligatorScript : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        Inventory playerDuck = other.GetComponent<Inventory>();
+        GameObject playerDuck = GameObject.FindWithTag("Player");
+        
+        Debug.Log("fucus: "+_isFocussingDuck);
 
         // check, if duck has exited detection range
         if (_isFocussingDuck && playerDuck == null)
         {
+            Debug.Log("HERE");
             speed -= speedBoost;
             GetNewTarget();
             
