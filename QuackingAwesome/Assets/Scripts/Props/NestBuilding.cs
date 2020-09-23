@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class NestBuilding : MonoBehaviour
@@ -7,6 +8,13 @@ public class NestBuilding : MonoBehaviour
     public int neededSticks;
     
     public GameObject finishedNest;
+
+    private Transform nbContainer;
+
+    private void Start()
+    {
+        nbContainer = transform.Find("NestBuildingContainer");
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,20 +25,24 @@ public class NestBuilding : MonoBehaviour
     {
         Inventory player = other.GetComponent<Inventory>();
 
+        Debug.Log("Nest is triggered ");
         // does player-inventory exist?
         if (player == null)
         {
+            Debug.Log("not by the Duck.");
             return;
         }
         // is already built a nest on rock?
-        if (transform.childCount > 0)
+        if (nbContainer.childCount > 0)
         {
+            Debug.Log("already a nest on it");
             return;
         }
 
         // check for sticks in duck's inventory and needed for upgrade
         if (player.numberOfSticks > 0)
         {
+            Debug.Log("Transfering sticks now");
             TransferSticks(player);
             
             PrintText();
@@ -39,6 +51,10 @@ public class NestBuilding : MonoBehaviour
             {
                 BuildNest();
             }
+        }
+        else
+        {
+            Debug.Log("No sticks in inventory");
         }
     }
 
@@ -60,10 +76,13 @@ public class NestBuilding : MonoBehaviour
 
     private void BuildNest()
     {
-        Vector3 pos = gameObject.transform.localPosition;
+        var pos = gameObject.transform.localPosition;
         pos = new Vector3(-244.35f, 0.66f, -12.6f);
+        
+        // create nest object
         GameObject nestOfSticks = Instantiate(finishedNest, pos, Quaternion.identity);
-        nestOfSticks.transform.parent = transform;
+        // get "NestBuildingContainer" and set object as child of it
+        nestOfSticks.transform.parent = nbContainer;
     }
 
     private void PrintText()

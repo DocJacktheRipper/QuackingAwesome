@@ -22,8 +22,15 @@ public class AlligatorScript : MonoBehaviour
     void FixedUpdate()
     {
         // get to next spot
-        transform.position = Vector3.MoveTowards(transform.position, _target.position, speed * Time.deltaTime);
-
+        var position = _target.position;
+        Transform transform1;
+        
+        (transform1 = transform).position = Vector3.MoveTowards(transform.position, position, speed * Time.deltaTime);
+        
+        // rotate aligator to face direction
+        var lookDir = position.normalized - transform1.position.normalized ; ///new Vector3(movement.x, 0f, movement.z);
+        transform.rotation = Quaternion.LookRotation(lookDir);
+        
         if (_isFocussingDuck)
         {
             return;

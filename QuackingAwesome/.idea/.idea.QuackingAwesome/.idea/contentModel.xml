@@ -74,16 +74,22 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="AlligatorScript.cs" t="Include" />
-          <e p="CharacterControl.cs" t="Include" />
-          <e p="EnemyAI.cs" t="Include" />
+          <e p="AI" t="Include">
+            <e p="AlligatorScript.cs" t="Include" />
+            <e p="EnemyAI.cs" t="Include" />
+          </e>
+          <e p="Controllers" t="Include">
+            <e p="CharacterControl.cs" t="Include" />
+            <e p="PauseMenu.cs" t="Include" />
+            <e p="PlayerFollow.cs" t="Include" />
+            <e p="SimpleCameraController.cs" t="Include" />
+          </e>
           <e p="Inventory.cs" t="Include" />
-          <e p="NestBuilding.cs" t="Include" />
-          <e p="PauseMenu.cs" t="Include" />
-          <e p="PeaCollecting.cs" t="Include" />
-          <e p="PlayerFollow.cs" t="Include" />
-          <e p="SimpleCameraController.cs" t="Include" />
-          <e p="StickCollecting.cs" t="Include" />
+          <e p="Props" t="Include">
+            <e p="NestBuilding.cs" t="Include" />
+            <e p="PeaCollecting.cs" t="Include" />
+            <e p="StickCollecting.cs" t="Include" />
+          </e>
         </e>
         <e p="UI Elements" t="Include">
           <e p="Joystick Pack" t="Include">
