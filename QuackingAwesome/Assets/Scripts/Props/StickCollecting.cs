@@ -11,14 +11,14 @@ public class StickCollecting : MonoBehaviour
 
     // Checks if player was trigger. If so, checks if the duck can carry more sticks.
     // If so, collect it. Otherwise, leave it.
-    private void PlayerIsTrigger(Collider other)
+    private bool PlayerIsTrigger(Collider other)
     {
         Inventory inventory = other.GetComponent<Inventory>();
 
         if (inventory == null)
         {
-            Debug.Log("It wasn't the Duck!");
-            return;
+            Debug.Log("It wasn't the Duck! (stick)");
+            return false;
         }
 
         if (inventory.numberOfSticks < inventory.maxCapacityOfSticks)
@@ -30,5 +30,7 @@ public class StickCollecting : MonoBehaviour
         {
             Debug.Log("Can't collect any more sticks. I'm a frikkin duck!");
         }
+
+        return true;
     }
 }
