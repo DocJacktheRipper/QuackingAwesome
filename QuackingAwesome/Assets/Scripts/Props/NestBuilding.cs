@@ -60,12 +60,24 @@ public class NestBuilding : MonoBehaviour
         {
             numberOfSticks = neededSticks;
             player.numberOfSticks -= diff;
+            RespawnSticksInWorld(diff);    // so there are the same amount of sticks in the world
         }
         else
         {
             numberOfSticks += player.numberOfSticks;
+            RespawnSticksInWorld(player.numberOfSticks); // so there are the same amount of sticks in the world
             player.numberOfSticks = 0;
         }
+    }
+
+    private void RespawnSticksInWorld(int numberOfTransferedSticks)
+    {
+        GameObject spawner = GameObject.Find("SpawningBehaviour");
+        StickSpawner sp = spawner.GetComponent<StickSpawner>();
+        if (sp == null)
+            return;
+        
+        sp.SpawnStick(numberOfTransferedSticks);
     }
 
     private void BuildNest()

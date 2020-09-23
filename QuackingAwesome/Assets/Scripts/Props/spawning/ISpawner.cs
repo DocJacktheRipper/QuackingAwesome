@@ -16,24 +16,16 @@ public class ISpawner : MonoBehaviour
     // positions to spawn
     public List<SpawnPoint> spawningPoints;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     internal void SpawnObject()
     {
         var index = (int) Random.Range(0, spawningPoints.Count);
 
-        GameObject obj = Instantiate(spawnObject, spawningPoints[index].transform.position, Quaternion.identity);
-        spawningPoints[index].blockedPosition = true;
+        SpawnPoint point = spawningPoints[index];
+        GameObject obj = Instantiate(spawnObject, point.transform.position, Quaternion.identity);
+        //spawningPoints[index].blockedPosition = true;
+        spawningPoints.Remove(point);
+        Destroy(point);
 
         var transformEulerAngles = obj.transform.eulerAngles;
         transformEulerAngles.x = Random.Range(0, 360);
