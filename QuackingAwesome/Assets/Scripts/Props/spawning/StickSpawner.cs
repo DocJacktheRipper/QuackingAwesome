@@ -6,6 +6,13 @@ using UnityEngine;
 
 public class StickSpawner : Spawner
 {
+    private void Start()
+    {
+        if (spawnOnStart)
+        {
+            SpawnStick(minItemsInWorld);
+        }
+    }
     public void Reset()
     {
         SpawnObject();

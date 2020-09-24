@@ -84,12 +84,13 @@ public class NestBuilding : MonoBehaviour
     private void BuildNest()
     {
         var pos = gameObject.transform.localPosition;
-        pos = new Vector3(-244.35f, 0.66f, -12.6f);
-        
+        //pos = new Vector3(-244.35f, 0.66f, -12.6f);
+        pos = new Vector3(0, 0, 0);
         // create nest object
         GameObject nestOfSticks = Instantiate(finishedNest, pos, Quaternion.identity);
         // get "NestBuildingContainer" and set object as child of it
         nestOfSticks.transform.parent = nbContainer;
+        nestOfSticks.transform.position = nbContainer.position;
     }
 
     private void PrintText()
