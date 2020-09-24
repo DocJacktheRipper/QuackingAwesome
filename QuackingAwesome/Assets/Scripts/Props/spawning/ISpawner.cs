@@ -7,6 +7,7 @@ namespace Props.spawning
 {
     public class Spawner : MonoBehaviour
     {
+        public bool spawnOnStart;
         // how many of them should be in the world at the same time
         public int minItemsInWorld;
         public int maxItemsInWorld;
@@ -21,7 +22,8 @@ namespace Props.spawning
         public List<SpawnPoint> spawningPoints;
 
         private int numberOfObjectsToSpawn = 0;
-/*
+
+        /*
         private void Start()
         {
             StartCoroutine(CheckForMissingSticks());
