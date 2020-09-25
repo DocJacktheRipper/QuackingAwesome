@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,6 +7,9 @@ public class NestBuilding : MonoBehaviour
 {
     public int numberOfSticks;
     public int neededSticks;
+
+    public bool enableDynamicBuilding;
+    public float heightForDynBuilding;
     
     public GameObject finishedNest;
 
@@ -30,18 +34,20 @@ public class NestBuilding : MonoBehaviour
         {
             return;
         }
-        // is already built a nest on rock?
-        if (nbContainer.childCount > 0)
-        {
-            Debug.Log("already a nest on it");
-            return;
-        }
+
 
         // check for sticks in duck's inventory and needed for upgrade
         if (player.numberOfSticks > 0)
         {
             //Debug.Log("Transfering sticks now");
             TransferSticks(player);
+            
+            // visually showing progress (?)
+            if (enableDynamicBuilding)
+            {
+                BuildNestDynamically();
+                return;
+            }
             
             PrintText();
             
@@ -81,16 +87,34 @@ public class NestBuilding : MonoBehaviour
         sp.SpawnStick(numberOfTransferedSticks);
     }
 
+    private void BuildNestDynamically()
+    {
+        if (nbContainer.childCount <= 0)
+        {    
+            BuildNest();
+        }
+        
+        // set y pos based on 
+        //heightForDynBuilding
+    }
+
     private void BuildNest()
     {
-        var pos = gameObject.transform.localPosition;
-        //pos = new Vector3(-244.35f, 0.66f, -12.6f);
-        pos = new Vector3(0, 0, 0);
+        // is already built a nest on rock?
+        if (nbContainer.childCount > 0)
+        {
+            Debug.Log("already a nest on it");
+            return;
+        }
+        
         // create nest object
-        GameObject nestOfSticks = Instantiate(finishedNest, pos, Quaternion.identity);
+        GameObject nestOfSticks = Instantiate(finishedNest, new Vector3(0, 0, 0), Quaternion.identity);
         // get "NestBuildingContainer" and set object as child of it
         nestOfSticks.transform.parent = nbContainer;
         nestOfSticks.transform.position = nbContainer.position;
+        
+        // rotate (90°) to correct the import
+        nbContainer.GetChild(0).Rotate(0f, 0f, 90f);
     }
 
     private void PrintText()
