@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4843764308327094800}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.295, y: 0.216, z: -0.287}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4950081083784494031}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 4843764308862729006}
   - component: {fileID: 4843764309202380201}
   m_Layer: 0
-  m_Name: Nest
+  m_Name: Decorated NestRock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -105,8 +105,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5762892458755793269}
-  m_LocalRotation: {x: 0.0000000218557, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.29, y: 0, z: 1.3}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4843764308327094803}
@@ -190,8 +190,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberOfSticks: 0
-  neededSticks: 1
-  finishedNest: {fileID: 3266395052907132535, guid: 02a304ec852029744926939f3c8db270,
+  neededSticks: 3
+  enableDynamicBuilding: 0
+  heightForDynBuilding: 0
+  finishedNest: {fileID: 5959379846114813634, guid: e4dede209bcc2a44794eca8520e6eb16,
     type: 3}
 --- !u!65 &4843764309202380201
 BoxCollider:
@@ -204,8 +206,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.5031633, y: 0.14502463, z: 2.9116058}
-  m_Center: {x: -0.03152466, y: -0.15578265, z: 0.4173236}
+  m_Size: {x: 2.5031633, y: 0.4463013, z: 2.9116058}
+  m_Center: {x: -0.031524643, y: -0.069983676, z: 0.41732362}
 --- !u!1001 &4843764307974851610
 PrefabInstance:
   m_ObjectHideFlags: 0
