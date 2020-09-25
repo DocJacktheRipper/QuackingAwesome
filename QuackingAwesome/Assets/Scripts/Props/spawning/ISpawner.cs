@@ -21,7 +21,7 @@ namespace Props.spawning
         // positions to spawn
         public List<SpawnPoint> spawningPoints;
 
-        private int numberOfObjectsToSpawn = 0;
+        //private int numberOfObjectsToSpawn = 0;
 
         /*
         private void Start()
