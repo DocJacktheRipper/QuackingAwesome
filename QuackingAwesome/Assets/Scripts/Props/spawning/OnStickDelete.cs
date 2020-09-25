@@ -18,7 +18,7 @@ public class OnStickDelete : MonoBehaviour
     private void OnDestroy()
     {
         if (isQuitting) return;
-        Debug.Log("Stick is destroyed.");
+        //Debug.Log("Stick is destroyed.");
         
         // get pool of spawn points
         GameObject pool = GameObject.Find("StickSpawnSpots");
