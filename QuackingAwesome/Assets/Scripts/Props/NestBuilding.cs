@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEditor.Rendering;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 public class NestBuilding : MonoBehaviour
@@ -94,8 +95,12 @@ public class NestBuilding : MonoBehaviour
             BuildNest();
         }
         
-        // set y pos based on 
-        //heightForDynBuilding
+        // set y pos based on heightForDynBuilding and number of sticks in nest
+        var percentageOfBeingFinished = 1 - (neededSticks - numberOfSticks) * 1.0f / neededSticks;
+        Debug.Log(percentageOfBeingFinished);
+        // percentageOfBeingFinished * heightForDynBuilding
+        nbContainer.GetChild(0).transform.position = new Vector3(0f, 0f, 0f); 
+        
     }
 
     private void BuildNest()
@@ -112,9 +117,6 @@ public class NestBuilding : MonoBehaviour
         // get "NestBuildingContainer" and set object as child of it
         nestOfSticks.transform.parent = nbContainer;
         nestOfSticks.transform.position = nbContainer.position;
-        
-        // rotate (90°) to correct the import
-        nbContainer.GetChild(0).Rotate(0f, 0f, 90f);
     }
 
     private void PrintText()
