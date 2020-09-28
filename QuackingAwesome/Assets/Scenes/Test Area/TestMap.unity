@@ -719,6 +719,7 @@ MonoBehaviour:
   - {fileID: 2128729342}
   - {fileID: 661440848}
   - {fileID: 586317052}
+  spawningPointParent: {fileID: 1422837318}
 --- !u!114 &148753688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -774,6 +775,7 @@ MonoBehaviour:
   - {fileID: 1733093449}
   - {fileID: 1645419457}
   - {fileID: 1911696054}
+  spawningPointParent: {fileID: 773221474}
 --- !u!1001 &149321681
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6447,6 +6449,11 @@ PrefabInstance:
       propertyPath: neededSticks
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4843764308862729006, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
+        type: 3}
+      propertyPath: enableDynamicBuilding
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4843764309202380201, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
         type: 3}
       propertyPath: m_Size.y
@@ -8791,7 +8798,7 @@ PrefabInstance:
     - target: {fileID: 4623894378085778654, guid: fcb40f7152cb34640aabb80e2fcd6053,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.171
+      value: -0.161
       objectReference: {fileID: 0}
     - target: {fileID: 4623894378085778654, guid: fcb40f7152cb34640aabb80e2fcd6053,
         type: 3}

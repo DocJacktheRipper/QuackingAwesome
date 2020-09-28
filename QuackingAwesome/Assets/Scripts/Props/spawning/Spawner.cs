@@ -20,6 +20,7 @@ namespace Props.spawning
 
         // positions to spawn
         public List<SpawnPoint> spawningPoints;
+        public Transform spawningPointParent;
 
         //private int numberOfObjectsToSpawn = 0;
 
@@ -48,11 +49,37 @@ namespace Props.spawning
             spawningPoints.Remove(point);    
             Destroy(point);
             // TODO: fix, that it actually destroys obj
-        
-            var transformEulerAngles = obj.transform.eulerAngles;
-            transformEulerAngles.x = Random.Range(0, 360);
 
             obj.transform.parent = targetParent.transform;
+        }
+
+        internal void Spawn()
+        {
+            if (spawningPointParent.childCount > 0)
+            {
+                var spawnPoint = GetRandomPosition();
+                // create object
+                GameObject gameObject = Instantiate(objectToSpawn, spawnPoint.position, Quaternion.identity);
+                SetObjectsAsChildren(spawnPoint, gameObject);
+                RotateObjectRandomly(gameObject.transform);
+            }
+        }
+
+        private void RotateObjectRandomly(Transform obj)
+        {
+            obj.Rotate( 0f, Random.Range(0, 360f), 0f, Space.Self);
+        }
+
+        private void SetObjectsAsChildren(Transform spawnPoint, GameObject o)
+        {
+            o.transform.parent = targetParent.transform;    // move newly created object (stick, peas)
+            spawnPoint.parent = o.transform;                // move spawn point to be child of new object
+        }
+
+        private Transform GetRandomPosition()
+        {
+            var ranPos = (int) Random.Range(0, spawningPointParent.childCount);
+            return spawningPointParent.GetChild(ranPos);
         }
 /*
         IEnumerator SpawnObjectWithDelay()

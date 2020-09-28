@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class OnStickDelete : MonoBehaviour
 {
+    public GameObject positionPool;
     
     public GameObject spawnPositionPrefab;
     
@@ -20,6 +21,7 @@ public class OnStickDelete : MonoBehaviour
         if (isQuitting) return;
         //Debug.Log("Stick is destroyed.");
         
+        /*
         // get pool of spawn points
         GameObject pool = GameObject.Find("StickSpawnSpots");
         
@@ -28,5 +30,12 @@ public class OnStickDelete : MonoBehaviour
 
         // set it as child of the pool
         sPoint.transform.parent = pool.transform;
+        */
+
+        // return spawn-position back to pool of positions
+        if (transform.childCount > 0)
+        {
+            
+        }
     }
 }

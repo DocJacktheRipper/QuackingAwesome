@@ -27,10 +27,7 @@ public class StickSpawner : Spawner
     {
         for (int i = 0; i < numberOfSticks; i++)
         {
-            SpawnObject();
+            Spawn();
         }
     }
-
-    // add position too pool of spawn-points
-    
 }
