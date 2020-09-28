@@ -11739,17 +11739,17 @@ PrefabInstance:
     - target: {fileID: 4843764308327094803, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.295
+      value: 0.29
       objectReference: {fileID: 0}
     - target: {fileID: 4843764308327094803, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.287
+      value: -0.29
       objectReference: {fileID: 0}
     - target: {fileID: 4843764308327094803, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.216
+      value: 0.18
       objectReference: {fileID: 0}
     - target: {fileID: 4843764308862729006, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
         type: 3}
@@ -11760,7 +11760,7 @@ PrefabInstance:
     - target: {fileID: 4843764308862729006, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
         type: 3}
       propertyPath: neededSticks
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4843764308862729006, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
         type: 3}
@@ -11770,7 +11770,7 @@ PrefabInstance:
     - target: {fileID: 4843764308862729006, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
         type: 3}
       propertyPath: heightForDynBuilding
-      value: 12
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4843764309202380201, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
         type: 3}
@@ -16043,6 +16043,17 @@ PrefabInstance:
       propertyPath: maxCapacityOfSticks
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 5161659593025514264, guid: fcb40f7152cb34640aabb80e2fcd6053,
+        type: 3}
+      propertyPath: enableDuckbillVisual
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5161659593025514264, guid: fcb40f7152cb34640aabb80e2fcd6053,
+        type: 3}
+      propertyPath: branchVisual
+      value: 
+      objectReference: {fileID: 4624714640261913744, guid: 5fb8db268f6d16045b007463f3edfbc6,
+        type: 3}
     - target: {fileID: 5161659593025514274, guid: fcb40f7152cb34640aabb80e2fcd6053,
         type: 3}
       propertyPath: DuckSpeed

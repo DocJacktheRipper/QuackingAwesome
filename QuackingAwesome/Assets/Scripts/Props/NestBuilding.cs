@@ -1,128 +1,131 @@
-﻿using System;
-using Props.spawning;
-//using UnityEditor.Rendering;
+﻿using Props.spawning;
 using UnityEngine;
-using UnityEngine.Rendering;
-using UnityEngine.UI;
 
-public class NestBuilding : MonoBehaviour
+namespace Props
 {
-    public int numberOfSticks;
-    public int neededSticks;
+    public class NestBuilding : MonoBehaviour
+    {
+        public int numberOfSticks;
+        public int neededSticks;
 
-    public bool enableDynamicBuilding;
-    public float heightForDynBuilding;
+        public bool enableDynamicBuilding;
+        public float heightForDynBuilding;
     
-    public GameObject finishedNest;
+        public GameObject finishedNest;
 
-    private Transform nbContainer;
+        private Transform _nbContainer;
 
-    private void Start()
-    {
-        nbContainer = transform.Find("NestBuildingContainer");
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        PlayerIsTrigger(other);
-    }
-
-    private void PlayerIsTrigger(Collider other)
-    {
-        Inventory player = other.GetComponent<Inventory>();
-        
-        // does player-inventory exist?
-        if (player == null)
+        private void Start()
         {
-            return;
+            _nbContainer = transform.Find("NestBuildingContainer");
         }
 
-
-        // check for sticks in duck's inventory and needed for upgrade
-        if (player.numberOfSticks > 0)
+        private void OnTriggerEnter(Collider other)
         {
-            //Debug.Log("Transfering sticks now");
-            TransferSticks(player);
-            
-            // visually showing progress (?)
-            if (enableDynamicBuilding)
+            PlayerIsTrigger(other);
+        }
+
+        private void PlayerIsTrigger(Collider other)
+        {
+            Inventory player = other.GetComponent<Inventory>();
+        
+            // does player-inventory exist?
+            if (player == null)
             {
-                BuildNestDynamically();
                 return;
             }
-            
-            PrintText();
-            
-            if (numberOfSticks >= neededSticks)
+
+
+            // check for sticks in duck's inventory and needed for upgrade
+            if (player.numberOfSticks > 0)
             {
-                BuildNest();
+                //Debug.Log("Transfering sticks now");
+                TransferSticks(player);
+            
+                // visually showing progress (?)
+                if (enableDynamicBuilding)
+                {
+                    BuildNestDynamically();
+                    return;
+                }
+            
+                PrintText();
+            
+                if (numberOfSticks >= neededSticks)
+                {
+                    BuildNest();
+                }
             }
         }
-    }
 
-    private void TransferSticks(Inventory player)
-    {
-        // only use as much sticks as needed for the nest
-        int diff = neededSticks - numberOfSticks;
-        if ((diff - player.numberOfSticks) < 0)
+        private void TransferSticks(Inventory player)
         {
-            numberOfSticks = neededSticks;
-            player.numberOfSticks -= diff;
-            RespawnSticksInWorld(diff);    // so there are the same amount of sticks in the world
+            // only use as much sticks as needed for the nest
+            int diff = neededSticks - numberOfSticks;
+            if ((diff - player.numberOfSticks) < 0)
+            {
+                numberOfSticks = neededSticks;
+                player.numberOfSticks -= diff;
+                RespawnSticksInWorld(diff);    // so there are the same amount of sticks in the world
+                // Adjust sticks in Duckbill
+                player.DeleteSticks(diff);
+            }
+            else
+            {
+                numberOfSticks += player.numberOfSticks;
+                RespawnSticksInWorld(player.numberOfSticks); // so there are the same amount of sticks in the world
+                player.DeleteAllSticks();
+                player.numberOfSticks = 0;
+            }
         }
-        else
+
+        private void RespawnSticksInWorld(int numberOfTransferedSticks)
         {
-            numberOfSticks += player.numberOfSticks;
-            RespawnSticksInWorld(player.numberOfSticks); // so there are the same amount of sticks in the world
-            player.numberOfSticks = 0;
+            GameObject spawner = GameObject.Find("SpawningBehaviour");
+            if (spawner == null)
+                return;
+            StickSpawner sp = spawner.GetComponent<StickSpawner>();
+            
+            sp.SpawnAtOnce(numberOfTransferedSticks);
         }
-    }
 
-    private void RespawnSticksInWorld(int numberOfTransferedSticks)
-    {
-        GameObject spawner = GameObject.Find("SpawningBehaviour");
-        if (spawner == null)
-            return;
-        StickSpawner sp = spawner.GetComponent<StickSpawner>();
-        
-        
-        sp.SpawnAtOnce(numberOfTransferedSticks);
-    }
-
-    private void BuildNestDynamically()
-    {
-        if (nbContainer.childCount <= 0)
-        {    
-            BuildNest();
-        }
-        
-        // set y pos based on heightForDynBuilding and number of sticks in nest
-        var percentageOfBeingFinished = 1 - (neededSticks - numberOfSticks) * 1.0f / neededSticks;
-        Debug.Log(percentageOfBeingFinished);
-        // percentageOfBeingFinished * heightForDynBuilding
-        nbContainer.GetChild(0).transform.position = new Vector3(0f, 0f, 0f); 
-        
-    }
-
-    private void BuildNest()
-    {
-        // is already built a nest on rock?
-        if (nbContainer.childCount > 0)
+        private void BuildNestDynamically()
         {
-            Debug.Log("already a nest on it");
-            return;
-        }
+            if (_nbContainer.childCount <= 0)
+            {    
+                BuildNest();
+            }
         
-        // create nest object
-        GameObject nestOfSticks = Instantiate(finishedNest, new Vector3(0, 0, 0), Quaternion.identity);
-        // get "NestBuildingContainer" and set object as child of it
-        nestOfSticks.transform.parent = nbContainer;
-        nestOfSticks.transform.position = nbContainer.position;
-    }
+            // set y pos based on heightForDynBuilding and number of sticks in nest
+            var percentageOfBeingFinished = 1 - (neededSticks - numberOfSticks) * 1.0f / neededSticks;
+            Debug.Log(percentageOfBeingFinished);
+            _nbContainer.GetChild(0).transform.localPosition 
+                = new Vector3(0f, percentageOfBeingFinished * heightForDynBuilding, 0f);
+        
+            // percentageOfBeingFinished * heightForDynBuilding
+            
+        }
 
-    private void PrintText()
-    {
-        var text = "Sticks in Nest: " + numberOfSticks + "/" + neededSticks;
-        Debug.Log(text);
+        private void BuildNest()
+        {
+            // is already built a nest on rock?
+            if (_nbContainer.childCount > 0)
+            {
+                Debug.Log("already a nest on it");
+                return;
+            }
+        
+            // create nest object
+            GameObject nestOfSticks = Instantiate(finishedNest, new Vector3(0, 0, 0), Quaternion.identity);
+            // get "NestBuildingContainer" and set object as child of it
+            nestOfSticks.transform.parent = _nbContainer;
+            nestOfSticks.transform.position = _nbContainer.position;
+        }
+
+        private void PrintText()
+        {
+            var text = "Sticks in Nest: " + numberOfSticks + "/" + neededSticks;
+            Debug.Log(text);
+        }
     }
 }
