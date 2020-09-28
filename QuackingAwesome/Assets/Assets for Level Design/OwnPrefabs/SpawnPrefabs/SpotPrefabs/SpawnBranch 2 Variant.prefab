@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15412bae9c0608443bc3dbd1b6f2bd56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  positionPool: {fileID: 0}
   spawnPositionPrefab: {fileID: 8598992634336898018, guid: ca9b6c824a06f7a46af748db64d6caa5,
     type: 3}
 --- !u!1001 &7327544112260372058
@@ -21,10 +22,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 481788930585519190, guid: a09ef9c25688915468caaf4acfc6866d,
+        type: 3}
+      propertyPath: branchVisual
+      value: 
+      objectReference: {fileID: 4451941183071688819, guid: 006e392d17557b045b1e173abb80f1e8,
+        type: 3}
+    - target: {fileID: 481788930585519190, guid: a09ef9c25688915468caaf4acfc6866d,
+        type: 3}
+      propertyPath: enableDuckbillVisual
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2995859592274278843, guid: a09ef9c25688915468caaf4acfc6866d,
         type: 3}
       propertyPath: m_Name
-      value: SpawnBranch 2
+      value: SpawnBranch 2 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3489339546995938990, guid: a09ef9c25688915468caaf4acfc6866d,
         type: 3}
@@ -80,6 +92,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3489339546995938990, guid: a09ef9c25688915468caaf4acfc6866d,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3489339546995938990, guid: a09ef9c25688915468caaf4acfc6866d,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3489339546995938990, guid: a09ef9c25688915468caaf4acfc6866d,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a09ef9c25688915468caaf4acfc6866d, type: 3}

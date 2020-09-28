@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
 
 namespace Props.spawning
@@ -12,7 +13,7 @@ namespace Props.spawning
         public int minItemsInWorld;
         public int maxItemsInWorld;
 
-        public GameObject objectToSpawn;
+        public List<GameObject> objectsToSpawn;
         public GameObject targetParent;
 
         // time between spawns
@@ -34,11 +35,6 @@ namespace Props.spawning
         public void Reset()
         {
             
-        }
-
-        public void SpawnStick()
-        {
-            Spawn();
         }
 
         public void SpawnAtOnce(int numberOfObjects)
@@ -80,13 +76,13 @@ namespace Props.spawning
         }
         */
 
-        internal void Spawn()
+        public void Spawn()
         {
             if (spawningPointParent.childCount > 0)
             {
                 var spawnPoint = GetRandomPosition();
                 // create object
-                GameObject gameObject = Instantiate(objectToSpawn, spawnPoint.position, Quaternion.identity);
+                GameObject gameObject = Instantiate(GetRandomSkin(), spawnPoint.position, Quaternion.identity);
                 SetObjectsAsChildren(spawnPoint, gameObject);
                 RotateObjectRandomly(gameObject.transform);
 
@@ -96,6 +92,11 @@ namespace Props.spawning
                     spawnable.positionPool = spawningPointParent;
                 }
             }
+        }
+
+        private GameObject GetRandomSkin()
+        {
+            return objectsToSpawn[Random.Range(0, objectsToSpawn.Count - 1)];
         }
 
         private static void RotateObjectRandomly(Transform obj)

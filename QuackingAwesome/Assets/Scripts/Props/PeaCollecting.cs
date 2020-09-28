@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Props.spawning;
+using UnityEngine;
 
 public class PeaCollecting : MonoBehaviour
 {
@@ -21,6 +22,11 @@ public class PeaCollecting : MonoBehaviour
 
         inventory.Pb.BarValue += 1;
         Destroy(gameObject);
+        
+        // spawn another pea
+        var nbContainer = GameObject.Find("SpawningBehaviour");
+        var spawner = nbContainer.GetComponent<PeaSpawner>();
+        spawner.Spawn();
 
         return true;
     }
