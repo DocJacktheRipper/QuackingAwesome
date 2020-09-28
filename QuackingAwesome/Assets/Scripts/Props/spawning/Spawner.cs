@@ -19,11 +19,36 @@ namespace Props.spawning
         public float spawningDelay;
 
         // positions to spawn
-        public List<SpawnPoint> spawningPoints;
+        //public List<SpawnPoint> spawningPoints;
         public Transform spawningPointParent;
 
         //private int numberOfObjectsToSpawn = 0;
 
+        private void Start()
+        {
+            if (spawnOnStart)
+            {
+                SpawnAtOnce(minItemsInWorld);
+            }
+        }
+        public void Reset()
+        {
+            
+        }
+
+        public void SpawnStick()
+        {
+            Spawn();
+        }
+
+        public void SpawnAtOnce(int numberOfObjects)
+        {
+            for (var i = 0; i < numberOfObjects; i++)
+            {
+                Spawn();
+            }
+        }
+        
         /*
         private void Start()
         {
@@ -39,6 +64,7 @@ namespace Props.spawning
         }
 
 */
+        /*
         internal void SpawnObject()
         {
             var index = (int) Random.Range(0, spawningPoints.Count);
@@ -52,6 +78,7 @@ namespace Props.spawning
 
             obj.transform.parent = targetParent.transform;
         }
+        */
 
         internal void Spawn()
         {
@@ -62,10 +89,16 @@ namespace Props.spawning
                 GameObject gameObject = Instantiate(objectToSpawn, spawnPoint.position, Quaternion.identity);
                 SetObjectsAsChildren(spawnPoint, gameObject);
                 RotateObjectRandomly(gameObject.transform);
+
+                var spawnable = gameObject.GetComponent<OnSpawnableDelete>();
+                if (spawnable != null)
+                {
+                    spawnable.positionPool = spawningPointParent;
+                }
             }
         }
 
-        private void RotateObjectRandomly(Transform obj)
+        private static void RotateObjectRandomly(Transform obj)
         {
             obj.Rotate( 0f, Random.Range(0, 360f), 0f, Space.Self);
         }

@@ -1,4 +1,5 @@
 ﻿using System;
+using Props.spawning;
 //using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -85,7 +86,7 @@ public class NestBuilding : MonoBehaviour
         StickSpawner sp = spawner.GetComponent<StickSpawner>();
         
         
-        sp.SpawnStick(numberOfTransferedSticks);
+        sp.SpawnAtOnce(numberOfTransferedSticks);
     }
 
     private void BuildNestDynamically()

@@ -18,9 +18,12 @@
           <e p="LowPolyTreePack" t="Include">
             <e p="README.txt" t="Include" />
           </e>
-        </e>
-        <e p="Five Seamless Tileable Ground Textures" t="Include">
-          <e p="read me.txt" t="Include" />
+          <e p="Sample- Low Poly Nature Assets" t="Include">
+            <e p="Documentation.txt" t="Include" />
+            <e p="Materials" t="Include">
+              <e p="_MaterialIndex.txt" t="Include" />
+            </e>
+          </e>
         </e>
         <e p="plugins" t="Include">
           <e p="LeoLuz" t="Include">
@@ -66,12 +69,6 @@
             </e>
           </e>
         </e>
-        <e p="Sample- Low Poly Nature Assets" t="Include">
-          <e p="Documentation.txt" t="Include" />
-          <e p="Materials" t="Include">
-            <e p="_MaterialIndex.txt" t="Include" />
-          </e>
-        </e>
         <e p="Samples" t="Include">
           <e p="Terrain Tools" t="Include">
             <e p="0.1.0-preview" t="Include">
@@ -97,13 +94,20 @@
             <e p="NestBuilding.cs" t="Include" />
             <e p="PeaCollecting.cs" t="Include" />
             <e p="spawning" t="Include">
-              <e p="OnStickDelete.cs" t="Include" />
+              <e p="OnSpawnableDelete.cs" t="Include" />
               <e p="PeaSpawner.cs" t="Include" />
               <e p="Spawner.cs" t="Include" />
               <e p="SpawnPoint.cs" t="Include" />
               <e p="StickSpawner.cs" t="Include" />
             </e>
             <e p="StickCollecting.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Textures and Shaders" t="Include">
+          <e p="Textures" t="Include">
+            <e p="Five Seamless Tileable Ground Textures" t="Include">
+              <e p="read me.txt" t="Include" />
+            </e>
           </e>
         </e>
         <e p="UI Elements" t="Include">

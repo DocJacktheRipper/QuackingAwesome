@@ -1,8 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class SpawnPoint : MonoBehaviour
+namespace Props.spawning
 {
-    public bool blockedPosition = false;
+    public class SpawnPoint : MonoBehaviour
+    {
+        public bool blockedPosition = false;
+    }
 }
