@@ -16,16 +16,7 @@ namespace Inventory
 
         public bool AddStick()
         {
-            if (numberOfSticks >= maxCapacityOfSticks) 
-                return false;
-        
-            numberOfSticks++;
-            return true;
-        }
-
-        public int GetNumberOfSticks()
-        {
-            return numberOfSticks;
+            return AddSticks(1) <= 0;
         }
 
         /// <summary>
@@ -36,7 +27,10 @@ namespace Inventory
         public int AddSticks(int n)
         {
             var overflow = TransferSticks(n);
-            ShowSticksInDuckbill();
+            for (var i = 0; i < (n-overflow); i++)
+            {
+                ShowStickInDuckbill();
+            }
             return overflow;
         }
 
@@ -46,7 +40,7 @@ namespace Inventory
             if (numberOfSticks <= maxCapacityOfSticks) 
                 return 0;
         
-            var overflow = maxCapacityOfSticks - numberOfSticks;
+            var overflow = numberOfSticks - maxCapacityOfSticks ;
             numberOfSticks = maxCapacityOfSticks;
             return overflow;
         }
@@ -59,15 +53,19 @@ namespace Inventory
             
             DeleteVisualSticks(number);
         }
+        
         public void DeleteVisualSticks(int number)
         {
             for (var i = 0; i < number; i++)
             {
-                GameObject child = transform.GetChild(0).gameObject;
-                if (child != null)
+                if (transform.childCount <= 0)
                 {
-                    Destroy(child);
+                    Debug.Log("No more children in duck");
+                    return;
                 }
+                
+                var child = transform.GetChild(i).gameObject;
+                Destroy(child);
             }
         }
 
@@ -77,7 +75,7 @@ namespace Inventory
             DeleteVisualSticks(transform.childCount);
         }
 
-        private void ShowSticksInDuckbill()
+        private void ShowStickInDuckbill()
         {
             if (!enableDuckbillVisual)
             {
@@ -87,6 +85,11 @@ namespace Inventory
             var stick = Instantiate(branchVisual, transform, true);
             stick.transform.localPosition = new Vector3(0.00037f, 0.00869f, 0.00588f);
             stick.transform.eulerAngles = new Vector3(0f, -90f, 0f);
+        }
+        
+        public int GetNumberOfSticks()
+        {
+            return numberOfSticks;
         }
     }
 }

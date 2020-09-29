@@ -9,14 +9,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4623894378085778654}
+  - component: {fileID: 72313733389020845}
+  - component: {fileID: 6032344169458206697}
   - component: {fileID: 8612154508580326267}
   - component: {fileID: 5791756305796792241}
   - component: {fileID: 5161659593025514279}
   - component: {fileID: 5161659593025514265}
   - component: {fileID: 5161659593025514276}
   - component: {fileID: 5161659593025514274}
-  - component: {fileID: 6032344169458206697}
-  - component: {fileID: 72313733389020845}
   m_Layer: 0
   m_Name: Duck
   m_TagString: Player
@@ -38,6 +38,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &72313733389020845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5431499328450125412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a655955551873d24fb93aa5c198398ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  progressBar: {fileID: 114769781544105922, guid: 5eefba205a58c8c4a937c97b87c185a3,
+    type: 3}
+--- !u!114 &6032344169458206697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5431499328450125412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f35751e0e264eee9fa6b04b7a4f1752, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfSticks: 0
+  maxCapacityOfSticks: 1
+  enableDuckbillVisual: 1
+  branchVisual: {fileID: 6976615927814636928, guid: 37f9aeb2fdaf19f4a8efd7ce8a593dcd,
+    type: 3}
 --- !u!33 &8612154508580326267
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -224,34 +255,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DuckSpeed: 2
   quack_placeholder: {fileID: 5161659593025514276}
---- !u!114 &6032344169458206697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5431499328450125412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f35751e0e264eee9fa6b04b7a4f1752, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  numberOfSticks: 0
-  maxCapacityOfSticks: 1
-  enableDuckbillVisual: 1
-  branchVisual: {fileID: 6976615927814636928, guid: 37f9aeb2fdaf19f4a8efd7ce8a593dcd,
-    type: 3}
---- !u!114 &72313733389020845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5431499328450125412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a655955551873d24fb93aa5c198398ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  progressBar: {fileID: 114769781544105922, guid: 5eefba205a58c8c4a937c97b87c185a3,
-    type: 3}

@@ -88,10 +88,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4950081083784494031}
+  - component: {fileID: 1029452869482211099}
   - component: {fileID: 8295035753630921834}
   - component: {fileID: 6122947537856168096}
   - component: {fileID: 4843764308862729042}
-  - component: {fileID: 4843764308862729006}
   - component: {fileID: 4843764309202380201}
   m_Layer: 0
   m_Name: Decorated NestRock
@@ -117,6 +117,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1029452869482211099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5762892458755793269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5082b069d2308d4490897bee0a294fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfSticks: 0
+  neededSticks: 10
+  enableDynamicBuilding: 1
+  heightForDynBuilding: 0.2
+  finishedNest: {fileID: 5959379846114813634, guid: d612d710e605aac42993c2d10abe3119,
+    type: 3}
 --- !u!33 &8295035753630921834
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -178,24 +196,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -680160067601601106, guid: 20b9c6eb7df740847bf1bbacea47c17f, type: 3}
---- !u!114 &4843764308862729006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5762892458755793269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fa77ca1b11b4ad459aeebaa7bf29d0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  numberOfSticks: 0
-  neededSticks: 3
-  enableDynamicBuilding: 0
-  heightForDynBuilding: 0
-  finishedNest: {fileID: 5959379846114813634, guid: d612d710e605aac42993c2d10abe3119,
-    type: 3}
 --- !u!65 &4843764309202380201
 BoxCollider:
   m_ObjectHideFlags: 0

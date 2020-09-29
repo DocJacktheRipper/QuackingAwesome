@@ -65,6 +65,7 @@ namespace Props
             var diff = neededSticks - numberOfSticks;
             if ((diff - player.GetNumberOfSticks()) < 0)
             {
+                Debug.Log("More sticks in inventory than needed");
                 numberOfSticks = neededSticks;
                 // so there are the same amount of sticks in the world
                 RespawnSticksInWorld(diff);    
@@ -77,6 +78,7 @@ namespace Props
                 // so there are the same amount of sticks in the world
                 RespawnSticksInWorld(player.GetNumberOfSticks()); 
                 player.RemoveSticks(player.GetNumberOfSticks());
+                player.DeleteAllVisualSticks();
             }
         }
 
@@ -99,7 +101,7 @@ namespace Props
         
             // set y pos based on heightForDynBuilding and number of sticks in nest
             var percentageOfBeingFinished = 1 - (neededSticks - numberOfSticks) * 1.0f / neededSticks;
-            Debug.Log(percentageOfBeingFinished);
+            //Debug.Log(percentageOfBeingFinished);
             _nbContainer.GetChild(0).transform.localPosition 
                 = new Vector3(0f, percentageOfBeingFinished * heightForDynBuilding, 0f);
         }
