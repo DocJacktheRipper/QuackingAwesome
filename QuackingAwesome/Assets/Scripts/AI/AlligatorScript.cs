@@ -54,7 +54,7 @@ public class AlligatorScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Inventory playerDuck = other.GetComponent<Inventory>();
+        OldInventory playerDuck = other.GetComponent<OldInventory>();
 
         // check, if duck is in range
         if (playerDuck == null)
@@ -65,7 +65,7 @@ public class AlligatorScript : MonoBehaviour
         AimForDuck(playerDuck);
     }
 
-    private void AimForDuck(Inventory playerDuck)
+    private void AimForDuck(OldInventory playerDuck)
     {
         _isFocussingDuck = true;
         _target = playerDuck.transform;

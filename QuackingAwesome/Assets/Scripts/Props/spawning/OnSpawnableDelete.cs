@@ -8,7 +8,7 @@ namespace Props.spawning
     
         public GameObject spawnPositionPrefab;
     
-        private bool _isQuitting = false;
+        private bool _isQuitting;
     
         void OnApplicationQuit()
         {

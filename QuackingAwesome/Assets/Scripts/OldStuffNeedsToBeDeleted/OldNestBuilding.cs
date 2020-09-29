@@ -1,10 +1,9 @@
-﻿using Inventory;
-using Props.spawning;
+﻿using Props.spawning;
 using UnityEngine;
 
 namespace Props
 {
-    public class NestBuilding : MonoBehaviour
+    public class OldNestBuilding : MonoBehaviour
     {
         public int numberOfSticks;
         public int neededSticks;
@@ -28,7 +27,7 @@ namespace Props
 
         private void PlayerIsTrigger(Collider other)
         {
-            StickInventory player = other.GetComponent<StickInventory>();
+            OldInventory player = other.GetComponent<OldInventory>();
         
             // does player-inventory exist?
             if (player == null)
@@ -38,7 +37,7 @@ namespace Props
 
 
             // check for sticks in duck's inventory and needed for upgrade
-            if (player.GetNumberOfSticks() > 0)
+            if (player.numberOfSticks > 0)
             {
                 //Debug.Log("Transfering sticks now");
                 TransferSticks(player);
@@ -59,33 +58,33 @@ namespace Props
             }
         }
 
-        private void TransferSticks(StickInventory player)
+        private void TransferSticks(OldInventory player)
         {
             // only use as much sticks as needed for the nest
-            var diff = neededSticks - numberOfSticks;
-            if ((diff - player.GetNumberOfSticks()) < 0)
+            int diff = neededSticks - numberOfSticks;
+            if ((diff - player.numberOfSticks) < 0)
             {
                 numberOfSticks = neededSticks;
-                // so there are the same amount of sticks in the world
-                RespawnSticksInWorld(diff);    
+                player.numberOfSticks -= diff;
+                RespawnSticksInWorld(diff);    // so there are the same amount of sticks in the world
                 // Adjust sticks in Duckbill
-                player.RemoveSticks(diff);
+                player.DeleteSticks(diff);
             }
             else
             {
-                numberOfSticks += player.GetNumberOfSticks();
-                // so there are the same amount of sticks in the world
-                RespawnSticksInWorld(player.GetNumberOfSticks()); 
-                player.RemoveSticks(player.GetNumberOfSticks());
+                numberOfSticks += player.numberOfSticks;
+                RespawnSticksInWorld(player.numberOfSticks); // so there are the same amount of sticks in the world
+                player.DeleteAllSticks();
+                player.numberOfSticks = 0;
             }
         }
 
-        private static void RespawnSticksInWorld(int numberOfTransferedSticks)
+        private void RespawnSticksInWorld(int numberOfTransferedSticks)
         {
-            var spawner = GameObject.Find("SpawningBehaviour");
+            GameObject spawner = GameObject.Find("SpawningBehaviour");
             if (spawner == null)
                 return;
-            var sp = spawner.GetComponent<StickSpawner>();
+            StickSpawner sp = spawner.GetComponent<StickSpawner>();
             
             sp.SpawnAtOnce(numberOfTransferedSticks);
         }
@@ -102,6 +101,9 @@ namespace Props
             Debug.Log(percentageOfBeingFinished);
             _nbContainer.GetChild(0).transform.localPosition 
                 = new Vector3(0f, percentageOfBeingFinished * heightForDynBuilding, 0f);
+        
+            // percentageOfBeingFinished * heightForDynBuilding
+            
         }
 
         private void BuildNest()
@@ -114,8 +116,9 @@ namespace Props
             }
         
             // create nest object
-            var nestOfSticks = Instantiate(finishedNest, _nbContainer, true);
+            GameObject nestOfSticks = Instantiate(finishedNest, new Vector3(0, 0, 0), Quaternion.identity);
             // get "NestBuildingContainer" and set object as child of it
+            nestOfSticks.transform.parent = _nbContainer;
             nestOfSticks.transform.position = _nbContainer.position;
         }
 

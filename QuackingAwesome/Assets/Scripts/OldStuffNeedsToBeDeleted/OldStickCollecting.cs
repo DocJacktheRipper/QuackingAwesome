@@ -1,9 +1,8 @@
-﻿using Inventory;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Props
+namespace OldStuffNeedsToBeDeleted
 {
-    public class StickCollecting : MonoBehaviour
+    public class OldStickCollecting : MonoBehaviour
     {
         private void OnTriggerEnter(Collider other)
         {
@@ -17,17 +16,19 @@ namespace Props
         // If so, collect it. Otherwise, leave it.
         private bool PlayerIsTrigger(Collider other)
         {
-            StickInventory inventory = other.GetComponent<StickInventory>();
+            OldInventory oldInventory = other.GetComponent<OldInventory>();
 
-            if (inventory == null)
+            if (oldInventory == null)
             {
                 Debug.Log("It wasn't the Duck! (stick)");
                 return false;
             }
 
-            if (inventory.AddStick())
+            if (oldInventory.numberOfSticks < oldInventory.maxCapacityOfSticks)
             {
+                oldInventory.numberOfSticks++;
                 Destroy(gameObject);
+                oldInventory.ShowSticksInDuckbill();
             }
             else
             {
@@ -36,5 +37,6 @@ namespace Props
 
             return true;
         }
+
     }
 }

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class Inventory : MonoBehaviour
+public class OldInventory : MonoBehaviour
 {
     public int numberOfSticks;
     public int maxCapacityOfSticks = 1;    
@@ -28,6 +28,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    
     public void DeleteAllSticks()
     {
         DeleteSticks(numberOfSticks);

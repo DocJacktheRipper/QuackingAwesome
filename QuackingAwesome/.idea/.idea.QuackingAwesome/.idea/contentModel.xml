@@ -89,7 +89,16 @@
             <e p="PlayerFollow.cs" t="Include" />
             <e p="SimpleCameraController.cs" t="Include" />
           </e>
-          <e p="Inventory.cs" t="Include" />
+          <e p="Inventory" t="Include">
+            <e p="EnergyInventory.cs" t="Include" />
+            <e p="StickInventory.cs" t="Include" />
+          </e>
+          <e p="OldStuffNeedsToBeDeleted" t="Include">
+            <e p="OldInventory.cs" t="Include" />
+            <e p="OldNestBuilding.cs" t="Include" />
+            <e p="OldPeaCollecting.cs" t="Include" />
+            <e p="OldStickCollecting.cs" t="Include" />
+          </e>
           <e p="Props" t="Include">
             <e p="NestBuilding.cs" t="Include" />
             <e p="PeaCollecting.cs" t="Include" />

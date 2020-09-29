@@ -1,34 +1,28 @@
-﻿using Inventory;
-using Props.spawning;
+﻿using Props.spawning;
 using UnityEngine;
 
-namespace Props
+namespace OldStuffNeedsToBeDeleted
 {
-    public class PeaCollecting : MonoBehaviour
+    public class OldPeaCollecting : MonoBehaviour
     {
-        public int nutritiousValue = 1;
-            
         private void OnTriggerEnter(Collider other)
         {
-            if (PlayerIsTrigger(other))
-            {
-                return;
-            }
+            PlayerIsTrigger(other);
         }
 
         // Checks if player was trigger. If so, checks if the duck can carry more sticks.
         // If so, collect it. Otherwise, leave it.
         private bool PlayerIsTrigger(Collider other)
         {
-            EnergyInventory inventory = other.GetComponent<EnergyInventory>();
+            OldInventory oldInventory = other.GetComponent<OldInventory>();
 
-            if (inventory == null)
+            if (oldInventory == null)
             {
                 Debug.Log("It wasn't the Duck! (pea)");
                 return false;
             }
 
-            inventory.IncreaseEnergy(nutritiousValue);
+            oldInventory.Pb.BarValue += 1;
             Destroy(gameObject);
         
             // spawn another pea
