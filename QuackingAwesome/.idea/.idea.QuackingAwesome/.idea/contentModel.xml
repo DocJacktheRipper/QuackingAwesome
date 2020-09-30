@@ -80,7 +80,10 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="AI" t="Include">
-            <e p="AlligatorScript.cs" t="Include" />
+            <e p="Alligator" t="Include">
+              <e p="AlligatorBehaviour.cs" t="Include" />
+              <e p="AlligatorMouthTrigger.cs" t="Include" />
+            </e>
             <e p="EnemyAI.cs" t="Include" />
           </e>
           <e p="Controllers" t="Include">
