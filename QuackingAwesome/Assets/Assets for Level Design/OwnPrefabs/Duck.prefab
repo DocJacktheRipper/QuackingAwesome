@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 5161659593025514265}
   - component: {fileID: 5161659593025514276}
   - component: {fileID: 5161659593025514274}
+  - component: {fileID: 1409627447054719117}
+  - component: {fileID: 1888710541441914567}
   m_Layer: 0
   m_Name: Duck
   m_TagString: Player
@@ -253,5 +255,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 000bfe5ebf737954ab5668a45cdfef9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DuckSpeed: 2
+  duckSpeed: 0
+--- !u!114 &1409627447054719117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5431499328450125412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc389f328a3b6a44bb2e3e89070083d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 1
+  NextDash: 0
+--- !u!114 &1888710541441914567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5431499328450125412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c16d0c19464245c4398b920f43f7078e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   quack_placeholder: {fileID: 5161659593025514276}

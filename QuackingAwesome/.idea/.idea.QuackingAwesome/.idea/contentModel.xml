@@ -25,6 +25,7 @@
             </e>
           </e>
         </e>
+        <e p="BeaverCollide.cs" t="Include" />
         <e p="plugins" t="Include">
           <e p="LeoLuz" t="Include">
             <e p="Virtual Plug and Play Joystick" t="Include">
@@ -84,13 +85,23 @@
               <e p="AlligatorBehaviour.cs" t="Include" />
               <e p="AlligatorMouthTrigger.cs" t="Include" />
             </e>
-            <e p="EnemyAI.cs" t="Include" />
+            <e p="BeaverAI.cs" t="Include" />
           </e>
           <e p="Controllers" t="Include">
-            <e p="CharacterControl.cs" t="Include" />
-            <e p="PauseMenu.cs" t="Include" />
-            <e p="PlayerFollow.cs" t="Include" />
-            <e p="SimpleCameraController.cs" t="Include" />
+            <e p="Buttons" t="Include">
+              <e p="DashButton.cs" t="Include" />
+              <e p="PauseMenu.cs" t="Include" />
+              <e p="QuackButton.cs" t="Include" />
+            </e>
+            <e p="Camera" t="Include">
+              <e p="PlayerFollow.cs" t="Include" />
+              <e p="SimpleCameraController.cs" t="Include" />
+            </e>
+            <e p="Duck" t="Include">
+              <e p="CharacterControl.cs" t="Include" />
+              <e p="DashingBehaviour.cs" t="Include" />
+              <e p="QuackingBehaviour.cs" t="Include" />
+            </e>
           </e>
           <e p="Inventory" t="Include">
             <e p="EnergyInventory.cs" t="Include" />
@@ -103,6 +114,7 @@
             <e p="OldStickCollecting.cs" t="Include" />
           </e>
           <e p="Props" t="Include">
+            <e p="BeaverCollide.cs" t="Include" />
             <e p="NestBuilding.cs" t="Include" />
             <e p="PeaCollecting.cs" t="Include" />
             <e p="spawning" t="Include">
