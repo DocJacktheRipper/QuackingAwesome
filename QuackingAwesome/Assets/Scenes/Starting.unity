@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 20d7b5b50a3e7624796b96279da1f38f,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -330,11 +330,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 96189824}
+  - component: {fileID: 96189825}
   - component: {fileID: 96189829}
   - component: {fileID: 96189828}
   - component: {fileID: 96189827}
   - component: {fileID: 96189826}
-  - component: {fileID: 96189825}
   m_Layer: 5
   m_Name: A
   m_TagString: Untagged
@@ -370,11 +370,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 96189823}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a157ba41ba8dcd044b11cd74f28153ec, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b57f6d55692bf54e9e58c751c9d200b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonName: Submit
-  pressed: 0
+  player: {fileID: 969745190}
 --- !u!225 &96189826
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -430,9 +429,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 5
+      - m_Target: {fileID: 96189825}
+        m_MethodName: Dash
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1326,11 +1325,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 455666352}
+  - component: {fileID: 455666353}
   - component: {fileID: 455666357}
   - component: {fileID: 455666356}
   - component: {fileID: 455666355}
   - component: {fileID: 455666354}
-  - component: {fileID: 455666353}
   m_Layer: 5
   m_Name: B
   m_TagString: Untagged
@@ -1366,11 +1365,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 455666351}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a157ba41ba8dcd044b11cd74f28153ec, type: 3}
+  m_Script: {fileID: 11500000, guid: d154847b6f062c74c89842e238f9926d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ButtonName: Fire3
-  pressed: 0
+  player: {fileID: 969745190}
 --- !u!225 &455666354
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -1426,9 +1424,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: 
-        m_Mode: 5
+      - m_Target: {fileID: 455666353}
+        m_MethodName: Quack
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3130,6 +3128,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8843941601633688871, guid: 93e3512978bcf1743819154cc039e1a7,
     type: 3}
   m_PrefabInstance: {fileID: 1130074921}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &969745190 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5431499328450125412, guid: fcb40f7152cb34640aabb80e2fcd6053,
+    type: 3}
+  m_PrefabInstance: {fileID: 5161659592565311353}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &980667409
 PrefabInstance:
@@ -6042,17 +6046,17 @@ PrefabInstance:
     - target: {fileID: 4843764309202380201, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
         type: 3}
       propertyPath: m_Center.x
-      value: -0.031524643
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4843764309202380201, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
         type: 3}
       propertyPath: m_Center.y
-      value: -0.069983676
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4843764309202380201, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
         type: 3}
       propertyPath: m_Center.z
-      value: 0.41732362
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4950081083784494031, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
         type: 3}
@@ -7164,12 +7168,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44b98cf7cb99f0348bdb201ce8b25caa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  startWaitTime: 4
-  moveSpots:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1001 &1903456596
 PrefabInstance:
   m_ObjectHideFlags: 0

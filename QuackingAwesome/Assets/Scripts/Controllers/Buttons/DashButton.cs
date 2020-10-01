@@ -6,11 +6,8 @@ namespace Controllers.Buttons
     public class DashButton : MonoBehaviour
     {
         public GameObject player;
-
         private DashingBehaviour _control;
-
-        public Text displayCooldown;
-
+        
         private bool _interactable = true;
 
         void Start()
@@ -21,6 +18,7 @@ namespace Controllers.Buttons
         void Update()
         {
             // to look, if it was changed afterwards
+            // to avoid overriding too much
             var wasInteractable = _interactable;
             
             // enable button, when cooldown is over;
@@ -39,6 +37,7 @@ namespace Controllers.Buttons
 
         public void Dash()
         {
+            // if cooldown is cool
             if(_interactable)
                 _control.Dash();
         }
