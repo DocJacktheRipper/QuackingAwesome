@@ -1,24 +1,25 @@
-﻿using System.Collections;
+﻿using Boo.Lang;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class BeaverAI : MonoBehaviour
 {
     public Transform[] points;
     private int destPoint = 0;
-    private NavMeshAgent beaver;
-
-    public GameObject sticks;
-
-    private float Distance;
-
+    public NavMeshAgent beaver;
+    public GameObject duck;
+    Collider duckCollider, beaverCollider;
 
     // Start is called before the first frame update
     void Start()
     {
-        sticks = GameObject.Find("CollectableSicks");
+        duckCollider = duck.GetComponent<Collider>();
+        beaverCollider = beaver.GetComponent<Collider>();
         beaver = GetComponent<NavMeshAgent>();
         GotoNextPoint();
     }
@@ -26,18 +27,15 @@ public class BeaverAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Distance = Vector3.Distance(beaver.transform.position, sticks.transform.position);
-        //Debug.Log(Distance);
-
         if (!beaver.pathPending && beaver.remainingDistance < 0.5f)
         {
             GotoNextPoint();
         }
     }
 
-    void GotoNextPoint()
+    private void GotoNextPoint()
     {
-        if(points.Length == 0)
+        if (points.Length == 0)
         {
             return;
         }
@@ -46,18 +44,17 @@ public class BeaverAI : MonoBehaviour
         destPoint = (destPoint + Random.Range(0, 18)) % points.Length;
     }
 
-    private void OnTriggerEnter(Collider collider)
+    public void FetchStick(Vector3 stickPosition)
     {
-        if(collider.gameObject.tag == "Beaver")
+        beaver.destination = stickPosition;
+        Debug.Log("Fetching a stick");
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("collide");
+            Physics.IgnoreCollision(beaverCollider, duckCollider, true);
         }
     }
-
-    private void FetchStick()
-    {
-        
-    }
-
-   
 }

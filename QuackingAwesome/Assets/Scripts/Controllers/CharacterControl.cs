@@ -9,6 +9,7 @@ public class CharacterControl : MonoBehaviour
 
     private float Rotation = 3.8f; //value how fast duck rotates
     public float DuckSpeed; //for debugging to see the speed
+    public float speed;
 
     private Vector3 lookDir;
     private Vector3 movement;
@@ -53,7 +54,7 @@ public class CharacterControl : MonoBehaviour
     }
     void FixedUpdate()
     {
-        movement = new Vector3(x, 0f, z) * 2f * Time.deltaTime;
+        movement = new Vector3(x, 0f, z) * speed * Time.deltaTime;
         duck.AddForce(movement, ForceMode.VelocityChange);
     }
 

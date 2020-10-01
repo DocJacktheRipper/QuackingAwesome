@@ -4,23 +4,19 @@ using UnityEngine;
 
 public class BeaverCollide : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    //BeaverAI beaverAI;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void OnTriggerEnter(Collider collider)
-    {
-        if (collider.gameObject.tag == "Beaver")
-        {
-            Debug.Log("collide");
-        }
-    }
+    //private void Start()
+    //{
+    //    beaverAI = GameObject.FindGameObjectWithTag("Beaver").GetComponent<BeaverAI>();
+    //}
+    //private void OnTriggerEnter(Collider collider)
+    //{
+    //    if (collider.gameObject.tag != "Beaver")
+    //    {
+    //        Debug.Log("tf this aint a beaver dude");
+    //        //beaverAI.FetchStick();
+    //        Destroy(gameObject);
+    //    }
+    //}
 }

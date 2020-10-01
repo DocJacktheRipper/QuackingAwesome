@@ -1,5 +1,8 @@
-﻿using Inventory;
+﻿using Boo.Lang;
+using Inventory;
+using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Props
 {
@@ -11,6 +14,15 @@ namespace Props
             {
                 return;
             }
+            if (BeaverIsTrigger(other))
+            {
+                return;
+            }
+            if (BeaverDelete(other))
+            {
+                return;
+            }
+
         }
 
         // Checks if player was trigger. If so, checks if the duck can carry more sticks.
@@ -34,6 +46,31 @@ namespace Props
                 Debug.Log("Can't collect any more sticks. I'm a frikkin duck!");
             }
 
+            return true;
+        }
+
+
+        
+        private bool BeaverIsTrigger(Collider other)
+        {
+            BeaverAI beaverAI = GameObject.FindGameObjectWithTag("Beaver").GetComponent<BeaverAI>();
+           
+            if (other.gameObject.tag == "Beaver")
+            {
+                Vector3 stickPosition = this.transform.position;
+                beaverAI.FetchStick(stickPosition);
+            } 
+            return true;
+        }
+
+        private bool BeaverDelete(Collider other)
+        {
+            if (
+                other.gameObject.tag == "BeaverTrigger" &&
+                other.gameObject.tag == "Beaver")
+            {
+                Debug.Log("yes");
+            }
             return true;
         }
     }

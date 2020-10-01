@@ -15,6 +15,19 @@ MonoBehaviour:
   positionPool: {fileID: 0}
   spawnPositionPrefab: {fileID: 8598992634336898018, guid: ca9b6c824a06f7a46af748db64d6caa5,
     type: 3}
+--- !u!114 &4370809034125621075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3777131180942760111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd21719f599ed634688be8a0ff3bd4bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BeaverAI: {fileID: 0}
 --- !u!1001 &8378201339044889663
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -92,6 +105,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SpawnBranch 1 Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4624714640261913744, guid: 5fb8db268f6d16045b007463f3edfbc6,
+        type: 3}
+      propertyPath: m_TagString
+      value: Stick
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fb8db268f6d16045b007463f3edfbc6, type: 3}
