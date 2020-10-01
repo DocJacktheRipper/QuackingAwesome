@@ -44,12 +44,14 @@ public class BeaverAI : MonoBehaviour
         destPoint = (destPoint + Random.Range(0, 18)) % points.Length;
     }
 
+    //Sets direction of the beaver to nearest stick
     public void FetchStick(Vector3 stickPosition)
     {
         beaver.destination = stickPosition;
         Debug.Log("Fetching a stick");
     }
 
+    //Prevents collision with beaver and duck, making the outer and larger "CapsuleCollider" to an areatrigger
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Player")
