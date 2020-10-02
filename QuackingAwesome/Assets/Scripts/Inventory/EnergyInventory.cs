@@ -4,16 +4,16 @@ namespace Inventory
 {
     public class EnergyInventory : MonoBehaviour
     {
-        public ProgressBar progressBar;
+        public float energy;
 
         private void Start()
         {
-            progressBar.BarValue = 10;
+            energy = 10;
         }
 
         public void IncreaseEnergy(int value)
         {
-            progressBar.BarValue += value;
+            energy += value;
         }
     }
 }
