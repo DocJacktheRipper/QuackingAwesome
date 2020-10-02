@@ -1,30 +1,32 @@
-﻿using Inventory;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class PeaBar : MonoBehaviour
+namespace Inventory
 {
-    public GameObject duck;
-    private EnergyInventory _inventory;
-    private Text _text;
+    public class PeaBar : MonoBehaviour
+    {
+        public GameObject duck;
+        private EnergyInventory _inventory;
+        private Text _text;
 
-    private int _energy;
+        private int _energy;
     
-    void Start()
-    {
-        _inventory = duck.GetComponent<EnergyInventory>();
-        _text = GetComponent<Text>();
-    }
-
-    void Update()
-    {
-        int tempEnergy = _energy;
-
-        _energy = (int) _inventory.energy;
-
-        if (_energy != tempEnergy)
+        void Start()
         {
-            _text.text = _energy.ToString();
+            _inventory = duck.GetComponent<EnergyInventory>();
+            _text = GetComponent<Text>();
+        }
+
+        void Update()
+        {
+            int tempEnergy = _energy;
+
+            _energy = (int) _inventory.energy;
+
+            if (_energy != tempEnergy)
+            {
+                _text.text = _energy.ToString();
+            }
         }
     }
 }

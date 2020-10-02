@@ -8,7 +8,7 @@ namespace Inventory
 
         private void Start()
         {
-            energy = 10;
+            energy = 0;
         }
 
         public void IncreaseEnergy(int value)

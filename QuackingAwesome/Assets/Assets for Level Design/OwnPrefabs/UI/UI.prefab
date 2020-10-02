@@ -520,7 +520,6 @@ GameObject:
   - component: {fileID: 4966003076414406896}
   - component: {fileID: 4966003076414406902}
   - component: {fileID: 4966003076414406897}
-  - component: {fileID: 8732047369406396980}
   m_Layer: 5
   m_Name: Max_Text
   m_TagString: Untagged
@@ -588,19 +587,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: ' /100'
---- !u!114 &8732047369406396980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4966003076414406899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9bb681c04daaee4288782a8ac034081, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  duck: {fileID: 0}
 --- !u!1 &4966003076506418227
 GameObject:
   m_ObjectHideFlags: 0
@@ -984,7 +970,6 @@ RectTransform:
   - {fileID: 4966003077443166471}
   - {fileID: 4966003076759075930}
   - {fileID: 4966003076246530922}
-  - {fileID: 4966003077247122312}
   m_Father: {fileID: 4966003077444846383}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1153,72 +1138,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!1 &4966003077247122315
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4966003077247122312}
-  - component: {fileID: 4966003077247122318}
-  - component: {fileID: 4966003077247122313}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4966003077247122312
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4966003077247122315}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -519.8462, y: -245.38599, z: 0}
-  m_LocalScale: {x: 1.1629668, y: 1.1629668, z: 1.1629668}
-  m_Children: []
-  m_Father: {fileID: 4966003076931584797}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4966003077247122318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4966003077247122315}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 5
---- !u!114 &4966003077247122313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4966003077247122315}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
 --- !u!1 &4966003077288812555
 GameObject:
   m_ObjectHideFlags: 0
@@ -2388,6 +2307,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8368540740302329662}
   - component: {fileID: 9060155933342210271}
+  - component: {fileID: 9028533523274780568}
   - component: {fileID: 9004434013741495936}
   m_Layer: 5
   m_Name: Current_Text
@@ -2423,6 +2343,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6265955694708365278}
   m_CullTransparentMesh: 0
+--- !u!114 &9028533523274780568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6265955694708365278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9bb681c04daaee4288782a8ac034081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duck: {fileID: 0}
 --- !u!114 &9004434013741495936
 MonoBehaviour:
   m_ObjectHideFlags: 0
