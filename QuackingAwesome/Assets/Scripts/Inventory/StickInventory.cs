@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 namespace Inventory
 {
@@ -83,7 +83,7 @@ namespace Inventory
             }
         
             var stick = Instantiate(branchVisual, transform, true);
-            stick.transform.localPosition = new Vector3(0.00037f, 0.00869f, 0.00588f);
+            stick.transform.localPosition = new Vector3(0.0123f, 0.0266f, 0.0643f);
             stick.transform.eulerAngles = new Vector3(0f, -90f, 0f);
         }
         
