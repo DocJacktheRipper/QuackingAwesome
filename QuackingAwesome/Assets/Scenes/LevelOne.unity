@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 20d7b5b50a3e7624796b96279da1f38f,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3493,12 +3493,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44b98cf7cb99f0348bdb201ce8b25caa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
-  startWaitTime: 4
-  moveSpots:
-  - {fileID: 6521382671555064780}
-  - {fileID: 5430064599681860708}
-  - {fileID: 1144215257}
 --- !u!1 &1909213698
 GameObject:
   m_ObjectHideFlags: 0
