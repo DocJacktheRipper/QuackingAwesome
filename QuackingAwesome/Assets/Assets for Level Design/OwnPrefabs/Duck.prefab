@@ -52,8 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a655955551873d24fb93aa5c198398ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  progressBar: {fileID: 114769781544105922, guid: 5eefba205a58c8c4a937c97b87c185a3,
-    type: 3}
+  energy: 0
 --- !u!114 &6032344169458206697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,7 +77,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5431499328450125412}
-  m_Mesh: {fileID: -7025624325178000746, guid: aeb0a106720373c48b09b37bc54b3055, type: 3}
+  m_Mesh: {fileID: -2004654740740423693, guid: aeb0a106720373c48b09b37bc54b3055, type: 3}
 --- !u!23 &5791756305796792241
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -97,7 +96,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 87aa0494a6d97534693a400a0b35b68e, type: 2}
+  - {fileID: 2100000, guid: 44831438b30563a44b91c55ae28b9672, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
