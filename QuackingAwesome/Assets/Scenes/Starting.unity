@@ -707,6 +707,7 @@ GameObject:
   - component: {fileID: 164703724}
   - component: {fileID: 164703723}
   - component: {fileID: 164703722}
+  - component: {fileID: 164703725}
   m_Layer: 0
   m_Name: PopUp Canvas
   m_TagString: PopUpCanvas
@@ -796,6 +797,22 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &164703725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164703720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e2359039fcca4541be2c721d01d3477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controls: {fileID: 622850318}
+  pop1: {fileID: 483512442}
+  pop2: {fileID: 207043175}
+  pop3: {fileID: 1270460684}
 --- !u!4 &183215727 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8598992634336898019, guid: ca9b6c824a06f7a46af748db64d6caa5,
@@ -1703,6 +1720,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 586317050}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &622850318 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4966003076931584796, guid: 71009c3a85318c543ae7524648288408,
+    type: 3}
+  m_PrefabInstance: {fileID: 874244529}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &626755352
 GameObject:
   m_ObjectHideFlags: 0
@@ -2592,7 +2615,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 856361808}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 164703725}
+        m_MethodName: buttonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &856361808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2861,7 +2895,7 @@ BoxCollider:
   m_GameObject: {fileID: 881029396}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.124255, y: 0.13462299, z: 0.306162}
   m_Center: {x: 0.039174497, y: 0.0625515, z: -0.059605002}
@@ -4616,7 +4650,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1318402441}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 164703725}
+        m_MethodName: buttonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1318402441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5408,7 +5453,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1601556584}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 164703725}
+        m_MethodName: buttonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1601556584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6621,7 +6677,7 @@ PrefabInstance:
     - target: {fileID: 2202338067957442546, guid: cb8ce2c2e51e01c47b0ae53ae2358aa0,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb8ce2c2e51e01c47b0ae53ae2358aa0, type: 3}
