@@ -1874,6 +1874,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.06213293, y: 0.102809854, z: 0.16128044}
   m_Center: {x: 0.00000014528632, y: -0.0009334944, z: -0.009148151}
+--- !u!114 &1186403704 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 72313733389020845, guid: fcb40f7152cb34640aabb80e2fcd6053,
+    type: 3}
+  m_PrefabInstance: {fileID: 5161659592565311353}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186403694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a655955551873d24fb93aa5c198398ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1193333371
 GameObject:
   m_ObjectHideFlags: 0
@@ -2061,6 +2073,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4966003076117959618}
     m_Modifications:
+    - target: {fileID: 2084873333586569914, guid: b51857b31ca727344804cebf0959d70e,
+        type: 3}
+      propertyPath: energy
+      value: 
+      objectReference: {fileID: 1186403704}
     - target: {fileID: 3691946060683662801, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
       propertyPath: nest
@@ -2411,6 +2428,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: _Beaver_
+      objectReference: {fileID: 0}
+    - target: {fileID: 2202338067110339141, guid: cb8ce2c2e51e01c47b0ae53ae2358aa0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb8ce2c2e51e01c47b0ae53ae2358aa0, type: 3}
