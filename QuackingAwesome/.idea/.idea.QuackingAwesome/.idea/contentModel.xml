@@ -25,6 +25,15 @@
             </e>
           </e>
         </e>
+        <e p="Fonts" t="Include">
+          <e p="Documentation" t="Include">
+            <e p="JazzCreateAltKeys_BubbleFont.txt" t="Include" />
+            <e p="JazzCreateBubble_VersionHistory_1.1.txt" t="Include" />
+          </e>
+          <e p="Script" t="Include">
+            <e p="scriptTexttest.cs" t="Include" />
+          </e>
+        </e>
         <e p="plugins" t="Include">
           <e p="LeoLuz" t="Include">
             <e p="Virtual Plug and Play Joystick" t="Include">
@@ -98,7 +107,11 @@
                 <e p="NestButtonTrigger.cs" t="Include" />
               </e>
               <e p="PauseMenu.cs" t="Include" />
+              <e p="PopUps.cs" t="Include" />
               <e p="QuackButton.cs" t="Include" />
+              <e p="StartMenu" t="Include">
+                <e p="LoadScene.cs" t="Include" />
+              </e>
             </e>
             <e p="Camera" t="Include">
               <e p="PlayerFollow.cs" t="Include" />
@@ -122,9 +135,9 @@
             <e p="OldStickCollecting.cs" t="Include" />
           </e>
           <e p="Props" t="Include">
-            <e p="BeaverCollide.cs" t="Include" />
             <e p="NestBuilding.cs" t="Include" />
             <e p="PeaCollecting.cs" t="Include" />
+            <e p="PeaDetection.cs" t="Include" />
             <e p="spawning" t="Include">
               <e p="OnSpawnableDelete.cs" t="Include" />
               <e p="PeaSpawner.cs" t="Include" />
@@ -133,13 +146,7 @@
               <e p="StickSpawner.cs" t="Include" />
             </e>
             <e p="StickCollecting.cs" t="Include" />
-          </e>
-        </e>
-        <e p="Textures and Shaders" t="Include">
-          <e p="Textures" t="Include">
-            <e p="Five Seamless Tileable Ground Textures" t="Include">
-              <e p="read me.txt" t="Include" />
-            </e>
+            <e p="StickDetection.cs" t="Include" />
           </e>
         </e>
         <e p="UI Elements" t="Include">
