@@ -87,6 +87,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4950081083784494031}
   - component: {fileID: 1029452869482211099}
+  - component: {fileID: 7032550159679433148}
   - component: {fileID: 8295035753630921834}
   - component: {fileID: 6122947537856168096}
   - component: {fileID: 4843764308862729042}
@@ -133,6 +134,19 @@ MonoBehaviour:
   heightForDynBuilding: 0.2
   finishedNest: {fileID: 5959379846114813634, guid: d612d710e605aac42993c2d10abe3119,
     type: 3}
+--- !u!114 &7032550159679433148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5762892458755793269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e45888073c74ade4293ee7f9f324f923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 0}
 --- !u!33 &8295035753630921834
 MeshFilter:
   m_ObjectHideFlags: 0

@@ -25,7 +25,6 @@
             </e>
           </e>
         </e>
-        <e p="BeaverCollide.cs" t="Include" />
         <e p="plugins" t="Include">
           <e p="LeoLuz" t="Include">
             <e p="Virtual Plug and Play Joystick" t="Include">
@@ -85,12 +84,19 @@
               <e p="AlligatorBehaviour.cs" t="Include" />
               <e p="AlligatorMouthTrigger.cs" t="Include" />
             </e>
-            <e p="BeaverAI.cs" t="Include" />
+            <e p="Beaver" t="Include">
+              <e p="BeaverAI.cs" t="Include" />
+              <e p="BeaverCollide.cs" t="Include" />
+            </e>
           </e>
           <e p="Controllers" t="Include">
             <e p="Buttons" t="Include">
               <e p="DashButton.cs" t="Include" />
-              <e p="NestButton.cs" t="Include" />
+              <e p="NestMenu" t="Include">
+                <e p="HatchingEggButton.cs" t="Include" />
+                <e p="NestButton.cs" t="Include" />
+                <e p="NestButtonTrigger.cs" t="Include" />
+              </e>
               <e p="PauseMenu.cs" t="Include" />
               <e p="QuackButton.cs" t="Include" />
             </e>
