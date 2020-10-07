@@ -875,6 +875,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5745544884615550971, guid: 6309e6e9d11f68a4083d047c2aba84a1,
+        type: 3}
+      propertyPath: Controls
+      value: 
+      objectReference: {fileID: 4966003077353729257}
+    - target: {fileID: 7027507373786263043, guid: 6309e6e9d11f68a4083d047c2aba84a1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6309e6e9d11f68a4083d047c2aba84a1, type: 3}
 --- !u!224 &415609529 stripped
@@ -3731,20 +3741,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c8622f0746c05a4ab983f7282ae5878, type: 3}
---- !u!114 &4966003076117959617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4966003076117959622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 795fe33c4e588204f8b25ae4e4603a98, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PauseMenuUi: {fileID: 0}
-  Controls: {fileID: 4966003077353729257}
 --- !u!224 &4966003076117959618
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3839,7 +3835,6 @@ GameObject:
   - component: {fileID: 4966003076117959619}
   - component: {fileID: 4966003076117959620}
   - component: {fileID: 4966003076117959621}
-  - component: {fileID: 4966003076117959617}
   m_Layer: 5
   m_Name: Interface Canvas
   m_TagString: Untagged
