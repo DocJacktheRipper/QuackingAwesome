@@ -957,12 +957,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca9b6c824a06f7a46af748db64d6caa5, type: 3}
---- !u!1 &413884869 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4966003077785722086, guid: 71009c3a85318c543ae7524648288408,
-    type: 3}
-  m_PrefabInstance: {fileID: 874244529}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &413888629 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8598992634336898019, guid: ca9b6c824a06f7a46af748db64d6caa5,
@@ -5255,6 +5249,12 @@ Transform:
   m_Father: {fileID: 2005143674}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1461832343 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4966003076931584796, guid: 71009c3a85318c543ae7524648288408,
+    type: 3}
+  m_PrefabInstance: {fileID: 874244529}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1463631408 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8598992634336898019, guid: ca9b6c824a06f7a46af748db64d6caa5,
@@ -7986,16 +7986,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e2359039fcca4541be2c721d01d3477, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  popUps: {fileID: 2032481968}
+  controls: {fileID: 1461832343}
   pop1: {fileID: 1152211648}
   pop2: {fileID: 987010575}
   pop3: {fileID: 1356003850}
-  duck: {fileID: 969745191}
-  pea: {fileID: 413884869}
-  sticks:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!4 &2037605253 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8843941601633688871, guid: 93e3512978bcf1743819154cc039e1a7,
