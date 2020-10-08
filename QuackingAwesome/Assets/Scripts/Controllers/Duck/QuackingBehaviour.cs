@@ -9,6 +9,7 @@ public class QuackingBehaviour : MonoBehaviour
     
     public void Quack()
     {
+        Debug.Log("quyakc");
         quack_placeholder.Play();
 
         if (transform.childCount > 0)
