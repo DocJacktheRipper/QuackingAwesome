@@ -49,13 +49,15 @@ namespace Props
                     BuildNestDynamically();
                     return;
                 }
-            
+                
+                /*
                 PrintText();
             
                 if (numberOfSticks >= neededSticks)
                 {
                     BuildNest();
                 }
+                */
             }
         }
 
@@ -63,23 +65,26 @@ namespace Props
         {
             // only use as much sticks as needed for the nest
             var diff = neededSticks - numberOfSticks;
+            var numOfTransferedStick = 0;
             if ((diff - player.GetNumberOfSticks()) < 0)
             {
                 Debug.Log("More sticks in inventory than needed");
                 numberOfSticks = neededSticks;
-                // so there are the same amount of sticks in the world
-                RespawnSticksInWorld(diff);    
-                // Adjust sticks in Duckbill
-                player.RemoveSticks(diff);
+                
+                numOfTransferedStick = diff;
             }
             else
             {
-                numberOfSticks += player.GetNumberOfSticks();
-                // so there are the same amount of sticks in the world
-                RespawnSticksInWorld(player.GetNumberOfSticks()); 
-                player.RemoveSticks(player.GetNumberOfSticks());
+                numOfTransferedStick = player.GetNumberOfSticks();
+                numberOfSticks += numOfTransferedStick;
+                
                 player.DeleteAllVisualSticks();
             }
+            
+            // so there are the same amount of sticks in the world
+            RespawnSticksInWorld(numOfTransferedStick);    
+            // Adjust sticks in Duckbill
+            player.RemoveSticks(numOfTransferedStick);
         }
 
         private static void RespawnSticksInWorld(int numberOfTransferedSticks)
@@ -94,10 +99,13 @@ namespace Props
 
         private void BuildNestDynamically()
         {
+            /*
             if (_nbContainer.childCount <= 0)
             {    
                 BuildNest();
             }
+            */
+            _nbContainer.GetChild(0).gameObject.SetActive(true);
         
             // set y pos based on heightForDynBuilding and number of sticks in nest
             var percentageOfBeingFinished = 1 - (neededSticks - numberOfSticks) * 1.0f / neededSticks;
@@ -106,6 +114,7 @@ namespace Props
                 = new Vector3(0f, percentageOfBeingFinished * heightForDynBuilding, 0f);
         }
 
+        /*
         private void BuildNest()
         {
             // is already built a nest on rock?
@@ -120,7 +129,8 @@ namespace Props
             // get "NestBuildingContainer" and set object as child of it
             nestOfSticks.transform.position = _nbContainer.position;
         }
-
+        */
+        
         private void PrintText()
         {
             var text = "Sticks in Nest: " + numberOfSticks + "/" + neededSticks;
