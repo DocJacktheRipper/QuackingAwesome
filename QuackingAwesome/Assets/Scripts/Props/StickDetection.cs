@@ -13,9 +13,8 @@ public class StickDetection : MonoBehaviour
     private bool stickTrigger(Collider other)
     {
         PopUps popups = GameObject.FindGameObjectWithTag("PopUpCanvas").GetComponent<PopUps>();
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && popups.p3 == true) 
         {
-            Debug.Log("ducc:D");
             popups.popUp3();
             return true;
         }

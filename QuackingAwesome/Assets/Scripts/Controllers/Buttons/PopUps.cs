@@ -12,8 +12,14 @@ public class PopUps : MonoBehaviour
     public GameObject pop2; //second
     public GameObject pop3; //third
 
+    //checking if popup is displayed more than once
+    public bool p2;
+    public bool p3;
+
     private void Awake()
     {
+        p2 = true;
+        p3 = true;
         popUp1();
     }
 
@@ -29,6 +35,7 @@ public class PopUps : MonoBehaviour
         pop2.SetActive(true);
         controls.SetActive(false);
         Time.timeScale = 0f;
+        p2 = false;
     }
 
     public void popUp3()
@@ -36,6 +43,7 @@ public class PopUps : MonoBehaviour
         pop3.SetActive(true);
         controls.SetActive(false);
         Time.timeScale = 0f;
+        p3 = false;
     }
 
     public void buttonClick()
