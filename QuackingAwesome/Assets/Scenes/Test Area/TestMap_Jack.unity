@@ -714,7 +714,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &164703721
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3374,6 +3374,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1024463211}
   m_CullTransparentMesh: 0
+--- !u!114 &1032571951 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6243043676791719530, guid: b51857b31ca727344804cebf0959d70e,
+    type: 3}
+  m_PrefabInstance: {fileID: 4808378788423664165}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3121c15f07a66774a87800e5417b129c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1049984398
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5376,6 +5388,11 @@ PrefabInstance:
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3957277266261469900, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4843764308327094800, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5399,7 +5416,7 @@ PrefabInstance:
     - target: {fileID: 4843764308327094803, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.028
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 4843764308862729006, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
         type: 3}
@@ -5507,6 +5524,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5121332394596715784, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5196616757830249763, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5516,6 +5538,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5501551570851141554, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5501551570851141554, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
+        type: 3}
+      propertyPath: m_Name
+      value: Nest
       objectReference: {fileID: 0}
     - target: {fileID: 5738738483995937969, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
         type: 3}
@@ -5535,6 +5567,21 @@ PrefabInstance:
     - target: {fileID: 5762892458755793269, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
         type: 3}
       propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6098278226380276977, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
+        type: 3}
+      propertyPath: neededEnergyForLayingEgg
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6098278226380276977, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
+        type: 3}
+      propertyPath: neededEnergyForHatchingEgg
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6098278226380276977, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
+        type: 3}
+      propertyPath: maxEggsInNest
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6615604204151910636, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
@@ -5581,7 +5628,7 @@ PrefabInstance:
         type: 3}
       propertyPath: button
       value: 
-      objectReference: {fileID: 8180408745641629684}
+      objectReference: {fileID: 1032571951}
     - target: {fileID: 8285060229820163589, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5680,6 +5727,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1621584523}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1621584525 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6098278226380276977, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
+    type: 3}
+  m_PrefabInstance: {fileID: 1621584523}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 230d8e572c8164a4bb3c9592992d9137, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1623323379
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8159,6 +8218,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4966003075768817030}
     m_Modifications:
+    - target: {fileID: 106393018329798284, guid: b51857b31ca727344804cebf0959d70e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1032571951}
+    - target: {fileID: 106393018329798284, guid: b51857b31ca727344804cebf0959d70e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExpandNestMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 2084873333586569914, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
       propertyPath: energy
@@ -8274,10 +8343,30 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7674414865084437066, guid: b51857b31ca727344804cebf0959d70e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7731950308038804197, guid: b51857b31ca727344804cebf0959d70e,
+        type: 3}
+      propertyPath: nest
+      value: 
+      objectReference: {fileID: 1621584525}
+    - target: {fileID: 8826835751316883244, guid: b51857b31ca727344804cebf0959d70e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8922169578126567246, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
       propertyPath: m_Name
       value: Nest Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8946986506195603168, guid: b51857b31ca727344804cebf0959d70e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b51857b31ca727344804cebf0959d70e, type: 3}
@@ -8583,7 +8672,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 79, y: 78.880005}
+  m_AnchoredPosition: {x: 79, y: 78.87988}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.607}
 --- !u!1 &4966003077240113335
@@ -8919,6 +9008,11 @@ PrefabInstance:
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6132121242691262493, guid: 75fe04d6e34f441428bc3b2e29f09019,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6474137864396962280, guid: 75fe04d6e34f441428bc3b2e29f09019,
         type: 3}
       propertyPath: moveSpots.Array.data[0]
@@ -9031,18 +9125,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75fe04d6e34f441428bc3b2e29f09019, type: 3}
---- !u!114 &8180408745641629684 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3691946060683662801, guid: b51857b31ca727344804cebf0959d70e,
-    type: 3}
-  m_PrefabInstance: {fileID: 4808378788423664165}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3121c15f07a66774a87800e5417b129c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &8548730545255092270
 PrefabInstance:
   m_ObjectHideFlags: 0
