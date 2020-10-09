@@ -32,10 +32,6 @@ namespace Props.spawning
                 SpawnAtOnce(minItemsInWorld);
             }
         }
-        public void Reset()
-        {
-            
-        }
 
         public void SpawnAtOnce(int numberOfObjects)
         {
@@ -43,6 +39,11 @@ namespace Props.spawning
             {
                 Spawn();
             }
+        }
+
+        public void SpawnWithDelay(float seconds)
+        {
+            Invoke(nameof(Spawn), seconds);
         }
         
         /*
