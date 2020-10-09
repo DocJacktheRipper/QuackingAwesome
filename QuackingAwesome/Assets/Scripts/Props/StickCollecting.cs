@@ -1,6 +1,7 @@
 ﻿//using Boo.Lang;
 using Inventory;
 using JetBrains.Annotations;
+using Props.spawning;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -70,6 +71,7 @@ namespace Props
             if (other.gameObject.tag == "BeaverTrigger")
             {
                 Destroy(gameObject);
+                GameObject.Find("SpawningBehaviour").GetComponent<StickSpawner>().SpawnWithDelay(3);
                 Debug.Log("Deleted a stick");
             }
             if (other.gameObject.tag == "Beaver")
