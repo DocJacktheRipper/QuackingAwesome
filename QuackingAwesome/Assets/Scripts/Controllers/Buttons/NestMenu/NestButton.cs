@@ -7,18 +7,19 @@ namespace Controllers.Buttons.NestMenu
     {
         public NestBuilding nest;
 
+        public GameObject nestButton;
         public GameObject nestMenuUI;
     
 
         public void ActivateNestButton()
         {
             if(nest.NestIsFinished)
-                gameObject.SetActive(true);
+                nestButton.SetActive(true);
         }
 
         public void DeactivateNestButton()
         {
-            gameObject.SetActive(false);
+            nestButton.SetActive(false);
         }
 
         public void ExpandNestMenu()
