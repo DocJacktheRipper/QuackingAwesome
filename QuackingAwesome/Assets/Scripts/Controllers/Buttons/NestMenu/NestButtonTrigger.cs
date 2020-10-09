@@ -4,11 +4,11 @@ namespace Controllers.Buttons.NestMenu
 {
     public class NestButtonTrigger : MonoBehaviour
     {
-        public NestButton button;
+        public NestButton nestMenu;
 
         private void Start()
         {
-            button.ActivateNestButton();
+            nestMenu.ActivateNestButton();
         }
 
         private void OnTriggerEnter(Collider other)
@@ -21,7 +21,7 @@ namespace Controllers.Buttons.NestMenu
         {
             if (other.CompareTag("Player"))
             {
-                button.ActivateNestButton();
+                nestMenu.ActivateNestButton();
             }
         }
     
@@ -35,7 +35,7 @@ namespace Controllers.Buttons.NestMenu
         {
             if (other.CompareTag("Player"))
             {
-                button.DeactivateNestButton();
+                nestMenu.DeactivateNestButton();
             }
         }
     }

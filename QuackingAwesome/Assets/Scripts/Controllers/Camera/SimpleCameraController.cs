@@ -127,13 +127,13 @@ namespace UnityTemplateProjects
 				EditorApplication.isPlaying = false; 
 				#endif
             }
-            // Hide and lock cursor when right mouse button pressed
+            // Hide and lock cursor when right mouse nestMenu pressed
             if (Input.GetMouseButtonDown(1))
             {
                 Cursor.lockState = CursorLockMode.Locked;
             }
 
-            // Unlock and show cursor when right mouse button released
+            // Unlock and show cursor when right mouse nestMenu released
             if (Input.GetMouseButtonUp(1))
             {
                 Cursor.visible = true;
