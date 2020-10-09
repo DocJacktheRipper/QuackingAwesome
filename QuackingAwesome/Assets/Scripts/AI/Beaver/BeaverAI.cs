@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
+using UnityEngine.SceneManagement;
 
 public class BeaverAI : MonoBehaviour
 {
@@ -39,7 +40,6 @@ public class BeaverAI : MonoBehaviour
         {
             return;
         }
-
         beaver.destination = points[destPoint].position;
         destPoint = (destPoint + Random.Range(0, 18)) % points.Length;
     }
@@ -54,9 +54,6 @@ public class BeaverAI : MonoBehaviour
     //Prevents collision with beaver and duck, making the outer and larger "CapsuleCollider" to an areatrigger
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
-        {
-            Physics.IgnoreCollision(beaverCollider, duckCollider, true);
-        }
+        Physics.IgnoreCollision(beaverCollider, duckCollider, true);
     }
 }
