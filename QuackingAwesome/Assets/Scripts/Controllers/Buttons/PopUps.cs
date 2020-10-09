@@ -32,18 +32,18 @@ public class PopUps : MonoBehaviour
 
     public void popUp2()
     {
+        p2 = false;
         pop2.SetActive(true);
         controls.SetActive(false);
         Time.timeScale = 0f;
-        p2 = false;
     }
 
     public void popUp3()
     {
+        p3 = false;
         pop3.SetActive(true);
         controls.SetActive(false);
         Time.timeScale = 0f;
-        p3 = false;
     }
 
     public void buttonClick()
