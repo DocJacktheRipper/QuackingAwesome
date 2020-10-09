@@ -5,19 +5,15 @@ namespace Controllers.Buttons.NestMenu
 {
     public class NestButton : MonoBehaviour
     {
-        public GameObject nest;
-        private NestBuilding _nestInventory;
+        public NestBuilding nest;
 
         public GameObject nestMenuUI;
     
-        void Start()
-        {
-            _nestInventory = nest.GetComponent<NestBuilding>();
-        }
 
         public void ActivateNestButton()
         {
-            gameObject.SetActive(true);
+            if(nest.NestIsFinished)
+                gameObject.SetActive(true);
         }
 
         public void DeactivateNestButton()

@@ -11,8 +11,9 @@ namespace Props
 
         public bool enableDynamicBuilding;
         public float heightForDynBuilding;
-    
-        public GameObject finishedNest;
+
+        // true, when nest is built
+        public bool NestIsFinished { get; private set; }
 
         private Transform _nbContainer;
 
@@ -42,6 +43,11 @@ namespace Props
             {
                 //Debug.Log("Transfering sticks now");
                 TransferSticks(player);
+                
+                if (numberOfSticks >= neededSticks)
+                {
+                    SetNestFinished();
+                }
             
                 // visually showing progress (?)
                 if (enableDynamicBuilding)
@@ -49,7 +55,7 @@ namespace Props
                     BuildNestDynamically();
                     return;
                 }
-                
+
                 /*
                 PrintText();
             
@@ -59,6 +65,14 @@ namespace Props
                 }
                 */
             }
+        }
+
+        private void SetNestFinished()
+        {
+            NestIsFinished = true;
+            Debug.Log("nest is finished!");
+            
+            // Todo: make audio sound
         }
 
         private void TransferSticks(StickInventory player)
@@ -80,7 +94,7 @@ namespace Props
                 
                 player.DeleteAllVisualSticks();
             }
-            
+
             // so there are the same amount of sticks in the world
             RespawnSticksInWorld(numOfTransferedStick);    
             // Adjust sticks in Duckbill
@@ -130,7 +144,8 @@ namespace Props
             nestOfSticks.transform.position = _nbContainer.position;
         }
         */
-        
+
+
         private void PrintText()
         {
             var text = "Sticks in Nest: " + numberOfSticks + "/" + neededSticks;

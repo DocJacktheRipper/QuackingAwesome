@@ -32,7 +32,7 @@ namespace Props
 
             if (inventory == null)
             {
-                Debug.Log("It wasn't the Duck! (stick)");
+                //Debug.Log("It wasn't the Duck! (stick)");
                 return false;
             }
 

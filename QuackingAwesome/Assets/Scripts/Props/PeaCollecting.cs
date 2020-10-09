@@ -24,7 +24,7 @@ namespace Props
 
             if (inventory == null)
             {
-                Debug.Log("It wasn't the Duck! (pea)");
+                //Debug.Log("It wasn't the Duck! (pea)");
                 return false;
             }
 

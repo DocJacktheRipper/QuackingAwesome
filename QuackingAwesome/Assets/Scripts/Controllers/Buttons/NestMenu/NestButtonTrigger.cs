@@ -5,7 +5,12 @@ namespace Controllers.Buttons.NestMenu
     public class NestButtonTrigger : MonoBehaviour
     {
         public NestButton button;
-    
+
+        private void Start()
+        {
+            button.ActivateNestButton();
+        }
+
         private void OnTriggerEnter(Collider other)
         {
             PlayerIsTriggerEnter(other);
