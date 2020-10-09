@@ -1685,6 +1685,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca9b6c824a06f7a46af748db64d6caa5, type: 3}
+--- !u!1 &93221157 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8946986506195603168, guid: b51857b31ca727344804cebf0959d70e,
+    type: 3}
+  m_PrefabInstance: {fileID: 4808378788423664165}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &104032970 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8598992634336898019, guid: ca9b6c824a06f7a46af748db64d6caa5,
@@ -23436,7 +23442,7 @@ PrefabInstance:
     - target: {fileID: 1029452869482211099, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
         type: 3}
       propertyPath: neededSticks
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2312920174255135967, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
         type: 3}
@@ -23623,6 +23629,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6098278226380276977, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
+        type: 3}
+      propertyPath: neededEnergyForLayingEgg
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6098278226380276977, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
+        type: 3}
+      propertyPath: neededEnergyForHatchingEgg
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6615604204151910636, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
         type: 3}
@@ -32033,6 +32049,11 @@ PrefabInstance:
       propertyPath: nest
       value: 
       objectReference: {fileID: 1369831723}
+    - target: {fileID: 6243043676791719530, guid: b51857b31ca727344804cebf0959d70e,
+        type: 3}
+      propertyPath: nestButton
+      value: 
+      objectReference: {fileID: 93221157}
     - target: {fileID: 8826835751316883244, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
       propertyPath: m_IsActive
