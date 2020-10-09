@@ -5160,6 +5160,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1621584523}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1369831723 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1029452869482211099, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
+    type: 3}
+  m_PrefabInstance: {fileID: 1621584523}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369831717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5082b069d2308d4490897bee0a294fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1416651148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5949,6 +5961,11 @@ PrefabInstance:
       propertyPath: heightForDynBuilding
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 1029452869482211099, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
+        type: 3}
+      propertyPath: neededSticks
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2312920174255135967, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
         type: 3}
       propertyPath: m_NavMeshLayer
@@ -6138,12 +6155,12 @@ PrefabInstance:
     - target: {fileID: 6098278226380276977, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
         type: 3}
       propertyPath: neededEnergyForLayingEgg
-      value: 10
+      value: 1.67
       objectReference: {fileID: 0}
     - target: {fileID: 6098278226380276977, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
         type: 3}
       propertyPath: neededEnergyForHatchingEgg
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6098278226380276977, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
         type: 3}
@@ -9150,6 +9167,11 @@ PrefabInstance:
       propertyPath: nest
       value: 
       objectReference: {fileID: 1621584525}
+    - target: {fileID: 6243043676791719530, guid: b51857b31ca727344804cebf0959d70e,
+        type: 3}
+      propertyPath: nest
+      value: 
+      objectReference: {fileID: 1369831723}
     - target: {fileID: 7674414865084437066, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
       propertyPath: m_IsActive
@@ -9784,6 +9806,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 44831438b30563a44b91c55ae28b9672, type: 2}
+    - target: {fileID: 5791756305796792241, guid: fcb40f7152cb34640aabb80e2fcd6053,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8612154508580326267, guid: fcb40f7152cb34640aabb80e2fcd6053,
         type: 3}
       propertyPath: m_Mesh
