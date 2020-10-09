@@ -1,5 +1,17 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4500446938422653105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5486445242338815969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e80bd8dd042b0c4da1a3b4eb5a3f34a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &3350140295777604629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,18 +27,6 @@ MonoBehaviour:
   positionPool: {fileID: 0}
   spawnPositionPrefab: {fileID: 8598992634336898018, guid: ca9b6c824a06f7a46af748db64d6caa5,
     type: 3}
---- !u!114 &-4500446938422653105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5486445242338815969}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e80bd8dd042b0c4da1a3b4eb5a3f34a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &7327544112260372058
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48,7 +48,7 @@ PrefabInstance:
     - target: {fileID: 2995859592274278843, guid: a09ef9c25688915468caaf4acfc6866d,
         type: 3}
       propertyPath: m_Name
-      value: SpawnBranch 2 Variant
+      value: SpawnBranchTut 2 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2995859592274278843, guid: a09ef9c25688915468caaf4acfc6866d,
         type: 3}

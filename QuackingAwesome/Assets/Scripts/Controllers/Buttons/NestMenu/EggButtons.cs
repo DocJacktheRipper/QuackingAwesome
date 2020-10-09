@@ -16,7 +16,7 @@ namespace Controllers.Buttons.NestMenu
         private void Update()
         {
             // enable button for laying egg
-            if (nest.HasEnoughEnergyForLaying())
+            if (nest.CanLayEgg())
             {
                 layButton.interactable = true;
             }
@@ -26,7 +26,7 @@ namespace Controllers.Buttons.NestMenu
             }
             
             // disable button for hatching egg
-            if (nest.HasEnoughEnergyForHatching())
+            if (nest.CanHatchEgg())
             {
                 hatchButton.interactable = true;
             }

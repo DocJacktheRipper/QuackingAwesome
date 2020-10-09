@@ -27,7 +27,7 @@ namespace Controllers.Buttons
 
             if (wasInteractable != _interactable)
             {
-                Debug.Log("Enabled changed (dash button");
+                //Debug.Log("Enabled changed (dash button");
                 if(_interactable)
                     GetComponent<Image>().color = Color.white;
                 else
