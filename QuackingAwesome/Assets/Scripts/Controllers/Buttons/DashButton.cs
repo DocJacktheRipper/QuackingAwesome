@@ -21,13 +21,13 @@ namespace Controllers.Buttons
             // to avoid overriding too much
             var wasInteractable = _interactable;
             
-            // enable button, when cooldown is over;
+            // enable nestMenu, when cooldown is over;
             // disable when still on cooldown
             _interactable = (_control.NextDash < Time.time);
 
             if (wasInteractable != _interactable)
             {
-                Debug.Log("Enabled changed (dash button");
+                //Debug.Log("Enabled changed (dash nestMenu");
                 if(_interactable)
                     GetComponent<Image>().color = Color.white;
                 else
