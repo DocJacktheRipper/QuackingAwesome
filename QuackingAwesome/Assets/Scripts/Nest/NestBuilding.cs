@@ -1,4 +1,5 @@
 ﻿using Inventory;
+using Nest;
 using Props.spawning;
 using UnityEngine;
 
@@ -16,10 +17,12 @@ namespace Props
         public bool NestIsFinished { get; private set; }
 
         private Transform _nbContainer;
+        private NestEffectTrigger _effectTrigger;
 
         private void Start()
         {
             _nbContainer = transform.Find("NestBuildingContainer");
+            _effectTrigger = GetComponent<NestEffectTrigger>();
         }
 
         private void OnTriggerEnter(Collider other)
@@ -73,6 +76,9 @@ namespace Props
             Debug.Log("nest is finished!");
             
             // Todo: make audio sound
+            
+            // make particle effect
+            _effectTrigger.NestFinishedEffect();
         }
 
         private void TransferSticks(StickInventory player)
