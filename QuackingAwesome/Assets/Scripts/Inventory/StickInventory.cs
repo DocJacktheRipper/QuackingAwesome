@@ -10,8 +10,11 @@ namespace Inventory
         public bool enableDuckbillVisual;
         public GameObject branchVisual;
 
+        private Transform _carriedSticks;
+
         private void Start()
         {
+            _carriedSticks = transform.Find("CarriedSticks");
         }
 
         public bool AddStick()
@@ -58,13 +61,13 @@ namespace Inventory
         {
             for (var i = 0; i < number; i++)
             {
-                if (transform.childCount <= 0)
+                if (_carriedSticks.childCount <= 0)
                 {
                     Debug.Log("No more children in duck");
                     return;
                 }
                 
-                var child = transform.GetChild(i).gameObject;
+                var child = _carriedSticks.GetChild(i).gameObject;
                 Destroy(child);
             }
         }
@@ -72,7 +75,7 @@ namespace Inventory
     
         public void DeleteAllVisualSticks()
         {
-            DeleteVisualSticks(transform.childCount);
+            DeleteVisualSticks(_carriedSticks.childCount);
         }
 
         private void ShowStickInDuckbill()
@@ -82,7 +85,7 @@ namespace Inventory
                 return;
             }
         
-            var stick = Instantiate(branchVisual, transform, true);
+            var stick = Instantiate(branchVisual, _carriedSticks, true);
             stick.transform.localPosition = new Vector3(0.01237f, 0.07559f, 0.04857f);
             stick.transform.eulerAngles = new Vector3(0f, -90f, 0f);
         }
