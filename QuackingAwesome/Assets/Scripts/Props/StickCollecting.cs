@@ -1,9 +1,6 @@
-﻿//using Boo.Lang;
-using Inventory;
-using JetBrains.Annotations;
+﻿using Inventory;
 using Props.spawning;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Props
 {
@@ -23,6 +20,23 @@ namespace Props
             {
                 return;
             }
+        }
+        
+        private void OnCollisionEnter(Collision other)
+        {
+            Debug.Log("Collider activated - stick");
+            if (PlayerIsTrigger(other.collider))
+            {
+                return;
+            }
+            if (BeaverDelete(other.collider))
+            {
+                return;
+            }
+            /*if (BeaverIsTrigger(other))
+            {
+                return;
+            }*/    
         }
 
         // Checks if player was trigger. If so, checks if the duck can carry more sticks.
@@ -56,7 +70,7 @@ namespace Props
         {
             BeaverAI beaverAI = GameObject.FindGameObjectWithTag("Beaver").GetComponent<BeaverAI>();
 
-            if (other.gameObject.tag == "Beaver")
+            if (other.gameObject.CompareTag("Beaver"))
             {
                 Vector3 stickPosition = this.transform.position;
                 beaverAI.FetchStick(stickPosition);
@@ -68,13 +82,13 @@ namespace Props
         //If false, redirects to the "BeaverIsTrigger" function that searches for nearby sticks
         private bool BeaverDelete(Collider other)
         {
-            if (other.gameObject.tag == "BeaverTrigger")
+            if (other.gameObject.CompareTag("BeaverTrigger"))
             {
                 Destroy(gameObject);
                 GameObject.Find("SpawningBehaviour").GetComponent<StickSpawner>().SpawnWithDelay(3);
                 Debug.Log("Deleted a stick");
             }
-            if (other.gameObject.tag == "Beaver")
+            if (other.gameObject.CompareTag("Beaver"))
             {
                 BeaverIsTrigger(other);
             }

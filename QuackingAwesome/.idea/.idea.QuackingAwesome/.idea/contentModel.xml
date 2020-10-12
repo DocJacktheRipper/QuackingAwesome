@@ -34,6 +34,12 @@
             <e p="scriptTexttest.cs" t="Include" />
           </e>
         </e>
+        <e p="Materials" t="Include">
+          <e p="ConeCollider" t="Include">
+            <e p="readme_en.txt" t="Include" />
+            <e p="readme_jp.txt" t="Include" />
+          </e>
+        </e>
         <e p="plugins" t="Include">
           <e p="LeoLuz" t="Include">
             <e p="Virtual Plug and Play Joystick" t="Include">
@@ -120,7 +126,10 @@
             <e p="Duck" t="Include">
               <e p="CharacterControl.cs" t="Include" />
               <e p="DashingBehaviour.cs" t="Include" />
-              <e p="QuackingBehaviour.cs" t="Include" />
+              <e p="Quack" t="Include">
+                <e p="QuackingArea.cs" t="Include" />
+                <e p="QuackingBehaviour.cs" t="Include" />
+              </e>
             </e>
           </e>
           <e p="Inventory" t="Include">
@@ -132,12 +141,6 @@
             <e p="LayAndHatchEgg.cs" t="Include" />
             <e p="NestBuilding.cs" t="Include" />
             <e p="NestEffectTrigger.cs" t="Include" />
-          </e>
-          <e p="OldStuffNeedsToBeDeleted" t="Include">
-            <e p="OldInventory.cs" t="Include" />
-            <e p="OldNestBuilding.cs" t="Include" />
-            <e p="OldPeaCollecting.cs" t="Include" />
-            <e p="OldStickCollecting.cs" t="Include" />
           </e>
           <e p="Props" t="Include">
             <e p="PeaCollecting.cs" t="Include" />

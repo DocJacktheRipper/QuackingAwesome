@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5024038120035273130}
   - component: {fileID: 2444820691101890417}
   - component: {fileID: -59016132237272861}
+  - component: {fileID: -3620875529888260500}
   m_Layer: 0
   m_Name: Branch 1
   m_TagString: Untagged
@@ -90,10 +91,10 @@ MeshCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4624714640261913744}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
+  m_IsTrigger: 0
+  m_Enabled: 0
   serializedVersion: 4
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2257621098689611155, guid: 95cc45b7a6c86ed4daa4a2e32f6a0e5e, type: 3}
 --- !u!114 &2444820691101890417
@@ -123,3 +124,16 @@ MonoBehaviour:
   positionPool: {fileID: 0}
   spawnPositionPrefab: {fileID: 8598992634336898018, guid: ca9b6c824a06f7a46af748db64d6caa5,
     type: 3}
+--- !u!65 &-3620875529888260500
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4624714640261913744}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.47797537, y: 0.06675822, z: 1.0166636}
+  m_Center: {x: -0.00263533, y: -0.000000029802322, z: -0.14116666}

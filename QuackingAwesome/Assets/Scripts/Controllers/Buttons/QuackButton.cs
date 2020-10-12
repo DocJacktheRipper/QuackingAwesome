@@ -1,4 +1,5 @@
 ﻿using Controllers.Duck;
+using Controllers.Duck.Quack;
 using UnityEngine;
 
 namespace Controllers.Buttons

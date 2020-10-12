@@ -15,6 +15,14 @@ namespace Props
                 return;
             }
         }
+        
+        private void OnCollisionEnter(Collision other)
+        {
+            if (PlayerIsTrigger(other.collider))
+            {
+                return;
+            }
+        }
 
         // Checks if player was trigger. If so, checks if the duck can carry more sticks.
         // If so, collect it. Otherwise, leave it.
