@@ -1,4 +1,5 @@
-﻿using Inventory;
+﻿using AI.Beaver;
+using Inventory;
 using Props.spawning;
 using UnityEngine;
 
@@ -63,7 +64,7 @@ namespace Props
             return true;
         }
 
-        //Checks if the beaver was a trigger and sends the position of focused stick to BeaverAI.cs
+        //Checks if the beaverNavigation was a trigger and sends the position of focused stick to BeaverAI.cs
         //Automatically searches for a new target if a stick has been taken by the duck before reaching it
         //Larger "CapsuleCollider" on "Beaver" is used only as a trigger of an area and it has no collision with the playable duck
         private bool BeaverIsTrigger(Collider other)

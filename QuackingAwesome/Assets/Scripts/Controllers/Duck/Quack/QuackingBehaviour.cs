@@ -17,7 +17,7 @@ namespace Controllers.Duck.Quack
             _quackingCone = GameObject.Find("QuackingCone");
             _coneCollider = _quackingCone.GetComponent<Collider>();
 
-            _animator = GetComponent<Animator>();
+            //_animator = GetComponent<Animator>();
         }
 
         public void Quack()
@@ -25,7 +25,7 @@ namespace Controllers.Duck.Quack
             // sound
             quackPlaceholder.Play();
             // animation
-            _animator.Play("Base Layer.Quack");
+            //_animator.Play("Base Layer.Quack");
 
             if (transform.childCount > 0)
             {

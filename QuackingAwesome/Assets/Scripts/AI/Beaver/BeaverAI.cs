@@ -1,59 +1,66 @@
 ﻿//using Boo.Lang;
-using System;
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.UI;
 using Random = UnityEngine.Random;
-using UnityEngine.SceneManagement;
 
-public class BeaverAI : MonoBehaviour
+namespace AI.Beaver
 {
-    public Transform[] points;
-    private int destPoint = 0;
-    public NavMeshAgent beaver;
-    public GameObject duck;
-    Collider duckCollider, beaverCollider;
-
-    // Start is called before the first frame update
-    void Start()
+    public class BeaverAI : MonoBehaviour
     {
-        duckCollider = duck.GetComponent<Collider>();
-        beaverCollider = beaver.GetComponent<Collider>();
-        beaver = GetComponent<NavMeshAgent>();
-        GotoNextPoint();
-    }
+        public Transform[] points;
+        private int destPoint = 0;
+        public NavMeshAgent beaverNavigation;
+        public GameObject duck;
+        Collider duckCollider, beaverCollider;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (!beaver.pathPending && beaver.remainingDistance < 0.5f)
+        // Start is called before the first frame update
+        void Start()
         {
+            duckCollider = duck.GetComponent<Collider>();
+            beaverCollider = beaverNavigation.GetComponent<Collider>();
+            beaverNavigation = GetComponent<NavMeshAgent>();
             GotoNextPoint();
         }
-    }
 
-    private void GotoNextPoint()
-    {
-        if (points.Length == 0)
+        // Update is called once per frame
+        void Update()
         {
-            return;
+            if (!beaverNavigation.pathPending && beaverNavigation.remainingDistance < 0.5f)
+            {
+                GotoNextPoint();
+            }
         }
-        beaver.destination = points[destPoint].position;
-        destPoint = (destPoint + Random.Range(0, 18)) % points.Length;
-    }
 
-    //Sets direction of the beaver to nearest stick
-    public void FetchStick(Vector3 stickPosition)
-    {
-        beaver.destination = stickPosition;
-        Debug.Log("Fetching a stick");
-    }
+        private void GotoNextPoint()
+        {
+            if (points.Length == 0)
+            {
+                return;
+            }
+            beaverNavigation.destination = points[destPoint].position;
+            destPoint = (destPoint + Random.Range(0, 18)) % points.Length;
+        }
 
-    //Prevents collision with beaver and duck, making the outer and larger "CapsuleCollider" to an areatrigger
-    private void OnCollisionEnter(Collision collision)
-    {
-        Physics.IgnoreCollision(beaverCollider, duckCollider, true);
+        public void InvokeScared(Transform source)
+        {
+            Vector3 dir = (transform.position - source.position);
+            Vector3 point = transform.position + dir;
+
+            beaverNavigation.destination = point;
+        }
+
+        //Sets direction of the beaverNavigation to nearest stick
+        public void FetchStick(Vector3 stickPosition)
+        {
+            beaverNavigation.destination = stickPosition;
+            Debug.Log("Fetching a stick");
+        }
+
+        //Prevents collision with beaverNavigation and duck, making the outer and larger "CapsuleCollider" to an areatrigger
+        private void OnCollisionEnter(Collision collision)
+        {
+            Physics.IgnoreCollision(beaverCollider, duckCollider, true);
+        }
     }
 }
