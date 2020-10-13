@@ -42,10 +42,17 @@ namespace AI.Beaver
             destPoint = (destPoint + Random.Range(0, 18)) % points.Length;
         }
 
-        public void InvokeScared(Transform source)
+        /// <summary>
+        /// Change target to position opposite of given source with fixed distance to that.
+        /// </summary>
+        /// <param name="source">from where to go away</param>
+        /// <param name="distance">how far away is the new target point</param>
+        public void InvokeScared(Transform source, float distance)
         {
-            Vector3 dir = (transform.position - source.position);
-            Vector3 point = transform.position + dir;
+            var position = transform.position;
+            var dir = (position - source.position);
+            var relPoint = Vector3.Normalize(dir) * distance;
+            var point = position + relPoint;
 
             beaverNavigation.destination = point;
         }

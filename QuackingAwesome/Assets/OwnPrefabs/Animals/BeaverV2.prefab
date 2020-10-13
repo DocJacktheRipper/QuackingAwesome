@@ -227,8 +227,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isScared: 0
   currentChance: 30
-  minChance: 20
-  chanceDropRate: 0
+  minChance: 10
+  chanceDropRate: 0.1
+  howFarAway: 4
 --- !u!114 &7009594877555079387
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,5 +251,5 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  beaverNavigation: {fileID: 0}
+  beaverNavigation: {fileID: 7009594877555079385}
   duck: {fileID: 0}

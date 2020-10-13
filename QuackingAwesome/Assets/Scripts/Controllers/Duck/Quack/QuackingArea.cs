@@ -22,6 +22,7 @@ namespace Controllers.Duck.Quack
         {
             if (other.gameObject.CompareTag("Beaver"))
             {
+                Debug.Log("Beaver trigger");
                 QuackToBeaver();
             }
         }
@@ -31,7 +32,8 @@ namespace Controllers.Duck.Quack
             if (_beaver.GetComponent<ScaredAway>().AttemptScare(volume))
             {
                 Debug.Log("is scared away");
-                _beaver.GetComponent<BeaverAI>().InvokeScared(transform.parent);
+                float dist = _beaver.GetComponent<ScaredAway>().howFarAway;
+                _beaver.GetComponent<BeaverAI>().InvokeScared(transform.parent, dist);
             }
 
             GetComponent<Collider>().enabled = false;

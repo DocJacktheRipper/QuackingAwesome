@@ -9,6 +9,7 @@ namespace AI.Beaver
         public float currentChance;
         public float minChance;
         public float chanceDropRate;
+        public float howFarAway;
 
         private BeaverAI _movingBeaver;
         void Start()
@@ -40,7 +41,7 @@ namespace AI.Beaver
         {
             float range = Random.Range(0, 100);
 
-            Debug.Log(range+"/"+currentChance);
+            Debug.Log(range+"/"+(currentChance+heaviness));
             
             if (range < IncreaseChance(heaviness))
             {
