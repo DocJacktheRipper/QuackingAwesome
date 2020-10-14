@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PeaDetection : MonoBehaviour
 {
@@ -12,15 +13,15 @@ public class PeaDetection : MonoBehaviour
 
     private bool peaTrigger(Collider other)
     {
-        PopUps popups = GameObject.FindGameObjectWithTag("PopUpCanvas").GetComponent<PopUps>();
-        if (other.gameObject.tag == "Player" && popups.p2 == true)
+        if (SceneManager.GetActiveScene().name == "Starting")
         {
-            popups.popUp2();
-            return true;
-        } 
-        else
-        {
-            return false;
+            PopUps popups = GameObject.FindGameObjectWithTag("PopUpCanvas").GetComponent<PopUps>();
+            if (other.gameObject.tag == "Player" && popups.p2 == true)
+            {
+                popups.popUp2();
+                return true;
+            }
         }
+        return false;
     }
 }
