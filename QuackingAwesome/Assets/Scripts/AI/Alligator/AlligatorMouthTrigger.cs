@@ -30,7 +30,16 @@ namespace AI.Alligator
         {
             // load current scene
             var scene = SceneManager.GetActiveScene(); 
-            SceneManager.LoadScene(scene.name);
+            // load a scene without tutorial popups
+            if(scene.name == "Starting")
+            {
+                SceneManager.LoadScene("StartingNoPopUps");
+            } 
+            else
+            {
+                SceneManager.LoadScene(scene.name);
+            }
+            
         }
     }
 }

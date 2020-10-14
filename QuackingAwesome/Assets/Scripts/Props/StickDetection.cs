@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StickDetection : MonoBehaviour
 {   
@@ -12,15 +13,15 @@ public class StickDetection : MonoBehaviour
 
     private bool stickTrigger(Collider other)
     {
-        PopUps popups = GameObject.FindGameObjectWithTag("PopUpCanvas").GetComponent<PopUps>();
-        if (other.gameObject.tag == "Player" && popups.p3 == true && popups.p2 == false) 
+        if (SceneManager.GetActiveScene().name == "Starting")
         {
-            popups.popUp3();
-            return true;
+            PopUps popups = GameObject.FindGameObjectWithTag("PopUpCanvas").GetComponent<PopUps>();
+            if (other.gameObject.tag == "Player" && popups.p3 == true && popups.p2 == false)
+            {
+                popups.popUp3();
+                return true;
+            }
         }
-        else
-        {
-            return false;
-        }
+        return false;
     }
 }
