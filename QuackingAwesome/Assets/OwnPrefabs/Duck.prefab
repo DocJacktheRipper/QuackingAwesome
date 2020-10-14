@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 5161659593025514279}
   - component: {fileID: 5161659593025514276}
   - component: {fileID: 5161659593025514274}
+  - component: {fileID: 4772274028142190718}
   m_Layer: 0
   m_Name: Duck
   m_TagString: Player
@@ -155,6 +156,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   quackPlaceholder: {fileID: 5161659593025514276}
+  overHeat: 0
+  maxOverHeat: 70
+  amountOfHeatPerQuack: 10
+  recoverySpeed: 0.2
 --- !u!33 &8612154508580326267
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -327,6 +332,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duckSpeed: 0
+--- !u!95 &4772274028142190718
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5431499328450125412}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: aeb0a106720373c48b09b37bc54b3055, type: 3}
+  m_Controller: {fileID: 9100000, guid: 4d23666b90952774c9ef31da25172e8f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &3653095972764585120
 PrefabInstance:
   m_ObjectHideFlags: 0
