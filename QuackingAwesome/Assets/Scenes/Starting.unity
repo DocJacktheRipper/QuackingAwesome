@@ -17751,6 +17751,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1015053279}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1248403729 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6098278226380276977, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
+    type: 3}
+  m_PrefabInstance: {fileID: 1621584523}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 230d8e572c8164a4bb3c9592992d9137, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1249974072
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24660,6 +24672,11 @@ PrefabInstance:
       propertyPath: neededEnergyForHatchingEgg
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 6098278226380276977, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
+        type: 3}
+      propertyPath: duck
+      value: 
+      objectReference: {fileID: 969745190}
     - target: {fileID: 6615604204151910636, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -33248,6 +33265,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6143372374340547582, guid: b51857b31ca727344804cebf0959d70e,
+        type: 3}
+      propertyPath: nest
+      value: 
+      objectReference: {fileID: 1248403729}
     - target: {fileID: 6243043676791719530, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
       propertyPath: nest
@@ -33740,6 +33762,16 @@ PrefabInstance:
         type: 3}
       propertyPath: progressBar
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888710541441914567, guid: fcb40f7152cb34640aabb80e2fcd6053,
+        type: 3}
+      propertyPath: recoverySpeed
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1888710541441914567, guid: fcb40f7152cb34640aabb80e2fcd6053,
+        type: 3}
+      propertyPath: amountOfHeatPerQuack
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3667004376736167036, guid: fcb40f7152cb34640aabb80e2fcd6053,
         type: 3}
