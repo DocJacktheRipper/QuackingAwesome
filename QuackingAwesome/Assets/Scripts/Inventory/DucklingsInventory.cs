@@ -14,4 +14,9 @@ public class DucklingsInventory : MonoBehaviour
             DucklingCount = 0;
         }
     }
+
+    public void AddDucklings(int number)
+    {
+        DucklingCount += number;
+    }
 }

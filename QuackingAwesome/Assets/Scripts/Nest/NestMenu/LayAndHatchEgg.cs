@@ -12,7 +12,7 @@ namespace Nest
         public float neededEnergyForLayingEgg;
         public float neededEnergyForHatchingEgg;
 
-        // private DucklingsInventory _ducklings;
+        private DucklingsInventory _ducklings;
 
         private int _currentEggs = 0;
         public int maxEggsInNest = 3;
@@ -20,6 +20,7 @@ namespace Nest
         public void Start()
         {
             _energyInventory = duck.GetComponent<EnergyInventory>();
+            _ducklings = duck.GetComponent<DucklingsInventory>();
         }
 
         public void LayEgg()
@@ -43,8 +44,9 @@ namespace Nest
         {
             transform.GetChild(--_currentEggs).gameObject.SetActive(true);
             _energyInventory.energy -= neededEnergyForHatchingEgg;
-            
+
             // todo: egg inventory update
+            _ducklings.AddDucklings(1);
         }
         
         public bool HasEnoughEnergyForHatching()

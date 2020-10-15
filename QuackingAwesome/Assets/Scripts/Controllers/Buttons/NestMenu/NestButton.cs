@@ -9,7 +9,9 @@ namespace Controllers.Buttons.NestMenu
 
         public GameObject nestButton;
         public GameObject nestMenuUI;
-    
+
+        public GameObject Controls;
+
 
         public void ActivateNestButton()
         {
@@ -24,12 +26,16 @@ namespace Controllers.Buttons.NestMenu
 
         public void ExpandNestMenu()
         {
+            // enable menu [nest]
             nestMenuUI.SetActive(true);
+            // disable joystick
+            Controls.SetActive(false);
         }
 
         public void CloseNestMenu()
         {
             nestMenuUI.SetActive(false);
+            Controls.SetActive(true);
         }
     }
 }

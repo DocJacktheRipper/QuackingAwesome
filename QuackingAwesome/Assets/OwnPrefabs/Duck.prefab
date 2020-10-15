@@ -68,6 +68,7 @@ GameObject:
   - component: {fileID: 4623894378085778654}
   - component: {fileID: 72313733389020845}
   - component: {fileID: 6032344169458206697}
+  - component: {fileID: 433741082582950495}
   - component: {fileID: 1409627447054719117}
   - component: {fileID: 1888710541441914567}
   - component: {fileID: 8612154508580326267}
@@ -129,6 +130,18 @@ MonoBehaviour:
   enableDuckbillVisual: 1
   branchVisual: {fileID: 6976615927814636928, guid: 37f9aeb2fdaf19f4a8efd7ce8a593dcd,
     type: 3}
+--- !u!114 &433741082582950495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5431499328450125412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50f336206ac671842a9497db3246fe15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1409627447054719117
 MonoBehaviour:
   m_ObjectHideFlags: 0
