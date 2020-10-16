@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class DucklingShow : MonoBehaviour
 {
-    public GameObject duck;
+    private GameObject duck;
 
     private Text _text;
     private DucklingsInventory _ducklingsInventory;
@@ -12,6 +12,7 @@ public class DucklingShow : MonoBehaviour
 
     void Start()
     {
+        duck = GameObject.Find("Duck");
         _text = GetComponent<Text>();
         _ducklingsInventory = duck.GetComponent<DucklingsInventory>();
     }

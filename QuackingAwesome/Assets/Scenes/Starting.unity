@@ -24665,18 +24665,23 @@ PrefabInstance:
     - target: {fileID: 6098278226380276977, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
         type: 3}
       propertyPath: neededEnergyForLayingEgg
-      value: 50
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6098278226380276977, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
         type: 3}
       propertyPath: neededEnergyForHatchingEgg
-      value: 50
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 6098278226380276977, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
         type: 3}
       propertyPath: duck
       value: 
       objectReference: {fileID: 969745190}
+    - target: {fileID: 6098278226380276977, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
+        type: 3}
+      propertyPath: maxEggsInNest
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6615604204151910636, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -33290,6 +33295,11 @@ PrefabInstance:
       propertyPath: nestButton
       value: 
       objectReference: {fileID: 93221157}
+    - target: {fileID: 6243043676791719530, guid: b51857b31ca727344804cebf0959d70e,
+        type: 3}
+      propertyPath: Controls
+      value: 
+      objectReference: {fileID: 4966003077805697709}
     - target: {fileID: 8826835751316883244, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
       propertyPath: m_IsActive
