@@ -42,11 +42,12 @@ namespace Nest
             
         public void HatchEgg()
         {
-            transform.GetChild(--_currentEggs).gameObject.SetActive(true);
-            _energyInventory.energy -= neededEnergyForHatchingEgg;
-
-            // todo: egg inventory update
-            _ducklings.AddDucklings(1);
+            for(int i=0; i<_currentEggs; i++)
+            {
+                transform.GetChild(--_currentEggs).gameObject.SetActive(false);
+                _energyInventory.energy -= neededEnergyForHatchingEgg;
+                _ducklings.AddDucklings(1);
+            }
         }
         
         public bool HasEnoughEnergyForHatching()
