@@ -13,6 +13,8 @@ namespace Controllers.Duck.Quack
         public float amountOfHeatPerQuack;
         public float recoverySpeed;
 
+        public bool isRecovering;
+
         private GameObject _quackingCone;
         private Collider _coneCollider;
         
@@ -30,8 +32,9 @@ namespace Controllers.Duck.Quack
         private void Update()
         {
             overHeat -= recoverySpeed;
-            if (overHeat < 0)
+            if (overHeat <= 0)
             {
+                isRecovering = false;
                 overHeat = 0;
             }
         }
@@ -52,6 +55,10 @@ namespace Controllers.Duck.Quack
             _coneCollider.enabled = true;
 
             overHeat += amountOfHeatPerQuack;
+            if(overHeat >= 100)
+            {
+                isRecovering = true;
+            }
         }
 
         private void DropSticks()
