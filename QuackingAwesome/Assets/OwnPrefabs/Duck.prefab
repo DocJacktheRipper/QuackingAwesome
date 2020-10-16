@@ -77,6 +77,7 @@ GameObject:
   - component: {fileID: 5161659593025514276}
   - component: {fileID: 5161659593025514274}
   - component: {fileID: 4772274028142190718}
+  - component: {fileID: 3059070598927708807}
   m_Layer: 0
   m_Name: Duck
   m_TagString: Player
@@ -173,6 +174,7 @@ MonoBehaviour:
   maxOverHeat: 70
   amountOfHeatPerQuack: 10
   recoverySpeed: 0.1
+  isRecovering: 0
 --- !u!33 &8612154508580326267
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -364,6 +366,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3059070598927708807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5431499328450125412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9f10eb4f63f4f43b45ed76afb49a4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 3
+  duck: {fileID: 5431499328450125412}
+  nest: {fileID: 0}
+  arrow: {fileID: 0}
+  nestPos: {fileID: 0}
 --- !u!1001 &3653095972764585120
 PrefabInstance:
   m_ObjectHideFlags: 0
