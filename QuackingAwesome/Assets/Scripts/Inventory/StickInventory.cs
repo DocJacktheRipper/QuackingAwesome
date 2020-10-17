@@ -86,7 +86,7 @@ namespace Inventory
             }
         
             var stick = Instantiate(branchVisual, _carriedSticks, true);
-            stick.transform.localPosition = new Vector3(0.01237f, 0.07559f, 0.04857f);
+            stick.transform.localPosition = new Vector3(-0.0144f, 0.1668f, 0.2831f);
             stick.transform.eulerAngles = new Vector3(0f, -90f, 0f);
         }
         
