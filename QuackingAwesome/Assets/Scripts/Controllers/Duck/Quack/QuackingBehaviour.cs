@@ -20,13 +20,14 @@ namespace Controllers.Duck.Quack
         
         // animation
         private Animator _animator;
+        private static readonly int DoQuack = Animator.StringToHash("DoQuack");
 
         private void Start()
         {
             _quackingCone = GameObject.Find("QuackingCone");
             _coneCollider = _quackingCone.GetComponent<Collider>();
 
-            //_animator = GetComponent<Animator>();
+            _animator = GetComponent<Animator>();
         }
 
         private void Update()
@@ -44,7 +45,7 @@ namespace Controllers.Duck.Quack
             // sound
             quackPlaceholder.Play();
             // animation
-            //_animator.Play("Base Layer.Pick and Keep");
+            _animator.SetTrigger(DoQuack);
             
 
             if (transform.childCount > 0)

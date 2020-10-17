@@ -6,7 +6,7 @@ namespace Nest
 {
     public class LayAndHatchEgg : MonoBehaviour
     {
-        public GameObject duck;
+        private GameObject duck;
         
         private EnergyInventory _energyInventory;
         public float neededEnergyForLayingEgg;
@@ -19,6 +19,7 @@ namespace Nest
 
         public void Start()
         {
+            duck = GameObject.FindWithTag("Player");
             _energyInventory = duck.GetComponent<EnergyInventory>();
             _ducklings = duck.GetComponent<DucklingsInventory>();
         }

@@ -7,6 +7,14 @@ namespace Props
 {
     public class StickCollecting : MonoBehaviour
     {
+        private Animator _duckAnimator;
+        private static readonly int DoPickAndKeep = Animator.StringToHash("DoPickAndKeep");
+
+        void Start()
+        {
+            _duckAnimator = GameObject.FindWithTag("Player").GetComponent<Animator>();
+        }
+        
         private void OnTriggerEnter(Collider other)
         {
             if (PlayerIsTrigger(other))
@@ -54,6 +62,7 @@ namespace Props
 
             if (inventory.AddStick())
             {
+                _duckAnimator.SetTrigger(DoPickAndKeep);
                 Destroy(gameObject);
             }
             else

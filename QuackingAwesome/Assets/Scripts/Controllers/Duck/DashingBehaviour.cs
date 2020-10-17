@@ -13,14 +13,23 @@ public class DashingBehaviour : MonoBehaviour
 
     // time until player will be able to dash again
     public float NextDash = 0;
-        
+    
+    // animation
+    private Animator _animator;
+    private static readonly int DoDash = Animator.StringToHash("DoDash");
+
+
     void Start()
     {
         _duck = GetComponent<Rigidbody>();
+        _animator = GetComponent<Animator>();
     }
 
     public void Dash()
     {
+        // trigger animation
+        _animator.SetTrigger(DoDash);
+        
         //if (Time.time > NextDash)
         {
             _duck.AddForce(transform.forward * 100f, ForceMode.Impulse);

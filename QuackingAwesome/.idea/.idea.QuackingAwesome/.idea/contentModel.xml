@@ -34,12 +34,12 @@
             <e p="scriptTexttest.cs" t="Include" />
           </e>
         </e>
-        <e p="fps_showing.cs" t="Include" />
         <e p="Materials" t="Include">
           <e p="ConeCollider" t="Include">
             <e p="readme_en.txt" t="Include" />
             <e p="readme_jp.txt" t="Include" />
           </e>
+          <e p="ToonBasicOutline.shader" t="Include" />
         </e>
         <e p="plugins" t="Include">
           <e p="LeoLuz" t="Include">
@@ -83,6 +83,18 @@
                 <e p="UIButtonToButton.cs" t="Include" />
               </e>
             </e>
+          </e>
+        </e>
+        <e p="QuickOutline" t="Include">
+          <e p="README.txt" t="Include" />
+          <e p="Resources" t="Include">
+            <e p="Shaders" t="Include">
+              <e p="OutlineFill.shader" t="Include" />
+              <e p="OutlineMask.shader" t="Include" />
+            </e>
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="Outline.cs" t="Include" />
           </e>
         </e>
         <e p="Samples" t="Include">
@@ -134,17 +146,24 @@
               </e>
             </e>
           </e>
+          <e p="fps_showing.cs" t="Include" />
           <e p="Inventory" t="Include">
             <e p="DucklingsInventory.cs" t="Include" />
             <e p="EnergyInventory.cs" t="Include" />
-            <e p="PeaBar.cs" t="Include" />
             <e p="StickInventory.cs" t="Include" />
+            <e p="UI" t="Include">
+              <e p="DucklingShow.cs" t="Include" />
+              <e p="PeaBar.cs" t="Include" />
+            </e>
           </e>
           <e p="Nest" t="Include">
-            <e p="LayAndHatchEgg.cs" t="Include" />
             <e p="NestBuilding.cs" t="Include" />
             <e p="NestEffectTrigger.cs" t="Include" />
             <e p="NestLocation.cs" t="Include" />
+            <e p="NestMenu" t="Include">
+              <e p="LayAndHatchEgg.cs" t="Include" />
+              <e p="Upgrades.cs" t="Include" />
+            </e>
           </e>
           <e p="Props" t="Include">
             <e p="PeaCollecting.cs" t="Include" />
@@ -191,6 +210,7 @@
               <e p="ProgressBarCircle.cs" t="Include" />
             </e>
           </e>
+          <e p="stylesheet.uss" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
