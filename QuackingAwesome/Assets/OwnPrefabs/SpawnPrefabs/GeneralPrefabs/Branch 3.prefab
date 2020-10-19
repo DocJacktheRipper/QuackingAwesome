@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -17713153955301849}
   - component: {fileID: 2043000338558694136}
   - component: {fileID: 253457184792830689}
+  - component: {fileID: 696857475105935881}
   m_Layer: 0
   m_Name: Branch 3
   m_TagString: Untagged
@@ -137,3 +138,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.46639693, y: 0.08832193, z: 1.2331159}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &696857475105935881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168723362063478163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 0.6431373, g: 0.39607844, b: 0, a: 1}
+  outlineWidth: 1.5
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
