@@ -14,6 +14,8 @@ namespace Controllers.Buttons
         private Button _button;
         private Image filling;
 
+        public KeyCode _Key;
+
         private void Start()
         {
             _control = player.GetComponent<QuackingBehaviour>();
@@ -35,6 +37,16 @@ namespace Controllers.Buttons
                 filling.color = new Color(1, 0, 0, 0.75f);
                 _button.enabled = true;
             }
+
+            if (Input.GetKeyDown(_Key) && _button.enabled)
+            {
+                FadeToColor(_button.colors.pressedColor);
+            }
+            else if (Input.GetKeyUp(_Key) && _button.enabled)
+            {
+                _button.onClick.Invoke();
+                FadeToColor(_button.colors.normalColor);
+            }
             /*
             if (_control.overHeat > _control.maxOverHeat)
             {
@@ -46,6 +58,12 @@ namespace Controllers.Buttons
             }*/
         }
 
+        private void FadeToColor(Color color)
+        {
+            var graphic = GetComponent<Graphic>();
+            graphic.CrossFadeColor(color, _button.colors.fadeDuration, true, true);
+        }
+        
         public void Quack()
         {
             _control.Quack();
