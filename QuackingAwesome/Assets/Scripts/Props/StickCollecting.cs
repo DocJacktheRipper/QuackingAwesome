@@ -62,7 +62,7 @@ namespace Props
 
             if (inventory.AddStick())
             {
-                _duckAnimator.SetTrigger(DoPickAndKeep);
+                //_duckAnimator.SetTrigger(DoPickAndKeep);
                 Destroy(gameObject);
             }
             else
