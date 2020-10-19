@@ -19,13 +19,15 @@ public class NestLocation : MonoBehaviour
         } 
         else
         {
-            arrow.SetActive(false);
+            // arrow.SetActive(false);
+            arrow.GetComponent<Renderer>().enabled = false;
         }
     }
 
     private void nestPosition()
     {
-        arrow.SetActive(true);
+        //arrow.SetActive(true);
+        arrow.GetComponent<Renderer>().enabled = true;
         arrow.transform.rotation = Quaternion.LookRotation(nestPos.position - transform.position);
     }
 }
