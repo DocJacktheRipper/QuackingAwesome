@@ -17,6 +17,8 @@ public class DashingBehaviour : MonoBehaviour
     // animation
     private Animator _animator;
     private static readonly int DoDash = Animator.StringToHash("DoDash");
+    // particle effects
+    public ParticleSystem dashEffect;
 
 
     void Start()
@@ -29,6 +31,8 @@ public class DashingBehaviour : MonoBehaviour
     {
         // trigger animation
         _animator.SetTrigger(DoDash);
+        // trigger effect
+        dashEffect.Play();
         
         //if (Time.time > NextDash)
         {
