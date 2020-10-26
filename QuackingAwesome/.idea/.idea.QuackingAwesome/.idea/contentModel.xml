@@ -111,6 +111,11 @@
             <e p="Alligator" t="Include">
               <e p="AlligatorMouthTrigger.cs" t="Include" />
               <e p="BehaviourAlligator.cs" t="Include" />
+              <e p="States" t="Include">
+                <e p="ChasingState.cs" t="Include" />
+                <e p="IdleState.cs" t="Include" />
+                <e p="IState.cs" t="Include" />
+              </e>
               <e p="ToDelete" t="Include">
                 <e p="AlligatorBehaviour.cs" t="Include" />
               </e>
