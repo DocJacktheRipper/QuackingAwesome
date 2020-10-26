@@ -1,6 +1,7 @@
 ﻿using System;
 using Inventory;
 using Nest;
+using Nest.NestMenu;
 using UnityEngine;
 using UnityEngine.UI;
 

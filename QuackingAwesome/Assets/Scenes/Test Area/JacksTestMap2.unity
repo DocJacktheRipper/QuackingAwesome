@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 20d7b5b50a3e7624796b96279da1f38f,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -22884,18 +22884,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1015053279}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1248403729 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6098278226380276977, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
-    type: 3}
-  m_PrefabInstance: {fileID: 1621584523}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1027169102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 230d8e572c8164a4bb3c9592992d9137, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1249974072
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25608,24 +25596,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5082b069d2308d4490897bee0a294fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1369831725
+--- !u!114 &1369831726 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1799645201457602966, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
+    type: 3}
+  m_PrefabInstance: {fileID: 1621584523}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1369831717}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Script: {fileID: 11500000, guid: 230d8e572c8164a4bb3c9592992d9137, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  outlineMode: 1
-  outlineColor: {r: 0, g: 0, b: 0, a: 1}
-  outlineWidth: 3
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!4 &1372536241 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8598992634336898019, guid: ca9b6c824a06f7a46af748db64d6caa5,
@@ -34676,6 +34658,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 1799645201457602966, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
+        type: 3}
+      propertyPath: neededEnergyForHatchingEgg
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2312920174255135967, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
         type: 3}
@@ -48377,6 +48364,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Alligator
       objectReference: {fileID: 0}
+    - target: {fileID: 2574722902467918670, guid: 5a2e11769ecd75c4fa3e7d6e7f42c622,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2574722902467918671, guid: 5a2e11769ecd75c4fa3e7d6e7f42c622,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -48948,7 +48940,7 @@ PrefabInstance:
         type: 3}
       propertyPath: nest
       value: 
-      objectReference: {fileID: 1248403729}
+      objectReference: {fileID: 1369831726}
     - target: {fileID: 6243043676791719530, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
       propertyPath: nest

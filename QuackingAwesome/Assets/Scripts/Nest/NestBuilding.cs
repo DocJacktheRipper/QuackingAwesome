@@ -1,9 +1,8 @@
 ﻿using Inventory;
-using Nest;
 using Props.spawning;
 using UnityEngine;
 
-namespace Props
+namespace Nest
 {
     public class NestBuilding : MonoBehaviour
     {
@@ -56,7 +55,6 @@ namespace Props
                 if (enableDynamicBuilding)
                 {
                     BuildNestDynamically();
-                    return;
                 }
 
                 /*
@@ -72,20 +70,25 @@ namespace Props
 
         private void SetNestFinished()
         {
+            if (!NestIsFinished)
+            {
+                Debug.Log("nest is finished!");
+            
+                // Todo: make audio sound
+            
+                // make particle effect
+                _effectTrigger.NestFinishedEffect();
+            }
+            
             NestIsFinished = true;
-            Debug.Log("nest is finished!");
-            
-            // Todo: make audio sound
-            
-            // make particle effect
-            _effectTrigger.NestFinishedEffect();
+           
         }
 
         private void TransferSticks(StickInventory player)
         {
             // only use as much sticks as needed for the nest
             var diff = neededSticks - numberOfSticks;
-            var numOfTransferedStick = 0;
+            int numOfTransferedStick;
             if ((diff - player.GetNumberOfSticks()) < 0)
             {
                 Debug.Log("More sticks in inventory than needed");
@@ -150,12 +153,5 @@ namespace Props
             nestOfSticks.transform.position = _nbContainer.position;
         }
         */
-
-
-        private void PrintText()
-        {
-            var text = "Sticks in Nest: " + numberOfSticks + "/" + neededSticks;
-            Debug.Log(text);
-        }
     }
 }

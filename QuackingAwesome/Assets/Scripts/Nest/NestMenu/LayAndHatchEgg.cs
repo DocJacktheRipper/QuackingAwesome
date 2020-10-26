@@ -1,11 +1,12 @@
-﻿using System;
-using Inventory;
+﻿using Inventory;
 using UnityEngine;
 
-namespace Nest
+namespace Nest.NestMenu
 {
     public class LayAndHatchEgg : MonoBehaviour
     {
+        public GameObject nest;
+        
         private GameObject duck;
         
         private EnergyInventory _energyInventory;
@@ -26,7 +27,7 @@ namespace Nest
 
         public void LayEgg()
         {
-            transform.GetChild(_currentEggs++).gameObject.SetActive(true);
+            nest.transform.GetChild(_currentEggs++).gameObject.SetActive(true);
             _energyInventory.energy -= neededEnergyForLayingEgg;
         }
         
@@ -45,7 +46,7 @@ namespace Nest
         {
             for(int i=0; i<_currentEggs; i++)
             {
-                transform.GetChild(--_currentEggs).gameObject.SetActive(false);
+                nest.transform.GetChild(--_currentEggs).gameObject.SetActive(false);
                 _energyInventory.energy -= neededEnergyForHatchingEgg;
                 _ducklings.AddDucklings(1);
             }

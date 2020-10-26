@@ -121,10 +121,12 @@ GameObject:
   - component: {fileID: 1029452869482211099}
   - component: {fileID: 7032550159679433148}
   - component: {fileID: 105895419849321683}
+  - component: {fileID: 1799645201457602966}
   - component: {fileID: 8295035753630921834}
   - component: {fileID: 6122947537856168096}
   - component: {fileID: 4843764308862729042}
   - component: {fileID: 4843764309202380201}
+  - component: {fileID: 1463147512425968094}
   m_Layer: 0
   m_Name: Decorated NestRock
   m_TagString: Untagged
@@ -192,6 +194,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nestIsFinishedEffect: {fileID: 7178032086277321587}
+--- !u!114 &1799645201457602966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5762892458755793269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 230d8e572c8164a4bb3c9592992d9137, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nest: {fileID: 5501551570851141554}
+  neededEnergyForLayingEgg: 10
+  neededEnergyForHatchingEgg: 15
+  maxEggsInNest: 3
 --- !u!33 &8295035753630921834
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -266,6 +284,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.5031633, y: 0.4463013, z: 2.6244833}
   m_Center: {x: 0, y: 0, z: 0.14356124}
+--- !u!114 &1463147512425968094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5762892458755793269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 1
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  outlineWidth: 3
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &2227742929023709552
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -343,8 +379,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5353627499907380609, guid: d612d710e605aac42993c2d10abe3119, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d612d710e605aac42993c2d10abe3119, type: 3}
+--- !u!1 &5501551570851141554 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5959379846114813634, guid: d612d710e605aac42993c2d10abe3119,
+    type: 3}
+  m_PrefabInstance: {fileID: 2227742929023709552}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5121332394596715784 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6482976510641437816, guid: d612d710e605aac42993c2d10abe3119,
