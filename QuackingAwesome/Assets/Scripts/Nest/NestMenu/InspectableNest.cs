@@ -5,12 +5,14 @@ namespace Nest.NestMenu
 {
     public class InspectableNest : MonoBehaviour
     {
+        /*
         protected Vector3 posLastFrame;
         public Camera camera;
         
         public RectTransform objectToHold;
         public Image fillImage;
         public float holdDuration = 1f;
+        */
         
         // Start is called before the first frame update
         void Start()

@@ -10,6 +10,7 @@ namespace Controllers.Buttons
         
         private bool _interactable = true;
         private Button _button;
+        private GameObject _cooldownOverlay;
 
         public KeyCode _Key;
         
@@ -17,21 +18,33 @@ namespace Controllers.Buttons
         {
             _control = player.GetComponent<DashingBehaviour>();
             _button = GetComponent<Button>();
+            _cooldownOverlay = transform.Find("cooldown_overlay").gameObject;
         }
         
         void Update()
         {
             _interactable = (_control.NextDash < Time.time);
             _button.enabled = _interactable;
+
+            if (_interactable)
+            {
+                _cooldownOverlay.SetActive(false);
+            }
+            else
+            {
+                _cooldownOverlay.SetActive(true);
+            }
             
             if (Input.GetKeyDown(_Key) && _button.enabled)
             {
                 FadeToColor(_button.colors.pressedColor);
+                _cooldownOverlay.SetActive(true);
             }
             else if (Input.GetKeyUp(_Key) && _button.enabled)
             {
                 _button.onClick.Invoke();
                 FadeToColor(_button.colors.normalColor);
+                _cooldownOverlay.SetActive(true);
             }
             /*
             // to look, if it was changed afterwards
