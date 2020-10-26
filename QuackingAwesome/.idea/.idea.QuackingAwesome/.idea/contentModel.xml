@@ -109,13 +109,19 @@
         <e p="Scripts" t="Include">
           <e p="AI" t="Include">
             <e p="Alligator" t="Include">
-              <e p="AlligatorBehaviour.cs" t="Include" />
               <e p="AlligatorMouthTrigger.cs" t="Include" />
+              <e p="BehaviourAlligator.cs" t="Include" />
+              <e p="ToDelete" t="Include">
+                <e p="AlligatorBehaviour.cs" t="Include" />
+              </e>
             </e>
             <e p="Beaver" t="Include">
-              <e p="BeaverAI.cs" t="Include" />
+              <e p="BehaviourBeaver.cs" t="Include" />
               <e p="DuckTrigger.cs" t="Include" />
               <e p="ScaredAway.cs" t="Include" />
+              <e p="ToDeleteLater" t="Include">
+                <e p="BeaverAI.cs" t="Include" />
+              </e>
             </e>
           </e>
           <e p="Controllers" t="Include">
