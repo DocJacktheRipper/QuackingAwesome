@@ -21,11 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cb082888-ab6d-41db-a40b-24e16e1dbeec" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Duck.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Duck.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/LevelOne.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/LevelOne.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Starting.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Starting.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingBehaviour.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/StickInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/StickInventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Nest/NestMenu/Upgrades.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Nest/NestMenu/Upgrades.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Props/Sticks/StickTriggerEnter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Props/Sticks/StickTriggerEnter.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,9 +83,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Nest/LayAndHatchEgg.cs" />
         <option value="$PROJECT_DIR$/Assets/TestAnimationQuack.cs" />
         <option value="$PROJECT_DIR$/Assets/fps_showing.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Buttons/QuackButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Nest/NestLocation.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Props/StickCollecting.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Nest/NestMenu/LayAndHatchEgg.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/DashingBehaviour.cs" />
@@ -102,9 +97,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/BehaviourAlligator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Props/Sticks/CollectingSticks.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Nest/NestBuilding.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/StickInventory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Nest/NestMenu/Upgrades.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Nest/NestLocation.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Props/Sticks/StickTriggerEnter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/StickInventory.cs" />
       </list>
     </option>
   </component>
@@ -187,7 +184,7 @@
       <workItem from="1602954532801" duration="1646000" />
       <workItem from="1603101679149" duration="2686000" />
       <workItem from="1603649714525" duration="1195000" />
-      <workItem from="1603707843363" duration="37446000" />
+      <workItem from="1603707843363" duration="40491000" />
     </task>
     <servers />
   </component>
@@ -280,12 +277,13 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="474" y="62" key="RiderGenerateDialog/0.0.1280.689/1920.0.1920.1050@0.0.1280.689" timestamp="1603740749754" />
-    <state x="93" y="93" width="1095" height="504" key="VCS.FileHistoryDialog" timestamp="1603891220229">
-      <screen x="0" y="0" width="1280" height="689" />
+    <state x="2060" y="142" width="1643" height="769" key="VCS.FileHistoryDialog" timestamp="1603907894790">
+      <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state x="93" y="93" width="1095" height="504" key="VCS.FileHistoryDialog/0.0.1280.689/0.-1080.1920.1050@0.0.1280.689" timestamp="1602233383428" />
     <state x="93" y="93" width="1095" height="504" key="VCS.FileHistoryDialog/0.0.1280.689/1100.-1080.1920.1050@0.0.1280.689" timestamp="1601986668586" />
     <state x="93" y="93" width="1095" height="504" key="VCS.FileHistoryDialog/0.0.1280.689/1920.0.1920.1050@0.0.1280.689" timestamp="1603891220229" />
+    <state x="2060" y="142" width="1643" height="769" key="VCS.FileHistoryDialog/0.0.1280.689/1920.0.1920.1050@1920.0.1920.1050" timestamp="1603907894790" />
     <state x="93" y="93" width="1095" height="504" key="VCS.FileHistoryDialog/0.0.1280.689@0.0.1280.689" timestamp="1601381214210" />
     <state x="297" y="153" key="run.anything.popup" timestamp="1601292231244">
       <screen x="0" y="0" width="1280" height="689" />

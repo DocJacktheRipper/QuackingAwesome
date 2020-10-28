@@ -8,16 +8,16 @@ namespace Inventory
         public bool collectingEnabled = true;
         
         public int numberOfSticks;
-        public int maxCapacityOfSticks = 1;    
-    
-        public bool enableDuckbillVisual;
-        public GameObject branchVisual;
+        public int maxCapacityOfSticks = 1;
 
         private Transform _carriedSticks;
+
+        private Transform _stickEnvironmentContainer;
 
         private void Start()
         {
             _carriedSticks = transform.Find("CarriedSticks");
+            _stickEnvironmentContainer = GameObject.Find("CollectableSicks").transform;
         }
 
         public bool AddStick()
@@ -59,8 +59,12 @@ namespace Inventory
             var stick = _carriedSticks.GetChild(0);
             stick.SetParent(position, true);
 
-            // delete stick at the end
-            stick.GetComponent<StickTriggerEnter>().MoveStickToPos(position);
+            // determine position
+            var pos = position.position;
+            pos.y += 0.4f;
+
+            // move and delete stick at the end
+            stick.GetComponent<StickTriggerEnter>().MoveStickToPos(pos, true);
         }
 
         public void MoveSticksToNest(int number, Transform position)
@@ -74,6 +78,32 @@ namespace Inventory
                 if(_carriedSticks.childCount > 0)
                     MoveStickToNest(position);
             }
+        }
+
+        public void DropSticks(int number)
+        {
+            for (int i = 0; i < number && (_carriedSticks.childCount > 0); i++)
+            {
+                DropStick();
+            }
+        }
+
+        public void DropStick()
+        {
+            if (_carriedSticks.childCount <= 0)
+                return;
+
+            // drop it within radius
+            var targetPos = (Vector3) Random.insideUnitCircle * 1.5f;
+            targetPos += transform.position;
+            targetPos.y = 0f;    
+
+            // set parent
+            var stick = _carriedSticks.GetChild(0).GetComponent<StickTriggerEnter>();
+            stick.transform.SetParent(_stickEnvironmentContainer, true);
+            
+            // invoke dropping
+            stick.MoveStickToPos(targetPos, false);
         }
 
         public int GetNumberOfSticks()

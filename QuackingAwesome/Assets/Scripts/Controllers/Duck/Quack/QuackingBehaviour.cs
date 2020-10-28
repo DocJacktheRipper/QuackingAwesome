@@ -1,4 +1,5 @@
 ﻿using System;
+using Inventory;
 using UnityEngine;
 
 namespace Controllers.Duck.Quack
@@ -17,6 +18,8 @@ namespace Controllers.Duck.Quack
 
         private GameObject _quackingCone;
         private Collider _coneCollider;
+
+        private StickInventory _stickInventory;
         
         // animation
         private Animator _animator;
@@ -26,6 +29,7 @@ namespace Controllers.Duck.Quack
         {
             _quackingCone = GameObject.Find("QuackingCone");
             _coneCollider = _quackingCone.GetComponent<Collider>();
+            _stickInventory = GetComponent<StickInventory>();
 
             _animator = GetComponent<Animator>();
         }
@@ -68,10 +72,7 @@ namespace Controllers.Duck.Quack
 
             for (int i = 0; i < stickHolder.childCount; i++)
             {
-                // let it fall down
-                var stick = stickHolder.GetChild(i);
-                
-                // TODO: how to fix this?
+                _stickInventory.DropStick();
             }
         }
     }

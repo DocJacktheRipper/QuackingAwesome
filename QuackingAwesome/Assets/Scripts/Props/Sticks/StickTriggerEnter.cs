@@ -9,21 +9,25 @@ namespace Props.Sticks
 {
     public class StickTriggerEnter : MonoBehaviour
     {
-        private Animator _duckAnimator;
-        private static readonly int DoPickAndKeep = Animator.StringToHash("DoPickAndKeep");
+        private Collider _trigger;
         
         // where to put the position before delete
         public Transform positionPool;
         private Transform _duckCarriedSticks;
         
         // target position [e.g. nest]
-        private bool shouldMove;
+        private bool _shouldMove;
         private float speed = 1.2f;
         private Vector3 targetPos;
-
+        private bool _deleteOnPositionReached = false;
+        
+        // animation
+        private Animator _duckAnimator;
+        private static readonly int DoPickAndKeep = Animator.StringToHash("DoPickAndKeep");
 
         void Start()
         {
+            _trigger = gameObject.GetComponent<Collider>();
             var duck = GameObject.FindWithTag("Player");
             _duckAnimator = duck.GetComponent<Animator>();
             
@@ -33,14 +37,21 @@ namespace Props.Sticks
 
         private void Update()
         {
-            if (shouldMove)
+            if (_shouldMove)
             {
                 transform.position =
                     Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
                 if(Vector3.Distance(transform.position, targetPos) < 0.1f)
                 {
-                    // delete this stick
-                    DeleteStick();
+                    _shouldMove = false;
+                    if (_deleteOnPositionReached)
+                    {
+                        // delete this stick
+                        DeleteStick();
+                    }
+                    
+                    // enable trigger again
+                    _trigger.enabled = true;
                 }
             }
         }
@@ -95,7 +106,7 @@ namespace Props.Sticks
             //_duckAnimator.SetTrigger(DoPickAndKeep);
             
             // disable trigger
-            gameObject.GetComponent<Collider>().enabled = false;
+            _trigger.enabled = false;
             
             // animation for stick picking?
             
@@ -138,11 +149,16 @@ namespace Props.Sticks
             return true;
         }
 
-        public void MoveStickToPos(Transform targetPosition)
+        /// <summary>
+        /// Invoke moving of Stick until reach of position.
+        /// </summary>
+        /// <param name="targetPosition">Position to reach</param>
+        /// <param name="deleteStick">Determines, if deleted after reaching position</param>
+        public void MoveStickToPos(Vector3 targetPosition, bool deleteStick)
         {
-            targetPos = targetPosition.position;
-            targetPos.y += 0.4f;
-            shouldMove = true;
+            targetPos = targetPosition;
+            _shouldMove = true;
+            _deleteOnPositionReached = deleteStick;
         }
 
         public void DeleteStick()
