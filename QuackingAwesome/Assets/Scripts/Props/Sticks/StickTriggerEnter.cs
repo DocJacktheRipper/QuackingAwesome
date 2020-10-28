@@ -1,6 +1,8 @@
-﻿using AI.Beaver;
+﻿using System;
+using AI.Beaver;
 using Inventory;
 using Props.spawning;
+using UnityEditor;
 using UnityEngine;
 
 namespace Props.Sticks
@@ -13,6 +15,12 @@ namespace Props.Sticks
         // where to put the position before delete
         public Transform positionPool;
         private Transform _duckCarriedSticks;
+        
+        // target position [e.g. nest]
+        private bool shouldMove;
+        private float speed = 1.2f;
+        private Vector3 targetPos;
+
 
         void Start()
         {
@@ -22,7 +30,20 @@ namespace Props.Sticks
             _duckCarriedSticks = duck.transform.Find("CarriedSticks");
             positionPool = GameObject.Find("StickSpawnSpots").transform;
         }
-        
+
+        private void Update()
+        {
+            if (shouldMove)
+            {
+                transform.position =
+                    Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
+                if(Vector3.Distance(transform.position, targetPos) < 0.1f)
+                {
+                    DeleteStick();
+                }
+            }
+        }
+
         private void OnTriggerEnter(Collider other)
         {
             if (PlayerIsTrigger(other))
@@ -139,6 +160,19 @@ namespace Props.Sticks
                 BeaverIsTrigger(other);
             }
             return true;
+        }
+
+        public void MoveStickToPos(Transform targetPosition)
+        {
+            targetPos = targetPosition.position;
+            targetPos.y += 0.6f;
+            shouldMove = true;
+        }
+
+        public void DeleteStick()
+        { 
+            transform.GetChild(0).parent = positionPool;
+            Destroy(gameObject);
         }
     }
 }

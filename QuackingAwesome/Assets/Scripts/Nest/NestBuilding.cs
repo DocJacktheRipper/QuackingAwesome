@@ -100,14 +100,15 @@ namespace Nest
             {
                 numOfTransferedStick = player.GetNumberOfSticks();
                 numberOfSticks += numOfTransferedStick;
-                
-                player.DeleteAllVisualSticks();
+                //player.DeleteAllVisualSticks();
             }
+            
+            player.MoveSticksToNest(numOfTransferedStick, _nbContainer);
 
             // so there are the same amount of sticks in the world
             RespawnSticksInWorld(numOfTransferedStick);    
             // Adjust sticks in Duckbill
-            player.RemoveSticks(numOfTransferedStick);
+            //player.RemoveSticks(numOfTransferedStick);
         }
 
         private static void RespawnSticksInWorld(int numberOfTransferedSticks)

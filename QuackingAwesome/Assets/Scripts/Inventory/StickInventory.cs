@@ -1,3 +1,4 @@
+using Props.Sticks;
 using UnityEngine;
 
 namespace Inventory
@@ -51,7 +52,31 @@ namespace Inventory
             numberOfSticks = maxCapacityOfSticks;
             return overflow;
         }
+        
+        public void MoveStickToNest(Transform position)
+        {
+            // change parent and invoke animation
+            var stick = _carriedSticks.GetChild(0);
+            stick.SetParent(position, true);
 
+            // delete stick at the end
+            stick.GetComponent<StickTriggerEnter>().MoveStickToPos(position);
+        }
+
+        public void MoveSticksToNest(int number, Transform position)
+        {
+            numberOfSticks -= number;
+            if (numberOfSticks < 0)
+                numberOfSticks = 0;
+
+            for (int i = 0; i < number; i++)
+            {
+                if(_carriedSticks.childCount > 0)
+                    MoveStickToNest(position);
+            }
+        }
+        
+        /*
         public void RemoveSticks(int number)
         {
             numberOfSticks -= number;
@@ -60,7 +85,6 @@ namespace Inventory
             
             DeleteVisualSticks(number);
         }
-        
         public void DeleteVisualSticks(int number)
         {
             for (var i = 0; i < number; i++)
@@ -75,13 +99,13 @@ namespace Inventory
                 Destroy(child);
             }
         }
-
-    
         public void DeleteAllVisualSticks()
         {
             DeleteVisualSticks(_carriedSticks.childCount);
         }
+        */
 
+        /*
         private void ShowStickInDuckbill()
         {
             if (!enableDuckbillVisual)
@@ -94,7 +118,7 @@ namespace Inventory
             //stick.transform.eulerAngles = new Vector3(0f, -90f, 0f);
             //stick.transform.localRotation = Quaternion.Euler(0,90,0);
             
-        }
+        }*/
         
         public int GetNumberOfSticks()
         {
