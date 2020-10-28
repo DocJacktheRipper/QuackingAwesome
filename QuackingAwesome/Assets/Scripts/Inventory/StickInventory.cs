@@ -42,6 +42,13 @@ namespace Inventory
             return overflow;
         }
 
+        public void RemoveStick(int amount)
+        {
+            numberOfSticks -= amount;
+            if (numberOfSticks < 0)
+                numberOfSticks = 0;
+        }
+
         private int TransferSticks(int n)
         {
             numberOfSticks += n;
@@ -58,6 +65,7 @@ namespace Inventory
             // change parent and invoke animation
             var stick = _carriedSticks.GetChild(0);
             stick.SetParent(position, true);
+            RemoveStick(1);
 
             // determine position
             var pos = position.position;
@@ -101,6 +109,8 @@ namespace Inventory
             // set parent
             var stick = _carriedSticks.GetChild(0).GetComponent<StickTriggerEnter>();
             stick.transform.SetParent(_stickEnvironmentContainer, true);
+            
+            RemoveStick(1);
             
             // invoke dropping
             stick.MoveStickToPos(targetPos, false);
