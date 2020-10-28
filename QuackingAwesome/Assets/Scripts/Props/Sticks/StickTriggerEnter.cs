@@ -12,10 +12,15 @@ namespace Props.Sticks
         
         // where to put the position before delete
         public Transform positionPool;
+        private Transform _duckCarriedSticks;
 
         void Start()
         {
-            _duckAnimator = GameObject.FindWithTag("Player").GetComponent<Animator>();
+            var duck = GameObject.FindWithTag("Player");
+            _duckAnimator = duck.GetComponent<Animator>();
+            
+            _duckCarriedSticks = duck.transform.Find("CarriedSticks");
+            positionPool = GameObject.Find("StickSpawnSpots").transform;
         }
         
         private void OnTriggerEnter(Collider other)
@@ -63,6 +68,11 @@ namespace Props.Sticks
                 return false;
             }
 
+            if (!inventory.collectingEnabled)
+            {
+                return true;
+            }
+
             if (inventory.AddStick())
             {
                 //_duckAnimator.SetTrigger(DoPickAndKeep);
@@ -90,8 +100,13 @@ namespace Props.Sticks
             // disable trigger
             gameObject.GetComponent<Collider>().enabled = false;
             
+            // animation for stick picking?
             
             
+            // move to duck
+            Transform transform1;
+            (transform1 = transform).SetPositionAndRotation(new Vector3(0,0,0), Quaternion.identity);
+            transform1.SetParent(_duckCarriedSticks, false);
         }
 
         //Checks if the beaverNavigation was a trigger and sends the position of focused stick to BeaverAI.cs

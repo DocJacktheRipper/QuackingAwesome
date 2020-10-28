@@ -2292,9 +2292,9 @@ MonoBehaviour:
   minItemsInWorld: 12
   maxItemsInWorld: 12
   objectsToSpawn:
-  - {fileID: 3777131180942760111, guid: cc2fc4fd6e0e52c479fd8e3a10994b75, type: 3}
-  - {fileID: 5486445242338815969, guid: ac4552b12016bec45b829e9ad76e40ce, type: 3}
-  - {fileID: 4432363223243641514, guid: e06dba64a8b17c44e98ba05f8202d059, type: 3}
+  - {fileID: 4532185491533887296, guid: 5c286f27b5fb1624289409ce8148743c, type: 3}
+  - {fileID: 6664525395264644254, guid: 46425fd1a7cd6364c9c714d6c0e092f9, type: 3}
+  - {fileID: 7218634431413887039, guid: 44614086633d99748aa21b43468905d7, type: 3}
   targetParent: {fileID: 1302999286}
   spawningDelay: 1
   spawningPointParent: {fileID: 1422837318}
@@ -55380,6 +55380,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6032344169458206697, guid: fcb40f7152cb34640aabb80e2fcd6053,
+        type: 3}
+      propertyPath: collectingEnabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7939994142206816082, guid: fcb40f7152cb34640aabb80e2fcd6053,
         type: 3}

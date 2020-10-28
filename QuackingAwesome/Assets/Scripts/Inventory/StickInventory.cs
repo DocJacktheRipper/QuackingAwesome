@@ -4,6 +4,8 @@ namespace Inventory
 {
     public class StickInventory : MonoBehaviour
     {
+        public bool collectingEnabled = true;
+        
         public int numberOfSticks;
         public int maxCapacityOfSticks = 1;    
     
@@ -30,10 +32,12 @@ namespace Inventory
         public int AddSticks(int n)
         {
             var overflow = TransferSticks(n);
+            /*
             for (var i = 0; i < (n-overflow); i++)
             {
                 ShowStickInDuckbill();
             }
+            */
             return overflow;
         }
 
@@ -85,9 +89,11 @@ namespace Inventory
                 return;
             }
         
-            var stick = Instantiate(branchVisual, _carriedSticks, true);
-            stick.transform.localPosition = new Vector3(-0.0144f, 0.1668f, 0.2831f);
-            stick.transform.eulerAngles = new Vector3(0f, -90f, 0f);
+            var stick = Instantiate(branchVisual, _carriedSticks, false);
+            //stick.transform.localPosition = new Vector3(-0.0144f, 0.1668f, 0.2831f);
+            //stick.transform.eulerAngles = new Vector3(0f, -90f, 0f);
+            //stick.transform.localRotation = Quaternion.Euler(0,90,0);
+            
         }
         
         public int GetNumberOfSticks()
