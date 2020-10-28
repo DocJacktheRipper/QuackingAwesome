@@ -117,7 +117,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474075633236751571}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.017, y: 0.169, z: 0.252}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4623894378085778654}
@@ -835,8 +835,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distance: 3
   duck: {fileID: 5431499328450125412}
-  nest: {fileID: 0}
-  arrow: {fileID: 0}
+  arrow: {fileID: 919132149155446097, guid: 8f96616786287814a935979f57b66af5, type: 3}
   nestPos: {fileID: 0}
 --- !u!65 &1337223831053516566
 BoxCollider:
@@ -849,8 +848,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.28890234, y: 0.42839408, z: 0.5985101}
-  m_Center: {x: -0.0306907, y: 0.062954545, z: 0.002458781}
+  m_Size: {x: 0.28353837, y: 0.42839408, z: 0.5985101}
+  m_Center: {x: -0.000047013164, y: 0.062954545, z: 0.002458781}
 --- !u!95 &3718391608811839523
 Animator:
   serializedVersion: 3

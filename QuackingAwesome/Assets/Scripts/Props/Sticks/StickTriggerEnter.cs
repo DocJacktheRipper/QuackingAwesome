@@ -39,6 +39,7 @@ namespace Props.Sticks
                     Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
                 if(Vector3.Distance(transform.position, targetPos) < 0.1f)
                 {
+                    // delete this stick
                     DeleteStick();
                 }
             }
@@ -58,23 +59,6 @@ namespace Props.Sticks
             {
                 return;
             }
-        }
-        
-        private void OnCollisionEnter(Collision other)
-        {
-            Debug.Log("Collider activated - stick");
-            if (PlayerIsTrigger(other.collider))
-            {
-                return;
-            }
-            if (BeaverDelete(other.collider))
-            {
-                return;
-            }
-            /*if (BeaverIsTrigger(other))
-            {
-                return;
-            }*/    
         }
 
         // Checks if player was trigger. If so, checks if the duck can carry more sticks.
@@ -96,15 +80,7 @@ namespace Props.Sticks
 
             if (inventory.AddStick())
             {
-                //_duckAnimator.SetTrigger(DoPickAndKeep);
                 PickStick();
-                /*
-                if (transform.childCount > 0)
-                {
-                    var child = transform.GetChild(0);
-                    child.parent = child;
-                }
-                */
             }
             else
             {
@@ -165,7 +141,7 @@ namespace Props.Sticks
         public void MoveStickToPos(Transform targetPosition)
         {
             targetPos = targetPosition.position;
-            targetPos.y += 0.6f;
+            targetPos.y += 0.4f;
             shouldMove = true;
         }
 

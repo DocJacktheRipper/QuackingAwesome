@@ -6,13 +6,12 @@ public class NestLocation : MonoBehaviour
 {
     public float distance;
     public GameObject duck;
-    public GameObject nest;
     public GameObject arrow;
     public Transform nestPos;
 
     void Update()
     {
-        distance = Vector3.Distance(duck.transform.position, nest.transform.position);
+        distance = Vector3.Distance(duck.transform.position, nestPos.transform.position);
         if(distance > 3f)
         {
             nestPosition();

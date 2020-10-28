@@ -45,7 +45,7 @@ public class Upgrades : MonoBehaviour
 
         NeededAmountForDash += 1;
         var text = dashUpgrade.transform.Find("RequirementText").GetComponent<Text>();
-        text.text = "Cost: " + NeededAmountForDash + " hatchling";
+        text.text = "Cost: " + NeededAmountForDash + " ducklings";
     }
 
     public void UpgradeCarryCapacity(int amount)

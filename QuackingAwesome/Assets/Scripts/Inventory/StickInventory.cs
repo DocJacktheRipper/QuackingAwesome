@@ -75,51 +75,7 @@ namespace Inventory
                     MoveStickToNest(position);
             }
         }
-        
-        /*
-        public void RemoveSticks(int number)
-        {
-            numberOfSticks -= number;
-            if (numberOfSticks < 0)
-                numberOfSticks = 0;
-            
-            DeleteVisualSticks(number);
-        }
-        public void DeleteVisualSticks(int number)
-        {
-            for (var i = 0; i < number; i++)
-            {
-                if (_carriedSticks.childCount <= 0)
-                {
-                    Debug.Log("No more children in duck");
-                    return;
-                }
-                
-                var child = _carriedSticks.GetChild(i).gameObject;
-                Destroy(child);
-            }
-        }
-        public void DeleteAllVisualSticks()
-        {
-            DeleteVisualSticks(_carriedSticks.childCount);
-        }
-        */
 
-        /*
-        private void ShowStickInDuckbill()
-        {
-            if (!enableDuckbillVisual)
-            {
-                return;
-            }
-        
-            var stick = Instantiate(branchVisual, _carriedSticks, false);
-            //stick.transform.localPosition = new Vector3(-0.0144f, 0.1668f, 0.2831f);
-            //stick.transform.eulerAngles = new Vector3(0f, -90f, 0f);
-            //stick.transform.localRotation = Quaternion.Euler(0,90,0);
-            
-        }*/
-        
         public int GetNumberOfSticks()
         {
             return numberOfSticks;
