@@ -14,7 +14,7 @@ namespace AI.Alligator
             Attacking = 3
         };
 
-        public AlligatorState currentState;
+        public AlligatorState currentState = AlligatorState.Swimming;
         private NavMeshAgent alligatorNavigation;
         
         public Transform[] wayPoints;
@@ -35,6 +35,7 @@ namespace AI.Alligator
             
             lastSwitchTime = Time.time;
             currentState = AlligatorState.Idle;
+            GotoNextPoint();
         }
 
         private void Update()
@@ -57,12 +58,12 @@ namespace AI.Alligator
                     break;
                 case AlligatorState.Swimming:
                     Swim();
-                    
+                    /*
                     if (SwitchStatesAfterTime(waitMinimumSeconds))
                     {
                         lastSwitchTime = Time.time;
                         currentState = AlligatorState.Idle;
-                    }
+                    }*/
                     break;
                 case AlligatorState.Chasing:
                     Chase();
@@ -125,20 +126,26 @@ namespace AI.Alligator
                 return;
             }
             var destPoint = Random.Range(0, wayPoints.Length);
-            alligatorNavigation.destination = wayPoints[destPoint].position;
+            alligatorNavigation.SetDestination(wayPoints[destPoint].position);
         }
         
         private bool SwitchStatesAfterTime(float minDiff)
         {
+            string status = "try changing states";
             if ((lastSwitchTime + minDiff) > Time.time)
             {
                 var ranInt = Random.Range(0, 1);
+
+                status += " - time elapsed - changes: " + ranInt + "/" + chanceToSwitchStates;
                 if (ranInt < chanceToSwitchStates)
                 {
+                    status += " -- switch";
+                    Debug.Log(status);
                     return true;
                 }
+                Debug.Log(status);
             }
-
+            Debug.Log(status);
             return false;
         }
     }

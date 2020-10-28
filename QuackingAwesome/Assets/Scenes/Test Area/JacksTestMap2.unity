@@ -53998,6 +53998,16 @@ PrefabInstance:
       propertyPath: wayPoints.Array.data[6]
       value: 
       objectReference: {fileID: 664105156}
+    - target: {fileID: 5481022849578958752, guid: 5a2e11769ecd75c4fa3e7d6e7f42c622,
+        type: 3}
+      propertyPath: currentState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5481022849578958752, guid: 5a2e11769ecd75c4fa3e7d6e7f42c622,
+        type: 3}
+      propertyPath: waitMinimumSeconds
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7447338938953231297, guid: 5a2e11769ecd75c4fa3e7d6e7f42c622,
         type: 3}
       propertyPath: m_ObstacleAvoidanceType
@@ -54513,7 +54523,7 @@ PrefabInstance:
     - target: {fileID: 7166106159278318141, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.000020027
+      value: 0.000030517578
       objectReference: {fileID: 0}
     - target: {fileID: 7166106159278318141, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
