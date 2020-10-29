@@ -22,10 +22,16 @@ namespace AI.Alligator
         public float chaseSpeedBonus;
 
         public int chanceToSwitchStates = 50;
-        public float waitMinimumSeconds = 0.5f;
+        public float waitForSeconds_Idle;
+        public float waitForSeconds_Swimming;
         private float lastSwitchTime;
 
         private GameObject duck;
+        
+        // animations
+        public Animator animator;
+        private static readonly int DoBite = Animator.StringToHash("DoBite");
+        private static readonly int IsIdle = Animator.StringToHash("IsIdle");
 
 
         private void Start()
@@ -50,26 +56,32 @@ namespace AI.Alligator
                 case AlligatorState.Idle:
                     Idle();
                     // switch between idle and swimming after some time
-                    if (SwitchStatesAfterTime(waitMinimumSeconds))
+                    if (SwitchStatesAfterTime(waitForSeconds_Idle))
                     {
                         lastSwitchTime = Time.time;
                         currentState = AlligatorState.Swimming;
+                        animator.SetBool(IsIdle, true);
                     }
                     break;
                 case AlligatorState.Swimming:
                     Swim();
-                    /*
-                    if (SwitchStatesAfterTime(waitMinimumSeconds))
+                    // switch between idle and swimming after some time
+                    if (SwitchStatesAfterTime(waitForSeconds_Swimming))
                     {
                         lastSwitchTime = Time.time;
                         currentState = AlligatorState.Idle;
-                    }*/
+                        animator.SetBool(IsIdle, true);
+                    }
                     break;
                 case AlligatorState.Chasing:
                     Chase();
+                    // TODO: on state enter etc.
+                    // animator.SetBool(IsIdle, true);
                     break;
                 case AlligatorState.Attacking:
                     Attack();
+                    
+                    animator.SetBool(IsIdle, false);
                     break;
             }
         }
@@ -103,11 +115,13 @@ namespace AI.Alligator
 
         private void Attack()
         {
-            
+            // invoke animation
+            animator.SetTrigger(DoBite);
         }
 
         private void Swim()
         {
+            alligatorNavigation.isStopped = false;
             if (!alligatorNavigation.pathPending && alligatorNavigation.remainingDistance < 0.5f)
             {
                 GotoNextPoint();
@@ -117,6 +131,7 @@ namespace AI.Alligator
         private void Idle()
         {
             // do nothing or animation?
+            alligatorNavigation.isStopped = true;
         }
         
         private void GotoNextPoint()
@@ -132,9 +147,9 @@ namespace AI.Alligator
         private bool SwitchStatesAfterTime(float minDiff)
         {
             string status = "try changing states";
-            if ((lastSwitchTime + minDiff) > Time.time)
+            if ( Time.time > (lastSwitchTime + minDiff) )
             {
-                var ranInt = Random.Range(0, 1);
+                var ranInt = Random.Range(0, 100);
 
                 status += " - time elapsed - changes: " + ranInt + "/" + chanceToSwitchStates;
                 if (ranInt < chanceToSwitchStates)
