@@ -14,6 +14,14 @@ namespace AI.Alligator
             }
         }
 
+        private void OnCollisionEnter(Collision other)
+        {
+            if (PlayerIsTrigger(other.collider))
+            {
+                return;
+            }
+        }
+
         private bool PlayerIsTrigger(Collider collider)
         {
             if (!collider.CompareTag("Player"))
