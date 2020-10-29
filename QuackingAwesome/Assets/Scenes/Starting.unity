@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 20d7b5b50a3e7624796b96279da1f38f,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -7832,6 +7832,25 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!95 &579891901
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 579891895}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 9f5732f2f5315ab4586d18352a5a7452, type: 3}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &579998415
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49233,6 +49252,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AABB.m_Extent.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337223831053516566, guid: fcb40f7152cb34640aabb80e2fcd6053,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.34427497
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337223831053516566, guid: fcb40f7152cb34640aabb80e2fcd6053,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.53014755
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337223831053516566, guid: fcb40f7152cb34640aabb80e2fcd6053,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.71743697
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337223831053516566, guid: fcb40f7152cb34640aabb80e2fcd6053,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0.009516358
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337223831053516566, guid: fcb40f7152cb34640aabb80e2fcd6053,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.010449648
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337223831053516566, guid: fcb40f7152cb34640aabb80e2fcd6053,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.02274853
       objectReference: {fileID: 0}
     - target: {fileID: 1409627447054719117, guid: fcb40f7152cb34640aabb80e2fcd6053,
         type: 3}
