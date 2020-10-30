@@ -42,6 +42,8 @@ namespace AI.Alligator
             lastSwitchTime = Time.time;
             currentState = AlligatorState.Idle;
             GotoNextPoint();
+            
+            animator.SetBool(IsIdle, true);
         }
 
         private void Update()
@@ -116,8 +118,7 @@ namespace AI.Alligator
 
         private void Attack()
         {
-            // invoke animation
-            animator.SetTrigger(DoBite);
+            
         }
 
         private void Swim()
@@ -163,6 +164,13 @@ namespace AI.Alligator
             }
             Debug.Log(status);
             return false;
+        }
+        
+        //**** External Access ****//
+        public void Bite()
+        {
+            animator.SetTrigger(DoBite);
+            currentState = AlligatorState.Attacking;
         }
     }
 }
