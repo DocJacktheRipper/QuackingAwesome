@@ -30,6 +30,12 @@ ModelImporter:
   - first:
       74: 8327801510916851920
     second: DuckArmature|Default
+  - first:
+      74: 1423745349676563464
+    second: DuckDeath
+  - first:
+      74: 4918964694871890028
+    second: DuckDash
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -127,11 +133,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Dash
-      takeName: DuckArmature|Dash
+      name: DuckDeath
+      takeName: DuckDeath
       internalID: 0
       firstFrame: 0
-      lastFrame: 9
+      lastFrame: 4
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -157,7 +163,7 @@ ModelImporter:
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
       name: Default
-      takeName: DuckArmature|Default
+      takeName: Default
       internalID: 0
       firstFrame: 0
       lastFrame: 1
@@ -185,11 +191,11 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: DuckArmature|Default
-      takeName: DuckArmature|Default
+      name: DuckDash
+      takeName: DuckDash
       internalID: 0
       firstFrame: 0
-      lastFrame: 1
+      lastFrame: 19
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
