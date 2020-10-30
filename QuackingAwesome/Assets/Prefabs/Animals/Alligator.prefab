@@ -365,6 +365,7 @@ MonoBehaviour:
   chanceToSwitchStates: 20
   waitForSeconds_Idle: 12
   waitForSeconds_Swimming: 5
+  animator: {fileID: 8273628732505740216}
 --- !u!135 &2574722904113934394
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -378,6 +379,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 3
   m_Center: {x: 0, y: 0, z: 1}
+--- !u!65 &5566257955587727019
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3421091977984594808}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.765027, y: 0.6378539, z: 1.4769456}
+  m_Center: {x: 0, y: -0.02430293, z: -0.17093432}
 --- !u!114 &2574722903592988196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -494,6 +508,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Body
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 9f5732f2f5315ab4586d18352a5a7452,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 220389c39561fde418283993f10094f4, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5732f2f5315ab4586d18352a5a7452, type: 3}
 --- !u!1 &3421091977984594808 stripped
@@ -505,6 +524,12 @@ GameObject:
 --- !u!4 &2608140174760446402 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9f5732f2f5315ab4586d18352a5a7452,
+    type: 3}
+  m_PrefabInstance: {fileID: 2574722903592988201}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8273628732505740216 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 9f5732f2f5315ab4586d18352a5a7452,
     type: 3}
   m_PrefabInstance: {fileID: 2574722903592988201}
   m_PrefabAsset: {fileID: 0}

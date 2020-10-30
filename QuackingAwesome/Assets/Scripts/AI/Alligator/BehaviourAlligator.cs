@@ -110,6 +110,7 @@ namespace AI.Alligator
 
         private void Chase()
         {
+            alligatorNavigation.isStopped = false;
             alligatorNavigation.destination = duck.transform.position;
         }
 

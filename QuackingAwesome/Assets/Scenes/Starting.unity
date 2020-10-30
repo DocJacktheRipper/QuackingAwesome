@@ -1501,14 +1501,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 87920176}
-  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: -0.113, y: 1.859, z: -1.729}
+  m_LocalRotation: {x: 0.4472187, y: -0, z: -0, w: 0.8944246}
+  m_LocalPosition: {x: -0.113, y: 2.2, z: -1.673}
   m_LocalScale: {x: 0.49572, y: 0.49572, z: 0.49572}
   m_Children:
   - {fileID: 736956133}
   m_Father: {fileID: 1021911816}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 53.131004, y: 0, z: 0}
 --- !u!1001 &92588105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2314,7 +2314,7 @@ MonoBehaviour:
   minItemsInWorld: 100
   maxItemsInWorld: 400
   objectsToSpawn:
-  - {fileID: 7536800383449205181, guid: e87333c2561a21248aba5944762440f9, type: 3}
+  - {fileID: 5076473282928104849, guid: a8cfe5bfbf722fb4d8646eb7545feead, type: 3}
   targetParent: {fileID: 1513328459}
   spawningDelay: 0
   spawningPointParent: {fileID: 773221474}
@@ -12188,6 +12188,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Alligator
       objectReference: {fileID: 0}
+    - target: {fileID: 2574722902467918670, guid: 5a2e11769ecd75c4fa3e7d6e7f42c622,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2574722902467918671, guid: 5a2e11769ecd75c4fa3e7d6e7f42c622,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12243,6 +12248,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5481022849578958752, guid: 5a2e11769ecd75c4fa3e7d6e7f42c622,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1684071530}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a2e11769ecd75c4fa3e7d6e7f42c622, type: 3}
 --- !u!4 &894694765 stripped
@@ -14867,6 +14877,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 0.43182635
+      objectReference: {fileID: 0}
+    - target: {fileID: 7009594877555079382, guid: 1f14c094844de1241852e9f705269bd5,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7009594877555079382, guid: 1f14c094844de1241852e9f705269bd5,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 7009594877555079387, guid: 1f14c094844de1241852e9f705269bd5,
         type: 3}
@@ -35868,6 +35888,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 834018716}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1684071530 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8273628732505740216, guid: 5a2e11769ecd75c4fa3e7d6e7f42c622,
+    type: 3}
+  m_PrefabInstance: {fileID: 894694764}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1685546309 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8598992634336898019, guid: ca9b6c824a06f7a46af748db64d6caa5,
@@ -38874,8 +38900,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Welcome to Quack the Duck! Start your journey by collecting 3 sticks and
-    carry them on the rock right there!
+  m_Text: 'Objective:
+
+    Collect 3 Sticks and bring them
+
+    to the rock to build
+    a nest.'
 --- !u!222 &1907807228
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -37,17 +37,9 @@ namespace AI.Alligator
         private void DuckDied()
         {
             // load current scene
-            var scene = SceneManager.GetActiveScene(); 
-            // load a scene without tutorial popups
-            if(scene.name == "Starting")
-            {
-                SceneManager.LoadScene("StartingNoPopUps");
-            } 
-            else
-            {
-                SceneManager.LoadScene(scene.name);
-            }
-            
+            var scene = SceneManager.GetActiveScene().name;
+
+            SceneManager.LoadScene(scene);
         }
     }
 }
