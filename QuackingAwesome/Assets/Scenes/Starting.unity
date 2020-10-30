@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 20d7b5b50a3e7624796b96279da1f38f,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -33189,6 +33189,7 @@ Transform:
   - {fileID: 148753686}
   - {fileID: 317705326}
   - {fileID: 759479642}
+  - {fileID: 1715075713}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -34790,6 +34791,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 5762892458755793269, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
+        type: 3}
+      propertyPath: m_TagString
+      value: Nest
+      objectReference: {fileID: 0}
     - target: {fileID: 6098278226380276977, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
         type: 3}
       propertyPath: neededEnergyForLayingEgg
@@ -36205,6 +36211,50 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1714481968}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1715075712
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1715075713}
+  - component: {fileID: 1715075714}
+  m_Layer: 0
+  m_Name: DeathBehaviour
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1715075713
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715075712}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1537087979}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1715075714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715075712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0366a51dea7b304e80b33eb479b387c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfSticksLostInNest: 3
 --- !u!1001 &1719917025
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -48288,18 +48338,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4966003075768817030}
     m_Modifications:
-    - target: {fileID: 413271181287339379, guid: b51857b31ca727344804cebf0959d70e,
-        type: 3}
-      propertyPath: m_Text
-      value: '[1 feather for 0.5 sec]
-
-'
-      objectReference: {fileID: 0}
-    - target: {fileID: 413271181287339379, guid: b51857b31ca727344804cebf0959d70e,
-        type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 884176048821009646, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
       propertyPath: m_Color.a
@@ -48523,7 +48561,7 @@ PrefabInstance:
     - target: {fileID: 8826835751316883244, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8922169578126567246, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}

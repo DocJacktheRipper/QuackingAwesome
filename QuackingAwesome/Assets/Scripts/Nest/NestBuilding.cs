@@ -56,15 +56,6 @@ namespace Nest
                 {
                     BuildNestDynamically();
                 }
-
-                /*
-                PrintText();
-            
-                if (numberOfSticks >= neededSticks)
-                {
-                    BuildNest();
-                }
-                */
             }
         }
 
@@ -123,36 +114,29 @@ namespace Nest
 
         private void BuildNestDynamically()
         {
-            /*
-            if (_nbContainer.childCount <= 0)
-            {    
-                BuildNest();
-            }
-            */
             _nbContainer.GetChild(0).gameObject.SetActive(true);
         
             // set y pos based on heightForDynBuilding and number of sticks in nest
             var percentageOfBeingFinished = 1 - (neededSticks - numberOfSticks) * 1.0f / neededSticks;
-            //Debug.Log(percentageOfBeingFinished);
             _nbContainer.GetChild(0).transform.localPosition 
                 = new Vector3(0f, percentageOfBeingFinished * heightForDynBuilding, 0f);
         }
 
-        /*
-        private void BuildNest()
+        public void RemoveSticks(int numberOfSticksLostInNest)
         {
-            // is already built a nest on rock?
-            if (_nbContainer.childCount > 0)
+            numberOfSticks -= numberOfSticksLostInNest;
+
+            if (numberOfSticks < 0)
             {
-                Debug.Log("already a nest on it");
-                return;
+                numberOfSticks = 0;
             }
-        
-            // create nest object
-            var nestOfSticks = Instantiate(finishedNest, _nbContainer, true);
-            // get "NestBuildingContainer" and set object as child of it
-            nestOfSticks.transform.position = _nbContainer.position;
+
+            if (numberOfSticks < neededSticks)
+            {
+                NestIsFinished = false;
+            }
+            
+            BuildNestDynamically();
         }
-        */
     }
 }

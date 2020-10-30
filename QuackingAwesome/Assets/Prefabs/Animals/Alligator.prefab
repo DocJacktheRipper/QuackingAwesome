@@ -302,6 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4045cd076b52e3f4e9c4fb652144f29b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reloadOnDeath: 0
 --- !u!65 &2574722903495264307
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -313,8 +314,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.5350275, y: 0.9078224, z: 1.2239742}
-  m_Center: {x: -0.03319168, y: 0.04608977, z: 1.0222065}
+  m_Size: {x: 0.6138625, y: 0.9078224, z: 1.2611718}
+  m_Center: {x: -0.013107538, y: 0.04608977, z: 1.0408053}
 --- !u!1 &2574722904113934396
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,7 +470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 802213148080cf148bbd8bf638dcd11c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alligator: {fileID: 0}
+  alligator: {fileID: 5481022849578958752}
 --- !u!1 &4044391087743079008
 GameObject:
   m_ObjectHideFlags: 0
