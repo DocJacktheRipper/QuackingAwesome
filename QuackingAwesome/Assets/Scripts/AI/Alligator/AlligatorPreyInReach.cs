@@ -14,5 +14,13 @@ namespace AI.Alligator
                 alligator.Bite();
             }
         }
+        
+        private void OnTriggerExit(Collider other)
+        {
+            if (other.CompareTag("Player"))
+            {
+                alligator.ExitBite();
+            }
+        }
     }
 }

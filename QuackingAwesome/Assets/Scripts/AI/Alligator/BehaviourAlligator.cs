@@ -171,6 +171,14 @@ namespace AI.Alligator
         {
             animator.SetTrigger(DoBite);
             currentState = AlligatorState.Attacking;
+            alligatorNavigation.speed += 0.2f;
+        }
+
+        public void ExitBite()
+        {
+            animator.ResetTrigger(DoBite);
+            currentState = AlligatorState.Chasing;
+            alligatorNavigation.speed -= 0.2f;
         }
     }
 }
