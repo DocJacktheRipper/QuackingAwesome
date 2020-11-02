@@ -4,40 +4,64 @@ namespace AI.Alligator.States
 {
     public class IdleState : IState
     {
-        private float waitUntil;
+        private float waitUntilToSwitch;
+        private float waitSecondsToSwitch;
         private int chanceToSwitchToSwimming;
-        
-        public IdleState(float waitSeconds, int chance)
+
+        public IdleState(GameObject ai) : base(ai) { }
+        public IdleState(GameObject ai, float waitSeconds, int chance) : base(ai)
         {
-            waitUntil = Time.time + waitSeconds;
+            waitSecondsToSwitch = waitSeconds;
             chanceToSwitchToSwimming = chance;
         }
-        
-        public override void ExitState()
+
+        #region IState
+        public override void Enter()
         {
-            throw new System.NotImplementedException();
+            base.Enter();
+            waitUntilToSwitch = Time.time + waitSecondsToSwitch;
+        }
+
+        public override void Exit()
+        {
+            base.Exit();
         }
 
         public override void Execute()
         {
             if (SwitchStatesAfterTime())
             {
-                // TODO ?
+                //alligatorNavigation.isStopped = true;
             }
         }
-        
+        #endregion
+        #region HelperMethods
+
+        public void SetWaitingTime()
+        {
+            waitUntilToSwitch = Time.time + waitSecondsToSwitch;
+        }
+
         private bool SwitchStatesAfterTime()
         {
-            if (waitUntil > Time.time)
+            if (!(Time.time > waitUntilToSwitch)) return false;
+            
+            // try to switch after time elapsed
+            var ranInt = Random.Range(0, 100);
+                
+            var status = " - time elapsed - changes: " + ranInt + "/" + chanceToSwitchToSwimming;
+            if (ranInt < chanceToSwitchToSwimming)
             {
-                var ranInt = Random.Range(0, 1);
-                if (ranInt < chanceToSwitchToSwimming)
-                {
-                    return true;
-                }
+                status += " -- switched";
+                Debug.Log(status);
+                return true;
             }
+            Debug.Log(status);
 
             return false;
         }
+
+        #endregion
+        
     }
 }

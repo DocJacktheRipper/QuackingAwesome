@@ -22,8 +22,8 @@ namespace AI.Alligator
         public float chaseSpeedBonus;
 
         public int chanceToSwitchStates = 50;
-        public float waitForSeconds_Idle;
-        public float waitForSeconds_Swimming;
+        public float waitForSecondsIdle;
+        public float waitForSecondsSwimming;
         private float lastSwitchTime;
 
         private GameObject duck;
@@ -58,7 +58,7 @@ namespace AI.Alligator
                 case AlligatorState.Idle:
                     Idle();
                     // switch between idle and swimming after some time
-                    if (SwitchStatesAfterTime(waitForSeconds_Idle))
+                    if (SwitchStatesAfterTime(waitForSecondsIdle))
                     {
                         lastSwitchTime = Time.time;
                         currentState = AlligatorState.Swimming;
@@ -68,7 +68,7 @@ namespace AI.Alligator
                 case AlligatorState.Swimming:
                     Swim();
                     // switch between idle and swimming after some time
-                    if (SwitchStatesAfterTime(waitForSeconds_Swimming))
+                    if (SwitchStatesAfterTime(waitForSecondsSwimming))
                     {
                         lastSwitchTime = Time.time;
                         currentState = AlligatorState.Idle;
@@ -143,7 +143,8 @@ namespace AI.Alligator
                 return;
             }
             var destPoint = Random.Range(0, wayPoints.Length);
-            alligatorNavigation.SetDestination(wayPoints[destPoint].position);
+            currentTarget = wayPoints[destPoint];
+            alligatorNavigation.SetDestination(currentTarget.position);
         }
         
         private bool SwitchStatesAfterTime(float minDiff)
@@ -165,7 +166,9 @@ namespace AI.Alligator
             Debug.Log(status);
             return false;
         }
-        
+
+        #region ExternalAccess
+
         //**** External Access ****//
         public void Bite()
         {
@@ -180,5 +183,8 @@ namespace AI.Alligator
             currentState = AlligatorState.Chasing;
             alligatorNavigation.speed -= 0.2f;
         }
+
+        #endregion
+        
     }
 }

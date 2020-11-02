@@ -84,17 +84,20 @@
               </e>
             </e>
           </e>
-        </e>
-        <e p="QuickOutline" t="Include">
-          <e p="README.txt" t="Include" />
-          <e p="Resources" t="Include">
-            <e p="Shaders" t="Include">
-              <e p="OutlineFill.shader" t="Include" />
-              <e p="OutlineMask.shader" t="Include" />
+          <e p="QuickOutline" t="Include">
+            <e p="README.txt" t="Include" />
+            <e p="Resources" t="Include">
+              <e p="Shaders" t="Include">
+                <e p="OutlineFill.shader" t="Include" />
+                <e p="OutlineMask.shader" t="Include" />
+              </e>
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="Outline.cs" t="Include" />
             </e>
           </e>
-          <e p="Scripts" t="Include">
-            <e p="Outline.cs" t="Include" />
+          <e p="UnityAds" t="Include">
+            <e p="link.xml" t="Include" />
           </e>
         </e>
         <e p="Samples" t="Include">
@@ -113,7 +116,10 @@
               <e p="AlligatorPreyInReach.cs" t="Include" />
               <e p="BehaviourAlligator.cs" t="Include" />
               <e p="States" t="Include">
+                <e p="AlligatorAI.cs" t="Include" />
+                <e p="BehaviourMethods.cs" t="Include" />
                 <e p="ChasingState.cs" t="Include" />
+                <e p="HandlerAI.cs" t="Include" />
                 <e p="IdleState.cs" t="Include" />
                 <e p="IState.cs" t="Include" />
               </e>
