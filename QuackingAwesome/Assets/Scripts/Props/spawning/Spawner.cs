@@ -16,6 +16,8 @@ namespace Props.spawning
         public List<GameObject> objectsToSpawn;
         public GameObject targetParent;
 
+        public bool enableSpawnRadius = true;
+
         // time between spawns
         public float spawningDelay;
 
@@ -46,52 +48,33 @@ namespace Props.spawning
             Invoke(nameof(Spawn), seconds);
         }
         
-        /*
-        private void Start()
-        {
-            StartCoroutine(CheckForMissingSticks());
-        }
-
-        private void CheckForMissingSticks()
-        {
-            if (targetParent.transform.childCount < minItemsInWorld)
-            {
-                
-            }
-        }
-
-*/
-        /*
-        internal void SpawnObject()
-        {
-            var index = (int) Random.Range(0, spawningPoints.Count);
-
-            SpawnPoint point = spawningPoints[index];
-            GameObject obj = Instantiate(objectToSpawn, point.transform.position, Quaternion.identity);
-            //spawningPoints[index].blockedPosition = true;
-            spawningPoints.Remove(point);    
-            Destroy(point);
-            // TODO: fix, that it actually destroys obj
-
-            obj.transform.parent = targetParent.transform;
-        }
-        */
-
+       
         public void Spawn()
         {
-            if (spawningPointParent.childCount > 0)
-            {
-                var spawnPoint = GetRandomPosition();
-                // create object
-                GameObject gameObject = Instantiate(GetRandomSkin(), spawnPoint.position, Quaternion.identity);
-                SetObjectsAsChildren(spawnPoint, gameObject);
-                RotateObjectRandomly(gameObject.transform);
+            if (spawningPointParent.childCount <= 0) return;
+            
+            var spawnPoint = GetRandomPosition();
 
-                var spawnable = gameObject.GetComponent<OnSpawnableDelete>();
-                if (spawnable != null)
-                {
-                    spawnable.positionPool = spawningPointParent;
-                }
+            if (enableSpawnRadius)
+            {
+                var positionInRadius = (Vector3) Random.insideUnitCircle * 1.5f;
+                positionInRadius += spawnPoint.position;
+                positionInRadius.y = 0f;
+                var spawned = Instantiate(GetRandomSkin(), positionInRadius, Quaternion.identity);
+                SetObjectsAsChildren(spawnPoint, spawned);
+                RotateObjectRandomly(spawned.transform);
+                return;
+            }
+            
+            // create object
+            GameObject gameObject = Instantiate(GetRandomSkin(), spawnPoint.position, Quaternion.identity);
+            SetObjectsAsChildren(spawnPoint, gameObject);
+            RotateObjectRandomly(gameObject.transform);
+
+            var spawnable = gameObject.GetComponent<OnSpawnableDelete>();
+            if (spawnable != null)
+            {
+                spawnable.positionPool = spawningPointParent;
             }
         }
 
@@ -115,8 +98,40 @@ namespace Props.spawning
         {
             var ranPos = (int) Random.Range(0, spawningPointParent.childCount);
             return spawningPointParent.GetChild(ranPos);
+        } 
+        
+        /*
+        private void Start()
+        {
+            StartCoroutine(CheckForMissingSticks());
         }
-/*
+
+        private void CheckForMissingSticks()
+        {
+            if (targetParent.transform.childCount < minItemsInWorld)
+            {
+                
+            }
+        }
+
+        */
+        /*
+        internal void SpawnObject()
+        {
+            var index = (int) Random.Range(0, spawningPoints.Count);
+
+            SpawnPoint point = spawningPoints[index];
+            GameObject obj = Instantiate(objectToSpawn, point.transform.position, Quaternion.identity);
+            //spawningPoints[index].blockedPosition = true;
+            spawningPoints.Remove(point);    
+            Destroy(point);
+            // TODO: fix, that it actually destroys obj
+
+            obj.transform.parent = targetParent.transform;
+        }
+        */
+
+        /*
         IEnumerator SpawnObjectWithDelay()
         {
             SpawnObject();

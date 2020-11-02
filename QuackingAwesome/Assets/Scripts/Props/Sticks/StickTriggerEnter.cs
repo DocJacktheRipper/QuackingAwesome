@@ -162,8 +162,11 @@ namespace Props.Sticks
         }
 
         public void DeleteStick()
-        { 
-            transform.GetChild(0).parent = positionPool;
+        {
+            if (transform.childCount > 0)
+            {
+                transform.GetChild(0).parent = positionPool;
+            }
             Destroy(gameObject);
         }
     }
