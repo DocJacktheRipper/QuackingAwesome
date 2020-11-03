@@ -9,7 +9,7 @@ namespace Controllers.Duck
         //DUCK DOESNT FLY AWAY WHEN USING GRAVITY AND A BOX COLLIDER FOR WATER
         private Rigidbody _duck;
 
-        private float _rotation = 3.8f; //value how fast duck rotates
+        public float rotation = 3.8f; //value how fast duck rotates
         public float duckSpeed; //for debugging to see the speed
 
         private Vector3 _lookDir;
@@ -36,7 +36,7 @@ namespace Controllers.Duck
             if (x != 0 || z != 0)
             {
                 // create a smooth direction to look at using Slerp()
-                Vector3 smoothDir = Vector3.Slerp(transform.forward, _lookDir, _rotation * Time.deltaTime);
+                Vector3 smoothDir = Vector3.Slerp(transform.forward, _lookDir, rotation * Time.deltaTime);
                 transform.rotation = Quaternion.LookRotation(smoothDir);
             }
 

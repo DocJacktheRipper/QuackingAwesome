@@ -648,9 +648,6 @@ MonoBehaviour:
   collectingEnabled: 1
   numberOfSticks: 0
   maxCapacityOfSticks: 1
-  enableDuckbillVisual: 1
-  branchVisual: {fileID: 6976615927814636928, guid: 37f9aeb2fdaf19f4a8efd7ce8a593dcd,
-    type: 3}
 --- !u!114 &433741082582950495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -820,6 +817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 000bfe5ebf737954ab5668a45cdfef9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotation: 1
   duckSpeed: 0
 --- !u!114 &3059070598927708807
 MonoBehaviour:
