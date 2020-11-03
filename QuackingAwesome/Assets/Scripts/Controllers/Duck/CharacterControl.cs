@@ -39,22 +39,10 @@ namespace Controllers.Duck
                 Vector3 smoothDir = Vector3.Slerp(transform.forward, _lookDir, rotation * Time.deltaTime);
                 transform.rotation = Quaternion.LookRotation(smoothDir);
             }
-
-            /*
-            //get input for dash and quack(attack)
-            if (Input.GetButtonDown("Submit"))
-            {
-                Dash();
-            }
-            if (Input.GetButtonDown("Fire3"))
-            {
-                quack_placeholder.Play();
-            }
-            */
         }
         void FixedUpdate()
         {
-            _movement = new Vector3(x, 0f, z) * 2f * Time.deltaTime;
+            _movement = new Vector3(x, 0f, z) * (2f * Time.deltaTime);
             _duck.AddForce(_movement, ForceMode.VelocityChange);
         }
 
