@@ -1,18 +1,43 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using AI.Alligator.States;
 using UnityEngine;
 
-public class ChasingState : MonoBehaviour
+namespace Assets.Scripts.AI.Alligator.States
 {
-    // Start is called before the first frame update
-    void Start()
+    public class ChasingState : IState
     {
-        
-    }
+        public Transform target;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        #region constructor
+        public ChasingState(GameObject ai, StateHandlerAI sh) : base(ai, sh)
+        {
+
+        }
+        #endregion
+
+        public override void Enter()
+        {
+            base.Enter();
+            methods.InvokeChasing(target);
+        }
+
+        public override void Execute()
+        {
+            base.Execute();
+        }
+
+        public override void Exit()
+        {
+            base.Exit();
+            methods.StopChasing();
+        }
+
+        public override void DetectionTriggerEntered(Collider other)
+        {
+            base.DetectionTriggerEntered(other);
+            // TODO: calculate which target to focus on
+            // if(targetChanged)
+            //      methods.StopChasing();
+            //      methods.InvokeChasing(target);
+        }
     }
 }

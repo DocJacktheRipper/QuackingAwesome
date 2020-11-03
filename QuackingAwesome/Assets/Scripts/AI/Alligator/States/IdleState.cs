@@ -8,8 +8,9 @@ namespace AI.Alligator.States
         private float waitSecondsToSwitch;
         private int chanceToSwitchToSwimming;
 
-        public IdleState(GameObject ai) : base(ai) { }
-        public IdleState(GameObject ai, float waitSeconds, int chance) : base(ai)
+        private static readonly int IsIdle = Animator.StringToHash("IsIdle");
+
+        public IdleState(GameObject ai, StateHandlerAI sh, float waitSeconds, int chance) : base(ai, sh)
         {
             waitSecondsToSwitch = waitSeconds;
             chanceToSwitchToSwimming = chance;
@@ -20,11 +21,13 @@ namespace AI.Alligator.States
         {
             base.Enter();
             waitUntilToSwitch = Time.time + waitSecondsToSwitch;
+            methods.animator.SetBool(IsIdle, true);
         }
 
         public override void Exit()
         {
             base.Exit();
+            methods.animator.SetBool(IsIdle, false);
         }
 
         public override void Execute()
@@ -34,6 +37,16 @@ namespace AI.Alligator.States
                 //alligatorNavigation.isStopped = true;
             }
         }
+
+        public void DetectionTriggerEntered(Collider other)
+        {
+            if (other.CompareTag("Player"))
+            {
+                stateHandler.chasing.target = other.transform;
+                stateHandler.ChangeState(stateHandler.chasing);
+            }
+        }
+
         #endregion
         #region HelperMethods
 

@@ -10,6 +10,13 @@ namespace AI.Alligator.States
         public Transform wayPointContainer;
         public Transform currentTarget;
 
+        public Animator animator;
+
+        #region UsefulProperties
+        public float chaseSpeedBonus;
+        public float biteSpeedBonus;
+        #endregion
+
         private void Start()
         {
             alligatorNavigation = GetComponentInParent<NavMeshAgent>();
@@ -30,6 +37,22 @@ namespace AI.Alligator.States
             var destIndex = Random.Range(0, wayPointContainer.childCount);
             currentTarget = wayPointContainer.GetChild(destIndex);
             alligatorNavigation.SetDestination(currentTarget.position);
+        }
+
+        public void InvokeChasing()
+        {
+            // TODO: stuff
+            alligatorNavigation.speed += chaseSpeedBonus;
+        }
+
+        public void InvokeChasing(Transform target)
+        {
+
+        }
+
+        public void StopChasing()
+        {
+            alligatorNavigation.speed -= chaseSpeedBonus;
         }
     }
 }
