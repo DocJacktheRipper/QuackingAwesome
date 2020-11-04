@@ -1,5 +1,4 @@
-﻿using Assets.Scripts.AI.Alligator.States;
-using System;
+﻿using System;
 using UnityEngine;
 
 namespace AI.Alligator.States
@@ -10,24 +9,17 @@ namespace AI.Alligator.States
 
         #region StateMachine
 
-        private IState state = null;
+        public IState state = null;
 
         public IdleState idle;
         public ChasingState chasing;
 
         #endregion
-        #region InitialProperties
 
-        public float waitSecondsForSwitchingStates;
-        public int chanceForSwitchingStates;
-
-        #endregion
+        #region Initialization
 
         void Start()
         {
-            idle = new IdleState(gameObject, this, waitSecondsForSwitchingStates, chanceForSwitchingStates);
-            chasing = new ChasingState(gameObject, this);
-
             Initialize(idle);
         }
 
@@ -37,6 +29,9 @@ namespace AI.Alligator.States
             startingState.Enter();
         }
 
+
+        #endregion
+        
         public void ChangeState(IState newState)
         {
             state.Exit();
@@ -49,14 +44,27 @@ namespace AI.Alligator.States
         {
             state.Execute();
         }
+        
+        #region Trigger
 
-        public void TriggerEntered(Collider other)
+        public void DetectionTriggerEntered(Collider other)
         {
             state.DetectionTriggerEntered(other);
         }
-        public void TriggerExited(Collider other)
+        public void DetectionTriggerExited(Collider other)
         {
             
         }
+
+        public void BiteTriggerEntered(Collider other)
+        {
+            
+        }
+
+        public void BiteTriggerExited(Collider other)
+        {
+            
+        }
+        #endregion
     }
 }

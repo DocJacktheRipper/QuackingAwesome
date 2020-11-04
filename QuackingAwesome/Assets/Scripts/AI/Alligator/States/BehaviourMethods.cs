@@ -22,11 +22,6 @@ namespace AI.Alligator.States
             alligatorNavigation = GetComponentInParent<NavMeshAgent>();
         }
 
-        public void ChangeDestination(Vector3 destination)
-        {
-            alligatorNavigation.SetDestination(currentTarget.position);
-        }
-        
         public void GotoNextPoint()
         {
             if (wayPointContainer.childCount <= 0)
@@ -45,9 +40,9 @@ namespace AI.Alligator.States
             alligatorNavigation.speed += chaseSpeedBonus;
         }
 
-        public void InvokeChasing(Transform target)
+        public void Chase(Transform target)
         {
-
+            alligatorNavigation.SetDestination(target.position);
         }
 
         public void StopChasing()

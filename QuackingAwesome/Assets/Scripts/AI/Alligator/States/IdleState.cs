@@ -4,18 +4,13 @@ namespace AI.Alligator.States
 {
     public class IdleState : IState
     {
-        private float waitUntilToSwitch;
-        private float waitSecondsToSwitch;
-        private int chanceToSwitchToSwimming;
+        public float waitUntilToSwitch;
+        public float waitSecondsToSwitch;
+        public int chanceToSwitchToSwimming;
 
         private static readonly int IsIdle = Animator.StringToHash("IsIdle");
 
-        public IdleState(GameObject ai, StateHandlerAI sh, float waitSeconds, int chance) : base(ai, sh)
-        {
-            waitSecondsToSwitch = waitSeconds;
-            chanceToSwitchToSwimming = chance;
-        }
-
+        
         #region IState
         public override void Enter()
         {
@@ -34,11 +29,11 @@ namespace AI.Alligator.States
         {
             if (SwitchStatesAfterTime())
             {
-                //alligatorNavigation.isStopped = true;
+                SetWaitingTime();
             }
         }
 
-        public void DetectionTriggerEntered(Collider other)
+        public override void DetectionTriggerEntered(Collider other)
         {
             if (other.CompareTag("Player"))
             {

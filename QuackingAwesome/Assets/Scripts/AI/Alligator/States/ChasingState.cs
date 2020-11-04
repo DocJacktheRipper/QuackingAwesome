@@ -1,28 +1,21 @@
-﻿using AI.Alligator.States;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Assets.Scripts.AI.Alligator.States
+namespace AI.Alligator.States
 {
     public class ChasingState : IState
     {
         public Transform target;
 
-        #region constructor
-        public ChasingState(GameObject ai, StateHandlerAI sh) : base(ai, sh)
-        {
-
-        }
-        #endregion
-
         public override void Enter()
         {
             base.Enter();
-            methods.InvokeChasing(target);
+            methods.InvokeChasing();
         }
 
         public override void Execute()
         {
             base.Execute();
+            methods.Chase(target);
         }
 
         public override void Exit()
@@ -36,8 +29,7 @@ namespace Assets.Scripts.AI.Alligator.States
             base.DetectionTriggerEntered(other);
             // TODO: calculate which target to focus on
             // if(targetChanged)
-            //      methods.StopChasing();
-            //      methods.InvokeChasing(target);
+            //    stateHandler.ChangeStates(stateHandler.chaseState);
         }
     }
 }

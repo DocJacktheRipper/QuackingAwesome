@@ -112,19 +112,22 @@
         <e p="Scripts" t="Include">
           <e p="AI" t="Include">
             <e p="Alligator" t="Include">
-              <e p="AlligatorMouthTrigger.cs" t="Include" />
-              <e p="AlligatorPreyInReach.cs" t="Include" />
               <e p="BehaviourAlligator.cs" t="Include" />
               <e p="States" t="Include">
-                <e p="AlligatorAI.cs" t="Include" />
                 <e p="BehaviourMethods.cs" t="Include" />
                 <e p="ChasingState.cs" t="Include" />
-                <e p="HandlerAI.cs" t="Include" />
                 <e p="IdleState.cs" t="Include" />
                 <e p="IState.cs" t="Include" />
+                <e p="StateHandlerAI.cs" t="Include" />
               </e>
               <e p="ToDelete" t="Include">
                 <e p="AlligatorBehaviour.cs" t="Include" />
+              </e>
+              <e p="Trigger" t="Include">
+                <e p="AlligatorDetectionTriggered.cs" t="Include" />
+                <e p="AlligatorMouthTrigger.cs" t="Include" />
+                <e p="AlligatorPreyInReach.cs" t="Include" />
+                <e p="AlligatorStartBiting.cs" t="Include" />
               </e>
             </e>
             <e p="Beaver" t="Include">
