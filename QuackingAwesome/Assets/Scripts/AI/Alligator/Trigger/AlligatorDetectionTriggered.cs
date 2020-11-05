@@ -16,6 +16,7 @@ namespace AI.Alligator.Trigger
 
         private void OnTriggerExit(Collider other)
         {
+            Debug.Log("lost detection");
             stateHandler.DetectionTriggerExited(other);
         }
     }

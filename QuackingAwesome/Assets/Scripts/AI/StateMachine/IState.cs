@@ -24,8 +24,10 @@ namespace AI.Alligator.States
         public virtual void Enter() { }
         public virtual void Exit() { }
         public virtual void Execute() { }
-
+        
+        #region Trigger
         public virtual void DetectionTriggerEntered(Collider other) { }
         public virtual void DetectionTriggerExited(Collider other) { }
+        #endregion
     }
 }

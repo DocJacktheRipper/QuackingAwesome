@@ -45,14 +45,10 @@ namespace Assets.Scripts.AI.Alligator.States
             // try to switch after time elapsed
             var ranInt = Random.Range(0, 100);
 
-            var status = " - time elapsed - changes: " + ranInt + "/" + chanceToSwitchState;
-            if (ranInt < chanceToSwitchState)
+             if (ranInt < chanceToSwitchState)
             {
-                status += " -- switched";
-                Debug.Log(status);
                 return true;
             }
-            Debug.Log(status);
 
             return false;
         }

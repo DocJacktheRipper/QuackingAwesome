@@ -59,13 +59,14 @@ namespace AI.Alligator.States
 
         public void BiteTriggerEntered(Collider other)
         {
-            
+            methods.InvokeBiting();
         }
 
         public void BiteTriggerExited(Collider other)
         {
-            
+            methods.StopBiting();
         }
+        
         #endregion
     }
 }

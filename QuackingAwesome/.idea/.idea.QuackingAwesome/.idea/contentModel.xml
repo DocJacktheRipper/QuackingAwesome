@@ -115,9 +115,12 @@
               <e p="BehaviourAlligator.cs" t="Include" />
               <e p="States" t="Include">
                 <e p="BehaviourMethods.cs" t="Include" />
-                <e p="ChasingState.cs" t="Include" />
-                <e p="IdleState.cs" t="Include" />
-                <e p="IState.cs" t="Include" />
+                <e p="ConcreteStates" t="Include">
+                  <e p="ChasingState.cs" t="Include" />
+                  <e p="IdleState.cs" t="Include" />
+                  <e p="SwimmingState.cs" t="Include" />
+                </e>
+                <e p="ISwimIdleState.cs" t="Include" />
                 <e p="StateHandlerAI.cs" t="Include" />
               </e>
               <e p="ToDelete" t="Include">
@@ -137,6 +140,9 @@
               <e p="ToDeleteLater" t="Include">
                 <e p="BeaverAI.cs" t="Include" />
               </e>
+            </e>
+            <e p="StateMachine" t="Include">
+              <e p="IState.cs" t="Include" />
             </e>
           </e>
           <e p="Controllers" t="Include">
@@ -206,7 +212,6 @@
               <e p="StickTriggerEnter.cs" t="Include" />
             </e>
           </e>
-          <e p="TestAnimationQuack.cs" t="Include" />
         </e>
         <e p="UI Elements" t="Include">
           <e p="Joystick Pack" t="Include">

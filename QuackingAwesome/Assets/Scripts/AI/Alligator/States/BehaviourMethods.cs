@@ -11,6 +11,7 @@ namespace AI.Alligator.States
         public Vector3 currentTarget;
 
         public Animator animator;
+        private static readonly int DoBite = Animator.StringToHash("DoBite");
 
         #region UsefulProperties
         public float chaseSpeedBonus;
@@ -47,13 +48,11 @@ namespace AI.Alligator.States
         {
             if (wayPointContainer.childCount <= 0)
             {
-                Debug.Log("no child");
                 return;
             }
             // set new target by getting random point from container
             var destIndex = Random.Range(0, wayPointContainer.childCount);
             currentTarget = wayPointContainer.GetChild(destIndex).position;
-            Debug.Log("target: " + currentTarget.ToString());
             alligatorNavigation.SetDestination(currentTarget);
         }
 
@@ -83,12 +82,15 @@ namespace AI.Alligator.States
         public void InvokeBiting()
         {
             alligatorNavigation.speed += biteSpeedBonus;
+            animator.SetTrigger(DoBite);
         }
 
         public void StopBiting()
         {
             alligatorNavigation.speed -= biteSpeedBonus;
+            animator.ResetTrigger(DoBite);
         }
+        
         #endregion
     }
 }

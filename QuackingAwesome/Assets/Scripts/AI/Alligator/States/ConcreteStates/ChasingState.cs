@@ -37,7 +37,7 @@ namespace AI.Alligator.States
         {
             base.DetectionTriggerExited(other);
 
-            if(other.Equals(target))
+            if(other.transform.Equals(target))
             {
                 stateHandler.ChangeState(stateHandler.idle);
             }
