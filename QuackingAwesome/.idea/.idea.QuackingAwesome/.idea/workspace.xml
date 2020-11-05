@@ -22,18 +22,27 @@
     <list default="true" id="cb082888-ab6d-41db-a40b-24e16e1dbeec" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Samples/UI Builder/1.0.0-preview.7/OptionsPanel/Editor/Resources/UI Builder.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test Area/JacksTestMap2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test Area/JacksTestMap2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/BehaviourMethods.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/BehaviourMethods.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/ConcreteStates/ChasingState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/ConcreteStates/ChasingState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/IState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/IState.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/ISwimIdleState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/ISwimIdleState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/StateHandlerAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/StateHandlerAI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/BehaviourAlligator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/BehaviourAlligator.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/BehaviourMethods.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/BehaviourMethods.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/ConcreteStates.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/ConcreteStates/ChasingState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/ConcreteStates/ChasingState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/ConcreteStates/IdleState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/ConcreteStates/IdleState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/ConcreteStates/SwimmingState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/ConcreteStates/SwimmingState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/ISwimIdleState.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/ISwimIdleState.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/StateHandlerAI.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/StateHandlerAI.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/Trigger/AlligatorDetectionTriggered.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/Trigger/AlligatorDetectionTriggered.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/Trigger/AlligatorMouthTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/Trigger/AlligatorMouthTrigger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/DeathBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/DeathBehaviour.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/Trigger/AlligatorPreyInReach.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/Trigger/AlligatorPreyInReach.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/Trigger/AlligatorStartBiting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/Trigger/AlligatorStartBiting.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/StateMachine/IState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/StateMachine/IState.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,38 +54,29 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/StickInventory.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/IState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/ReverseWallCollider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/IStateAlligator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/StateHandlerBeaver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/049BE2AF-E36F-487E-B06E-F49D51A0BAB6/fd/9eed30da/Animator.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/BehaviourMethods.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/FadeMusic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Nest/NestMenu/InspectableNest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/DeathBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/StateMachine/BehaviourMethods.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/Beaver/ScaredAway.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/DucklingsInventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/Alligator/Trigger/AlligatorDetectionTriggered.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@7.3.1/Editor/Drawing/MaterialGraphEditWindow.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EE47BE73-F7EF-409C-A5E5-CE4B121745B7/d1/46dc56a7/Object.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/StateMachine/IStateHandlerAI.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Props/spawning/SpawnPoint.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/BehaviourMethodsAlligator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Buttons/NestMenu/NestButtonTrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Props/spawning/OnSpawnableDelete.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Buttons/NestMenu/HatchingEggButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Buttons/NestMenu/EggButtons.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Buttons/NestMenu/NestButtonTrigger.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Nest/EffectTrigger.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Buttons/NestMenu/NestButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Nest/NestEffectTrigger.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Props/PeaDetection.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/QuackingBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Props/PeaCollecting.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/BeaverAI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/ScaredAway.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/DucklingsInventory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Nest/LayAndHatchEgg.cs" />
         <option value="$PROJECT_DIR$/Assets/TestAnimationQuack.cs" />
@@ -108,14 +108,26 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/BehaviourAlligator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/ChasingState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/IdleState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/Trigger/AlligatorStartBiting.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/IState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/Trigger/AlligatorDetectionTriggered.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/ConcreteStates/ChasingState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/ISwimIdleState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/StateHandlerAI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/DeathBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/BehaviourMethods.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/StateMachine/BehaviourMethods.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/StateMachine/ISwimIdleState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/Trigger/AlligatorDetectionTriggered.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/Trigger/AlligatorStartBiting.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/StateMachine/IState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/ConcreteStates/ChasingState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/ConcreteStates/IdleState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/ISwimIdleState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/StateHandlerAlligator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/StateMachine/IStateHandlerAI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/IStateAlligator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/BehaviourMethodsAlligator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/ConcreteStates/SwimmingState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/IStateBeaver.cs" />
       </list>
     </option>
   </component>
@@ -204,7 +216,7 @@
       <workItem from="1604319389019" duration="14070000" />
       <workItem from="1604396438893" duration="1846000" />
       <workItem from="1604481652146" duration="4831000" />
-      <workItem from="1604597659740" duration="950000" />
+      <workItem from="1604597659740" duration="4576000" />
     </task>
     <servers />
   </component>

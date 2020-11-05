@@ -1,42 +1,45 @@
 ﻿using UnityEngine;
 
-namespace Assets.Scripts.AI.Alligator.States
+namespace AI.Alligator.StateMachine_Alligator.ConcreteStates
 {
-    public class SwimmingState : ISwimIdleState
+    public class IdleState : ISwimIdleState
     {
-        #region
+        private static readonly int IsIdle = Animator.StringToHash("IsIdle");
+
+        
+        #region IState
         public override void Enter()
         {
             base.Enter();
-            methods.StartMovement();
+            methods.StopMovement();
+            methods.animator.SetBool(IsIdle, true);
         }
+
         public override void Exit()
         {
             base.Exit();
+            methods.animator.SetBool(IsIdle, false);
         }
+
         public override void Execute()
         {
             base.Execute();
             if (base.SwitchStatesAfterTime())
             {
                 ResetWaitingTime();
-                stateHandler.ChangeState(stateHandler.idle);
-            }
-            if (methods.HasReachedDestination())
-            {
-                methods.GotoNextPoint();
+                stateHandler.ChangeState(stateHandler.swimming);
             }
         }
 
         public override void DetectionTriggerEntered(Collider other)
         {
             base.DetectionTriggerEntered(other);
-
             if (other.CompareTag("Player"))
             {
                 stateHandler.ChangeState(stateHandler.chasing);
             }
         }
         #endregion
+
     }
 }

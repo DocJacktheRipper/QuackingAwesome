@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.AI;
 
-namespace AI.Alligator.States
+namespace AI.StateMachine
 {
     public class BehaviourMethods : MonoBehaviour
     {

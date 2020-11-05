@@ -1,22 +1,20 @@
 ﻿using System;
-using AI.Alligator.States;
+using AI.StateMachine;
 using UnityEngine;
 
 namespace AI.Alligator.Trigger
 {
     public class AlligatorDetectionTriggered : MonoBehaviour
     {
-        public StateHandlerAI stateHandler;
+        public IStateHandlerAI stateHandler;
 
         private void OnTriggerEnter(Collider other)
         {
-            Debug.Log("detected");
             stateHandler.DetectionTriggerEntered(other);
         }
 
         private void OnTriggerExit(Collider other)
         {
-            Debug.Log("lost detection");
             stateHandler.DetectionTriggerExited(other);
         }
     }

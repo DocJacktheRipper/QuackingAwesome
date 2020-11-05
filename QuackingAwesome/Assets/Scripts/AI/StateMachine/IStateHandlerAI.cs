@@ -1,9 +1,9 @@
-﻿using Assets.Scripts.AI.Alligator.States;
+﻿using AI.Alligator.StateMachine_Alligator.ConcreteStates;
 using UnityEngine;
 
-namespace AI.Alligator.States
+namespace AI.StateMachine
 {
-    public class StateHandlerAI : MonoBehaviour
+    public class IStateHandlerAI : MonoBehaviour
     {
         public BehaviourMethods methods;
 
@@ -11,20 +11,11 @@ namespace AI.Alligator.States
 
         public IState state = null;
 
-        public IdleState idle;
-        public ChasingState chasing;
-        public SwimmingState swimming;
-
         #endregion
 
         #region Initialization
 
-        void Start()
-        {
-            Initialize(idle);
-        }
-
-        public void Initialize(IState startingState)
+        protected void Initialize(IState startingState)
         {
             state = startingState;
             startingState.Enter();

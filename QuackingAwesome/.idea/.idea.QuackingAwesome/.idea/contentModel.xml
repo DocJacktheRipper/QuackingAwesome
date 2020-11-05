@@ -112,19 +112,20 @@
         <e p="Scripts" t="Include">
           <e p="AI" t="Include">
             <e p="Alligator" t="Include">
-              <e p="BehaviourAlligator.cs" t="Include" />
-              <e p="States" t="Include">
-                <e p="BehaviourMethods.cs" t="Include" />
+              <e p="StateMachine_Alligator" t="Include">
+                <e p="BehaviourMethodsAlligator.cs" t="Include" />
                 <e p="ConcreteStates" t="Include">
                   <e p="ChasingState.cs" t="Include" />
                   <e p="IdleState.cs" t="Include" />
                   <e p="SwimmingState.cs" t="Include" />
                 </e>
+                <e p="IStateAlligator.cs" t="Include" />
                 <e p="ISwimIdleState.cs" t="Include" />
-                <e p="StateHandlerAI.cs" t="Include" />
+                <e p="StateHandlerAlligator.cs" t="Include" />
               </e>
               <e p="ToDelete" t="Include">
                 <e p="AlligatorBehaviour.cs" t="Include" />
+                <e p="BehaviourAlligator.cs" t="Include" />
               </e>
               <e p="Trigger" t="Include">
                 <e p="AlligatorDetectionTriggered.cs" t="Include" />
@@ -137,12 +138,18 @@
               <e p="BehaviourBeaver.cs" t="Include" />
               <e p="DuckTrigger.cs" t="Include" />
               <e p="ScaredAway.cs" t="Include" />
+              <e p="StateMachine_Beaver" t="Include">
+                <e p="IStateBeaver.cs" t="Include" />
+                <e p="StateHandlerBeaver.cs" t="Include" />
+              </e>
               <e p="ToDeleteLater" t="Include">
                 <e p="BeaverAI.cs" t="Include" />
               </e>
             </e>
             <e p="StateMachine" t="Include">
+              <e p="BehaviourMethods.cs" t="Include" />
               <e p="IState.cs" t="Include" />
+              <e p="IStateHandlerAI.cs" t="Include" />
             </e>
           </e>
           <e p="Controllers" t="Include">

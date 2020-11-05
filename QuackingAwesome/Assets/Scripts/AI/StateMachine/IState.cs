@@ -1,22 +1,21 @@
 ﻿using UnityEngine;
 
-namespace AI.Alligator.States
+namespace AI.StateMachine
 {
     public abstract class IState : MonoBehaviour
     {
         protected GameObject ai;
 
         protected BehaviourMethods methods;
-        protected StateHandlerAI stateHandler;
+        
 
-        private void Awake()
+        protected virtual void Awake()
         {
             ai = transform.parent.gameObject;
 
             methods = ai.GetComponent<BehaviourMethods>();
             if (methods == null)
                 Debug.Log("Fault");
-            stateHandler = ai.GetComponent<StateHandlerAI>();
 
             methods.GotoNextPoint();
         }

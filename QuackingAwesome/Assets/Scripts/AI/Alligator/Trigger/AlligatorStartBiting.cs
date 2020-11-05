@@ -1,11 +1,11 @@
-﻿using AI.Alligator.States;
+﻿using AI.StateMachine;
 using UnityEngine;
 
 namespace AI.Alligator.Trigger
 {
     public class AlligatorStartBiting : MonoBehaviour
     {
-        public StateHandlerAI handler;
+        public IStateHandlerAI handler;
 
         private void OnTriggerEnter(Collider other)
         {

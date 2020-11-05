@@ -1,38 +1,30 @@
-﻿using AI.Alligator.States;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Assets.Scripts.AI.Alligator.States
+namespace AI.Alligator.StateMachine_Alligator
 {
-    public class ISwimIdleState : IState
+    public class ISwimIdleState : IStateAlligator
     {
         public float waitUntilToSwitch;
         public float waitSecondsToSwitch;
         public int chanceToSwitchState;
 
+        #region overridden
         public override void Enter()
         {
             base.Enter();
             waitUntilToSwitch = Time.time + waitSecondsToSwitch;
         }
 
-        public override void Exit()
-        {
-            base.Exit();
-        }
-
-        public override void Execute()
-        {
-            
-        }
-
         public override void DetectionTriggerEntered(Collider other)
         {
+            base.DetectionTriggerEntered(other);
             if (other.CompareTag("Player"))
             {
                 stateHandler.chasing.target = other.transform;
             }
         }
-
+        #endregion
+        
         public void ResetWaitingTime()
         {
             waitUntilToSwitch = Time.time + waitSecondsToSwitch;

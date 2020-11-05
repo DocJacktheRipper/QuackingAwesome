@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿using AI.StateMachine;
+using UnityEngine;
 
-namespace AI.Alligator.States
+namespace AI.Alligator.StateMachine_Alligator.ConcreteStates
 {
-    public class ChasingState : IState
+    public class ChasingState : IStateAlligator
     {
         public Transform target;
 

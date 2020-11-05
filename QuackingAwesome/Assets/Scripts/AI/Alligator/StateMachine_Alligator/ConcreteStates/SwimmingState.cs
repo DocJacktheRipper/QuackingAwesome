@@ -1,46 +1,39 @@
-﻿using Assets.Scripts.AI.Alligator.States;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace AI.Alligator.States
+namespace AI.Alligator.StateMachine_Alligator.ConcreteStates
 {
-    public class IdleState : ISwimIdleState
+    public class SwimmingState : ISwimIdleState
     {
-        private static readonly int IsIdle = Animator.StringToHash("IsIdle");
-
-        
-        #region IState
+        #region
         public override void Enter()
         {
             base.Enter();
-            methods.StopMovement();
-            methods.animator.SetBool(IsIdle, true);
+            methods.StartMovement();
         }
-
-        public override void Exit()
-        {
-            base.Exit();
-            methods.animator.SetBool(IsIdle, false);
-        }
-
+        
         public override void Execute()
         {
             base.Execute();
             if (base.SwitchStatesAfterTime())
             {
                 ResetWaitingTime();
-                stateHandler.ChangeState(stateHandler.swimming);
+                stateHandler.ChangeState(stateHandler.idle);
+            }
+            if (methods.HasReachedDestination())
+            {
+                methods.GotoNextPoint();
             }
         }
 
         public override void DetectionTriggerEntered(Collider other)
         {
             base.DetectionTriggerEntered(other);
+
             if (other.CompareTag("Player"))
             {
                 stateHandler.ChangeState(stateHandler.chasing);
             }
         }
         #endregion
-
     }
 }
