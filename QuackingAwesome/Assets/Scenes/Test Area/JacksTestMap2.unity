@@ -11202,6 +11202,7 @@ GameObject:
   - component: {fileID: 922177079}
   - component: {fileID: 922177081}
   - component: {fileID: 922177080}
+  - component: {fileID: 922177082}
   m_Layer: 12
   m_Name: MouthTrigger
   m_TagString: Untagged
@@ -11234,8 +11235,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.23752907, y: 0.49182963, z: 0.9136827}
-  m_Center: {x: -0.002764891, y: 0.019643426, z: 1.0281267}
+  m_Size: {x: 0.23752907, y: 0.33934617, z: 0.9136827}
+  m_Center: {x: 0, y: 0, z: 1.0281267}
 --- !u!114 &922177081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11249,6 +11250,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reloadOnDeath: 0
+--- !u!65 &922177082
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922177078}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5268028, y: 0.51474154, z: 0.45525026}
+  m_Center: {x: 0, y: 0, z: 0.75539047}
 --- !u!1001 &925097296
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36509,7 +36523,7 @@ PrefabInstance:
     - target: {fileID: 2574722902467918671, guid: 5a2e11769ecd75c4fa3e7d6e7f42c622,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0056032203
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 2574722902467918671, guid: 5a2e11769ecd75c4fa3e7d6e7f42c622,
         type: 3}
@@ -36519,7 +36533,7 @@ PrefabInstance:
     - target: {fileID: 2574722902467918671, guid: 5a2e11769ecd75c4fa3e7d6e7f42c622,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.2921185
+      value: -5.77
       objectReference: {fileID: 0}
     - target: {fileID: 2574722902467918671, guid: 5a2e11769ecd75c4fa3e7d6e7f42c622,
         type: 3}
