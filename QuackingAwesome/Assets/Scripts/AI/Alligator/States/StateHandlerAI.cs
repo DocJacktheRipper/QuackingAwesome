@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Assets.Scripts.AI.Alligator.States;
 using UnityEngine;
 
 namespace AI.Alligator.States
@@ -13,6 +13,7 @@ namespace AI.Alligator.States
 
         public IdleState idle;
         public ChasingState chasing;
+        public SwimmingState swimming;
 
         #endregion
 
@@ -53,7 +54,7 @@ namespace AI.Alligator.States
         }
         public void DetectionTriggerExited(Collider other)
         {
-            
+            state.DetectionTriggerExited(other);
         }
 
         public void BiteTriggerEntered(Collider other)

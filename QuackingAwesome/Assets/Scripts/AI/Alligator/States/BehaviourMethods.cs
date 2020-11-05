@@ -8,7 +8,7 @@ namespace AI.Alligator.States
         public NavMeshAgent alligatorNavigation;
         
         public Transform wayPointContainer;
-        public Transform currentTarget;
+        public Vector3 currentTarget;
 
         public Animator animator;
 
@@ -17,22 +17,48 @@ namespace AI.Alligator.States
         public float biteSpeedBonus;
         #endregion
 
+       
         private void Start()
         {
             alligatorNavigation = GetComponentInParent<NavMeshAgent>();
+        }
+
+        #region Move
+        public void StartMovement()
+        {
+            alligatorNavigation.isStopped = false;
+            alligatorNavigation.SetDestination(currentTarget);
+        }
+        public void StopMovement()
+        {
+            alligatorNavigation.isStopped = true;
+        }
+
+        public bool HasReachedDestination()
+        {
+            if (!alligatorNavigation.pathPending && alligatorNavigation.remainingDistance < 0.5f)
+            {
+                return true;
+            }
+            return false;
         }
 
         public void GotoNextPoint()
         {
             if (wayPointContainer.childCount <= 0)
             {
+                Debug.Log("no child");
                 return;
             }
             // set new target by getting random point from container
             var destIndex = Random.Range(0, wayPointContainer.childCount);
-            currentTarget = wayPointContainer.GetChild(destIndex);
-            alligatorNavigation.SetDestination(currentTarget.position);
+            currentTarget = wayPointContainer.GetChild(destIndex).position;
+            Debug.Log("target: " + currentTarget.ToString());
+            alligatorNavigation.SetDestination(currentTarget);
         }
+
+        #endregion
+        #region Chase
 
         public void InvokeChasing()
         {
@@ -42,12 +68,27 @@ namespace AI.Alligator.States
 
         public void Chase(Transform target)
         {
-            alligatorNavigation.SetDestination(target.position);
+            currentTarget = target.position;
+            alligatorNavigation.SetDestination(currentTarget);
         }
 
         public void StopChasing()
         {
             alligatorNavigation.speed -= chaseSpeedBonus;
         }
+
+        #endregion
+        #region Bite
+
+        public void InvokeBiting()
+        {
+            alligatorNavigation.speed += biteSpeedBonus;
+        }
+
+        public void StopBiting()
+        {
+            alligatorNavigation.speed -= biteSpeedBonus;
+        }
+        #endregion
     }
 }

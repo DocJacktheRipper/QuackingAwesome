@@ -1,36 +1,28 @@
-﻿using UnityEngine;
+﻿using AI.Alligator.States;
+using UnityEngine;
 
-namespace AI.Alligator.States
+namespace Assets.Scripts.AI.Alligator.States
 {
-    public class IdleState : IState
+    public class ISwimIdleState : IState
     {
         public float waitUntilToSwitch;
         public float waitSecondsToSwitch;
-        public int chanceToSwitchToSwimming;
+        public int chanceToSwitchState;
 
-        private static readonly int IsIdle = Animator.StringToHash("IsIdle");
-
-        
-        #region IState
         public override void Enter()
         {
             base.Enter();
             waitUntilToSwitch = Time.time + waitSecondsToSwitch;
-            methods.animator.SetBool(IsIdle, true);
         }
 
         public override void Exit()
         {
             base.Exit();
-            methods.animator.SetBool(IsIdle, false);
         }
 
         public override void Execute()
         {
-            if (SwitchStatesAfterTime())
-            {
-                SetWaitingTime();
-            }
+            
         }
 
         public override void DetectionTriggerEntered(Collider other)
@@ -38,27 +30,23 @@ namespace AI.Alligator.States
             if (other.CompareTag("Player"))
             {
                 stateHandler.chasing.target = other.transform;
-                stateHandler.ChangeState(stateHandler.chasing);
             }
         }
 
-        #endregion
-        #region HelperMethods
-
-        public void SetWaitingTime()
+        public void ResetWaitingTime()
         {
             waitUntilToSwitch = Time.time + waitSecondsToSwitch;
         }
 
-        private bool SwitchStatesAfterTime()
+        public bool SwitchStatesAfterTime()
         {
             if (!(Time.time > waitUntilToSwitch)) return false;
-            
+
             // try to switch after time elapsed
             var ranInt = Random.Range(0, 100);
-                
-            var status = " - time elapsed - changes: " + ranInt + "/" + chanceToSwitchToSwimming;
-            if (ranInt < chanceToSwitchToSwimming)
+
+            var status = " - time elapsed - changes: " + ranInt + "/" + chanceToSwitchState;
+            if (ranInt < chanceToSwitchState)
             {
                 status += " -- switched";
                 Debug.Log(status);
@@ -68,8 +56,5 @@ namespace AI.Alligator.States
 
             return false;
         }
-
-        #endregion
-        
     }
 }

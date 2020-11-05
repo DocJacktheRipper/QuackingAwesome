@@ -9,6 +9,7 @@ namespace AI.Alligator.States
         public override void Enter()
         {
             base.Enter();
+            methods.StartMovement();
             methods.InvokeChasing();
         }
 
@@ -30,6 +31,16 @@ namespace AI.Alligator.States
             // TODO: calculate which target to focus on
             // if(targetChanged)
             //    stateHandler.ChangeStates(stateHandler.chaseState);
+        }
+
+        public override void DetectionTriggerExited(Collider other)
+        {
+            base.DetectionTriggerExited(other);
+
+            if(other.Equals(target))
+            {
+                stateHandler.ChangeState(stateHandler.idle);
+            }
         }
     }
 }

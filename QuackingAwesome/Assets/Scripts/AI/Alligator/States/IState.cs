@@ -6,13 +6,26 @@ namespace AI.Alligator.States
     {
         protected GameObject ai;
 
-        public BehaviourMethods methods;
-        public StateHandlerAI stateHandler;
+        protected BehaviourMethods methods;
+        protected StateHandlerAI stateHandler;
+
+        private void Awake()
+        {
+            ai = transform.parent.gameObject;
+
+            methods = ai.GetComponent<BehaviourMethods>();
+            if (methods == null)
+                Debug.Log("Fault");
+            stateHandler = ai.GetComponent<StateHandlerAI>();
+
+            methods.GotoNextPoint();
+        }
 
         public virtual void Enter() { }
         public virtual void Exit() { }
         public virtual void Execute() { }
 
         public virtual void DetectionTriggerEntered(Collider other) { }
+        public virtual void DetectionTriggerExited(Collider other) { }
     }
 }
