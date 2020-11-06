@@ -1,4 +1,5 @@
-﻿using Inventory;
+﻿using Controllers.Duck;
+using Inventory;
 using UnityEngine;
 using UnityEngine.UI;
 

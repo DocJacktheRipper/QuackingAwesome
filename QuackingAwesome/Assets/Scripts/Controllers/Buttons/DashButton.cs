@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Controllers.Duck;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace Controllers.Buttons
@@ -23,7 +24,7 @@ namespace Controllers.Buttons
         
         void Update()
         {
-            _interactable = (_control.NextDash < Time.time);
+            _interactable = (_control.nextDash < Time.time);
             _button.enabled = _interactable;
 
             if (_interactable)

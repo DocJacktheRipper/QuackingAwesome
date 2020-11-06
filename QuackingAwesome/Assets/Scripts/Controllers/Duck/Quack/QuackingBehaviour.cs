@@ -1,4 +1,6 @@
-﻿using System;
+﻿using System.Collections.Generic;
+using Controllers.Sound_and_Effects;
+using Controllers.Sound_and_Effects.Duck;
 using Inventory;
 using UnityEngine;
 
@@ -6,11 +8,9 @@ namespace Controllers.Duck.Quack
 {
     public class QuackingBehaviour : MonoBehaviour
     {
-        public AudioSource quackPlaceholder;
-
         // aka cooldown
         public float overHeat;
-        public float maxOverHeat; // if above, quacking is disabled
+        // public float maxOverHeat; // if above, quacking is disabled
         public float amountOfHeatPerQuack;
         public float recoverySpeed;
 
@@ -24,6 +24,12 @@ namespace Controllers.Duck.Quack
         // animation
         private Animator _animator;
         private static readonly int DoQuack = Animator.StringToHash("DoQuack");
+        // effects
+        public EffectAccessorDuck effects;
+        private ParticleSystem _quackEffect;
+        // sound
+        public QuackAudioManager audioManager;
+
 
         private void Start()
         {
@@ -32,6 +38,7 @@ namespace Controllers.Duck.Quack
             _stickInventory = GetComponent<StickInventory>();
 
             _animator = GetComponent<Animator>();
+            _quackEffect = effects.quackEffect;
         }
 
         private void Update()
@@ -47,9 +54,11 @@ namespace Controllers.Duck.Quack
         public void Quack()
         {
             // sound
-            quackPlaceholder.Play();
+            audioManager.PlayRandomSound();
             // animation
             _animator.SetTrigger(DoQuack);
+            // effect
+            _quackEffect.Play(true);
             
 
             if (transform.childCount > 0)

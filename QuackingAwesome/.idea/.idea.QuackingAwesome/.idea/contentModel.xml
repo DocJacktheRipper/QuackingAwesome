@@ -25,6 +25,14 @@
             </e>
           </e>
         </e>
+        <e p="Catartsys" t="Include">
+          <e p="LargeWater_URP" t="Include">
+            <e p="Catartsys_LargeWater_URP_Doc.txt" t="Include" />
+            <e p="Scripts" t="Include">
+              <e p="LargeWater_Grids_instanciator.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Fonts" t="Include">
           <e p="Documentation" t="Include">
             <e p="JazzCreateAltKeys_BubbleFont.txt" t="Include" />
@@ -174,14 +182,24 @@
             <e p="DeathBehaviour.cs" t="Include" />
             <e p="Duck" t="Include">
               <e p="CharacterControl.cs" t="Include" />
-              <e p="DashingBehaviour.cs" t="Include" />
+              <e p="Dash" t="Include">
+                <e p="DashingBehaviour.cs" t="Include" />
+              </e>
               <e p="Quack" t="Include">
                 <e p="QuackingArea.cs" t="Include" />
                 <e p="QuackingBehaviour.cs" t="Include" />
               </e>
             </e>
-            <e p="FadeMusic.cs" t="Include" />
             <e p="ReverseWallCollider.cs" t="Include" />
+            <e p="Sound and Effects" t="Include">
+              <e p="AudioManager.cs" t="Include" />
+              <e p="Duck" t="Include">
+                <e p="DashAudioManager.cs" t="Include" />
+                <e p="QuackAudioManager.cs" t="Include" />
+              </e>
+              <e p="EffectAccessorDuck.cs" t="Include" />
+              <e p="FadeMusic.cs" t="Include" />
+            </e>
           </e>
           <e p="fps_showing.cs" t="Include" />
           <e p="Inventory" t="Include">
