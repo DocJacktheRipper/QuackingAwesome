@@ -27,10 +27,20 @@ namespace Controllers.Buttons.NestMenu
 
         public void ExpandNestMenu()
         {
-            // enable menu [nest]
-            nestMenuUI.SetActive(true);
-            // disable joystick
-            Controls.SetActive(false);
+            if (nestMenuUI.activeSelf)
+            {
+                // disable menu [nest]
+                nestMenuUI.SetActive(false);
+                // enable joystick
+                Controls.SetActive(true);
+            }
+            else
+            {
+                // enable menu [nest]
+                nestMenuUI.SetActive(true);
+                // disable joystick
+                Controls.SetActive(false);
+            }
         }
 
         public void CloseNestMenu()

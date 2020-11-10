@@ -497,7 +497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dashEffect: {fileID: 1353210292954727320}
-  quackEffect: {fileID: 0}
+  quackEffect: {fileID: 5626701804596054849}
 --- !u!64 &7939994142206816082
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1469,6 +1469,12 @@ PrefabInstance:
 --- !u!4 &7788536429845155225 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2864786394860629526, guid: d67e7a3c38852e643a18e5eb45b105a5,
+    type: 3}
+  m_PrefabInstance: {fileID: 5465035212701705103}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &5626701804596054849 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 414819249658882254, guid: d67e7a3c38852e643a18e5eb45b105a5,
     type: 3}
   m_PrefabInstance: {fileID: 5465035212701705103}
   m_PrefabAsset: {fileID: 0}

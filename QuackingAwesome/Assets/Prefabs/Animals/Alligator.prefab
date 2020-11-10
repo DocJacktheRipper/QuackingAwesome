@@ -48,10 +48,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4fb17c57ae26ec4bab8b9de490f30d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alligatorNavigation: {fileID: 0}
+  alligatorNavigation: {fileID: 7447338938953231297}
   wayPointContainer: {fileID: 0}
   currentTarget: {x: 0, y: 0, z: 0}
-  animator: {fileID: 0}
+  animator: {fileID: 8273628732505740216}
   chaseSpeedBonus: 0.1
   biteSpeedBonus: 0.1
 --- !u!114 &8355196021217249873
@@ -728,6 +728,12 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 220389c39561fde418283993f10094f4, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f5732f2f5315ab4586d18352a5a7452, type: 3}
+--- !u!95 &8273628732505740216 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 9f5732f2f5315ab4586d18352a5a7452,
+    type: 3}
+  m_PrefabInstance: {fileID: 2574722903592988201}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2608140174760446402 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9f5732f2f5315ab4586d18352a5a7452,
