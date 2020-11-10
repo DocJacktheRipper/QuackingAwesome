@@ -21,6 +21,7 @@ namespace LeoLuz.PlugAndPlayJoystick
 
         #if UNITY_EDITOR
         private bool OrderOfScriptChanged;
+        private const int executionOrder = -1000;
 
         public void OnDrawGizmosSelected()
         {
@@ -33,9 +34,10 @@ namespace LeoLuz.PlugAndPlayJoystick
                 foreach (MonoScript monoScript in MonoImporter.GetAllRuntimeMonoScripts())
                 {
                     // If found our script
-                    if (monoScript.name == scriptName && MonoImporter.GetExecutionOrder(monoScript) != -2000)
+                    if (monoScript.name == scriptName && MonoImporter.GetExecutionOrder(monoScript) != executionOrder)
                     {
-                        MonoImporter.SetExecutionOrder(monoScript, -2000);
+                        MonoImporter.SetExecutionOrder(monoScript, executionOrder);
+                        break;
                     }
                 }
                 OrderOfScriptChanged = true;
@@ -61,7 +63,7 @@ namespace LeoLuz.PlugAndPlayJoystick
 
         void LateUpdate()
         {
-       
+
         }
 
         public virtual void OnPointerDown(PointerEventData data)

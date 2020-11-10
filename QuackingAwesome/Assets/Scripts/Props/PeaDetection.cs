@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class PeaDetection : MonoBehaviour
 {
+    /*
     private void OnTriggerEnter(Collider other)
     {
         if(peaTrigger(other))
@@ -15,7 +16,7 @@ public class PeaDetection : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Starting")
         {
-            PopUps popups = GameObject.FindGameObjectWithTag("PopUpCanvas").GetComponent<PopUps>();
+            PopUps popups = GameObject.FindGameObjectWithTag("PopUpCanvas").GetComponent<PopUpsTutorialPrefabs>();
             if (other.gameObject.tag == "Player" && popups.p2 == true)
             {
                 popups.popUp2();
@@ -24,4 +25,5 @@ public class PeaDetection : MonoBehaviour
         }
         return false;
     }
+    */
 }

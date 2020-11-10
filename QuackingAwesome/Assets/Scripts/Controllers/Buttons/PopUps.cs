@@ -1,57 +1,116 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
-using System.Security.AccessControl;
 using UnityEngine;
 
 public class PopUps : MonoBehaviour
 {
+    public GameObject player;
+    
+    public GameObject controls; // To disabling movement controls
+    
+    // The tutorial advices to be displayed
+    public GameObject objective; // Objective explanation
+    public GameObject energyExplanation; // Energy explanation when a first pea is ate
+    public GameObject stickExplanation; // Stick explanation when a first stick is carried
+    public GameObject fewSticksExplanation; // When it take too long to find the fist a stick
 
-    //add more GameObjects if more popups are needed
-    public GameObject controls; //for disabling movement controls
-    public GameObject pop1; //first popup screen
-    public GameObject pop2; //second
-    public GameObject pop3; //third
+    public int displayTime; // How long the tutorial advices should be displayed
+    public int stickResearchTime; // Max research time for stick before displaying the advice
+    private int _time;
+    
+    // checking if popup is displayed more than once
+    private bool _peaEaten;
+    private bool _stickGotten;
 
-    //checking if popup is displayed more than once
-    public bool p2;
-    public bool p3;
+    private Inventory.EnergyInventory _energyInventory;
+    private Inventory.StickInventory _stickInventory;
+    private int _numberOfSticks;
+
+    private GameObject _currentPopUp;
 
     private void Awake()
     {
-        p2 = true;
-        p3 = true;
-        popUp1();
+        // Fetch the player inventory
+        _energyInventory = player.GetComponent<Inventory.EnergyInventory>();
+        _stickInventory = player.GetComponent<Inventory.StickInventory>();
+        
+        // Display first advice
+        StartCoroutine(DisplayTutorialAdvice(
+            objective
+            //, displayTime
+            //, true
+            //, false
+            ));
+        
+        // Time spend searching for a stick
+        _numberOfSticks = _stickInventory.numberOfSticks;
+        _time = stickResearchTime;
+        StartCoroutine(displayBeaverStoleSticks());
+    }
+    
+    // Coroutine to start to display the advice given in argument
+    private IEnumerator DisplayTutorialAdvice(
+        GameObject popUp 
+        //, int displayTime
+        //, bool pauseGame 
+        //, bool activeControls
+        )
+    {
+        if (_currentPopUp) _currentPopUp.SetActive(false);
+        _currentPopUp = popUp;
+        popUp.SetActive(true);
+        //controls.SetActive(activeControls); 
+        //Time.timeScale = pauseGame ? 0f : 1f; 
+        yield return new WaitForSecondsRealtime(displayTime);
+        popUp.SetActive(false);
+        //controls.SetActive(true); 
+        //Time.timeScale = 1f; 
+        _currentPopUp = null;
+    }
+    
+    // Count down before give the stick disapparence explanation
+    private IEnumerator displayBeaverStoleSticks()
+    {
+        while(_time>0){
+            _time--;
+            yield return new WaitForSeconds(1);
+        }
+        StartCoroutine(DisplayTutorialAdvice(fewSticksExplanation));
     }
 
-    private void popUp1()
+    private void Update()
     {
-        pop1.SetActive(true);
-        controls.SetActive(false);
-        Time.timeScale = 0f;
-    }
-
-    public void popUp2()
-    {
-        p2 = false;
-        pop2.SetActive(true);
-        controls.SetActive(false);
-        Time.timeScale = 0f;
-    }
-
-    public void popUp3()
-    {
-        p3 = false;
-        pop3.SetActive(true);
-        controls.SetActive(false);
-        Time.timeScale = 0f;
-    }
-
-    public void buttonClick()
-    {
-        pop1.SetActive(false);
-        pop2.SetActive(false);
-        pop3.SetActive(false);
-        controls.SetActive(true);
-        Time.timeScale = 1f;
+        // Peas
+        if (!_peaEaten && 
+            _energyInventory.energy > 0)
+        {
+            StartCoroutine(DisplayTutorialAdvice(
+                energyExplanation
+                //, displayTime
+                //, false
+                //, true
+                ));
+            _peaEaten = true;
+        }
+        
+        // Sticks
+        if (!_stickGotten && 
+            _numberOfSticks == 1)
+        {
+            StartCoroutine(DisplayTutorialAdvice(
+                stickExplanation
+                //, displayTime
+                //, false
+                //, true
+                ));
+            _stickGotten = true;
+        }
+        
+        // Beaver
+        if (stickResearchTime != 0 && 
+            _numberOfSticks != _stickInventory.numberOfSticks)
+        {
+            _time = stickResearchTime;
+            _numberOfSticks = _stickInventory.numberOfSticks;
+        }
     }
 }

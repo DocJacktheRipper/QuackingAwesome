@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class StickDetection : MonoBehaviour
 {   
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
         if (stickTrigger(other))
         {
@@ -15,7 +15,7 @@ public class StickDetection : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Starting")
         {
-            PopUps popups = GameObject.FindGameObjectWithTag("PopUpCanvas").GetComponent<PopUps>();
+            PopUps popups = GameObject.FindGameObjectWithTag("PopUpCanvas").GetComponent<PopUpsTutorialPrefabs>();
             if (other.gameObject.tag == "Player" && popups.p3 == true && popups.p2 == false)
             {
                 popups.popUp3();
@@ -23,5 +23,5 @@ public class StickDetection : MonoBehaviour
             }
         }
         return false;
-    }
+    }*/
 }
