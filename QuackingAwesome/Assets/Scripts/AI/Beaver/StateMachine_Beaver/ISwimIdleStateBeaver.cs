@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-namespace AI.Alligator.StateMachine_Alligator
+namespace AI.Beaver.StateMachine_Beaver
 {
-    public class ISwimIdleState : IStateAlligator
+    public class ISwimIdleStateBeaver : IStateBeaver
     {
         public float waitUntilToSwitch;
         public float waitSecondsToSwitch;
@@ -15,14 +15,6 @@ namespace AI.Alligator.StateMachine_Alligator
             waitUntilToSwitch = Time.time + waitSecondsToSwitch;
         }
 
-        public override void DetectionTriggerEntered(Collider other)
-        {
-            base.DetectionTriggerEntered(other);
-            if (other.CompareTag("Player"))
-            {
-                stateHandler.chasing.target = other.transform;
-            }
-        }
         #endregion
         
         public void ResetWaitingTime()
@@ -37,7 +29,7 @@ namespace AI.Alligator.StateMachine_Alligator
             // try to switch after time elapsed
             var ranInt = Random.Range(0, 100);
 
-             if (ranInt < chanceToSwitchState)
+            if (ranInt < chanceToSwitchState)
             {
                 return true;
             }

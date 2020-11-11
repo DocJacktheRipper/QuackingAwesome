@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿using AI.StateMachine;
+using UnityEngine;
 
 namespace AI.Alligator.StateMachine_Alligator.ConcreteStates
 {
-    public class SwimmingState : ISwimIdleState
+    public class SwimmingStateAlligator : ISwimIdleStateAlligator
     {
         #region
         public override void Enter()
@@ -31,6 +32,7 @@ namespace AI.Alligator.StateMachine_Alligator.ConcreteStates
 
             if (other.CompareTag("Player"))
             {
+                stateHandler.chasing.target = other.transform;
                 stateHandler.ChangeState(stateHandler.chasing);
             }
         }
