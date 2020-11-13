@@ -106,10 +106,15 @@ public class PopUps : MonoBehaviour
         }
         
         // Beaver
-        if (stickResearchTime != 0 && 
-            _numberOfSticks != _stickInventory.numberOfSticks)
+        if (_time != 0 &&
+            _numberOfSticks == 1)
         {
             _time = stickResearchTime;
+        }
+
+        if ((_time != 0 || !_stickGotten) && 
+            _numberOfSticks != _stickInventory.numberOfSticks)
+        {
             _numberOfSticks = _stickInventory.numberOfSticks;
         }
     }
