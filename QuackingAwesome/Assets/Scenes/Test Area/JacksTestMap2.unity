@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 20d7b5b50a3e7624796b96279da1f38f,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -26977,6 +26977,11 @@ PrefabInstance:
       propertyPath: nestMenu
       value: 
       objectReference: {fileID: 673712218}
+    - target: {fileID: 7032550159679433148, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
+        type: 3}
+      propertyPath: stickBar
+      value: 
+      objectReference: {fileID: 2034311980}
     - target: {fileID: 7178032086277321587, guid: c5d2532c37bf5fd42b70b1503e4ccc51,
         type: 3}
       propertyPath: playOnAwake
@@ -29934,6 +29939,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1045149444}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2034311980 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8632427952567579905, guid: f406a50b810c1da4ea5642912f70020d,
+    type: 3}
+  m_PrefabInstance: {fileID: 8548730545255092270}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba5fb8559365a8948b6559eebab49b05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2044359539 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ef352434534037544a17e30195970022,
@@ -36015,7 +36032,7 @@ PrefabInstance:
     - target: {fileID: 2574722902467918670, guid: 5a2e11769ecd75c4fa3e7d6e7f42c622,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2574722902467918670, guid: 5a2e11769ecd75c4fa3e7d6e7f42c622,
         type: 3}
@@ -36257,6 +36274,11 @@ PrefabInstance:
       propertyPath: chanceToSwitchState
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 6980241056859643280, guid: 5a2e11769ecd75c4fa3e7d6e7f42c622,
+        type: 3}
+      propertyPath: wayPointContainer
+      value: 
+      objectReference: {fileID: 2005143674}
     - target: {fileID: 7447338938953231297, guid: 5a2e11769ecd75c4fa3e7d6e7f42c622,
         type: 3}
       propertyPath: m_ObstacleAvoidanceType
@@ -36661,6 +36683,11 @@ PrefabInstance:
       propertyPath: chanceToSwitchState
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 8419178566806227090, guid: 77f9ba5ff4379b347bd0df8445a7077c,
+        type: 3}
+      propertyPath: wayPointContainer
+      value: 
+      objectReference: {fileID: 1568423353}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77f9ba5ff4379b347bd0df8445a7077c, type: 3}
 --- !u!1001 &4808378788423664165
@@ -38173,6 +38200,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Statistics
       objectReference: {fileID: 0}
+    - target: {fileID: 8632427952567579905, guid: f406a50b810c1da4ea5642912f70020d,
+        type: 3}
+      propertyPath: nest
+      value: 
+      objectReference: {fileID: 1369831723}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f406a50b810c1da4ea5642912f70020d, type: 3}
 --- !u!224 &9111827349342214625 stripped

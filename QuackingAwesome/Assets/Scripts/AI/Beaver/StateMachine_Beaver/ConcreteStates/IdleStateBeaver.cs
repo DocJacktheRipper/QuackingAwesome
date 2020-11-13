@@ -28,7 +28,7 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
             if (base.SwitchStatesAfterTime())
             {
                 ResetWaitingTime();
-                //stateHandler.ChangeState(stateHandler.swimming);
+                stateHandler.ChangeState(stateHandler.swimming);
             }
         }
 

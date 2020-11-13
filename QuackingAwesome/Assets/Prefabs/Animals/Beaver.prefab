@@ -39,6 +39,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 348273231611832212}
+  - component: {fileID: 8419178566806227090}
+  - component: {fileID: 7767153919719269221}
   m_Layer: 12
   m_Name: AI
   m_TagString: Untagged
@@ -63,6 +65,39 @@ Transform:
   m_Father: {fileID: 4242092220193179901}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8419178566806227090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3642855247802676167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaa79732573b8dc478d1ccbe2270301c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  navigation: {fileID: 4242092220193179902}
+  wayPointContainer: {fileID: 0}
+  currentTarget: {x: 0, y: 0, z: 0}
+  animator: {fileID: 3289728769903166336}
+  chaseSpeedBonus: 0.1
+--- !u!114 &7767153919719269221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3642855247802676167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3bf2fa11b68a3f4e9cfa12dc6aa800d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  methods: {fileID: 0}
+  state: {fileID: 0}
+  idle: {fileID: 6460208989639343062}
+  swimming: {fileID: 3530289126467822476}
 --- !u!1 &3688176156780178512
 GameObject:
   m_ObjectHideFlags: 0

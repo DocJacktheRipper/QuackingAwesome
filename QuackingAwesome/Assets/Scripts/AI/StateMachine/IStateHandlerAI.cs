@@ -48,14 +48,11 @@ namespace AI.StateMachine
             state.DetectionTriggerExited(other);
         }
 
-        public void BiteTriggerEntered(Collider other)
+        public virtual void BiteTriggerEntered(Collider other)
         {
-            methods.InvokeBiting();
         }
-
-        public void BiteTriggerExited(Collider other)
+        public virtual void BiteTriggerExited(Collider other)
         {
-            methods.StopBiting();
         }
         
         #endregion
