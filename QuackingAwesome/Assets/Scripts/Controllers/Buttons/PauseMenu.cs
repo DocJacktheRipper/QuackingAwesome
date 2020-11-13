@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Controllers.Buttons.StartMenu;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
@@ -7,6 +8,7 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject PauseMenuUi;
     public GameObject Controls;
+    public LoadingScene loadingScene;
 
     private void Start()
     {
@@ -47,8 +49,7 @@ public class PauseMenu : MonoBehaviour
         //SceneManager.LoadScene("Tutorial");
 
         // load current scene
-        Scene scene = SceneManager.GetActiveScene(); 
-        SceneManager.LoadScene(scene.name);
+        loadingScene.LoadNewScene(SceneManager.GetActiveScene().name);
     }
 
     void Pause()
@@ -61,6 +62,6 @@ public class PauseMenu : MonoBehaviour
 
     public void ReturnToStartMenuScene()
     {
-        SceneManager.LoadScene("StartMenu");
+        loadingScene.LoadNewScene("StartMenu");
     }
 }
