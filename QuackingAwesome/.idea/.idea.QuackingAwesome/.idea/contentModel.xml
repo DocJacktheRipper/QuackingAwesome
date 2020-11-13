@@ -143,7 +143,6 @@
               </e>
             </e>
             <e p="Beaver" t="Include">
-              <e p="DuckTrigger.cs" t="Include" />
               <e p="ScaredAway.cs" t="Include" />
               <e p="StateMachine_Beaver" t="Include">
                 <e p="BehaviourMethodsBeaver.cs" t="Include" />
@@ -159,6 +158,10 @@
               </e>
               <e p="ToDeleteLater" t="Include">
                 <e p="BeaverAI.cs" t="Include" />
+              </e>
+              <e p="Trigger" t="Include">
+                <e p="BeaverDetectionTriggered.cs" t="Include" />
+                <e p="DuckTrigger.cs" t="Include" />
               </e>
             </e>
             <e p="StateMachine" t="Include">
@@ -180,7 +183,7 @@
               <e p="PopUpsTutorialPrefabs.cs" t="Include" />
               <e p="QuackButton.cs" t="Include" />
               <e p="StartMenu" t="Include">
-                <e p="LoadScene.cs" t="Include" />
+                <e p="LoadingScene.cs" t="Include" />
               </e>
             </e>
             <e p="Camera" t="Include">

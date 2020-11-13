@@ -54,6 +54,12 @@ namespace AI.StateMachine
             navigation.SetDestination(currentTarget);
         }
 
+        public void SetDestination(Vector3 dest)
+        {
+            currentTarget = dest;
+            navigation.SetDestination(dest);
+        }
+
         #endregion
         #region Chase
 

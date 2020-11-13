@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 521578000312637597}
   - component: {fileID: 947556906637796895}
   - component: {fileID: -9109192893763330523}
+  - component: {fileID: -4461138531952986509}
   m_Layer: 0
   m_Name: StickV1
-  m_TagString: Untagged
+  m_TagString: Stick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,3 +127,16 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!135 &-4461138531952986509
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4532185491533887296}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.01
+  m_Center: {x: -0.017610911, y: 0.00006954372, z: 0.0053145587}

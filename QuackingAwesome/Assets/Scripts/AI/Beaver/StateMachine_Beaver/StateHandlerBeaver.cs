@@ -11,6 +11,7 @@ namespace AI.Beaver.StateMachine_Beaver
         
         public IdleStateBeaver idle;
         public SwimmingStateBeaver swimming;
+        public FetchingStickBeaver fetching;
 
         #endregion
         

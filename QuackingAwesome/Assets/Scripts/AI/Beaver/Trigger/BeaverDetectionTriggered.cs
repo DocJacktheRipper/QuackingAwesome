@@ -1,21 +1,18 @@
-﻿using System;
-using AI.Alligator.StateMachine_Alligator;
-using AI.StateMachine;
+﻿using AI.Beaver.StateMachine_Beaver;
 using UnityEngine;
 
-namespace AI.Alligator.Trigger
+namespace AI.Beaver.Trigger
 {
-    public class AlligatorDetectionTriggered : MonoBehaviour
+    public class BeaverDetectionTriggered : MonoBehaviour
     {
-        public StateHandlerAlligator stateHandler;
-
+        public StateHandlerBeaver stateHandler;
         private void OnTriggerEnter(Collider other)
         {
             stateHandler.DetectionTriggerEntered(other);
         }
 
         private void OnTriggerExit(Collider other)
-        {
+        { 
             stateHandler.DetectionTriggerExited(other);
         }
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using AI.Beaver;
+using AI.Beaver.StateMachine_Beaver;
 using Inventory;
 using Props.spawning;
 using UnityEditor;
@@ -122,13 +123,26 @@ namespace Props.Sticks
         //Larger "CapsuleCollider" on "Beaver" is used only as a trigger of an area and it has no collision with the playable duck
         private bool BeaverIsTrigger(Collider other)
         {
-            BeaverAI beaverAI = GameObject.FindGameObjectWithTag("Beaver").GetComponent<BeaverAI>();
+            /// to delete later //
+            /*
+            var beaverAI = GameObject.FindGameObjectWithTag("Beaver").GetComponent<BeaverAI>();
 
-            if (other.gameObject.CompareTag("Beaver"))
+            if (other.CompareTag("Beaver"))
             {
                 Vector3 stickPosition = this.transform.position;
                 beaverAI.FetchStick(stickPosition);
             }
+            /// end to delete /*/
+
+            /*
+            var beaver = other.GetComponent<StateHandlerBeaver>();
+            if (beaver == null)
+                return false;
+            
+            Debug.Log("Detected by stick");
+            beaver.state.StickDetected(transform);
+            */
+            
             return true;
         }
         //Checks if the inner "BoxCollider" is a trigger
