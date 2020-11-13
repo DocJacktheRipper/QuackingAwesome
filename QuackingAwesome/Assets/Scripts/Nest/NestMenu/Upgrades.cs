@@ -13,10 +13,9 @@ namespace Nest.NestMenu
         private DucklingsInventory ducklings;
         private DashingBehaviour dashingBehaviour;
         private StickInventory stickInventory;
-        private int _neededAmountForDash;
 
-        public int NeededAmountForDash { get; set; }
-        public int NeededAmountForBeak { get; set; }
+        public int NeededAmountForDash;
+        public int NeededAmountForBeak;
 
         private void Start()
         {

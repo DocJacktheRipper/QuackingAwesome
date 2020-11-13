@@ -57,15 +57,16 @@ namespace Props.spawning
 
             if (enableSpawnRadius)
             {
-                var positionInRadius = (Vector3) Random.insideUnitCircle * 1.5f;
+                var positionInRadius = (Vector3) Random.insideUnitSphere * 1.5f;
                 positionInRadius += spawnPoint.position;
                 positionInRadius.y = 0f;
                 var spawned = Instantiate(GetRandomSkin(), positionInRadius, Quaternion.identity);
-                SetObjectsAsChildren(spawnPoint, spawned);
+                spawned.transform.parent = targetParent.transform;
                 RotateObjectRandomly(spawned.transform);
                 return;
             }
             
+            // OLD CODE, CAN BE REMOVED, ONCE VALIDATED!
             // create object
             GameObject gameObject = Instantiate(GetRandomSkin(), spawnPoint.position, Quaternion.identity);
             SetObjectsAsChildren(spawnPoint, gameObject);

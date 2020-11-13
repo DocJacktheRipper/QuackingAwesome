@@ -7,9 +7,9 @@ namespace AI.Alligator.StateMachine_Alligator
     {
         #region Statemachine
         
-        public IdleState idle;
-        public ChasingState chasing;
-        public SwimmingState swimming;
+        public IdleStateAlligator idle;
+        public ChasingStateAlligator chasing;
+        public SwimmingStateAlligator swimming;
 
         #endregion
         

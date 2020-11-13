@@ -44,7 +44,7 @@ namespace Controllers.Buttons.NestMenu
         
         public void HatchAnEgg()
         {
-            nest.HatchEgg();
+            nest.HatchEggs();
         }
     }
 }

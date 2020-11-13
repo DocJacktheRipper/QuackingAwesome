@@ -1,18 +1,22 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using AI.Alligator.StateMachine_Alligator.ConcreteStates;
+using AI.Beaver.StateMachine_Beaver.ConcreteStates;
+using AI.StateMachine;
 using UnityEngine;
 
-public class StateHandlerBeaver : MonoBehaviour
+namespace AI.Beaver.StateMachine_Beaver
 {
-    // Start is called before the first frame update
-    void Start()
+    public class StateHandlerBeaver : IStateHandlerAI
     {
+        #region Statemachine
         
-    }
+        public IdleStateBeaver idle;
+        public SwimmingStateBeaver swimming;
 
-    // Update is called once per frame
-    void Update()
-    {
+        #endregion
         
+        void Start()
+        {
+            Initialize(idle);
+        }
     }
 }

@@ -32,11 +32,12 @@ namespace AI.Alligator
                 return false;
             }
 
-            DuckDied();
+            //DuckDied();
+            DeathOfDuck();
 
             return true;
         }
-
+/*
         private void DuckDied()
         {
             if (reloadOnDeath)
@@ -51,7 +52,7 @@ namespace AI.Alligator
                 DeathOfDuck();
             }
         }
-
+*/
         private void DeathOfDuck()
         {
             DeathBehaviour deathEvent = GameObject.Find("DeathBehaviour").GetComponent<DeathBehaviour>();

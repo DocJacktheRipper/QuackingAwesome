@@ -1,24 +1,25 @@
 ﻿using UnityEngine;
 
-namespace AI.Alligator.StateMachine_Alligator.ConcreteStates
+namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
 {
-    public class IdleState : ISwimIdleState
+    public class IdleStateBeaver : ISwimIdleStateBeaver
     {
         private static readonly int IsIdle = Animator.StringToHash("IsIdle");
 
-        
+
         #region IState
+
         public override void Enter()
         {
             base.Enter();
             methods.StopMovement();
-            methods.animator.SetBool(IsIdle, true);
+            //methods.animator.SetBool(IsIdle, true);
         }
 
         public override void Exit()
         {
             base.Exit();
-            methods.animator.SetBool(IsIdle, false);
+            //methods.animator.SetBool(IsIdle, false);
         }
 
         public override void Execute()
@@ -27,19 +28,16 @@ namespace AI.Alligator.StateMachine_Alligator.ConcreteStates
             if (base.SwitchStatesAfterTime())
             {
                 ResetWaitingTime();
-                stateHandler.ChangeState(stateHandler.swimming);
+                //stateHandler.ChangeState(stateHandler.swimming);
             }
         }
 
         public override void DetectionTriggerEntered(Collider other)
         {
             base.DetectionTriggerEntered(other);
-            if (other.CompareTag("Player"))
-            {
-                stateHandler.ChangeState(stateHandler.chasing);
-            }
+            // TODO: swim away from alligator
         }
-        #endregion
 
+        #endregion
     }
 }

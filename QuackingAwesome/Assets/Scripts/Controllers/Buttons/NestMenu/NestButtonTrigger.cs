@@ -1,14 +1,17 @@
-﻿using UnityEngine;
+﻿using Inventory.UI;
+using UnityEngine;
 
 namespace Controllers.Buttons.NestMenu
 {
     public class NestButtonTrigger : MonoBehaviour
     {
         public NestButton nestMenu;
+        public StickBar stickBar;
 
         private void Start()
         {
             nestMenu.ActivateNestButton();
+            stickBar.DisplayStickStatistics(true);
         }
 
         private void OnTriggerEnter(Collider other)
@@ -16,12 +19,13 @@ namespace Controllers.Buttons.NestMenu
             PlayerIsTriggerEnter(other);
         }
 
-        // Activate nest menu, when duck is swimming outside
+        // Activate nest menu, when duck is swimming inside
         private void PlayerIsTriggerEnter(Collider other)
         {
             if (other.CompareTag("Player"))
             {
                 nestMenu.ActivateNestButton();
+                stickBar.DisplayStickStatistics(true);
             }
         }
     
@@ -36,6 +40,7 @@ namespace Controllers.Buttons.NestMenu
             if (other.CompareTag("Player"))
             {
                 nestMenu.DeactivateNestButton();
+                if (!stickBar.stayVisible) stickBar.DisplayStickStatistics(false);
             }
         }
     }

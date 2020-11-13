@@ -42,19 +42,34 @@ namespace Nest.NestMenu
         }
 
             
-        public void HatchEgg()
+        public void HatchEggs()
         {
+            // remove energy once for all eggs
+            _energyInventory.energy -= neededEnergyForHatchingEgg;
+            _ducklings.AddDucklings(_currentEggs);
+            
+            DeactivateAllEggs();
+
+            /* remove energy for every egg
             for(int i=0; i<_currentEggs; i++)
             {
                 nest.transform.GetChild(--_currentEggs).gameObject.SetActive(false);
                 _energyInventory.energy -= neededEnergyForHatchingEgg;
                 _ducklings.AddDucklings(1);
-            }
+            }*/
         }
         
         public bool HasEnoughEnergyForHatching()
         {
             return _energyInventory.energy >= neededEnergyForHatchingEgg;
+        }
+
+        private void DeactivateAllEggs()
+        {
+            while(_currentEggs > 0)
+            {
+                nest.transform.GetChild(--_currentEggs).gameObject.SetActive(false);
+            }
         }
         
         public bool CanHatchEgg()

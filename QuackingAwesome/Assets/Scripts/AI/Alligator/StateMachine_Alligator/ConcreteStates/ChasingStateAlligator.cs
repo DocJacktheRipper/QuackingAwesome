@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace AI.Alligator.StateMachine_Alligator.ConcreteStates
 {
-    public class ChasingState : IStateAlligator
+    public class ChasingStateAlligator : IStateAlligator
     {
         public Transform target;
 
