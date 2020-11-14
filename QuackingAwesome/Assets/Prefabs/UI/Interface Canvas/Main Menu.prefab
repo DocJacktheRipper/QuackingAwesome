@@ -408,7 +408,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 108.73538}
+  m_SizeDelta: {x: 0, y: 144.0108}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &6640913437925767069
 CanvasRenderer:
@@ -1001,6 +1001,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5883619001218954337}
+  - component: {fileID: 6197968913477280008}
   - component: {fileID: 1273350926318070045}
   - component: {fileID: 2511316759695905423}
   m_Layer: 5
@@ -1031,6 +1032,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 576.11755, y: 349.73398}
   m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &6197968913477280008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5388927243602749188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed302bbc5f084cd41bd3042f24b8ac66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicToggle: {fileID: 0}
+  soundToggle: {fileID: 0}
+  audioMixer: {fileID: 0}
 --- !u!222 &1273350926318070045
 CanvasRenderer:
   m_ObjectHideFlags: 0

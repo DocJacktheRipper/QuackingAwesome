@@ -45,7 +45,7 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: 510823631501286451}
-  m_UserColorIndex: 0
+  m_UserColorIndex: 7
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
@@ -64,7 +64,7 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: 6104568914788127546}
-  m_UserColorIndex: 0
+  m_UserColorIndex: 5
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
@@ -144,7 +144,9 @@ AudioMixerController:
   m_UpdateMode: 0
   m_ExposedParameters:
   - guid: 2cdee1082826b4a46bb63318208b578d
-    name: music_fade
+    name: music_volume
+  - guid: 4f828442dd0e6f642a6154a7296a28e3
+    name: sound_volume
   m_AudioMixerGroupViews:
   - guids:
     - 27548e217237c43499c189d935ea6d01
