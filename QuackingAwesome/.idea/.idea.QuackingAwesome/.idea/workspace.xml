@@ -22,11 +22,17 @@
     <list default="true" id="cb082888-ab6d-41db-a40b-24e16e1dbeec" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animals/Beaver.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animals/Beaver.obj.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/AudioMixer/MainMenu.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/SFX/AudioMixer/MainMenu.mixer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Interface Canvas/Main Menu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Interface Canvas/Main Menu.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test Area/JacksTestMap2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test Area/JacksTestMap2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/fps_showing.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/fps_showing.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Animals/Beaver.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Animals/Beaver.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/ScaredAway.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/ScaredAway.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/ScaredBeaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/ScaredBeaver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/StateHandlerBeaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/StateHandlerBeaver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/Trigger/DuckTrigger.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/Trigger/DuckTrigger.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingArea.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +62,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Sound and Effects/Duck/QuackAudioManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/049BE2AF-E36F-487E-B06E-F49D51A0BAB6/fd/9eed30da/Animator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/StateMachine/BehaviourMethods.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/Beaver/ScaredAway.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/ConcreteStates/SwimmingStateAlligator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/Alligator/Trigger/AlligatorDetectionTriggered.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.shadergraph@7.3.1/Editor/Drawing/MaterialGraphEditWindow.cs" root0="SKIP_HIGHLIGHTING" />
@@ -68,10 +73,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/ChasingState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/IdleState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/IState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/ConcreteStates/ChasingState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/ISwimIdleState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/StateHandlerAI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/States/BehaviourMethods.cs" />
@@ -100,7 +101,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/ConcreteStates/IdleStateAlligator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/ISwimIdleStateAlligator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ISwimIdleStateBeaver.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/ScaredBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/ConcreteStates/SwimmingStateAlligator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Dash/DashingBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/BehaviourMethodsAlligator.cs" />
@@ -109,7 +109,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/StateMachine/IStateHandlerAI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/IdleStateBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/DeathBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/StateHandlerBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/StateMachine/BehaviourMethods.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/Trigger/AlligatorDetectionTriggered.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/Trigger/BeaverDetectionTriggered.cs" />
@@ -119,6 +118,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/StateMachine/IState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/FetchingStickBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Sound and Effects/MuteToggle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/ScaredBeaver.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/ScaredAway.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/Trigger/ScaredAway.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/ScaredBeaver.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/StateHandlerBeaver.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingArea.cs" />
       </list>
     </option>
   </component>
@@ -213,7 +218,7 @@
       <workItem from="1605088475003" duration="2734000" />
       <workItem from="1605265579667" duration="2913000" />
       <workItem from="1605284553419" duration="9708000" />
-      <workItem from="1605358167729" duration="7080000" />
+      <workItem from="1605358167729" duration="10276000" />
     </task>
     <servers />
   </component>

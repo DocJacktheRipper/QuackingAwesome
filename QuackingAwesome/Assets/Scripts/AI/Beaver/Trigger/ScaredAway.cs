@@ -4,18 +4,15 @@ namespace AI.Beaver
 {
     public class ScaredAway : MonoBehaviour
     {
+        // Who invoked it?
+        public Transform source;
+        
         // when duck quacks to beaver
         public bool isScared;
         public float currentChance;
         public float minChance;
         public float chanceDropRate;
         public float howFarAway;
-
-        private BeaverAI _movingBeaver;
-        void Start()
-        {
-            _movingBeaver = GetComponent<BeaverAI>();
-        }
 
         void Update()
         {

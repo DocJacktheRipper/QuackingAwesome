@@ -1,5 +1,4 @@
-﻿using AI.Alligator.StateMachine_Alligator.ConcreteStates;
-using AI.Beaver.StateMachine_Beaver.ConcreteStates;
+﻿using AI.Beaver.StateMachine_Beaver.ConcreteStates;
 using AI.StateMachine;
 using UnityEngine;
 
@@ -12,6 +11,7 @@ namespace AI.Beaver.StateMachine_Beaver
         public IdleStateBeaver idle;
         public SwimmingStateBeaver swimming;
         public FetchingStickBeaver fetching;
+        public ScaredBeaver scared;
 
         #endregion
         
