@@ -27,6 +27,8 @@ namespace AI.StateMachine
         #region Trigger
         public virtual void DetectionTriggerEntered(Collider other) { }
         public virtual void DetectionTriggerExited(Collider other) { }
+        
+        public virtual void MouthTriggerEntered(Collider other) { }
         #endregion
     }
 }

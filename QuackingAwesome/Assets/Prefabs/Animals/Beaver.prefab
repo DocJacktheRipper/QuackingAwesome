@@ -9,9 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6884930236889888211}
+  - component: {fileID: 5923152314519034980}
+  - component: {fileID: 379269703353540787}
   m_Layer: 12
   m_Name: KillTrigger
-  m_TagString: Untagged
+  m_TagString: Beaver
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,6 +32,32 @@ Transform:
   m_Father: {fileID: 348273231611832212}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &5923152314519034980
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234958100050492871}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5309386, y: 0.53697515, z: 0.44147527}
+  m_Center: {x: -0.0018963814, y: 0.23151243, z: 0.27926236}
+--- !u!114 &379269703353540787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234958100050492871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54dc59342d1aa954ea81d3b2a63324d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateHandler: {fileID: 7767153919719269221}
 --- !u!1 &3642855247802676167
 GameObject:
   m_ObjectHideFlags: 0
@@ -43,7 +71,7 @@ GameObject:
   - component: {fileID: 7767153919719269221}
   m_Layer: 12
   m_Name: AI
-  m_TagString: Untagged
+  m_TagString: Beaver
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64,7 +92,7 @@ Transform:
   - {fileID: 4797756715178772723}
   - {fileID: 5149376222985511321}
   m_Father: {fileID: 4242092220193179901}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8419178566806227090
 MonoBehaviour:
@@ -83,6 +111,7 @@ MonoBehaviour:
   currentTarget: {x: 0, y: 0, z: 0}
   animator: {fileID: 3289728769903166336}
   chaseSpeedBonus: 0.1
+  stickContainer: {fileID: 0}
 --- !u!114 &7767153919719269221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,6 +129,7 @@ MonoBehaviour:
   idle: {fileID: 6460208989639343062}
   swimming: {fileID: 3530289126467822476}
   fetching: {fileID: 5504931528108280290}
+  goingHome: {fileID: 1588695849845219843}
   scared: {fileID: 2841898376266464896}
 --- !u!1 &3688176156780178512
 GameObject:
@@ -312,8 +342,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.48459673, y: 0.5168171, z: 0.57701623}
-  m_Center: {x: -0.02328372, y: 0.24159145, z: 0.16101009}
+  m_Size: {x: 0.45395088, y: 0.50149417, z: 0.5486537}
+  m_Center: {x: -0.007960796, y: 0.24925292, z: 0.14682883}
 --- !u!95 &3289728769903166336
 Animator:
   serializedVersion: 3
@@ -363,7 +393,7 @@ GameObject:
   - component: {fileID: 7762030165494006773}
   m_Layer: 12
   m_Name: Detection
-  m_TagString: Untagged
+  m_TagString: Beaver
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -407,7 +437,7 @@ GameObject:
   - component: {fileID: 4242092220193179902}
   m_Layer: 12
   m_Name: Beaver
-  m_TagString: Untagged
+  m_TagString: Beaver
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -424,6 +454,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4419237515261182409}
+  - {fileID: 1050548652506878050}
   - {fileID: 4819443412622589138}
   - {fileID: 348273231611832212}
   m_Father: {fileID: 0}
@@ -451,6 +482,36 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!1 &6732860321951368058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1050548652506878050}
+  m_Layer: 12
+  m_Name: CarriedSticks
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1050548652506878050
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6732860321951368058}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.046, y: 0.1772531, z: 0.462}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4242092220193179901}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7120258515362013496
 GameObject:
   m_ObjectHideFlags: 0
@@ -480,7 +541,7 @@ Transform:
   m_Children:
   - {fileID: 3392180511046326959}
   m_Father: {fileID: 4242092220193179901}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7917598201346527213
 GameObject:
@@ -494,10 +555,11 @@ GameObject:
   - component: {fileID: 6460208989639343062}
   - component: {fileID: 3530289126467822476}
   - component: {fileID: 5504931528108280290}
+  - component: {fileID: 1588695849845219843}
   - component: {fileID: 2841898376266464896}
   m_Layer: 12
   m_Name: States
-  m_TagString: Untagged
+  m_TagString: Beaver
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -529,8 +591,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitUntilToSwitch: 0
-  waitSecondsToSwitch: 0
-  chanceToSwitchState: 0
+  waitSecondsToSwitch: 5
+  chanceToSwitchState: 50
 --- !u!114 &3530289126467822476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -544,8 +606,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waitUntilToSwitch: 0
-  waitSecondsToSwitch: 0
-  chanceToSwitchState: 0
+  waitSecondsToSwitch: 10
+  chanceToSwitchState: 70
 --- !u!114 &5504931528108280290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -559,6 +621,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stickPosition: {fileID: 0}
+--- !u!114 &1588695849845219843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7917598201346527213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f1a2497673eb924ca750e04f53133a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beaverNest: {fileID: 0}
 --- !u!114 &2841898376266464896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -571,8 +646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 688be00ea150b434a88d7600bc07768a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaredAway: {fileID: 0}
-  source: {fileID: 0}
+  scaredAway: {fileID: 8989431789419713009}
 --- !u!1 &8593404517860725340
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,7 +659,7 @@ GameObject:
   - component: {fileID: 8989431789419713009}
   m_Layer: 12
   m_Name: Scare
-  m_TagString: Untagged
+  m_TagString: Beaver
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -616,11 +690,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a1041cf18beead44b18450ded79bb94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  source: {fileID: 0}
   isScared: 0
   currentChance: 20
   minChance: 10
   chanceDropRate: 0.1
-  howFarAway: 4
+  howFarAway: 5
+  runAwaySpeedBonus: 0
 --- !u!1001 &4242092221475874338
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -688,17 +764,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Body
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5cc18457f4767254a895f13202e14901,
+        type: 3}
+      propertyPath: m_TagString
+      value: Beaver
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cc18457f4767254a895f13202e14901, type: 3}
---- !u!1 &3900004816696990579 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5cc18457f4767254a895f13202e14901,
-    type: 3}
-  m_PrefabInstance: {fileID: 4242092221475874338}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4419237515261182409 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5cc18457f4767254a895f13202e14901,
+    type: 3}
+  m_PrefabInstance: {fileID: 4242092221475874338}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3900004816696990579 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5cc18457f4767254a895f13202e14901,
     type: 3}
   m_PrefabInstance: {fileID: 4242092221475874338}
   m_PrefabAsset: {fileID: 0}

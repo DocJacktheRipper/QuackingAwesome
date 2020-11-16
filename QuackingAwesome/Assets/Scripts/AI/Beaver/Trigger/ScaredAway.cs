@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace AI.Beaver
+namespace AI.Beaver.Trigger
 {
     public class ScaredAway : MonoBehaviour
     {
@@ -13,6 +13,7 @@ namespace AI.Beaver
         public float minChance;
         public float chanceDropRate;
         public float howFarAway;
+        public float runAwaySpeedBonus;
 
         void Update()
         {

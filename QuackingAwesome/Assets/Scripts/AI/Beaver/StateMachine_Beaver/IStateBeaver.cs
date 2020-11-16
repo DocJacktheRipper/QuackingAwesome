@@ -29,5 +29,22 @@ namespace AI.Beaver.StateMachine_Beaver
 
             return false;
         }
+
+        public override void MouthTriggerEntered(Collider other)
+        {
+            base.MouthTriggerEntered(other);
+            
+        }
+        private bool StickCollectable(Collider stickCollider)
+        {
+            if (!stickCollider.CompareTag("Stick"))
+            {
+                return false;
+            }
+            // add Stick to beaver
+            
+
+            return true;
+        }
     }
 }

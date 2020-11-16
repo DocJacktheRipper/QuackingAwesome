@@ -143,6 +143,7 @@
                 <e p="BehaviourMethodsBeaver.cs" t="Include" />
                 <e p="ConcreteStates" t="Include">
                   <e p="FetchingStickBeaver.cs" t="Include" />
+                  <e p="GoingHomeBeaver.cs" t="Include" />
                   <e p="IdleStateBeaver.cs" t="Include" />
                   <e p="ScaredBeaver.cs" t="Include" />
                   <e p="SwimmingStateBeaver.cs" t="Include" />
@@ -156,6 +157,7 @@
                 <e p="DuckTrigger.cs" t="Include" />
               </e>
               <e p="Trigger" t="Include">
+                <e p="BeaverBodyCollider.cs" t="Include" />
                 <e p="BeaverDetectionTriggered.cs" t="Include" />
                 <e p="ScaredAway.cs" t="Include" />
               </e>
@@ -221,6 +223,7 @@
             </e>
           </e>
           <e p="Nest" t="Include">
+            <e p="BeaverNest.cs" t="Include" />
             <e p="NestBuilding.cs" t="Include" />
             <e p="NestEffectTrigger.cs" t="Include" />
             <e p="NestLocation.cs" t="Include" />

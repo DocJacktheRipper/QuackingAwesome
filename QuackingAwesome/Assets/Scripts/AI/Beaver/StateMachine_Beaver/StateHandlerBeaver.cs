@@ -11,6 +11,7 @@ namespace AI.Beaver.StateMachine_Beaver
         public IdleStateBeaver idle;
         public SwimmingStateBeaver swimming;
         public FetchingStickBeaver fetching;
+        public GoingHomeBeaver goingHome;
         public ScaredBeaver scared;
 
         #endregion
@@ -18,6 +19,19 @@ namespace AI.Beaver.StateMachine_Beaver
         void Start()
         {
             Initialize(idle);
+        }
+
+        public void MouthColliderEntered(Collision other)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void StickCollected()
+        {
+            if (state.Equals(fetching))
+            {
+                ChangeState(goingHome);
+            }
         }
     }
 }
