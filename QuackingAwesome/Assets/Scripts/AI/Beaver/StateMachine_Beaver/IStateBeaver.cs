@@ -28,6 +28,7 @@ namespace AI.Beaver.StateMachine_Beaver
                 stateHandler.ChangeState(stateHandler.fetching);
                 return true;
             }
+            Debug.Log("Collider is: "+other.name);
 
             return false;
         }

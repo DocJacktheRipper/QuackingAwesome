@@ -18,6 +18,7 @@ namespace Controllers.Duck.Quack
 
         private GameObject _quackingCone;
         private Collider _coneCollider;
+        private float _activeColliderTime;
 
         private StickInventory _stickInventory;
         
@@ -49,6 +50,11 @@ namespace Controllers.Duck.Quack
                 isRecovering = false;
                 overHeat = 0;
             }
+
+            if (_activeColliderTime < Time.time)
+            {
+                _coneCollider.enabled = false;
+            }
         }
 
         public void Quack()
@@ -59,14 +65,14 @@ namespace Controllers.Duck.Quack
             _animator.SetTrigger(DoQuack);
             // effect
             _quackEffect.Play(true);
+
+
+            DropSticks();
             
 
-            if (transform.childCount > 0)
-            {
-                DropSticks();
-            }
-
+            // enable trigger
             _coneCollider.enabled = true;
+            _activeColliderTime = Time.time + 0.2f;
 
             overHeat += amountOfHeatPerQuack;
             if(overHeat >= 100)

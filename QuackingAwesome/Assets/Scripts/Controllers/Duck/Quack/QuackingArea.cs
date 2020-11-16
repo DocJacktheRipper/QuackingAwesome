@@ -6,17 +6,12 @@ namespace Controllers.Duck.Quack
 {
     public class QuackingArea : MonoBehaviour
     {
-        private GameObject _beaver;
-        private GameObject _alligator;
-
         // How heavy is the quack? "damage"
         public float volume;
         private Collider _quackArea;
 
         private void Start()
         {
-            _beaver = GameObject.FindWithTag("Beaver");
-            _alligator = GameObject.FindWithTag("Alligator");
             _quackArea = GetComponent<Collider>();
         }
 
@@ -33,13 +28,11 @@ namespace Controllers.Duck.Quack
         private void QuackToBeaver(GameObject beaver)
         {
             var ai = beaver.transform.parent.Find("AI");
-            if(ai == null)
-                Debug.Log("AI == null");
             ScaredAway scared = ai.Find("Scare").GetComponent<ScaredAway>();
 
             if (scared.AttemptScare(volume))
             {
-                Debug.Log("is scared away");
+                Debug.Log("Beaver is scared away");
                 var stateHandler = ai.GetComponent<StateHandlerBeaver>();
                 
                 // prepare and change states

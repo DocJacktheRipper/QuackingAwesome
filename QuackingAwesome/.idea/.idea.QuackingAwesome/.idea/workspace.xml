@@ -23,13 +23,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Animals/Beaver.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Animals/Beaver.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test Area/JacksTestMap2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test Area/JacksTestMap2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/GoingHomeBeaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/GoingHomeBeaver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/IdleStateBeaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/IdleStateBeaver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/ScaredBeaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/ScaredBeaver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/SwimmingStateBeaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/SwimmingStateBeaver.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/IStateBeaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/IStateBeaver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/StateHandlerBeaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/StateHandlerBeaver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingArea.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingBehaviour.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +80,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Sound and Effects/AudioManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Sound and Effects/Duck/QuackAudioManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Sound and Effects/Duck/DashAudioManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Buttons/NestMenu/NestButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Nest/NestMenu/Upgrades.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Nest/NestMenu/LayAndHatchEgg.cs" />
@@ -117,14 +112,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Props/Sticks/StickTriggerEnter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/StickInventory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Nest/BeaverNest.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/Trigger/BeaverBodyCollider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/StateHandlerBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/ScaredBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/GoingHomeBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/IdleStateBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/SwimmingStateBeaver.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/IStateBeaver.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingBehaviour.cs" />
       </list>
     </option>
   </component>
@@ -221,6 +217,7 @@
       <workItem from="1605284553419" duration="9708000" />
       <workItem from="1605358167729" duration="10505000" />
       <workItem from="1605528400084" duration="13538000" />
+      <workItem from="1605560911691" duration="1044000" />
     </task>
     <servers />
   </component>
@@ -329,10 +326,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="297" y="153" key="run.anything.popup/0.0.1280.689@0.0.1280.689" timestamp="1601292231244" />
-    <state x="415" y="149" width="672" height="445" key="search.everywhere.popup" timestamp="1605289304619">
+    <state x="415" y="149" width="672" height="445" key="search.everywhere.popup" timestamp="1605561658212">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="2543" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1280.689/1920.0.1920.1050@1920.0.1920.1050" timestamp="1604325775317" />
-    <state x="415" y="149" width="672" height="445" key="search.everywhere.popup/0.0.1280.689@0.0.1280.689" timestamp="1605289304619" />
+    <state x="415" y="149" width="672" height="445" key="search.everywhere.popup/0.0.1280.689@0.0.1280.689" timestamp="1605561658212" />
   </component>
 </project>
