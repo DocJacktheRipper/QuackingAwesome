@@ -20,12 +20,7 @@ namespace AI.Beaver.StateMachine_Beaver
         {
             Initialize(idle);
         }
-
-        public void MouthColliderEntered(Collision other)
-        {
-            throw new System.NotImplementedException();
-        }
-
+        
         public void StickCollected()
         {
             if (state.Equals(fetching))

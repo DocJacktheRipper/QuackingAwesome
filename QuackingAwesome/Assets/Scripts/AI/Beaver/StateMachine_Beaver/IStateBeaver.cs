@@ -20,8 +20,10 @@ namespace AI.Beaver.StateMachine_Beaver
 
         protected bool StickIsTrigger(Collider other)
         {
+            Debug.Log("Beaver has seen stick?");
             if (other.CompareTag("Stick"))
             {
+                Debug.Log("Yes, beaver has seen stick.");
                 stateHandler.fetching.stickPosition = other.transform;
                 stateHandler.ChangeState(stateHandler.fetching);
                 return true;
@@ -29,12 +31,7 @@ namespace AI.Beaver.StateMachine_Beaver
 
             return false;
         }
-
-        public override void MouthTriggerEntered(Collider other)
-        {
-            base.MouthTriggerEntered(other);
-            
-        }
+        
         private bool StickCollectable(Collider stickCollider)
         {
             if (!stickCollider.CompareTag("Stick"))

@@ -20,20 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb082888-ab6d-41db-a40b-24e16e1dbeec" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Animals/Beaver.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Animals/Beaver.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test Area/JacksTestMap2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test Area/JacksTestMap2.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/BehaviourMethodsBeaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/BehaviourMethodsBeaver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/GoingHomeBeaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/GoingHomeBeaver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/IdleStateBeaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/IdleStateBeaver.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/ScaredBeaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/ScaredBeaver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/SwimmingStateBeaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/SwimmingStateBeaver.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/IStateBeaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/IStateBeaver.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/StateHandlerBeaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/StateHandlerBeaver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/Trigger/ScaredAway.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/Trigger/ScaredAway.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/StateMachine/IState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/StateMachine/IState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingArea.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/StickInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/StickInventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Props/Sticks/StickTriggerEnter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Props/Sticks/StickTriggerEnter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,28 +103,28 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/StateHandlerAlligator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/Trigger/AlligatorPreyInReach.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/StateMachine/IStateHandlerAI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/IdleStateBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/DeathBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/StateMachine/BehaviourMethods.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/Trigger/AlligatorDetectionTriggered.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/Trigger/BeaverDetectionTriggered.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/SwimmingStateBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/FetchingStickBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Sound and Effects/MuteToggle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/ScaredBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/ScaredAway.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/Trigger/ScaredAway.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/ScaredBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/StateMachine/IState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/IStateBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/BehaviourMethodsBeaver.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/Trigger/BeaverBodyCollider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Props/Sticks/StickTriggerEnter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/StickInventory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Nest/BeaverNest.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/GoingHomeBeaver.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/StateHandlerBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingArea.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/Trigger/BeaverBodyCollider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/StateHandlerBeaver.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/ScaredBeaver.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/GoingHomeBeaver.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/IdleStateBeaver.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/SwimmingStateBeaver.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/IStateBeaver.cs" />
       </list>
     </option>
   </component>
@@ -224,7 +220,7 @@
       <workItem from="1605265579667" duration="2913000" />
       <workItem from="1605284553419" duration="9708000" />
       <workItem from="1605358167729" duration="10505000" />
-      <workItem from="1605528400084" duration="11993000" />
+      <workItem from="1605528400084" duration="13538000" />
     </task>
     <servers />
   </component>
@@ -338,24 +334,5 @@
     </state>
     <state x="2543" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1280.689/1920.0.1920.1050@1920.0.1920.1050" timestamp="1604325775317" />
     <state x="415" y="149" width="672" height="445" key="search.everywhere.popup/0.0.1280.689@0.0.1280.689" timestamp="1605289304619" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/IStateBeaver.cs</url>
-          <line>24</line>
-          <properties documentPath="C:\Users\sebas\Desktop\Programmieren_Privat\Unity\GitHub\QuackingAwesome\QuackingAwesome\Assets\Scripts\AI\Beaver\StateMachine_Beaver\IStateBeaver.cs" initialLine="31">
-            <startOffsets>
-              <option value="631" />
-            </startOffsets>
-            <endOffsets>
-              <option value="685" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

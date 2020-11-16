@@ -31,18 +31,6 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
             }
         }
 
-        /*
-        public override void DetectionTriggerExited(Collider other)
-        {
-            base.DetectionTriggerExited(other);
-            // if far away, it's not scared anymore
-            Debug.Log("Tag exited: " + other.tag);
-            if (other.CompareTag("Player") || other.CompareTag("Alligator"))
-            {
-                stateHandler.ChangeState(stateHandler.swimming);
-            }
-        }*/
-
         public override void Exit()
         {
             base.Exit();
