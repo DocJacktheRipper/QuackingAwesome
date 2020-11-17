@@ -43,7 +43,7 @@ namespace AI.Beaver.Trigger
         private void DeathOfDuck()
         {
             DeathBehaviour deathEvent = GameObject.Find("DeathBehaviour").GetComponent<DeathBehaviour>();
-            deathEvent.DuckDied();
+            StartCoroutine(deathEvent.DuckDied(20, this.GetComponentInParent<Collider>()));
         }
     }
 }
