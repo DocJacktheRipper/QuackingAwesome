@@ -1,5 +1,6 @@
 ﻿using AI.Beaver.StateMachine_Beaver.ConcreteStates;
 using AI.StateMachine;
+using UnityEditor.VersionControl;
 using UnityEngine;
 
 namespace AI.Beaver.StateMachine_Beaver
@@ -27,6 +28,12 @@ namespace AI.Beaver.StateMachine_Beaver
             {
                 ChangeState(goingHome);
             }
+        }
+
+        public void StickDetected(Transform stickTransform)
+        {
+            fetching.stickPosition = stickTransform;
+            ChangeState(fetching);
         }
     }
 }

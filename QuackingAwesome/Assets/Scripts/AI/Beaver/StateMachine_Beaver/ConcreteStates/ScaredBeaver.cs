@@ -12,12 +12,12 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
         {
             base.Enter();
             InvokeScared(scaredAway.source, scaredAway.howFarAway);
-            concreteMethods.AddSpeed(scaredAway.runAwaySpeedBonus);
+            ConcreteMethods.AddSpeed(scaredAway.runAwaySpeedBonus);
 
             // calculate when to switch to different state again
-            _waitUntil = Time.time + (scaredAway.howFarAway / concreteMethods.GetSpeed());
+            _waitUntil = Time.time + (scaredAway.howFarAway / ConcreteMethods.GetSpeed());
             
-            concreteMethods.StartMovement();
+            ConcreteMethods.StartMovement();
         }
 
         public override void Execute()
@@ -27,14 +27,14 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
             // End state after time...
             if (_waitUntil < Time.time)
             {
-                stateHandler.ChangeState(stateHandler.swimming);
+                StateHandler.ChangeState(StateHandler.swimming);
             }
         }
 
         public override void Exit()
         {
             base.Exit();
-            concreteMethods.AddSpeed(-scaredAway.runAwaySpeedBonus);
+            ConcreteMethods.AddSpeed(-scaredAway.runAwaySpeedBonus);
         }
 
 
@@ -52,7 +52,7 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
             var relPoint = Vector3.Normalize(dir) * distance;
             var point = position + relPoint;
 
-            concreteMethods.SetDestination(point);
+            ConcreteMethods.SetDestination(point);
         }
 
         #endregion

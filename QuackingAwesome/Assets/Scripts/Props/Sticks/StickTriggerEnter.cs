@@ -78,13 +78,16 @@ namespace Props.Sticks
             }
         }
 
+        /*
         private void OnCollisionEnter(Collision other)
         {
+            Debug.Log("Stick collided with: " + other.collider.name);
             if (BeaverHasDetected(other.collider))
             {
                 return;
             }
         }
+        */
 
         #region PlayerTrigger
 
@@ -132,10 +135,16 @@ namespace Props.Sticks
                 return false;
             }
             
+            Debug.Log("Beaver has triggered a Stick!");
             // Beaver was the collider.
             // Get the stateHandler of the Beaver and invoke Trigger
             //other.transform.parent.GetComponentInChildren<StateHandlerBeaver>();
-            
+            Component component;
+            if (other.transform.parent.TryGetComponent(typeof(StateHandlerBeaver), out component))
+            {
+                var stateHandler = component.GetComponent<StateHandlerBeaver>();
+                stateHandler.StickDetected(transform);
+            }
             
             return true;
         }
@@ -145,13 +154,12 @@ namespace Props.Sticks
         //Larger "CapsuleCollider" on "Beaver" is used only as a trigger of an area and it has no collision with the playable duck
         private bool BeaverIsTrigger(Collider other)
         {
-            var inventory = other.transform.Find("CarriedSticks").GetComponent<StickInventory>();
-
-            if (!other.CompareTag("Beaver") || inventory == null)
+            if (!other.CompareTag("Beaver"))
             {
                 return false;
             }
-
+            var inventory = other.transform.Find("CarriedSticks").GetComponent<StickInventory>();
+            
             if (!inventory.collectingEnabled)
             {
                 return false;

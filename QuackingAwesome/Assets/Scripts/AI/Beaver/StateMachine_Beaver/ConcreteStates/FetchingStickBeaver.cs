@@ -34,7 +34,7 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
             if ( distanceNew.sqrMagnitude < distanceVector.sqrMagnitude )
             {
                 this.stickPosition = stickPositionNew;
-                stateHandler.ChangeState(stateHandler.fetching);
+                StateHandler.ChangeState(StateHandler.fetching);
             }
         }
         

@@ -3064,6 +3064,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f96616786287814a935979f57b66af5, type: 3}
+--- !u!114 &478499613 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2440147762435693725, guid: b51857b31ca727344804cebf0959d70e,
+    type: 3}
+  m_PrefabInstance: {fileID: 4808378788423664165}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &479845018
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8520,6 +8532,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 552372766}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &566686825 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4242092220193179900, guid: 77f9ba5ff4379b347bd0df8445a7077c,
+    type: 3}
+  m_PrefabInstance: {fileID: 4242092220192633996}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &566686827
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566686825}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &568875916
 GameObject:
   m_ObjectHideFlags: 0
@@ -27461,7 +27495,24 @@ PrefabInstance:
       propertyPath: looping
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8184513094575919675, guid: c5d2532c37bf5fd42b70b1503e4ccc51, type: 3}
+    - {fileID: 8184513093495163071, guid: c5d2532c37bf5fd42b70b1503e4ccc51, type: 3}
+    - {fileID: 8184513093820115708, guid: c5d2532c37bf5fd42b70b1503e4ccc51, type: 3}
+    - {fileID: 8184513093930024700, guid: c5d2532c37bf5fd42b70b1503e4ccc51, type: 3}
+    - {fileID: 3650326194331716319, guid: c5d2532c37bf5fd42b70b1503e4ccc51, type: 3}
+    - {fileID: 3650326193299009397, guid: c5d2532c37bf5fd42b70b1503e4ccc51, type: 3}
+    - {fileID: 3650326193713804641, guid: c5d2532c37bf5fd42b70b1503e4ccc51, type: 3}
+    - {fileID: 3650326192977341117, guid: c5d2532c37bf5fd42b70b1503e4ccc51, type: 3}
+    - {fileID: 3650326193047389005, guid: c5d2532c37bf5fd42b70b1503e4ccc51, type: 3}
+    - {fileID: 8190833347691054042, guid: c5d2532c37bf5fd42b70b1503e4ccc51, type: 3}
+    - {fileID: 8190833347747529213, guid: c5d2532c37bf5fd42b70b1503e4ccc51, type: 3}
+    - {fileID: 8190833347260866129, guid: c5d2532c37bf5fd42b70b1503e4ccc51, type: 3}
+    - {fileID: 8190833346162117885, guid: c5d2532c37bf5fd42b70b1503e4ccc51, type: 3}
+    - {fileID: 5738738483989690359, guid: c5d2532c37bf5fd42b70b1503e4ccc51, type: 3}
+    - {fileID: 7059693990666121926, guid: c5d2532c37bf5fd42b70b1503e4ccc51, type: 3}
+    - {fileID: 2312920174253008793, guid: c5d2532c37bf5fd42b70b1503e4ccc51, type: 3}
+    - {fileID: 3927883447544906469, guid: c5d2532c37bf5fd42b70b1503e4ccc51, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c5d2532c37bf5fd42b70b1503e4ccc51, type: 3}
 --- !u!4 &1621584524 stripped
 Transform:
@@ -36967,6 +37018,16 @@ PrefabInstance:
       propertyPath: chanceToSwitchState
       value: 70
       objectReference: {fileID: 0}
+    - target: {fileID: 3530289126467822476, guid: 77f9ba5ff4379b347bd0df8445a7077c,
+        type: 3}
+      propertyPath: detectionRadius
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3530289126467822476, guid: 77f9ba5ff4379b347bd0df8445a7077c,
+        type: 3}
+      propertyPath: detectionCenter.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4242092220008363507, guid: 77f9ba5ff4379b347bd0df8445a7077c,
         type: 3}
       propertyPath: m_TagString
@@ -37055,7 +37116,7 @@ PrefabInstance:
     - target: {fileID: 5923152314519034980, guid: 77f9ba5ff4379b347bd0df8445a7077c,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6460208989639343062, guid: 77f9ba5ff4379b347bd0df8445a7077c,
         type: 3}
@@ -37065,7 +37126,7 @@ PrefabInstance:
     - target: {fileID: 6460208989639343062, guid: 77f9ba5ff4379b347bd0df8445a7077c,
         type: 3}
       propertyPath: chanceToSwitchState
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6819017904228080920, guid: 77f9ba5ff4379b347bd0df8445a7077c,
         type: 3}
@@ -37440,7 +37501,7 @@ PrefabInstance:
         type: 3}
       propertyPath: beakUpgrade
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 478499613}
     - target: {fileID: 8527007696831129757, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
       propertyPath: m_Text
