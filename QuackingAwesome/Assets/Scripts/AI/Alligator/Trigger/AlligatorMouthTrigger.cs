@@ -56,7 +56,7 @@ namespace AI.Alligator
         private void DeathOfDuck()
         {
             DeathBehaviour deathEvent = GameObject.Find("DeathBehaviour").GetComponent<DeathBehaviour>();
-            deathEvent.DuckDied();
+            StartCoroutine(deathEvent.DuckDied(50, this.GetComponentInParent<Collider>()));
         }
     }
 }
