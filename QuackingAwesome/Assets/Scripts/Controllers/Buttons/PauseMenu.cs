@@ -1,4 +1,5 @@
-﻿using Controllers.Buttons.StartMenu;
+﻿using System;
+using Controllers.Buttons.StartMenu;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,28 +11,31 @@ public class PauseMenu : MonoBehaviour
     public GameObject Controls;
     public LoadingScene loadingScene;
 
-    private void Start()
+    public void Start()
     {
-        
+        GameIsPaused = PauseMenuUi.activeSelf;
     }
 
-    //Checks input from the menubutton
-    void Update()
+    public void ToggleMainMenu()
     {
-        if (Input.GetButtonDown("Cancel"))
+        if (GameIsPaused)
         {
-            if (GameIsPaused)
-            {
-                Resume();
-            }
-            else
-            {
-                Pause();
-            }
+            Resume();
+        }
+        else
+        {
+            Pause();
         }
     }
-
-
+    
+    void Pause()
+    {
+        Controls.SetActive(false);
+        PauseMenuUi.SetActive(true);
+        Time.timeScale = 0;
+        GameIsPaused = true;
+    }
+    
     public void Resume()
     {
         Controls.SetActive(true);
@@ -51,15 +55,6 @@ public class PauseMenu : MonoBehaviour
         // load current scene
         loadingScene.LoadNewScene(SceneManager.GetActiveScene().name);
     }
-
-    void Pause()
-    {
-        Controls.SetActive(false);
-        PauseMenuUi.SetActive(true);
-        Time.timeScale = 0;
-        GameIsPaused = true;
-    }
-
     public void ReturnToStartMenuScene()
     {
         loadingScene.LoadNewScene("StartMenu");
