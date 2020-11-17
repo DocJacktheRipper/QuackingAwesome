@@ -41,10 +41,11 @@ public class PopUps : MonoBehaviour
             //, false
             ));
         
-        // Time spend searching for a stick
         _numberOfSticks = _stickInventory.numberOfSticks;
-        _time = stickResearchTime;
-        StartCoroutine(displayBeaverStoleSticks());
+        
+        // Time spend searching for a stick
+        //_time = stickResearchTime;
+        //StartCoroutine(displayBeaverStoleSticks());
     }
     
     // Coroutine to start to display the advice given in argument
@@ -106,11 +107,13 @@ public class PopUps : MonoBehaviour
         }
         
         // Beaver
+        /*
         if (_time != 0 &&
             _numberOfSticks == 1)
         {
             _time = stickResearchTime;
         }
+        */
 
         if ((_time != 0 || !_stickGotten) && 
             _numberOfSticks != _stickInventory.numberOfSticks)
