@@ -4,8 +4,8 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
 {
     public class SwimmingStateBeaver : ISwimIdleStateBeaver
     {
-        public float detectionRadius;
-        public Vector3 detectionCenter;
+        private float detectionRadius;
+        private Vector3 detectionCenter;
         
         #region
         public override void Enter()
@@ -28,7 +28,7 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
                 methods.GotoNextPoint();
             }
             
-            SearchForSticks();
+            //SearchForSticks();
         }
 
         public override void DetectionTriggerEntered(Collider other)

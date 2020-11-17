@@ -13,7 +13,6 @@ namespace AI.Beaver.StateMachine_Beaver
             base.Awake();
             
             StateHandler = ai.GetComponent<StateHandlerBeaver>();
-
             ConcreteMethods = ai.GetComponent<BehaviourMethodsBeaver>();
         }
 

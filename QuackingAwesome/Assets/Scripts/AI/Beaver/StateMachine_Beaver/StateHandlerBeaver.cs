@@ -24,10 +24,7 @@ namespace AI.Beaver.StateMachine_Beaver
         
         public void StickCollected()
         {
-            if (state.Equals(fetching))
-            {
-                ChangeState(goingHome);
-            }
+            ChangeState(goingHome);
         }
 
         public void StickDetected(Transform stickTransform)

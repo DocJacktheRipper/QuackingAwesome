@@ -1,6 +1,6 @@
-﻿using System;
-using AI.Beaver.StateMachine_Beaver;
+﻿using AI.Beaver.StateMachine_Beaver;
 using Controllers;
+using Props.Sticks;
 using UnityEngine;
 
 namespace AI.Beaver.Trigger
@@ -8,6 +8,7 @@ namespace AI.Beaver.Trigger
     public class BeaverBodyCollider : MonoBehaviour
     {
         public StateHandlerBeaver stateHandler;
+        public Transform stickContainer;
         
         public void OnCollisionEnter(Collision other)
         {
@@ -26,6 +27,20 @@ namespace AI.Beaver.Trigger
             }
         }
 
+        /*
+        private bool StickIsTrigger(Collider stickCollider)
+        {
+            if (!stickCollider.CompareTag("Stick"))
+            {
+                return false;
+            }
+
+            var stick = stickCollider.GetComponent<StickTriggerEnter>();
+            stick.PickStick(stickContainer);
+            
+            return true;
+        }
+        */
 
         private bool PlayerIsTrigger(Collider duckCollider)
         {

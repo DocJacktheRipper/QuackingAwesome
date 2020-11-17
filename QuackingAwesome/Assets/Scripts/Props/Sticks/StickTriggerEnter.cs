@@ -27,13 +27,19 @@ namespace Props.Sticks
 
         void Start()
         {
-            _trigger = gameObject.GetComponent<Collider>();
+            _trigger = gameObject.GetComponent<BoxCollider>();
             _collider = gameObject.GetComponent<SphereCollider>();
             var duck = GameObject.FindWithTag("Player");
             _duckAnimator = duck.GetComponent<Animator>();
             
             _duckCarriedSticks = duck.transform.Find("CarriedSticks");
             positionPool = GameObject.Find("StickSpawnSpots").transform;
+        }
+
+        private void Awake()
+        {
+            _trigger = gameObject.GetComponent<BoxCollider>();
+            _collider = gameObject.GetComponent<SphereCollider>();
         }
 
         private void Update()
@@ -78,16 +84,16 @@ namespace Props.Sticks
             }
         }
 
-        /*
+        
         private void OnCollisionEnter(Collision other)
         {
             Debug.Log("Stick collided with: " + other.collider.name);
-            if (BeaverHasDetected(other.collider))
+            if (BeaverIsTrigger(other.collider))
             {
                 return;
             }
         }
-        */
+        
 
         #region PlayerTrigger
 
@@ -111,6 +117,8 @@ namespace Props.Sticks
             if (inventory.AddStick())
             {
                 PickStick(_duckCarriedSticks);
+                // animation for stick picking
+                _duckAnimator.SetTrigger(DoPickAndKeep); //TODO: make dynamically for other animals
             }
             else
             {
@@ -158,21 +166,37 @@ namespace Props.Sticks
             {
                 return false;
             }
-            var inventory = other.transform.Find("CarriedSticks").GetComponent<StickInventory>();
-            
-            if (!inventory.collectingEnabled)
+
+            // ignore if only the body triggered
+            if (other.name.Contains("Body"))
             {
+                Debug.Log("Body triggered");
+                // TODO: do behaviour here
+                return true;
+            }
+
+            var ai = other.transform.parent;
+            var tempStickBox = ai.parent.Find("CarriedSticks");
+            
+            Component component;
+            if(!tempStickBox.TryGetComponent(typeof(StickInventory), out component))
+            {
+                Debug.Log("No component found");
+                return false;
+            }
+            var inventory = component.GetComponent<StickInventory>();
+            
+            if (!inventory.collectingEnabled || (inventory.numberOfSticks >= inventory.maxCapacityOfSticks))
+            {
+                Debug.Log("Stick not collectable.");
                 return false;
             }
 
             if (inventory.AddStick())
             {
                 PickStick(inventory.transform);
-                var stateHandlerBeaver = other.transform.Find("AI").GetComponent<StateHandlerBeaver>();
-                if (stateHandlerBeaver != null)
-                {
-                    stateHandlerBeaver.StickCollected();
-                }
+                var stateHandlerBeaver = ai.GetComponent<StateHandlerBeaver>();
+                stateHandlerBeaver.StickCollected();
             }
             else
             {
@@ -209,16 +233,13 @@ namespace Props.Sticks
 
         #endregion
         #region HelperMethods
-
-        private void PickStick(Transform targetParent)
+        
+        public void PickStick(Transform targetParent)
         {
             // disable trigger
             _trigger.enabled = false;
             _collider.enabled = false;
-            
-            // animation for stick picking?
-            _duckAnimator.SetTrigger(DoPickAndKeep);
-            
+
             // move to duck
             Transform transform1;
             (transform1 = transform).SetPositionAndRotation(new Vector3(0,0,0), Quaternion.identity);

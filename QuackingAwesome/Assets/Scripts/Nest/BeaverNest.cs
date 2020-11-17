@@ -1,4 +1,5 @@
-﻿using AI.Beaver.StateMachine_Beaver;
+﻿using System;
+using AI.Beaver.StateMachine_Beaver;
 using Inventory;
 using UnityEngine;
 
@@ -16,6 +17,14 @@ namespace Nest
             }
         }
 
+        private void OnTriggerStay(Collider other)
+        {
+            if (BeaverWasTrigger(other))
+            {
+                return;
+            }
+        }
+
         private bool BeaverWasTrigger(Collider other)
         {
             if (!other.CompareTag("Beaver"))
@@ -23,14 +32,20 @@ namespace Nest
                 return false;
             }
 
-            var beaver = other.transform.parent;
+            if (other.name.Contains("Body") || other.name.Contains("Detection"))
+            {
+               // Debug.Log("Trigger: "+ other.name);
+                return true;
+            }
+            
+            var ai = other.transform.parent;
             
             // move sticks
-            var inventory = beaver.Find("CarriedSticks").GetComponent<StickInventory>();
+            var inventory = ai.parent.Find("CarriedSticks").GetComponent<StickInventory>();
             sticks += TransferSticksToNest(inventory);
             
             // change state
-            var stateHandler = beaver.Find("AI").GetComponent<StateHandlerBeaver>();
+            var stateHandler = ai.GetComponent<StateHandlerBeaver>();
             stateHandler.ChangeState(stateHandler.idle);
 
             return true;
