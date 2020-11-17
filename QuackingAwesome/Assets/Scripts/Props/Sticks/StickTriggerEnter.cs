@@ -1,9 +1,7 @@
 ﻿using System;
-using AI.Beaver;
 using AI.Beaver.StateMachine_Beaver;
 using Inventory;
 using Props.spawning;
-using UnityEditor;
 using UnityEngine;
 
 namespace Props.Sticks
@@ -11,6 +9,7 @@ namespace Props.Sticks
     public class StickTriggerEnter : MonoBehaviour
     {
         private Collider _trigger;
+        private Collider _collider;
         
         // where to put the position before delete
         public Transform positionPool;
@@ -19,8 +18,8 @@ namespace Props.Sticks
         // target position [e.g. nest]
         private bool _shouldMove;
         private float speed = 1.2f;
-        private Vector3 targetPos;
-        private bool _deleteOnPositionReached = false;
+        private Vector3 _targetPos;
+        private bool _deleteOnPositionReached;
         
         // animation
         private Animator _duckAnimator;
@@ -29,6 +28,7 @@ namespace Props.Sticks
         void Start()
         {
             _trigger = gameObject.GetComponent<Collider>();
+            _collider = gameObject.GetComponent<SphereCollider>();
             var duck = GameObject.FindWithTag("Player");
             _duckAnimator = duck.GetComponent<Animator>();
             
@@ -38,21 +38,24 @@ namespace Props.Sticks
 
         private void Update()
         {
+            // lets stick move to set position and activate trigger again
             if (_shouldMove)
             {
                 transform.position =
-                    Vector3.MoveTowards(transform.position, targetPos, speed * Time.deltaTime);
-                if(Vector3.Distance(transform.position, targetPos) < 0.1f)
+                    Vector3.MoveTowards(transform.position, _targetPos, speed * Time.deltaTime);
+                if(Vector3.Distance(transform.position, _targetPos) < 0.1f)
                 {
                     _shouldMove = false;
                     if (_deleteOnPositionReached)
                     {
                         // delete this stick
                         DeleteStick();
+                        return;
                     }
                     
                     // enable trigger again
                     _trigger.enabled = true;
+                    _collider.enabled = false;
                 }
             }
         }
@@ -65,15 +68,25 @@ namespace Props.Sticks
             {
                 return;
             }
-            if (BeaverDelete(other))
-            {
-                return;
-            }
+            // if (BeaverDelete(other))
+            // {
+            //     return;
+            // }
             if (BeaverIsTrigger(other))
             {
                 return;
             }
         }
+
+        private void OnCollisionEnter(Collision other)
+        {
+            if (BeaverHasDetected(other.collider))
+            {
+                return;
+            }
+        }
+
+        #region PlayerTrigger
 
         // Checks if player was trigger. If so, checks if the duck can carry more sticks.
         // If so, collect it. Otherwise, leave it.
@@ -103,7 +116,30 @@ namespace Props.Sticks
 
             return true;
         }
-        
+
+        #endregion
+
+        #region BeaverTrigger
+
+        /// <summary>
+        /// Checks, if Beaver's Detection has triggered collider. If so, invoke Beaver to fetch the stick.
+        /// </summary>
+        /// <returns>Beaver was Collider.</returns>
+        private bool BeaverHasDetected(Collider other)
+        {
+            if (!other.GetComponent<Collider>().isTrigger || !other.CompareTag("Beaver"))
+            {
+                return false;
+            }
+            
+            // Beaver was the collider.
+            // Get the stateHandler of the Beaver and invoke Trigger
+            //other.transform.parent.GetComponentInChildren<StateHandlerBeaver>();
+            
+            
+            return true;
+        }
+
         //Checks if the beaverNavigation was a trigger and sends the position of focused stick to BeaverAI.cs
         //Automatically searches for a new target if a stick has been taken by the duck before reaching it
         //Larger "CapsuleCollider" on "Beaver" is used only as a trigger of an area and it has no collision with the playable duck
@@ -157,19 +193,23 @@ namespace Props.Sticks
             
             return true;
         }
+        
+        
+        #endregion
+        
+        
 
         #endregion
         #region HelperMethods
 
         private void PickStick(Transform targetParent)
         {
-            //_duckAnimator.SetTrigger(DoPickAndKeep);
-            
             // disable trigger
             _trigger.enabled = false;
+            _collider.enabled = false;
             
             // animation for stick picking?
-            
+            _duckAnimator.SetTrigger(DoPickAndKeep);
             
             // move to duck
             Transform transform1;
@@ -202,7 +242,7 @@ namespace Props.Sticks
         /// <param name="deleteStick">Determines, if deleted after reaching position</param>
         public void MoveStickToPos(Vector3 targetPosition, bool deleteStick)
         {
-            targetPos = targetPosition;
+            _targetPos = targetPosition;
             _shouldMove = true;
             _deleteOnPositionReached = deleteStick;
         }

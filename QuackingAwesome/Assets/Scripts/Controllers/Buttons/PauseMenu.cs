@@ -13,7 +13,9 @@ public class PauseMenu : MonoBehaviour
 
     public void Start()
     {
-        GameIsPaused = PauseMenuUi.activeSelf;
+        GameIsPaused = true;
+        
+        ToggleMainMenu();
     }
 
     public void ToggleMainMenu()
