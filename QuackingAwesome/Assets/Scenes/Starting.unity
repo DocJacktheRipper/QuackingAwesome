@@ -25177,11 +25177,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a1041cf18beead44b18450ded79bb94, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  source: {fileID: 0}
   isScared: 0
   currentChance: 0
   minChance: 0
   chanceDropRate: 0
   howFarAway: 0
+  runAwaySpeedBonus: 0
 --- !u!4 &1292411947 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5cc18457f4767254a895f13202e14901,
@@ -52697,7 +52699,7 @@ PrefabInstance:
     - target: {fileID: 3623700464272551930, guid: f406a50b810c1da4ea5642912f70020d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 510
       objectReference: {fileID: 0}
     - target: {fileID: 3623700464272551930, guid: f406a50b810c1da4ea5642912f70020d,
         type: 3}
@@ -52717,7 +52719,7 @@ PrefabInstance:
     - target: {fileID: 3623700464272551930, guid: f406a50b810c1da4ea5642912f70020d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -617
       objectReference: {fileID: 0}
     - target: {fileID: 3623700464493127032, guid: f406a50b810c1da4ea5642912f70020d,
         type: 3}
@@ -52794,12 +52796,12 @@ PrefabInstance:
     - target: {fileID: 3623700465710147831, guid: f406a50b810c1da4ea5642912f70020d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -624
+      value: 0.000071525574
       objectReference: {fileID: 0}
     - target: {fileID: 3623700465710147831, guid: f406a50b810c1da4ea5642912f70020d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 512
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3623700465710147831, guid: f406a50b810c1da4ea5642912f70020d,
         type: 3}

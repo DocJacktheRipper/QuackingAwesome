@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -154,11 +154,11 @@ RectTransform:
   m_Father: {fileID: 507474667}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!1001 &469355398
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -484,11 +484,11 @@ RectTransform:
   m_Father: {fileID: 294698051}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -562.00006, y: -209.52225}
-  m_SizeDelta: {x: 313.79382, y: 201.22731}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -354, y: 221}
+  m_SizeDelta: {x: 413.79382, y: 201.22731}
+  m_Pivot: {x: 1, y: 0}
 --- !u!114 &638402288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -702,11 +702,11 @@ RectTransform:
   m_Father: {fileID: 294698051}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 542, y: -245.61}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 400, y: 216}
   m_SizeDelta: {x: 371.34985, y: 172.45142}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &757760923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1065,7 +1065,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: -453.52222}
+  m_AnchoredPosition: {x: 0, y: 77}
   m_SizeDelta: {x: 435.55408, y: 184.95615}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &980768051
