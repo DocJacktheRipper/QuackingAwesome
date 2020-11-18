@@ -1,6 +1,7 @@
 ﻿using Nest;
 using Props;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 namespace Controllers.Buttons.NestMenu
 {
@@ -10,8 +11,9 @@ namespace Controllers.Buttons.NestMenu
 
         public GameObject nestButton;
         public GameObject nestMenuUI;
+        public GameObject mainMenuButton;
 
-        public GameObject Controls;
+        public GameObject controls;
 
 
         public void ActivateNestButton()
@@ -27,26 +29,26 @@ namespace Controllers.Buttons.NestMenu
 
         public void ExpandNestMenu()
         {
-            if (nestMenuUI.activeSelf)
-            {
-                // disable menu [nest]
-                nestMenuUI.SetActive(false);
-                // enable joystick
-                Controls.SetActive(true);
-            }
-            else
-            {
-                // enable menu [nest]
+            // enable menu [nest]
                 nestMenuUI.SetActive(true);
+                // disable nest button
+                nestButton.SetActive(false);
+                // disable main menu button
+                mainMenuButton.SetActive(false);
                 // disable joystick
-                Controls.SetActive(false);
+                controls.SetActive(false);
             }
-        }
 
         public void CloseNestMenu()
         {
+            // disable menu [nest]
             nestMenuUI.SetActive(false);
-            Controls.SetActive(true);
+            // enable nest button
+            nestButton.SetActive(true);
+            // enable main menu button
+            mainMenuButton.SetActive(true);
+            // enable joystick
+            controls.SetActive(true);
         }
     }
 }
