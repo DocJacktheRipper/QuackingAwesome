@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 20d7b5b50a3e7624796b96279da1f38f,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2067,12 +2067,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca9b6c824a06f7a46af748db64d6caa5, type: 3}
---- !u!1 &93221157 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8946986506195603168, guid: b51857b31ca727344804cebf0959d70e,
+--- !u!114 &93221161 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 765866186659977064, guid: b51857b31ca727344804cebf0959d70e,
     type: 3}
   m_PrefabInstance: {fileID: 4808378788423664165}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &101713294 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0e760fd03e4523245bb573c65f41beac,
@@ -16027,6 +16033,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca9b6c824a06f7a46af748db64d6caa5, type: 3}
+--- !u!1 &1017681545 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1896083893846588863, guid: f406a50b810c1da4ea5642912f70020d,
+    type: 3}
+  m_PrefabInstance: {fileID: 8548730545255092270}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1018319719
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51710,7 +51722,7 @@ PrefabInstance:
         type: 3}
       propertyPath: nestButton
       value: 
-      objectReference: {fileID: 93221157}
+      objectReference: {fileID: 1017681545}
     - target: {fileID: 6243043676791719530, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
       propertyPath: Controls
@@ -53299,6 +53311,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 189
       objectReference: {fileID: 0}
+    - target: {fileID: 8293797933335767842, guid: f406a50b810c1da4ea5642912f70020d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8293797933335767842, guid: f406a50b810c1da4ea5642912f70020d,
+        type: 3}
+      propertyPath: m_TargetGraphic
+      value: 
+      objectReference: {fileID: 93221161}
+    - target: {fileID: 8293797933335767842, guid: f406a50b810c1da4ea5642912f70020d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 673712218}
     - target: {fileID: 8632427952567579905, guid: f406a50b810c1da4ea5642912f70020d,
         type: 3}
       propertyPath: nest
