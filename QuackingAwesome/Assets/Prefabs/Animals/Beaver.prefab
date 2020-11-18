@@ -58,6 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateHandler: {fileID: 7767153919719269221}
+  stickContainer: {fileID: 0}
 --- !u!1 &3642855247802676167
 GameObject:
   m_ObjectHideFlags: 0
@@ -112,7 +113,6 @@ MonoBehaviour:
   currentTarget: {x: 0, y: 0, z: 0}
   animator: {fileID: 3289728769903166336}
   chaseSpeedBonus: 0.1
-  stickContainer: {fileID: 1050548652506878050}
 --- !u!114 &7767153919719269221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -670,6 +670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stickPosition: {fileID: 0}
+  inventory: {fileID: 5934899633272154998}
 --- !u!114 &1588695849845219843
 MonoBehaviour:
   m_ObjectHideFlags: 0

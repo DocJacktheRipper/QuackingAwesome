@@ -21,9 +21,28 @@
   <component name="ChangeListManager">
     <list default="true" id="cb082888-ab6d-41db-a40b-24e16e1dbeec" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Duck.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Duck.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Animals/Beaver.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Animals/Beaver.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SpawnPrefabs/TutorialPrefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SpawnPrefabs/TutorialPrefabs/PeaTut.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SpawnPrefabs/TutorialPrefabs/PeaTut.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SpawnPrefabs/TutorialPrefabs/SpawnBranchTut 1.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SpawnPrefabs/TutorialPrefabs/SpawnBranchTut 1.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SpawnPrefabs/TutorialPrefabs/SpawnBranchTut 2 Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SpawnPrefabs/TutorialPrefabs/SpawnBranchTut 2 Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SpawnPrefabs/TutorialPrefabs/SpawnBranchTut 3 Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SpawnPrefabs/TutorialPrefabs/SpawnBranchTut 3 Variant.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Starting.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Starting.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/FetchingStickBeaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/FetchingStickBeaver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ISwimIdleStateBeaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ISwimIdleStateBeaver.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingArea.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Nest/BeaverNest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Nest/BeaverNest.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Props/PeaDetection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Props/PeaDetection.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Props/StickCollecting.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Props/StickCollecting.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Props/StickDetection.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Props/StickDetection.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +56,6 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/StickInventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/IStateAlligator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/StateHandlerBeaver.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Nest/BeaverNest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ISwimIdleStateBeaver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Nest/NestMenu/InspectableNest.cs" root0="FORCE_HIGHLIGHTING" />
@@ -88,7 +106,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/ConcreteStates/ChasingStateAlligator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/ConcreteStates/IdleStateAlligator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/ISwimIdleStateAlligator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ISwimIdleStateBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/ConcreteStates/SwimmingStateAlligator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Dash/DashingBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/BehaviourMethodsAlligator.cs" />
@@ -97,7 +114,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/StateMachine/IStateHandlerAI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/DeathBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/Trigger/AlligatorDetectionTriggered.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/FetchingStickBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/ScaredBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/ScaredAway.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/Trigger/ScaredAway.cs" />
@@ -120,6 +136,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Nest/BeaverNest.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Props/Sticks/StickTriggerEnter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingArea.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/FetchingStickBeaver.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ISwimIdleStateBeaver.cs" />
       </list>
     </option>
   </component>
@@ -218,7 +236,7 @@
       <workItem from="1605528400084" duration="13538000" />
       <workItem from="1605560911691" duration="1044000" />
       <workItem from="1605617084703" duration="30102000" />
-      <workItem from="1605690048759" duration="341000" />
+      <workItem from="1605690048759" duration="1534000" />
     </task>
     <servers />
   </component>

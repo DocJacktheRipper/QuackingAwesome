@@ -20,7 +20,6 @@ namespace Controllers.Duck.Quack
             GameObject beaver;
             if ( (beaver = other.gameObject).CompareTag("Beaver"))
             {
-                Debug.Log("Beaver trigger");
                 QuackToBeaver(beaver);
             }
         }
