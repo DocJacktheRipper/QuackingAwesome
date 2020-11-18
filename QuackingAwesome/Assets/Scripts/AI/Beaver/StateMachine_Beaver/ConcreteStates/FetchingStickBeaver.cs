@@ -1,10 +1,12 @@
-﻿using UnityEngine;
+﻿using Inventory;
+using UnityEngine;
 
 namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
 {
     public class FetchingStickBeaver : IStateBeaver
     {
         public Transform stickPosition;
+        public StickInventory inventory;
 
         #region IStateBeaver
 
@@ -14,6 +16,15 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
             
             methods.Chase(stickPosition);
             methods.StartMovement();
+        }
+
+        public override void Execute()
+        {
+            base.Execute();
+            if (!inventory.collectingEnabled || inventory.numberOfSticks >= inventory.maxCapacityOfSticks)
+            {
+                StateHandler.ChangeState(StateHandler.swimming);
+            }
         }
 
         public override void Exit()
@@ -34,7 +45,7 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
             if ( distanceNew.sqrMagnitude < distanceVector.sqrMagnitude )
             {
                 this.stickPosition = stickPositionNew;
-                stateHandler.ChangeState(stateHandler.fetching);
+                StateHandler.ChangeState(StateHandler.fetching);
             }
         }
         

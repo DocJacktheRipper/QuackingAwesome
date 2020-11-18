@@ -16,13 +16,13 @@ namespace AI.Beaver.StateMachine_Beaver
         }
 
         #endregion
-        
-        public void ResetWaitingTime()
+
+        protected void ResetWaitingTime()
         {
             waitUntilToSwitch = Time.time + waitSecondsToSwitch;
         }
 
-        public bool SwitchStatesAfterTime()
+        protected bool SwitchStatesAfterTime()
         {
             if (!(Time.time > waitUntilToSwitch)) return false;
 

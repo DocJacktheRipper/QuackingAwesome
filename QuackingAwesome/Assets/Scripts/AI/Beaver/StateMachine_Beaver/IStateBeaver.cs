@@ -1,48 +1,32 @@
-﻿using System;
-using AI.StateMachine;
+﻿using AI.StateMachine;
 using UnityEngine;
 
 namespace AI.Beaver.StateMachine_Beaver
 {
     public class IStateBeaver : IState
     {
-        protected StateHandlerBeaver stateHandler;
-        protected BehaviourMethodsBeaver concreteMethods;
+        protected StateHandlerBeaver StateHandler;
+        protected BehaviourMethodsBeaver ConcreteMethods;
 
         protected override void Awake()
         {
             base.Awake();
             
-            stateHandler = ai.GetComponent<StateHandlerBeaver>();
-
-            concreteMethods = ai.GetComponent<BehaviourMethodsBeaver>();
+            StateHandler = ai.GetComponent<StateHandlerBeaver>();
+            ConcreteMethods = ai.GetComponent<BehaviourMethodsBeaver>();
         }
 
         protected bool StickIsTrigger(Collider other)
         {
-            Debug.Log("Beaver has seen stick?");
             if (other.CompareTag("Stick"))
             {
                 Debug.Log("Yes, beaver has seen stick.");
-                stateHandler.fetching.stickPosition = other.transform;
-                stateHandler.ChangeState(stateHandler.fetching);
+                StateHandler.fetching.stickPosition = other.transform;
+                StateHandler.ChangeState(StateHandler.fetching);
                 return true;
             }
-            Debug.Log("Collider is: "+other.name);
 
             return false;
-        }
-        
-        private bool StickCollectable(Collider stickCollider)
-        {
-            if (!stickCollider.CompareTag("Stick"))
-            {
-                return false;
-            }
-            // add Stick to beaver
-            
-
-            return true;
         }
     }
 }

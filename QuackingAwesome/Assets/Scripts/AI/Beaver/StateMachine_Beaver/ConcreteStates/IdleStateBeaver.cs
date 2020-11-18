@@ -28,17 +28,13 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
             if (base.SwitchStatesAfterTime())
             {
                 ResetWaitingTime();
-                stateHandler.ChangeState(stateHandler.swimming);
+                StateHandler.ChangeState(StateHandler.swimming);
             }
         }
 
         public override void DetectionTriggerEntered(Collider other)
         {
             base.DetectionTriggerEntered(other);
-            if (StickIsTrigger(other))
-            {
-                return;
-            }
             // TODO: swim away from alligator
         }
 

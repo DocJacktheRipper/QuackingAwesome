@@ -11,8 +11,18 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
         {
             base.Enter();
             
-            concreteMethods.SetDestination(beaverNest.transform.position);
-            concreteMethods.StartMovement();
+            ConcreteMethods.SetDestination(beaverNest.transform.position);
+            ConcreteMethods.StartMovement();
+        }
+
+        public override void Execute()
+        {
+            base.Execute();
+
+            if (ConcreteMethods.HasReachedDestination())
+            {
+                StateHandler.ChangeState(StateHandler.idle);
+            }
         }
 
         public override void DetectionTriggerEntered(Collider other)

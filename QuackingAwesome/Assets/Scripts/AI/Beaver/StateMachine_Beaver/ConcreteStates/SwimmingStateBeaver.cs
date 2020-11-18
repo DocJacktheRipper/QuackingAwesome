@@ -4,6 +4,9 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
 {
     public class SwimmingStateBeaver : ISwimIdleStateBeaver
     {
+        private float detectionRadius;
+        private Vector3 detectionCenter;
+        
         #region
         public override void Enter()
         {
@@ -17,13 +20,15 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
             if (base.SwitchStatesAfterTime())
             {
                 ResetWaitingTime();
-                stateHandler.ChangeState(stateHandler.idle);
+                StateHandler.ChangeState(StateHandler.idle);
                 return;
             }
             if (methods.HasReachedDestination())
             {
                 methods.GotoNextPoint();
             }
+            
+            //SearchForSticks();
         }
 
         public override void DetectionTriggerEntered(Collider other)
@@ -34,8 +39,22 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
             {
                 return;
             }
-            // TODO: swim away from alligator
         }
         #endregion
+
+        private void SearchForSticks()
+        {
+            Collider[] hitColliders = Physics.OverlapSphere(detectionCenter, detectionRadius);
+            foreach (var hitCollider in hitColliders)
+            {
+                if (hitCollider.CompareTag("Stick"))
+                {
+                    Debug.Log("Detected Stick!");
+                    StateHandler.fetching.stickPosition = hitCollider.transform;
+                    StateHandler.ChangeState(StateHandler.fetching);
+                }
+            }
+            // TODO: swim away from alligator
+        }
     }
 }
