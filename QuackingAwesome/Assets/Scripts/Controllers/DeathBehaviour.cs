@@ -58,7 +58,7 @@ namespace Controllers
             
             // Reset duck position
             _duck.transform.SetPositionAndRotation(duckStartingSpot.position, duckStartingSpot.rotation);
-            //_duck.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            _duck.GetComponent<Rigidbody>().velocity = Vector3.zero;
 
             Debug.Log(enemy.tag);
             // Randomly respawn the killing enemy (only alligator for the moment)
