@@ -1,4 +1,5 @@
 ﻿using Controllers.Duck;
+using Controllers.Duck.Dash;
 using UnityEngine;
 using UnityEngine.UI;
 

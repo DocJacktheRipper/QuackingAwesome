@@ -2,7 +2,7 @@
 using Controllers.Sound_and_Effects.Duck;
 using UnityEngine;
 
-namespace Controllers.Duck
+namespace Controllers.Duck.Dash
 {
     public class DashingBehaviour : MonoBehaviour
     {
@@ -39,7 +39,10 @@ namespace Controllers.Duck
             // trigger animation
             _animator.SetTrigger(DoDash);
             // trigger effect
-            _dashEffect.Play();
+            if (_dashEffect != null)
+            {
+                _dashEffect.Play();
+            }
         
             //if (Time.time > NextDash)
             {

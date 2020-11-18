@@ -1,5 +1,6 @@
 ﻿using System;
 using AI.Beaver;
+using AI.Beaver.StateMachine_Beaver;
 using Inventory;
 using Props.spawning;
 using UnityEditor;
@@ -56,6 +57,8 @@ namespace Props.Sticks
             }
         }
 
+        #region Trigger
+
         private void OnTriggerEnter(Collider other)
         {
             if (PlayerIsTrigger(other))
@@ -78,7 +81,7 @@ namespace Props.Sticks
         {
             StickInventory inventory = other.GetComponent<StickInventory>();
 
-            if (inventory == null)
+            if (!other.CompareTag("Player") || inventory == null)
             {
                 //Debug.Log("It wasn't the Duck! (stick)");
                 return false;
@@ -91,7 +94,7 @@ namespace Props.Sticks
 
             if (inventory.AddStick())
             {
-                PickStick();
+                PickStick(_duckCarriedSticks);
             }
             else
             {
@@ -100,8 +103,65 @@ namespace Props.Sticks
 
             return true;
         }
+        
+        //Checks if the beaverNavigation was a trigger and sends the position of focused stick to BeaverAI.cs
+        //Automatically searches for a new target if a stick has been taken by the duck before reaching it
+        //Larger "CapsuleCollider" on "Beaver" is used only as a trigger of an area and it has no collision with the playable duck
+        private bool BeaverIsTrigger(Collider other)
+        {
+            var inventory = other.transform.Find("CarriedSticks").GetComponent<StickInventory>();
 
-        private void PickStick()
+            if (!other.CompareTag("Beaver") || inventory == null)
+            {
+                return false;
+            }
+
+            if (!inventory.collectingEnabled)
+            {
+                return false;
+            }
+
+            if (inventory.AddStick())
+            {
+                PickStick(inventory.transform);
+                var stateHandlerBeaver = other.transform.Find("AI").GetComponent<StateHandlerBeaver>();
+                if (stateHandlerBeaver != null)
+                {
+                    stateHandlerBeaver.StickCollected();
+                }
+            }
+            else
+            {
+                Debug.Log("Beaver can't collect any more sticks.");
+            }
+            
+            /// to delete later //
+            /*
+            var beaverAI = GameObject.FindGameObjectWithTag("Beaver").GetComponent<BeaverAI>();
+
+            if (other.CompareTag("Beaver"))
+            {
+                Vector3 stickPosition = this.transform.position;
+                beaverAI.FetchStick(stickPosition);
+            }
+            /// end to delete /*/
+
+            /*
+            var beaver = other.GetComponent<StateHandlerBeaver>();
+            if (beaver == null)
+                return false;
+            
+            Debug.Log("Detected by stick");
+            beaver.state.StickDetected(transform);
+            */
+            
+            return true;
+        }
+
+        #endregion
+        #region HelperMethods
+
+        private void PickStick(Transform targetParent)
         {
             //_duckAnimator.SetTrigger(DoPickAndKeep);
             
@@ -114,23 +174,9 @@ namespace Props.Sticks
             // move to duck
             Transform transform1;
             (transform1 = transform).SetPositionAndRotation(new Vector3(0,0,0), Quaternion.identity);
-            transform1.SetParent(_duckCarriedSticks, false);
+            transform1.SetParent(targetParent, false);
         }
-
-        //Checks if the beaverNavigation was a trigger and sends the position of focused stick to BeaverAI.cs
-        //Automatically searches for a new target if a stick has been taken by the duck before reaching it
-        //Larger "CapsuleCollider" on "Beaver" is used only as a trigger of an area and it has no collision with the playable duck
-        private bool BeaverIsTrigger(Collider other)
-        {
-            BeaverAI beaverAI = GameObject.FindGameObjectWithTag("Beaver").GetComponent<BeaverAI>();
-
-            if (other.gameObject.CompareTag("Beaver"))
-            {
-                Vector3 stickPosition = this.transform.position;
-                beaverAI.FetchStick(stickPosition);
-            }
-            return true;
-        }
+        
         //Checks if the inner "BoxCollider" is a trigger
         //If true, destroys the stick
         //If false, redirects to the "BeaverIsTrigger" function that searches for nearby sticks
@@ -169,5 +215,8 @@ namespace Props.Sticks
             }
             Destroy(gameObject);
         }
+
+        #endregion
+       
     }
 }

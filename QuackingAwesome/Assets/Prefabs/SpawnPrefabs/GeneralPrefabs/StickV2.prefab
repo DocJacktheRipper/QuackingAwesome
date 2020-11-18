@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 3969021820618094363}
   - component: {fileID: 346438620232676276}
   - component: {fileID: 7008228847906395206}
+  - component: {fileID: -5816553007420402074}
   m_Layer: 0
   m_Name: StickV2
-  m_TagString: Untagged
+  m_TagString: Stick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,8 +122,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outlineMode: 0
-  outlineColor: {r: 0.7490196, g: 0.45882353, b: 0.21568628, a: 1}
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
   outlineWidth: 3
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!135 &-5816553007420402074
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6664525395264644254}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.01
+  m_Center: {x: 0.014323728, y: -0.004422321, z: 0.0032576476}

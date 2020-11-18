@@ -131,10 +131,6 @@
                 <e p="ISwimIdleStateAlligator.cs" t="Include" />
                 <e p="StateHandlerAlligator.cs" t="Include" />
               </e>
-              <e p="ToDelete" t="Include">
-                <e p="AlligatorBehaviour.cs" t="Include" />
-                <e p="BehaviourAlligator.cs" t="Include" />
-              </e>
               <e p="Trigger" t="Include">
                 <e p="AlligatorDetectionTriggered.cs" t="Include" />
                 <e p="AlligatorMouthTrigger.cs" t="Include" />
@@ -143,12 +139,11 @@
               </e>
             </e>
             <e p="Beaver" t="Include">
-              <e p="DuckTrigger.cs" t="Include" />
-              <e p="ScaredAway.cs" t="Include" />
               <e p="StateMachine_Beaver" t="Include">
                 <e p="BehaviourMethodsBeaver.cs" t="Include" />
                 <e p="ConcreteStates" t="Include">
                   <e p="FetchingStickBeaver.cs" t="Include" />
+                  <e p="GoingHomeBeaver.cs" t="Include" />
                   <e p="IdleStateBeaver.cs" t="Include" />
                   <e p="ScaredBeaver.cs" t="Include" />
                   <e p="SwimmingStateBeaver.cs" t="Include" />
@@ -159,6 +154,12 @@
               </e>
               <e p="ToDeleteLater" t="Include">
                 <e p="BeaverAI.cs" t="Include" />
+                <e p="DuckTrigger.cs" t="Include" />
+              </e>
+              <e p="Trigger" t="Include">
+                <e p="BeaverBodyCollider.cs" t="Include" />
+                <e p="BeaverDetectionTriggered.cs" t="Include" />
+                <e p="ScaredAway.cs" t="Include" />
               </e>
             </e>
             <e p="StateMachine" t="Include">
@@ -180,7 +181,7 @@
               <e p="PopUpsTutorialPrefabs.cs" t="Include" />
               <e p="QuackButton.cs" t="Include" />
               <e p="StartMenu" t="Include">
-                <e p="LoadScene.cs" t="Include" />
+                <e p="LoadingScene.cs" t="Include" />
               </e>
             </e>
             <e p="Camera" t="Include">
@@ -198,6 +199,7 @@
                 <e p="QuackingBehaviour.cs" t="Include" />
               </e>
             </e>
+            <e p="fps_showing.cs" t="Include" />
             <e p="ReverseWallCollider.cs" t="Include" />
             <e p="Sound and Effects" t="Include">
               <e p="AudioManager.cs" t="Include" />
@@ -207,9 +209,9 @@
               </e>
               <e p="EffectAccessorDuck.cs" t="Include" />
               <e p="FadeMusic.cs" t="Include" />
+              <e p="MuteToggle.cs" t="Include" />
             </e>
           </e>
-          <e p="fps_showing.cs" t="Include" />
           <e p="Inventory" t="Include">
             <e p="DucklingsInventory.cs" t="Include" />
             <e p="EnergyInventory.cs" t="Include" />
@@ -217,9 +219,11 @@
             <e p="UI" t="Include">
               <e p="DucklingShow.cs" t="Include" />
               <e p="PeaBar.cs" t="Include" />
+              <e p="StickBar.cs" t="Include" />
             </e>
           </e>
           <e p="Nest" t="Include">
+            <e p="BeaverNest.cs" t="Include" />
             <e p="NestBuilding.cs" t="Include" />
             <e p="NestEffectTrigger.cs" t="Include" />
             <e p="NestLocation.cs" t="Include" />
@@ -244,6 +248,10 @@
             <e p="Sticks" t="Include">
               <e p="StickTriggerEnter.cs" t="Include" />
             </e>
+          </e>
+          <e p="Tutorial" t="Include">
+            <e p="DisplayTutorialAdvices.cs" t="Include" />
+            <e p="UpdateTutorialAdvicesText.cs" t="Include" />
           </e>
         </e>
         <e p="UI Elements" t="Include">

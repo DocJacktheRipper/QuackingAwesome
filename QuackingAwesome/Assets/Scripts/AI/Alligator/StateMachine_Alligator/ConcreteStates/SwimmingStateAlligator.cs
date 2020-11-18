@@ -5,11 +5,14 @@ namespace AI.Alligator.StateMachine_Alligator.ConcreteStates
 {
     public class SwimmingStateAlligator : ISwimIdleStateAlligator
     {
+        private static readonly int IsSwimming = Animator.StringToHash("IsSwimming");
+        
         #region
         public override void Enter()
         {
             base.Enter();
             methods.StartMovement();
+            methods.animator.SetBool(IsSwimming, true);
         }
         
         public override void Execute()
@@ -24,6 +27,13 @@ namespace AI.Alligator.StateMachine_Alligator.ConcreteStates
             {
                 methods.GotoNextPoint();
             }
+        }
+
+        public override void Exit()
+        {
+            base.Exit();
+            
+            methods.animator.SetBool(IsSwimming, false);
         }
 
         public override void DetectionTriggerEntered(Collider other)

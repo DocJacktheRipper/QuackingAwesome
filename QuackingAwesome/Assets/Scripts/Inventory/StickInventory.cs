@@ -10,13 +10,13 @@ namespace Inventory
         public int numberOfSticks;
         public int maxCapacityOfSticks = 1;
 
-        private Transform _carriedSticks;
+        public Transform carriedSticks;
 
         private Transform _stickEnvironmentContainer;
 
         private void Start()
         {
-            _carriedSticks = transform.Find("CarriedSticks");
+            //carriedSticks = transform.Find("CarriedSticks");
             _stickEnvironmentContainer = GameObject.Find("CollectableSicks").transform;
         }
 
@@ -63,7 +63,7 @@ namespace Inventory
         public void MoveStickToNest(Transform position)
         {
             // change parent and invoke animation
-            var stick = _carriedSticks.GetChild(0);
+            var stick = carriedSticks.GetChild(0);
             stick.SetParent(position, true);
             RemoveStick(1);
 
@@ -83,14 +83,14 @@ namespace Inventory
 
             for (int i = 0; i < number; i++)
             {
-                if(_carriedSticks.childCount > 0)
+                if(carriedSticks.childCount > 0)
                     MoveStickToNest(position);
             }
         }
 
         public void DropSticks(int number)
         {
-            for (int i = 0; i < number && (_carriedSticks.childCount > 0); i++)
+            for (int i = 0; i < number && (carriedSticks.childCount > 0); i++)
             {
                 DropStick();
             }
@@ -98,7 +98,7 @@ namespace Inventory
 
         public void DropStick()
         {
-            if (_carriedSticks.childCount <= 0)
+            if (carriedSticks.childCount <= 0)
                 return;
 
             // drop it within radius
@@ -107,7 +107,7 @@ namespace Inventory
             targetPos.y = 0f;    
 
             // set parent
-            var stick = _carriedSticks.GetChild(0).GetComponent<StickTriggerEnter>();
+            var stick = carriedSticks.GetChild(0).GetComponent<StickTriggerEnter>();
             stick.transform.SetParent(_stickEnvironmentContainer, true);
             
             RemoveStick(1);

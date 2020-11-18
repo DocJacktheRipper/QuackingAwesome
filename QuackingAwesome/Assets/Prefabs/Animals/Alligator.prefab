@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4fb17c57ae26ec4bab8b9de490f30d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alligatorNavigation: {fileID: 7447338938953231297}
+  navigation: {fileID: 7447338938953231297}
   wayPointContainer: {fileID: 0}
   currentTarget: {x: 0, y: 0, z: 0}
   animator: {fileID: 8273628732505740216}
@@ -68,6 +68,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   methods: {fileID: 6980241056859643280}
   state: {fileID: 4056148417052670787}
+  concreteMethods: {fileID: 6980241056859643280}
   idle: {fileID: 4056148417052670787}
   chasing: {fileID: 5457622770706137385}
   swimming: {fileID: 6369884686813367827}

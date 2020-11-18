@@ -5,39 +5,37 @@ namespace AI.StateMachine
 {
     public class BehaviourMethods : MonoBehaviour
     {
-        public NavMeshAgent alligatorNavigation;
+        public NavMeshAgent navigation;
         
         public Transform wayPointContainer;
         public Vector3 currentTarget;
 
         public Animator animator;
-        private static readonly int DoBite = Animator.StringToHash("DoBite");
 
         #region UsefulProperties
         public float chaseSpeedBonus;
-        public float biteSpeedBonus;
         #endregion
 
        
         private void Start()
         {
-            alligatorNavigation = GetComponentInParent<NavMeshAgent>();
+            navigation = GetComponentInParent<NavMeshAgent>();
         }
 
         #region Move
         public void StartMovement()
         {
-            alligatorNavigation.isStopped = false;
-            alligatorNavigation.SetDestination(currentTarget);
+            navigation.isStopped = false;
+            navigation.SetDestination(currentTarget);
         }
         public void StopMovement()
         {
-            alligatorNavigation.isStopped = true;
+            navigation.isStopped = true;
         }
 
         public bool HasReachedDestination()
         {
-            if (!alligatorNavigation.pathPending && alligatorNavigation.remainingDistance < 0.5f)
+            if (!navigation.pathPending && navigation.remainingDistance < 0.5f)
             {
                 return true;
             }
@@ -53,7 +51,13 @@ namespace AI.StateMachine
             // set new target by getting random point from container
             var destIndex = Random.Range(0, wayPointContainer.childCount);
             currentTarget = wayPointContainer.GetChild(destIndex).position;
-            alligatorNavigation.SetDestination(currentTarget);
+            navigation.SetDestination(currentTarget);
+        }
+
+        public void SetDestination(Vector3 dest)
+        {
+            currentTarget = dest;
+            navigation.SetDestination(dest);
         }
 
         #endregion
@@ -62,35 +66,21 @@ namespace AI.StateMachine
         public void InvokeChasing()
         {
             // TODO: stuff
-            alligatorNavigation.speed += chaseSpeedBonus;
+            navigation.speed += chaseSpeedBonus;
         }
 
         public void Chase(Transform target)
         {
             currentTarget = target.position;
-            alligatorNavigation.SetDestination(currentTarget);
+            navigation.SetDestination(currentTarget);
         }
 
         public void StopChasing()
         {
-            alligatorNavigation.speed -= chaseSpeedBonus;
+            navigation.speed -= chaseSpeedBonus;
         }
 
         #endregion
-        #region Bite
-
-        public void InvokeBiting()
-        {
-            alligatorNavigation.speed += biteSpeedBonus;
-            animator.SetTrigger(DoBite);
-        }
-
-        public void StopBiting()
-        {
-            alligatorNavigation.speed -= biteSpeedBonus;
-            animator.ResetTrigger(DoBite);
-        }
         
-        #endregion
     }
 }
