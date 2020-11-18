@@ -11,9 +11,9 @@ namespace Nest.NestMenu
         public Button dashUpgrade;
         public Button beakUpgrade;
 
-        private DucklingsInventory ducklings;
-        private DashingBehaviour dashingBehaviour;
-        private StickInventory stickInventory;
+        private DucklingsInventory _ducklings;
+        private DashingBehaviour _dashingBehaviour;
+        private StickInventory _stickInventory;
 
         public int NeededAmountForDash;
         public int NeededAmountForBeak;
@@ -21,43 +21,96 @@ namespace Nest.NestMenu
         private void Start()
         {
             var d = GameObject.Find("Duck");
-            ducklings = d.GetComponent<DucklingsInventory>();
-            stickInventory = d.GetComponent<StickInventory>();
+            _ducklings = d.GetComponent<DucklingsInventory>();
+            _stickInventory = d.GetComponent<StickInventory>();
 
-            dashingBehaviour = d.GetComponent<DashingBehaviour>();
+            _dashingBehaviour = d.GetComponent<DashingBehaviour>();
         }
 
         private void Update()
         {
             // Dash cooldown
             //dashUpgrade.enabled = ducklings.DucklingCount >= NeededAmountForDash;
-            dashUpgrade.interactable = ducklings.DucklingCount >= NeededAmountForDash;
+            dashUpgrade.interactable = _ducklings.DucklingCount >= NeededAmountForDash;
 
             // Beak capacity
-            beakUpgrade.interactable = ducklings.DucklingCount >= NeededAmountForBeak;
+            beakUpgrade.interactable = _ducklings.DucklingCount >= NeededAmountForBeak;
         }
 
+
+        #region ButtonFunctions
 
         /******** Button functions ********/
         public void UpgradeDashCooldown(float amount)
         {
-            dashingBehaviour.cooldown -= amount;
-            ducklings.RemoveDucklings(NeededAmountForDash);
+            var button = dashUpgrade;
+            
+            _dashingBehaviour.cooldown -= amount;
+            _ducklings.RemoveDucklings(NeededAmountForDash);
 
             NeededAmountForDash += 1;
-            var text = dashUpgrade.transform.Find("CostText").GetComponent<Text>();
+            var text = button.transform.Find("CostText").GetComponent<Text>();
             text.text = NeededAmountForDash.ToString();
+            
+            if (!ToggleVisuals(button.gameObject))
+            {
+                DisableUpgrade(button);
+            }
         }
 
         public void UpgradeCarryCapacity(int amount)
         {
-            stickInventory.maxCapacityOfSticks += amount;
-            Debug.Log("New capacity: " + stickInventory.maxCapacityOfSticks);
-            ducklings.RemoveDucklings(NeededAmountForBeak);
+            var button = beakUpgrade;
+            
+            _stickInventory.maxCapacityOfSticks += amount;
+            Debug.Log("New capacity: " + _stickInventory.maxCapacityOfSticks);
+            _ducklings.RemoveDucklings(NeededAmountForBeak);
 
-            NeededAmountForBeak += 1;
-            var text = beakUpgrade.transform.Find("CostText").GetComponent<Text>();
-            text.text = NeededAmountForBeak.ToString();
+            NeededAmountForBeak = CalculateAndShowNewCost(NeededAmountForBeak, button);
+            if (!ToggleVisuals(button.gameObject))
+            {
+                DisableUpgrade(button);
+            }
         }
+
+        #endregion
+
+        #region HelperMethods
+
+        private void DisableUpgrade(Button upgradeButton)
+        {
+            var text = upgradeButton.transform.Find("CostText").GetComponent<Text>();
+            text.text = "MAX";
+            upgradeButton.interactable = false;
+            upgradeButton.enabled = false;
+        }
+
+        private int CalculateAndShowNewCost(int oldCost, Button upgradeButton)
+        {
+            oldCost += 1;
+            var text = upgradeButton.transform.Find("CostText").GetComponent<Text>();
+            text.text = oldCost.ToString();
+            return oldCost;
+        }
+
+        private bool ToggleVisuals(GameObject button)
+        {
+            var levelSystem = button.transform.parent.Find("Levels");
+            if (levelSystem == null)
+                return false; 
+
+            var visualToggle = levelSystem.GetComponent<UpgradeVisualToggle>();
+            
+            // check if possible
+            var isPossible = visualToggle.MoreUpgradesPossible();
+            if (isPossible)
+            {
+                visualToggle.EnableNextStep();
+            }
+
+            return isPossible;
+        }
+
+        #endregion
     }
 }

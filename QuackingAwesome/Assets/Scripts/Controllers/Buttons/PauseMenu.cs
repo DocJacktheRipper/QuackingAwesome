@@ -9,6 +9,7 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject PauseMenuUi;
     public GameObject Controls;
+    public GameObject NestMenu;
     public LoadingScene loadingScene;
 
     public void Start()
@@ -34,6 +35,7 @@ public class PauseMenu : MonoBehaviour
     {
         Controls.SetActive(false);
         PauseMenuUi.SetActive(true);
+        NestMenu.SetActive(false);
         Time.timeScale = 0;
         GameIsPaused = true;
     }
@@ -50,6 +52,7 @@ public class PauseMenu : MonoBehaviour
     {
         Controls.SetActive(true);
         PauseMenuUi.SetActive(false);
+        NestMenu.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
         //SceneManager.LoadScene("Tutorial");
