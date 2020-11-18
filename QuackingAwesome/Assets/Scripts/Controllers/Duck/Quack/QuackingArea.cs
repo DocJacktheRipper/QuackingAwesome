@@ -28,6 +28,11 @@ namespace Controllers.Duck.Quack
         private void QuackToBeaver(GameObject beaver)
         {
             var ai = beaver.transform.parent.Find("AI");
+            if (ai == null)
+            {
+                Debug.Log("AI not found!");
+                return;
+            }
             ScaredAway scared = ai.Find("Scare").GetComponent<ScaredAway>();
 
             if (scared.AttemptScare(volume))
