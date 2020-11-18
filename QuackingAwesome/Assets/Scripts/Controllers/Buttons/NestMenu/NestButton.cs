@@ -31,6 +31,8 @@ namespace Controllers.Buttons.NestMenu
             {
                 // disable menu [nest]
                 nestMenuUI.SetActive(false);
+                // enable nest button
+                nestButton.SetActive(true);
                 // enable joystick
                 Controls.SetActive(true);
             }
@@ -38,6 +40,8 @@ namespace Controllers.Buttons.NestMenu
             {
                 // enable menu [nest]
                 nestMenuUI.SetActive(true);
+                // disable nest button
+                nestButton.SetActive(false);
                 // disable joystick
                 Controls.SetActive(false);
             }
