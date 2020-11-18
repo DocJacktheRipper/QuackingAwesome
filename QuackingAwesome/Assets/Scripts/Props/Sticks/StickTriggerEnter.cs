@@ -1,5 +1,4 @@
-﻿using System;
-using AI.Beaver.StateMachine_Beaver;
+﻿using AI.Beaver.StateMachine_Beaver;
 using Inventory;
 using Props.spawning;
 using UnityEngine;
@@ -8,6 +7,8 @@ namespace Props.Sticks
 {
     public class StickTriggerEnter : MonoBehaviour
     {
+        #region Inits
+
         private Collider _trigger;
         private Collider _collider;
         
@@ -42,6 +43,9 @@ namespace Props.Sticks
             _collider = gameObject.GetComponent<SphereCollider>();
         }
 
+        #endregion
+        #region Update
+
         private void Update()
         {
             // lets stick move to set position and activate trigger again
@@ -66,8 +70,10 @@ namespace Props.Sticks
             }
         }
 
-        #region Trigger
 
+        #endregion
+        
+        #region Trigger
         private void OnTriggerEnter(Collider other)
         {
             if (PlayerIsTrigger(other))
@@ -83,8 +89,6 @@ namespace Props.Sticks
                 return;
             }
         }
-
-        
         private void OnCollisionEnter(Collision other)
         {
             Debug.Log("Stick collided with: " + other.collider.name);
@@ -177,21 +181,16 @@ namespace Props.Sticks
 
             var ai = other.transform.parent;
             var tempStickBox = ai.parent.Find("CarriedSticks");
+            var inventory = tempStickBox.GetComponent<StickInventory>();
             
-            Component component;
-            if(!tempStickBox.TryGetComponent(typeof(StickInventory), out component))
-            {
-                Debug.Log("No component found");
-                return false;
-            }
-            var inventory = component.GetComponent<StickInventory>();
-            
+            // check if beaver can collect more sticks
             if (!inventory.collectingEnabled || (inventory.numberOfSticks >= inventory.maxCapacityOfSticks))
             {
                 Debug.Log("Stick not collectable.");
                 return false;
             }
 
+            // move and add stick to beaver
             if (inventory.AddStick())
             {
                 PickStick(inventory.transform);

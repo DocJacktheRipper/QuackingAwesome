@@ -34,7 +34,7 @@ namespace Nest
 
             if (other.name.Contains("Body") || other.name.Contains("Detection"))
             {
-               // Debug.Log("Trigger: "+ other.name);
+               //s Debug.Log("Trigger: "+ other.name);
                 return true;
             }
             
