@@ -1574,6 +1574,7 @@ GameObject:
   - component: {fileID: 8355323408157679795}
   - component: {fileID: 7253635928263070877}
   - component: {fileID: 5842321471599579589}
+  - component: {fileID: 4421270093871755161}
   m_Layer: 5
   m_Name: NestInfoText
   m_TagString: Untagged
@@ -1641,6 +1642,19 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 0.7
   m_Text: You have 3/5 eggs in your nest waiting to be hatched
+--- !u!114 &4421270093871755161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3150330467828212248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2932605f109282542a7af211230c5622, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nest: {fileID: 0}
 --- !u!1 &3291155991632870949
 GameObject:
   m_ObjectHideFlags: 0
@@ -4776,7 +4790,8 @@ MonoBehaviour:
   nest: {fileID: 0}
   nestButton: {fileID: 0}
   nestMenuUI: {fileID: 8826835751316883244}
-  Controls: {fileID: 0}
+  mainMenuButton: {fileID: 0}
+  controls: {fileID: 0}
 --- !u!114 &6143372374340547582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5191,15 +5206,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 74a56e68103a9ca45bd09b95b2dea2d0, type: 3}
---- !u!4 &2639762616331854510 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4978548921058292974, guid: 74a56e68103a9ca45bd09b95b2dea2d0,
-    type: 3}
-  m_PrefabInstance: {fileID: 7040544316145899072}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3452434288616716308 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5646541351775710804, guid: 74a56e68103a9ca45bd09b95b2dea2d0,
+    type: 3}
+  m_PrefabInstance: {fileID: 7040544316145899072}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2639762616331854510 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4978548921058292974, guid: 74a56e68103a9ca45bd09b95b2dea2d0,
     type: 3}
   m_PrefabInstance: {fileID: 7040544316145899072}
   m_PrefabAsset: {fileID: 0}

@@ -25,6 +25,11 @@ namespace Nest.NestMenu
             _ducklings = duck.GetComponent<DucklingsInventory>();
         }
 
+        public int getNumEggs()
+        {
+            return _currentEggs;
+        }
+
         public void LayEgg()
         {
             nest.transform.GetChild(_currentEggs++).gameObject.SetActive(true);
