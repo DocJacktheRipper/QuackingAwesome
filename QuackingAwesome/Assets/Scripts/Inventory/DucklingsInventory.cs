@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DucklingsInventory : MonoBehaviour
 {
-    public int DucklingCount { get; private set; }
+    public int DucklingCount;
 
     public void RemoveDucklings(int number)
     {
