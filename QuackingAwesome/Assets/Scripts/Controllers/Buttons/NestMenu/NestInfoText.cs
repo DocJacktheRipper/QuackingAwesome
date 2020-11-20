@@ -14,7 +14,7 @@ public class NestInfoText : MonoBehaviour
     void Start()
     {
         _text           = GetComponent<Text>();
-        _currentNumEggs = nest.getNumEggs();
+        _currentNumEggs = nest.GetNumEggs();
         _maxEggs        = nest.maxEggsInNest.ToString();
         _text.text      = "You have " + _currentNumEggs.ToString() + " / " + _maxEggs + " eggs in your nest waiting to be hatched.";
     }
@@ -22,9 +22,9 @@ public class NestInfoText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (_currentNumEggs != nest.getNumEggs())
+        if (_currentNumEggs != nest.GetNumEggs())
         {
-            _currentNumEggs = nest.getNumEggs();
+            _currentNumEggs = nest.GetNumEggs();
             _text.text      = "You have " + _currentNumEggs.ToString() + " / " + _maxEggs + " eggs in your nest waiting to be hatched.";
         }
     }

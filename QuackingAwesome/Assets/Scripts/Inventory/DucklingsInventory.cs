@@ -9,7 +9,7 @@ public class DucklingsInventory : MonoBehaviour
     public void RemoveDucklings(int number)
     {
         DucklingCount -= number;
-        if (number < 0)
+        if (DucklingCount < 0)
         {
             DucklingCount = 0;
         }
