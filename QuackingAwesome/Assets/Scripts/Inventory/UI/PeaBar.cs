@@ -16,6 +16,7 @@ namespace Inventory
             _inventory = duck.GetComponent<EnergyInventory>();
             _text = GetComponent<Text>();
             _energy = (int) _inventory.energy;
+            _text.text = _energy.ToString();
         }
 
         void Update()
