@@ -58,7 +58,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stateHandler: {fileID: 7767153919719269221}
-  stickContainer: {fileID: 0}
 --- !u!1 &3642855247802676167
 GameObject:
   m_ObjectHideFlags: 0
@@ -113,6 +112,7 @@ MonoBehaviour:
   currentTarget: {x: 0, y: 0, z: 0}
   animator: {fileID: 3289728769903166336}
   chaseSpeedBonus: 0.1
+  stickInventory: {fileID: 5934899633272154998}
 --- !u!114 &7767153919719269221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,9 +129,9 @@ MonoBehaviour:
   state: {fileID: 0}
   idle: {fileID: 6460208989639343062}
   swimming: {fileID: 3530289126467822476}
-  fetching: {fileID: 5504931528108280290}
-  goingHome: {fileID: 1588695849845219843}
-  scared: {fileID: 2841898376266464896}
+  fetching: {fileID: 2443385788669377078}
+  goingHome: {fileID: 6621396442518740052}
+  scared: {fileID: 3210897502140052039}
 --- !u!1 &3688176156780178512
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,9 +603,9 @@ GameObject:
   - component: {fileID: 5149376222985511321}
   - component: {fileID: 6460208989639343062}
   - component: {fileID: 3530289126467822476}
-  - component: {fileID: 5504931528108280290}
-  - component: {fileID: 1588695849845219843}
-  - component: {fileID: 2841898376266464896}
+  - component: {fileID: 2443385788669377078}
+  - component: {fileID: 6621396442518740052}
+  - component: {fileID: 3210897502140052039}
   m_Layer: 12
   m_Name: States
   m_TagString: Beaver
@@ -657,7 +657,7 @@ MonoBehaviour:
   waitUntilToSwitch: 0
   waitSecondsToSwitch: 10
   chanceToSwitchState: 70
---- !u!114 &5504931528108280290
+--- !u!114 &2443385788669377078
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -671,7 +671,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stickPosition: {fileID: 0}
   inventory: {fileID: 5934899633272154998}
---- !u!114 &1588695849845219843
+--- !u!114 &6621396442518740052
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -684,7 +684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beaverNest: {fileID: 0}
---- !u!114 &2841898376266464896
+--- !u!114 &3210897502140052039
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

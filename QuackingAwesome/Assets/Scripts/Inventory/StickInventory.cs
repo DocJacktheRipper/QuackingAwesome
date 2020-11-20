@@ -20,27 +20,41 @@ namespace Inventory
             _stickEnvironmentContainer = GameObject.Find("CollectableSicks").transform;
         }
 
+
+        #region Adding
+
+        public bool AddStick(Transform stick)
+        {
+            var success = AddStick();
+
+            if (success)
+            {
+                stick.SetParent(carriedSticks);
+            }
+
+            return success;
+        }
+
         public bool AddStick()
         {
             return AddSticks(1) <= 0;
         }
 
         /// <summary>
-        /// Add sticks to Ducks inventory, if enough capacity.
+        /// Add sticks to Ducks inventory as number, if enough capacity.
         /// </summary>
         /// <param name="n">sticks to transfer</param>
         /// <returns>not collectable sticks</returns>
         public int AddSticks(int n)
         {
             var overflow = TransferSticks(n);
-            /*
-            for (var i = 0; i < (n-overflow); i++)
-            {
-                ShowStickInDuckbill();
-            }
-            */
+            
             return overflow;
         }
+
+        #endregion
+
+        #region RemoveFromInventory
 
         public void RemoveStick(int amount)
         {
@@ -115,6 +129,8 @@ namespace Inventory
             // invoke dropping
             stick.MoveStickToPos(targetPos, false);
         }
+
+        #endregion
 
         public int GetNumberOfSticks()
         {

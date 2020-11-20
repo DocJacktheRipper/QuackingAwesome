@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
 {
-    public class FetchingStickBeaver : IStateBeaver
+    public class FetchingStickStateBeaver : IStateBeaver
     {
         public Transform stickPosition;
         public StickInventory inventory;
@@ -38,7 +38,7 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
         {
             base.DetectionTriggerEntered(other);
 
-            if (StickIsTrigger(other))
+            if (base.StickIsTrigger(other))
             {
                 AnotherStickDetected(other.transform);
                 // won't do anything - as it has always only the new value?
@@ -49,7 +49,7 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
         {
             base.MouthTriggerEntered(other);
 
-            if (StickHasTouchedMouth(other))
+            if (StickIsTrigger(other))
             {
                 ConcreteMethods.CollectStick(other);
             }
@@ -71,11 +71,6 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
                 this.stickPosition = stickPositionNew;
                 StateHandler.ChangeState(StateHandler.fetching);
             }
-        }
-        
-        private bool StickHasTouchedMouth(Collider other)
-        {
-            throw new System.NotImplementedException();
         }
 
         #endregion

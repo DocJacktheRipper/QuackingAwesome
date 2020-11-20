@@ -16,7 +16,7 @@ namespace AI.Beaver.StateMachine_Beaver
             ConcreteMethods = ai.GetComponent<BehaviourMethodsBeaver>();
         }
 
-        protected bool StickIsTrigger(Collider other)
+        protected bool StickTriggeredDetection(Collider other)
         {
             if (other.CompareTag("Stick"))
             {
@@ -27,6 +27,11 @@ namespace AI.Beaver.StateMachine_Beaver
             }
 
             return false;
+        }
+
+        protected bool StickIsTrigger(Collider other)
+        {
+            return other.CompareTag("Stick");
         }
     }
 }

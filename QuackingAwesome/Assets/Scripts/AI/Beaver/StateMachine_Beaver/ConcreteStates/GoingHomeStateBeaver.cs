@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
 {
-    public class GoingHomeBeaver : IStateBeaver
+    public class GoingHomeStateBeaver : IStateBeaver
     {
         public BeaverNest beaverNest;
 
@@ -28,7 +28,7 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
         public override void DetectionTriggerEntered(Collider other)
         {
             base.DetectionTriggerEntered(other);
-            if (StickIsTrigger(other))
+            if (StickTriggeredDetection(other))
             {
                 return;
             }

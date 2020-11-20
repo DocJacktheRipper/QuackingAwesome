@@ -1,11 +1,14 @@
 ﻿using AI.StateMachine;
+using Inventory;
 using UnityEngine;
 
 namespace AI.Beaver.StateMachine_Beaver
 {
     public class BehaviourMethodsBeaver : BehaviourMethods
     {
-       public void AddSpeed(float scaredAwayRunAwaySpeedBonus)
+        public StickInventory stickInventory;
+
+        public void AddSpeed(float scaredAwayRunAwaySpeedBonus)
         {
             navigation.speed += scaredAwayRunAwaySpeedBonus;
         }
@@ -17,7 +20,7 @@ namespace AI.Beaver.StateMachine_Beaver
 
         public void CollectStick(Collider other)
         {
-            throw new System.NotImplementedException();
+            stickInventory.AddStick(other.transform);
         }
     }
 }

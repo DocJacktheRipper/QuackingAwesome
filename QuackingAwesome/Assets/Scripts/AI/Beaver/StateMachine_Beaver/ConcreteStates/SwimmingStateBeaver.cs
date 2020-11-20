@@ -35,7 +35,7 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
         {
             base.DetectionTriggerEntered(other);
             
-            if (StickIsTrigger(other))
+            if (StickTriggeredDetection(other))
             {
                 return;
             }
