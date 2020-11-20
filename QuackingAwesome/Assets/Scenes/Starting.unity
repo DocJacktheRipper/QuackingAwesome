@@ -9715,8 +9715,8 @@ MonoBehaviour:
   intersectionEffectsExpanded: 0
   planarReflectionsExpanded: 0
   causticsExpanded: 0
-  reflectionStrength: 0.354
-  reflectionFresnel: 5.8
+  reflectionStrength: 0.82
+  reflectionFresnel: 2.5
   causticsStrength: 2.09
   causticsTexture: {fileID: 2800000, guid: f2c40b951cee11943a1f6d5ec1b42f2c, type: 3}
   causticsSplit: 0.318
@@ -9784,32 +9784,32 @@ MonoBehaviour:
   shoreBlend: 0
   shoreDepth: 0
   waveColor: {r: 0, g: 0, b: 0, a: 0}
-  underwaterColor: {r: 0.20387965, g: 0.30975965, b: 0.517647, a: 0}
+  underwaterColor: {r: 0.2039216, g: 0.3098039, b: 0.5176471, a: 0}
   underwaterColorStrength: 0
-  underwaterRefractionStrength: 0.109
+  underwaterRefractionStrength: 0.099
   surfaceFoamTexture: {fileID: 2800000, guid: 5293ac8cd3dd6f6478585f4f30abddf7, type: 3}
-  surfaceFoamSampling: {x: 0.62, y: 0.12}
-  surfaceFoamCutoff: 0.62
-  surfaceFoamDistortion: 0.12
+  surfaceFoamSampling: {x: 0.776, y: 0.73}
+  surfaceFoamCutoff: 0.776
+  surfaceFoamDistortion: 0.73
   surfaceFoamBlend: 1
   surfaceFoamColor1: {r: 1, g: 1, b: 1, a: 0.3215686}
   surfaceFoamColor2: {r: 1, g: 1, b: 1, a: 0.7294118}
-  surfaceFoamMovement: {x: 0.7, y: 0, z: 0.47, w: 0.01}
-  surfaceFoamDirection1: 0.7
-  surfaceFoamDirection2: 0.47
-  surfaceFoamSpeed1: 0
+  surfaceFoamMovement: {x: 0.1, y: 0.01, z: 0.1, w: 0.01}
+  surfaceFoamDirection1: 0.1
+  surfaceFoamDirection2: 0.1
+  surfaceFoamSpeed1: 0.01
   surfaceFoamSpeed2: 0.01
-  surfaceFoamTilingAndOffset: {x: -1, y: -1, z: 0.57, w: 0.22}
-  surfaceFoamOffsetX: -1
+  surfaceFoamTilingAndOffset: {x: 0, y: -1, z: 0.22, w: 0.12}
+  surfaceFoamOffsetX: 0
   surfaceFoamOffsetY: -1
-  surfaceFoamScale1: 0.57
-  surfaceFoamScale2: 0.22
+  surfaceFoamScale1: 0.22
+  surfaceFoamScale2: 0.12
   enableSurfaceFoam: 1
   surfaceFoamHeightMask: 0
   surfaceFoamHeightMaskSmoothness: 0
   enableHeightMask: 0
   foamShadowStrength: 0.45
-  foamShadowDepth: 10.67
+  foamShadowDepth: 10
   surfaceFoamShadowProjection: 15
   intersectionFoamShadowProjection: 4.6
   foamMovement: 0
@@ -9827,22 +9827,22 @@ MonoBehaviour:
   enableIntersectionEffects: 1
   intersectionFoamBlend: 0.555
   intersectionWaterBlend: 0.514
-  shoreFoamSpeed: -2.5
-  shoreFoamWidth: 0.6
-  shoreFoamFrequency: 22.6
-  shoreFoamBreakupStrength: 1.13
-  shoreFoamBreakupScale: 31.2
+  shoreFoamSpeed: 0
+  shoreFoamWidth: 0
+  shoreFoamFrequency: 0
+  shoreFoamBreakupStrength: 0
+  shoreFoamBreakupScale: 0
   lighting: 0
   lightingSmoothness: 1
   lightingSpecularColor: {r: 1, g: 1, b: 1, a: 0}
   lightingDiffuseColor: {r: 0, g: 0, b: 0, a: 0}
-  lightingHardness: 0.425
+  lightingHardness: 0
   normalsTexture: {fileID: 2800000, guid: a41da5f5671718b47bbc71e9ef691103, type: 3}
-  normalsMovement: {x: 0.04, y: 0.36}
+  normalsMovement: {x: 0.005, y: 2}
   normalsStrength: 0.29
-  normalsScale: 0.36
-  normalsSpeed: 0.04
-  refractionStrength: 0.017
+  normalsScale: 2
+  normalsSpeed: 0.005
+  refractionStrength: 0.053
   waveVisuals: {x: 0, y: 1, z: 0.17}
   waveSteepness: 0
   waveLength: 1
@@ -36443,7 +36443,8 @@ PrefabInstance:
       propertyPath: looping
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1463147512425968094, guid: c5d2532c37bf5fd42b70b1503e4ccc51, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c5d2532c37bf5fd42b70b1503e4ccc51, type: 3}
 --- !u!4 &1621584524 stripped
 Transform:
