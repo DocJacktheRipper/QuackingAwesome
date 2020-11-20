@@ -21,7 +21,7 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
         public override void Enter()
         {
             base.Enter();
-            methods.StartMovement();
+            ConcreteMethods.StartMovement();
         }
         
         public override void Execute()
@@ -34,9 +34,9 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
                 return;
             }
             
-            if (methods.HasReachedDestination())
+            if (ConcreteMethods.HasReachedDestination())
             {
-                methods.GotoNextPoint();
+                ConcreteMethods.GotoNextPoint();
             }
 
             if (TimeIsUp())

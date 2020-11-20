@@ -22,12 +22,6 @@ namespace Inventory
             _stickEnvironmentContainer = GameObject.Find("CollectableSicks").transform;
         }
 
-        private void Update()
-        {
-            Debug.Log("Sticks in inventory: " + numberOfSticks);
-        }
-
-
         #region Adding
 
         public bool AddStick(Transform stick)

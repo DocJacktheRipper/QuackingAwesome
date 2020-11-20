@@ -15,8 +15,8 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
         {
             base.Enter();
             
-            methods.Chase(stickPosition);
-            methods.StartMovement();
+            ConcreteMethods.Chase(stickPosition);
+            ConcreteMethods.StartMovement();
         }
 
         public override void Execute()
@@ -32,7 +32,7 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
         {
             base.Exit();
             
-            methods.GotoNextPoint();
+            ConcreteMethods.GotoNextPoint();
         }
 
         public override void DetectionTriggerEntered(Collider other)
