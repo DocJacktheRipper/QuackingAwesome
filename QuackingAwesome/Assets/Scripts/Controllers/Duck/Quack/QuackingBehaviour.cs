@@ -64,7 +64,7 @@ namespace Controllers.Duck.Quack
             // animation
             _animator.SetTrigger(DoQuack);
             // effect
-            _quackEffect.Play(true);
+            //_quackEffect.Play(true);
 
 
             DropSticks();
