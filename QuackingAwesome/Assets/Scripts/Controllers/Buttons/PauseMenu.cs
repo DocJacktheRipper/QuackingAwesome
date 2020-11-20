@@ -1,64 +1,78 @@
-﻿using System;
-using Controllers.Buttons.StartMenu;
+﻿using Controllers.Buttons.StartMenu;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
-public class PauseMenu : MonoBehaviour
+namespace Controllers.Buttons
 {
-    public static bool GameIsPaused;
-
-    public GameObject PauseMenuUi;
-    public GameObject Controls;
-    public LoadingScene loadingScene;
-
-    public void Start()
+    public class PauseMenu : MonoBehaviour
     {
-        GameIsPaused = true;
+        public static bool GameIsPaused;
+
+        public GameObject pauseMenuUi;
+        public GameObject statistics;
+        public GameObject nestMenu;
+        public GameObject controls;
+        public LoadingScene loadingScene;
+        public AudioMixer audio;
+
+        public void Start()
+        {
+            pauseMenuUi = transform.Find("PauseMenu").gameObject;
+
+            GameIsPaused = true;
+            ToggleMainMenu();
+        }
+
+        public void ToggleMainMenu()
+        {
+            if (GameIsPaused)
+            {
+                Resume();
+            }
+            else
+            {
+                Pause();
+            }
+        }
+
+        private void EnableOtherUI(bool enable)
+        {
+            controls.SetActive(enable);
+            nestMenu.SetActive(enable);
+            statistics.SetActive(enable);
+        }
+    
+        void Pause()
+        {
+            EnableOtherUI(false);
+            pauseMenuUi.SetActive(true);
+            Time.timeScale = 0;
+            audio.SetFloat("sound_volume", 0);
         
-        ToggleMainMenu();
-    }
+            GameIsPaused = true;
+        }
+    
+        public void Resume()
+        {
+            EnableOtherUI(true);
+            pauseMenuUi.SetActive(false);
+            Time.timeScale = 1f;
+            audio.SetFloat("sound_volume", 0);
+        
+            GameIsPaused = false;
+        }
 
-    public void ToggleMainMenu()
-    {
-        if (GameIsPaused)
+        public void Restart()
         {
             Resume();
+
+            // load current scene
+            loadingScene.LoadNewScene(SceneManager.GetActiveScene().name);
         }
-        else
+        public void ReturnToStartMenuScene()
         {
-            Pause();
+            loadingScene.LoadNewScene("StartMenu");
         }
-    }
-    
-    void Pause()
-    {
-        Controls.SetActive(false);
-        PauseMenuUi.SetActive(true);
-        Time.timeScale = 0;
-        GameIsPaused = true;
-    }
-    
-    public void Resume()
-    {
-        Controls.SetActive(true);
-        PauseMenuUi.SetActive(false);
-        Time.timeScale = 1f;
-        GameIsPaused = false;
-    }
-
-    public void Restart()
-    {
-        Controls.SetActive(true);
-        PauseMenuUi.SetActive(false);
-        Time.timeScale = 1f;
-        GameIsPaused = false;
-        //SceneManager.LoadScene("Tutorial");
-
-        // load current scene
-        loadingScene.LoadNewScene(SceneManager.GetActiveScene().name);
-    }
-    public void ReturnToStartMenuScene()
-    {
-        loadingScene.LoadNewScene("StartMenu");
     }
 }
