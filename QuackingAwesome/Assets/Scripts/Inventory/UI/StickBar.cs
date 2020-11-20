@@ -25,7 +25,14 @@ namespace Inventory.UI
 
         void Update()
         {
-            if (_numberSticksInNest != nest.numberOfSticks)
+            if (nest.NestIsFinished)
+            {
+                _text.text = "Enter nest";
+                _text.fontSize = 50;
+                this.GetComponent<Button>().enabled = true;
+            }
+            
+            else if (_numberSticksInNest != nest.numberOfSticks)
             {
                 _numberSticksInNest = nest.numberOfSticks;
                 _text.text          = _numberSticksInNest.ToString() + " / " + _numberSticksNeeded;
