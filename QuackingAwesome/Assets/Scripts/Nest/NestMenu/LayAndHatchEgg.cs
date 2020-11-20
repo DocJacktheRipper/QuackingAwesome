@@ -25,7 +25,7 @@ namespace Nest.NestMenu
             _ducklings = duck.GetComponent<DucklingsInventory>();
         }
 
-        public int getNumEggs()
+        public int GetNumEggs()
         {
             return _currentEggs;
         }
