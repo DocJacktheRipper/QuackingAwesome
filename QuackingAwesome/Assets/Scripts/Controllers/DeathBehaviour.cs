@@ -23,6 +23,8 @@ namespace Controllers
         private int _maxSticks;
         private DucklingsInventory _ducklings;
 
+        private Collider _enemy;
+
         void Start()
         {
             _duck = GameObject.FindWithTag("Player");
@@ -41,11 +43,8 @@ namespace Controllers
             Time.timeScale = 0;
             controls.SetActive(false);
 
-            youDied.SetActive(true);
-            yield return new WaitForSecondsRealtime(1);
-            youDied.SetActive(false);
+            _enemy = enemy;
 
-            
             // Drop the carried sticks
             _stickInventory.DropStick();
             
@@ -61,22 +60,14 @@ namespace Controllers
             }
             else
             {
+                youDied.SetActive(true);
+                yield return new WaitForSecondsRealtime(3);
+                youDied.SetActive(false);
+                
                 if (numberOfSticksLost < 0) numberOfSticksLost = _maxSticks;
                 _nestBuilding.RemoveSticks(numberOfSticksLost);
+                
                 BackToNest(0);
-            }
-
-            Debug.Log(enemy.tag);
-            // Randomly respawn the killing enemy (only alligator for the moment)
-            if (enemy.CompareTag("Alligator"))
-            {
-                GameObject.Find("Alligator")
-                    .transform
-                    .SetPositionAndRotation(
-                        alligatorMoveSpots.GetChild(
-                            UnityEngine.Random.Range(0, alligatorMoveSpots.childCount)).position,
-                        Quaternion.identity
-                        );
             }
 
         }
@@ -90,6 +81,18 @@ namespace Controllers
             _duck.GetComponent<Rigidbody>().velocity = Vector3.zero;
             
             respawnToNest.SetActive(false);
+            
+            // Randomly respawn the killing enemy (only alligator for the moment)
+            if (_enemy.CompareTag("Alligator"))
+            {
+                GameObject.Find("Alligator")
+                    .transform
+                    .SetPositionAndRotation(
+                        alligatorMoveSpots.GetChild(
+                            UnityEngine.Random.Range(0, alligatorMoveSpots.childCount)).position,
+                        Quaternion.identity
+                    );
+            }
 
             Time.timeScale = 1;
             controls.SetActive(true);

@@ -9,6 +9,7 @@ namespace Controllers.Buttons.NestMenu
     {
         public NestBuilding nest;
 
+        public GameObject statistics;
         public GameObject nestButton;
         public GameObject nestMenuUI;
         public GameObject mainMenuButton;
@@ -33,8 +34,8 @@ namespace Controllers.Buttons.NestMenu
             Time.timeScale = 0;
             // enable menu [nest]
             nestMenuUI.SetActive(true);
-            // disable nest button
-            nestButton.SetActive(false);
+            // disable statistics
+            statistics.SetActive(false);
             // disable main menu button
             mainMenuButton.SetActive(false);
             // disable joystick
@@ -45,8 +46,8 @@ namespace Controllers.Buttons.NestMenu
         {
             // disable menu [nest]
             nestMenuUI.SetActive(false);
-            // enable nest button
-            nestButton.SetActive(true);
+            // enable statistics
+            statistics.SetActive(true);
             // enable main menu button
             mainMenuButton.SetActive(true);
             // enable joystick

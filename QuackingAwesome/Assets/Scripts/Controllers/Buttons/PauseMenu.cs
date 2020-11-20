@@ -48,7 +48,7 @@ namespace Controllers.Buttons
             EnableOtherUI(false);
             pauseMenuUi.SetActive(true);
             Time.timeScale = 0;
-            audio.SetFloat("sound_volume", 0);
+            //audio.SetFloat("sound_volume", 0);
         
             GameIsPaused = true;
         }
@@ -58,7 +58,7 @@ namespace Controllers.Buttons
             EnableOtherUI(true);
             pauseMenuUi.SetActive(false);
             Time.timeScale = 1f;
-            audio.SetFloat("sound_volume", 0);
+            //audio.SetFloat("sound_volume", 1);
         
             GameIsPaused = false;
         }
