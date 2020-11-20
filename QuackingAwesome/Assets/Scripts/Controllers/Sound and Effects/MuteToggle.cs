@@ -1,6 +1,4 @@
-﻿using System;
-using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
@@ -39,7 +37,7 @@ namespace Controllers.Sound_and_Effects
 
         public void ToggleSoundOnValueChange()
         {
-            ToggleMusicOnValueChange((soundIsOn = !soundIsOn));
+            ToggleSoundOnValueChange((soundIsOn = !soundIsOn));
         }
 
         public void ToggleSoundOnValueChange(bool audioIn)
