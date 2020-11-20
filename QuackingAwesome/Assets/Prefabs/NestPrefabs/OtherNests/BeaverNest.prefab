@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1735850238400642660}
   - component: {fileID: 1735850238400642658}
-  - component: {fileID: 1735850238400642661}
+  - component: {fileID: 2668367149510732149}
   m_Layer: 0
   m_Name: BeaverNest
-  m_TagString: Untagged
+  m_TagString: BeaverNest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sticks: 0
---- !u!65 &1735850238400642661
-BoxCollider:
+--- !u!135 &2668367149510732149
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -57,8 +57,22 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.630075, z: 1}
-  m_Center: {x: 0, y: 0.18496251, z: 0}
+  m_Radius: 1
+  m_Center: {x: -0.26766795, y: 0, z: -0.1710574}
+--- !u!136 &717457002228392884
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3717127895771918597}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.41493177
+  m_Height: 1.2340018
+  m_Direction: 0
+  m_Center: {x: -0.099968016, y: 0.4, z: -0.12412262}
 --- !u!1001 &4563428390272699476
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -128,6 +142,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b81d6fd4a15f1e4d80dec589c7a18d5, type: 3}
+--- !u!1 &3717127895771918597 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3b81d6fd4a15f1e4d80dec589c7a18d5,
+    type: 3}
+  m_PrefabInstance: {fileID: 4563428390272699476}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4097770487367494591 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3b81d6fd4a15f1e4d80dec589c7a18d5,

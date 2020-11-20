@@ -18,9 +18,11 @@ namespace AI.Beaver.StateMachine_Beaver
             return navigation.speed;
         }
 
-        public void CollectStick(Collider other)
+        public bool CollectStick(Collider other)
         {
-            stickInventory.AddStick(other.transform);
+            if(stickInventory.collectingEnabled)
+                return stickInventory.AddStick(other.transform);
+            return false;
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Nest;
+using Nest.NPC_Nests;
 using UnityEngine;
 
 namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
@@ -6,6 +7,8 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
     public class GoingHomeStateBeaver : IStateBeaver
     {
         public BeaverNest beaverNest;
+
+        #region IState
 
         public override void Enter()
         {
@@ -22,6 +25,9 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
             if (ConcreteMethods.HasReachedDestination())
             {
                 StateHandler.ChangeState(StateHandler.idle);
+                
+                // reset timer, so beaver is not tired anymore
+                StateHandler.swimming.ResetTimer();
             }
         }
 
@@ -33,5 +39,33 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
                 return;
             }
         }
+
+        public override void MouthTriggerEntered(Collider other)
+        {
+            base.MouthTriggerEntered(other);
+            if(BeaverNestIsTrigger(other))
+            {
+                return;
+            }
+        }
+
+        #endregion
+
+        #region HelperMethods
+
+        private bool BeaverNestIsTrigger(Collider other)
+        {
+            if (!other.CompareTag("BeaverNest"))
+            {
+                return false;
+            }
+
+            var nest = other.GetComponent<BeaverNest>();
+            var n = nest.TransferSticksToNest(ConcreteMethods.stickInventory);
+            Debug.Log(n + ", new number: " + ConcreteMethods.stickInventory.numberOfSticks);
+            return true;
+        }
+
+        #endregion
     }
 }

@@ -1,14 +1,14 @@
-﻿using System;
-using AI.Beaver.StateMachine_Beaver;
+﻿using AI.Beaver.StateMachine_Beaver;
 using Inventory;
 using UnityEngine;
 
-namespace Nest
+namespace Nest.NPC_Nests
 {
     public class BeaverNest : MonoBehaviour
     {
         public int sticks;
         
+        /*
         private void OnTriggerEnter(Collider other)
         {
             if (BeaverWasTrigger(other))
@@ -50,11 +50,13 @@ namespace Nest
 
             return true;
         }
+        */
 
-        private int TransferSticksToNest(StickInventory inventory)
+        public int TransferSticksToNest(StickInventory inventory)
         {
             var number = inventory.numberOfSticks;
             
+            Debug.Log("Moving stick to nest");
             inventory.MoveSticksToNest(number, transform);
 
             return number;

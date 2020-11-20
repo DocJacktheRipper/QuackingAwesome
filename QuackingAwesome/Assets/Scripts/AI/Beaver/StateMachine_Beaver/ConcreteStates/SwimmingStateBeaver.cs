@@ -7,6 +7,16 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
         //private float detectionRadius;
         //private Vector3 detectionCenter;
         
+        // after swimming for too long,
+        // beaver needs some rest in its base
+        public float possibleTimeOutsideNest;
+        private float _goHomeAfter;
+
+        private void Start()
+        {
+            ResetTimer();
+        }
+
         #region
         public override void Enter()
         {
@@ -23,9 +33,17 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
                 StateHandler.ChangeState(StateHandler.idle);
                 return;
             }
+            
             if (methods.HasReachedDestination())
             {
                 methods.GotoNextPoint();
+            }
+
+            if (TimeIsUp())
+            {
+                Debug.Log("Beaver is tired. Beaver is going home.");
+                StateHandler.ChangeState(StateHandler.goingHome);
+                return;
             }
             
             //SearchForSticks();
@@ -42,6 +60,15 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
         }
         #endregion
 
+        public void ResetTimer()
+        {
+            _goHomeAfter = Time.time + possibleTimeOutsideNest;
+        }
+
+        private bool TimeIsUp()
+        {
+            return _goHomeAfter < Time.time;
+        }
         
         /*
         private void SearchForSticks()

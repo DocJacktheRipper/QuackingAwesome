@@ -1,5 +1,7 @@
+using System;
 using Props.Sticks;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Inventory
 {
@@ -18,6 +20,11 @@ namespace Inventory
         {
             //carriedSticks = transform.Find("CarriedSticks");
             _stickEnvironmentContainer = GameObject.Find("CollectableSicks").transform;
+        }
+
+        private void Update()
+        {
+            Debug.Log("Sticks in inventory: " + numberOfSticks);
         }
 
 
