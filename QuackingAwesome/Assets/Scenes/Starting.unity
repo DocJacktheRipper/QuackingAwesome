@@ -606,6 +606,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef352434534037544a17e30195970022, type: 3}
+--- !u!1 &29141482 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8922169578126567246, guid: b51857b31ca727344804cebf0959d70e,
+    type: 3}
+  m_PrefabInstance: {fileID: 4808378788423664165}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &33553506 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ef352434534037544a17e30195970022,
@@ -9859,7 +9865,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 4808378788423664165}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 29141482}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3121c15f07a66774a87800e5417b129c, type: 3}
@@ -16354,6 +16360,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca9b6c824a06f7a46af748db64d6caa5, type: 3}
+--- !u!1 &1049771584 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3623700465978722749, guid: f406a50b810c1da4ea5642912f70020d,
+    type: 3}
+  m_PrefabInstance: {fileID: 8548730545255092270}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1049984398
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40720,7 +40732,8 @@ AudioSource:
   m_GameObject: {fileID: 1884819981}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -4594659466543005939, guid: 75eb54af43e2abf4cb015c0d7b477163,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: a749e2a4a78af0a4792b18e0091e8527, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -50659,14 +50672,19 @@ PrefabInstance:
       objectReference: {fileID: 4966003077805697709}
     - target: {fileID: 5745544884615550971, guid: 6309e6e9d11f68a4083d047c2aba84a1,
         type: 3}
-      propertyPath: pauseMenuUi
-      value: 
-      objectReference: {fileID: 2696655372063013112}
-    - target: {fileID: 5745544884615550971, guid: 6309e6e9d11f68a4083d047c2aba84a1,
-        type: 3}
       propertyPath: controls
       value: 
       objectReference: {fileID: 4966003077805697709}
+    - target: {fileID: 5745544884615550971, guid: 6309e6e9d11f68a4083d047c2aba84a1,
+        type: 3}
+      propertyPath: statistics
+      value: 
+      objectReference: {fileID: 1049771584}
+    - target: {fileID: 5745544884615550971, guid: 6309e6e9d11f68a4083d047c2aba84a1,
+        type: 3}
+      propertyPath: nestMenu
+      value: 
+      objectReference: {fileID: 29141482}
     - target: {fileID: 7027507373638349134, guid: 6309e6e9d11f68a4083d047c2aba84a1,
         type: 3}
       propertyPath: m_SizeDelta.x
