@@ -16,8 +16,9 @@ namespace Controllers.Buttons
 
         public void Start()
         {
+            pauseMenuUi = transform.Find("PauseMenu").gameObject;
+
             GameIsPaused = true;
-        
             ToggleMainMenu();
         }
 
