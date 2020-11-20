@@ -1,10 +1,8 @@
-﻿using System;
+﻿using UnityEngine;
+using System.Collections;
+
 using Inventory;
 using Nest;
-
-using UnityEngine;
-using System.Collections;
-using UnityEngine.UIElements;
 
 namespace Controllers
 {
@@ -13,6 +11,7 @@ namespace Controllers
         private GameObject _duck;
         public GameObject controls;
         public GameObject youDied;
+        public GameObject respawnToNest;
         
         public Transform alligatorMoveSpots;
         public Transform duckStartingSpot;
@@ -22,14 +21,19 @@ namespace Controllers
         private EnergyInventory _energyInventory;
         private NestBuilding _nestBuilding;
         private int _maxSticks;
+        private DucklingsInventory _ducklings;
 
         void Start()
         {
             _duck = GameObject.FindWithTag("Player");
+            
             _stickInventory  = _duck.GetComponent<StickInventory>();
             _energyInventory = _duck.GetComponent<EnergyInventory>();
+            _ducklings       = _duck.GetComponent<DucklingsInventory>();
+            
             _nestBuilding    = GameObject.FindWithTag("Nest").GetComponent<NestBuilding>();
             _maxSticks       = _nestBuilding.neededSticks;
+
         }
 
         public IEnumerator DuckDied(float percentEnergyLost, Collider enemy, int numberOfSticksLost = -1)
@@ -38,8 +42,9 @@ namespace Controllers
             controls.SetActive(false);
 
             youDied.SetActive(true);
-            yield return new WaitForSecondsRealtime(3);
+            yield return new WaitForSecondsRealtime(1);
             youDied.SetActive(false);
+
             
             // Drop the carried sticks
             _stickInventory.DropStick();
@@ -50,15 +55,16 @@ namespace Controllers
             _energyInventory.energy -= _energyInventory.energy * percentEnergyLost / 100;
             
             // Destroy the nest
-            if (!_nestBuilding.NestIsFinished)
+            if (_nestBuilding.NestIsFinished)
+            {
+                respawnToNest.SetActive(true);
+            }
+            else
             {
                 if (numberOfSticksLost < 0) numberOfSticksLost = _maxSticks;
                 _nestBuilding.RemoveSticks(numberOfSticksLost);
+                BackToNest(0);
             }
-            
-            // Reset duck position
-            _duck.transform.SetPositionAndRotation(duckStartingSpot.position, duckStartingSpot.rotation);
-            _duck.GetComponent<Rigidbody>().velocity = Vector3.zero;
 
             Debug.Log(enemy.tag);
             // Randomly respawn the killing enemy (only alligator for the moment)
@@ -73,9 +79,21 @@ namespace Controllers
                         );
             }
 
+        }
+
+        public void BackToNest(int lostHatchlings)
+        {
+            _ducklings.RemoveDucklings(lostHatchlings);
+            
+            // Reset duck position
+            _duck.transform.SetPositionAndRotation(duckStartingSpot.position, duckStartingSpot.rotation);
+            _duck.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            
+            respawnToNest.SetActive(false);
+
             Time.timeScale = 1;
             controls.SetActive(true);
         }
-        
+
     }
 }

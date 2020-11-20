@@ -28,16 +28,18 @@ namespace Controllers.Buttons.NestMenu
         }
 
         public void ExpandNestMenu()
-        {
+        {       
+            // pause the game
+            Time.timeScale = 0;
             // enable menu [nest]
-                nestMenuUI.SetActive(true);
-                // disable nest button
-                nestButton.SetActive(false);
-                // disable main menu button
-                mainMenuButton.SetActive(false);
-                // disable joystick
-                controls.SetActive(false);
-            }
+            nestMenuUI.SetActive(true);
+            // disable nest button
+            nestButton.SetActive(false);
+            // disable main menu button
+            mainMenuButton.SetActive(false);
+            // disable joystick
+            controls.SetActive(false);
+        }
 
         public void CloseNestMenu()
         {
@@ -49,6 +51,8 @@ namespace Controllers.Buttons.NestMenu
             mainMenuButton.SetActive(true);
             // enable joystick
             controls.SetActive(true);
+            // restart the game
+            Time.timeScale = 1;
         }
     }
 }

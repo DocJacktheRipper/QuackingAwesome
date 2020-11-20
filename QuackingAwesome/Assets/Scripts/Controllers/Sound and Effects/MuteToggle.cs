@@ -1,6 +1,4 @@
-﻿using System;
-using UnityEditor;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
@@ -39,13 +37,13 @@ namespace Controllers.Sound_and_Effects
 
         public void ToggleSoundOnValueChange()
         {
-            ToggleMusicOnValueChange((soundIsOn = !soundIsOn));
+            ToggleSoundOnValueChange((soundIsOn = !soundIsOn));
         }
 
         public void ToggleSoundOnValueChange(bool audioIn)
         {
-            // AudioListener.volume = audioIn ? 1 : 0;
-            audioMixer.SetFloat("sound_volume", audioIn ? 1 : 0);
+            AudioListener.volume = audioIn ? 1 : 0;
+            //audioMixer.SetFloat("sound_volume", audioIn ? 1 : 0);
         }
 
         public void ToggleMusicOnValueChange()
@@ -55,8 +53,8 @@ namespace Controllers.Sound_and_Effects
 
         public void ToggleMusicOnValueChange(bool audioIn)
         {
-            // AudioListener.volume = audioIn ? 1 : 0;
-            audioMixer.SetFloat("music_volume", audioIn ? 1 : 0);
+            AudioListener.volume = audioIn ? 1 : 0;
+            //audioMixer.SetFloat("music_volume", audioIn ? 1 : 0);
         }
         
         #endregion
