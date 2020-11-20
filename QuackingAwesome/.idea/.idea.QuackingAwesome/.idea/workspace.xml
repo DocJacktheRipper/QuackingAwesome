@@ -20,29 +20,295 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb082888-ab6d-41db-a40b-24e16e1dbeec" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Animals/Beaver.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Animals/Beaver.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SpawnPrefabs/TutorialPrefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SpawnPrefabs/TutorialPrefabs/PeaTut.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SpawnPrefabs/TutorialPrefabs/PeaTut.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SpawnPrefabs/TutorialPrefabs/SpawnBranchTut 1.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SpawnPrefabs/TutorialPrefabs/SpawnBranchTut 1.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SpawnPrefabs/TutorialPrefabs/SpawnBranchTut 2 Variant.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SpawnPrefabs/TutorialPrefabs/SpawnBranchTut 2 Variant.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SpawnPrefabs/TutorialPrefabs/SpawnBranchTut 3 Variant.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SpawnPrefabs/TutorialPrefabs/SpawnBranchTut 3 Variant.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Starting.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Starting.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Props.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Props.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test Area/BeaverTestMap.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test Area/BeaverTestMap.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test Area/JacksTestMap2.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test Area/JacksTestMap2.unity.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/FetchingStickBeaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/FetchingStickBeaver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ISwimIdleStateBeaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ISwimIdleStateBeaver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingArea.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Nest/BeaverNest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Nest/BeaverNest.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Props/PeaDetection.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Props/PeaDetection.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Props/StickCollecting.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Props/StickCollecting.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Props/StickDetection.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Props/StickDetection.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/SwimmingStateBeaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/SwimmingStateBeaver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/Trigger/BeaverBodyCollider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/Trigger/BeaverBodyCollider.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/StateMachine/IStateHandlerAI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/StateMachine/IStateHandlerAI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Props/Sticks/StickTriggerEnter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Props/Sticks/StickTriggerEnter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Demos.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Demos/Beach.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Demos/Beach/Beach Demo.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Demos/Beach/Beach Demo.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Demos/Beach/Sand.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Demos/Beach/Sand.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Demos/Buoyancy.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Demos/Buoyancy/Buoyancy Demo.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Demos/Buoyancy/Buoyancy Demo.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Demos/Buoyancy/BuoyantObject.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Demos/Buoyancy/BuoyantObject.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Demos/Buoyancy/GerstnerWaveDisplacement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Demos/Buoyancy/GerstnerWaveDisplacement.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Demos/Buoyancy/Object.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Demos/Buoyancy/Object.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Demos/URP Pipeline.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Demos/URP Pipeline.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Demos/URP Renderer.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Demos/URP Renderer.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Demos/Water.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Demos/Water/Black.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Demos/Water/Black.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Demos/Water/Floor.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Demos/Water/Floor.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Demos/Water/Floor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Demos/Water/Floor.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Demos/Water/Water Demo.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Demos/Water/Water Demo.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Demos/Windwaker.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Demos/Windwaker/Windwaker Demo.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Demos/Windwaker/Windwaker Demo.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Manual.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Manual.pdf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Materials/Beach.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Materials/Beach.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Materials/Ocean.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Materials/Ocean.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Materials/Underwater.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Materials/Underwater.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Materials/Wavy.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Materials/Wavy.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Materials/Windwaker.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Materials/Windwaker.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Meshes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Meshes/Circular Plane.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Meshes/Circular Plane.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Meshes/Hexagonal Plane.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Meshes/Hexagonal Plane.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Meshes/Square Plane.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Meshes/Square Plane.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Prefabs/Circular Water.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Prefabs/Circular Water.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Prefabs/Hexagonal Water.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Prefabs/Hexagonal Water.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Prefabs/Square Water.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Prefabs/Square Water.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/Editor.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/Editor/Reflections.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/Editor/Reflections/PlanarReflectionsEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/Editor/Reflections/PlanarReflectionsEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/Editor/Stylized Water For URP Editor.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/Editor/Stylized Water For URP Editor.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/Editor/Support.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/Editor/Support/SupportWindow.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/Editor/Support/SupportWindow.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/Editor/Water.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/Editor/Water/GradientTextureMaker.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/Editor/Water/GradientTextureMaker.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/Editor/Water/StylizedWaterURPEditor.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/Editor/Water/StylizedWaterURPEditor.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/Runtime.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/Runtime/Caustics.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/Runtime/Caustics/CausticsFeature.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/Runtime/Caustics/CausticsFeature.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/Runtime/Caustics/CausticsPass.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/Runtime/Caustics/CausticsPass.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/Runtime/Reflections.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/Runtime/Reflections/PlanarReflections.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/Runtime/Reflections/PlanarReflections.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/Runtime/Stylized Water For URP Runtime.asmdef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/Runtime/Stylized Water For URP Runtime.asmdef.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/Runtime/Water.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/Runtime/Water/StylizedWaterURP.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/Runtime/Water/StylizedWaterURP.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/About.uss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/About.uss.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/About.uxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/About.uxml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Acknowledgements.uss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Acknowledgements.uss.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Acknowledgements.uxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Acknowledgements.uxml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Find Errors.uss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Find Errors.uss.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Find Errors.uxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Find Errors.uxml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Resources.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Resources/Icons.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Resources/Icons/Caustics.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Resources/Icons/Caustics.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Resources/Icons/Discord.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Resources/Icons/Discord.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Resources/Icons/Forum.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Resources/Icons/Forum.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Resources/Icons/Manual.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Resources/Icons/Manual.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Resources/Icons/Negative.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Resources/Icons/Negative.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Resources/Icons/Neutral.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Resources/Icons/Neutral.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Resources/Icons/Positive.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Resources/Icons/Positive.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Resources/Icons/Reflection.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Resources/Icons/Reflection.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Resources/Icons/Review.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Resources/Icons/Review.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Resources/Icons/StylizedWaterURP.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Resources/Icons/StylizedWaterURP.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Resources/Icons/Twitter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Resources/Icons/Twitter.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Resources/Icons/WaterEffects.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Resources/Icons/WaterEffects.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Resources/Icons/Website.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Resources/Icons/Website.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Resources/Icons/color.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Resources/Icons/color.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Support.uss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Support.uss.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Support.uxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Support.uxml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Toolbar.uss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Toolbar.uss.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Toolbar.uxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Scripts/UI/Toolbar.uxml.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Caustics.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Caustics/Caustics.shader" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Caustics/Caustics.shader.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Caustics/Caustics.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Caustics/Caustics.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Caustics/World Position From Depth.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Caustics/World Position From Depth.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Color.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Color/Color Adjustment.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Color/Color Adjustment.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Color/Depth Color.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Color/Depth Color.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Color/HSV Lerp.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Color/HSV Lerp.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Color/Horizon Color.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Color/Horizon Color.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Color/Shore Color.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Color/Shore Color.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Depth.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Depth/Depth Fade.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Depth/Depth Fade.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Depth/Mobile Depth Fade.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Depth/Mobile Depth Fade.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Depth/Perspective Divide.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Depth/Perspective Divide.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Depth/Scene Position.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Depth/Scene Position.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Foam.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Foam/Foam Color.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Foam/Foam Color.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Foam/Foam Shadow Offset.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Foam/Foam Shadow Offset.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Foam/Intersection Foam.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Foam/Intersection Foam.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Foam/Mobile Intersection Foam.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Foam/Mobile Intersection Foam.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Foam/Mobile Surface Foam.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Foam/Mobile Surface Foam.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Foam/Shadow Strength.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Foam/Shadow Strength.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Foam/Shore Foam.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Foam/Shore Foam.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Foam/Surface Foam.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Foam/Surface Foam.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Other.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Other/Overlay.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Other/Overlay.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Other/Vertex Channel.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Other/Vertex Channel.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Planar Reflections.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Planar Reflections/Planar Reflections.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Planar Reflections/Planar Reflections.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/StylizedWaterForURP.hlsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/StylizedWaterForURP.hlsl.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Surface and Lighting.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Surface and Lighting/Additional Lighting.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Surface and Lighting/Additional Lighting.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Surface and Lighting/Blended Normals.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Surface and Lighting/Blended Normals.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Surface and Lighting/Fog.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Surface and Lighting/Fog.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Surface and Lighting/Lighting.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Surface and Lighting/Lighting.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Surface and Lighting/Main Light.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Surface and Lighting/Main Light.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Surface and Lighting/Main Lighting.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Surface and Lighting/Main Lighting.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/UV.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/UV/Mobile Refract UV.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/UV/Mobile Refract UV.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/UV/Refract UV.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/UV/Refract UV.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/UV/Underwater UV.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/UV/Underwater UV.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/UV/Water UV.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/UV/Water UV.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/WaterCaustics.hlsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/WaterCaustics.hlsl.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/WaterColor.hlsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/WaterColor.hlsl.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/WaterFoam.hlsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/WaterFoam.hlsl.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/WaterLighting.hlsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/WaterLighting.hlsl.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/WaterWaves.hlsl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/WaterWaves.hlsl.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Waves.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Waves/Waves.shadersubgraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Libraries/Waves/Waves.shadersubgraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Stylized Water Mobile.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Stylized Water Mobile.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Stylized Water Underwater.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Stylized Water Underwater.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Stylized Water.shadergraph" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Shaders/Stylized Water.shadergraph.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Caustics.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Caustics/Caustics 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Caustics/Caustics 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Caustics/Caustics 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Caustics/Caustics 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Caustics/Caustics 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Caustics/Caustics 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Caustics/Caustics 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Caustics/Caustics 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Foam.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Foam/Foam 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Foam/Foam 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Foam/Foam 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Foam/Foam 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Foam/Foam 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Foam/Foam 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Foam/Foam 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Foam/Foam 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Foam/Foam 5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Foam/Foam 5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Foam/Foam 6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Foam/Foam 6.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Foam/Foam 7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Foam/Foam 7.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Foam/Foam 8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Foam/Foam 8.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Normals.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Normals/Normals 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Normals/Normals 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Normals/Normals 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Normals/Normals 2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Normals/Normals 3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Normals/Normals 3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Normals/Normals 4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Normals/Normals 4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Normals/Normals 5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Stylized Water For URP/Textures/Normals/Normals 5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/test_particle.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/test_particle/Particle System.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/test_particle/Particle System.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +377,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/BehaviourMethodsAlligator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/StateHandlerAlligator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/Trigger/AlligatorPreyInReach.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/StateMachine/IStateHandlerAI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/DeathBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/Trigger/AlligatorDetectionTriggered.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/ScaredBeaver.cs" />
@@ -126,18 +391,19 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/IdleStateBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Camera/PlayerFollow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/StateHandlerBeaver.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/SwimmingStateBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/StateMachine/BehaviourMethods.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/BehaviourMethodsBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/IStateBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/GoingHomeBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/Trigger/BeaverDetectionTriggered.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/Trigger/BeaverBodyCollider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Nest/BeaverNest.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Props/Sticks/StickTriggerEnter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingArea.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/FetchingStickBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ISwimIdleStateBeaver.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/SwimmingStateBeaver.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Props/Sticks/StickTriggerEnter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/StateMachine/IStateHandlerAI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/Trigger/BeaverBodyCollider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/FetchingStickBeaver.cs" />
       </list>
     </option>
   </component>
@@ -237,6 +503,7 @@
       <workItem from="1605560911691" duration="1044000" />
       <workItem from="1605617084703" duration="30102000" />
       <workItem from="1605690048759" duration="1534000" />
+      <workItem from="1605868044053" duration="1671000" />
     </task>
     <servers />
   </component>

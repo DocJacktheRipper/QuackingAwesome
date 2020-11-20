@@ -4,8 +4,8 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
 {
     public class SwimmingStateBeaver : ISwimIdleStateBeaver
     {
-        private float detectionRadius;
-        private Vector3 detectionCenter;
+        //private float detectionRadius;
+        //private Vector3 detectionCenter;
         
         #region
         public override void Enter()
@@ -42,6 +42,8 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
         }
         #endregion
 
+        
+        /*
         private void SearchForSticks()
         {
             Collider[] hitColliders = Physics.OverlapSphere(detectionCenter, detectionRadius);
@@ -56,5 +58,6 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
             }
             // TODO: swim away from alligator
         }
+        */
     }
 }

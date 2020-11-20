@@ -34,7 +34,31 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
             methods.GotoNextPoint();
         }
 
-        private void StickDetected(Transform stickPositionNew)
+        public override void DetectionTriggerEntered(Collider other)
+        {
+            base.DetectionTriggerEntered(other);
+
+            if (StickIsTrigger(other))
+            {
+                AnotherStickDetected(other.transform);
+                // won't do anything - as it has always only the new value?
+            }
+        }
+
+        public override void MouthTriggerEntered(Collider other)
+        {
+            base.MouthTriggerEntered(other);
+
+            if (StickHasTouchedMouth(other))
+            {
+                ConcreteMethods.CollectStick(other);
+            }
+        }
+
+        #endregion
+        #region HelperMethods
+
+        private void AnotherStickDetected(Transform stickPositionNew)
         {
             // check if other stick is closer
             // [not necessary, because always further away?]
@@ -49,14 +73,9 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
             }
         }
         
-        public override void DetectionTriggerEntered(Collider other)
+        private bool StickHasTouchedMouth(Collider other)
         {
-            base.DetectionTriggerEntered(other);
-
-            if (StickIsTrigger(other))
-            {
-                StickDetected(other.transform);
-            }
+            throw new System.NotImplementedException();
         }
 
         #endregion

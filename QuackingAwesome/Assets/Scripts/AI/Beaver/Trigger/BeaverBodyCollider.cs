@@ -9,11 +9,10 @@ namespace AI.Beaver.Trigger
     public class BeaverBodyCollider : MonoBehaviour
     {
         public StateHandlerBeaver stateHandler;
-        public Transform stickContainer;
         
         public void OnCollisionEnter(Collision other)
         {
-           // stateHandler.MouthColliderEntered(other);
+            stateHandler.MouthTriggerEntered(other.collider);
             if (PlayerIsTrigger(other.collider))
             {
                 return;
@@ -22,26 +21,12 @@ namespace AI.Beaver.Trigger
 
         public void OnTriggerEnter(Collider other)
         {
+            stateHandler.MouthTriggerEntered(other);
             if (PlayerIsTrigger(other))
             {
                 return;
             }
         }
-
-        /*
-        private bool StickIsTrigger(Collider stickCollider)
-        {
-            if (!stickCollider.CompareTag("Stick"))
-            {
-                return false;
-            }
-
-            var stick = stickCollider.GetComponent<StickTriggerEnter>();
-            stick.PickStick(stickContainer);
-            
-            return true;
-        }
-        */
 
         private bool PlayerIsTrigger(Collider duckCollider)
         {
@@ -58,6 +43,7 @@ namespace AI.Beaver.Trigger
         
         private void DeathOfDuck()
         {
+            // TODO: actually death or warning first?
             DeathBehaviour deathEvent = GameObject.Find("DeathBehaviour").GetComponent<DeathBehaviour>();
             StartCoroutine(deathEvent.DuckDied(20, this.GetComponentInParent<Collider>()));
         }

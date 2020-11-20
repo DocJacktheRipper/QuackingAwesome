@@ -14,5 +14,10 @@ namespace AI.Beaver.StateMachine_Beaver
         {
             return navigation.speed;
         }
+
+        public void CollectStick(Collider other)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

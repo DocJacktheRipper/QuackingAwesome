@@ -80,7 +80,9 @@ namespace Props.Sticks
             {
                 return;
             }
-            // if (BeaverDelete(other))
+            /*
+            if (BeaverDelete(other))
+             
             // {
             //     return;
             // }
@@ -88,7 +90,9 @@ namespace Props.Sticks
             {
                 return;
             }
+            */
         }
+        /*
         private void OnCollisionEnter(Collision other)
         {
             Debug.Log("Stick collided with: " + other.collider.name);
@@ -96,7 +100,7 @@ namespace Props.Sticks
             {
                 return;
             }
-        }
+        }*/
         
 
         #region PlayerTrigger
@@ -134,8 +138,10 @@ namespace Props.Sticks
 
         #endregion
 
+        
         #region BeaverTrigger
 
+        /*
         /// <summary>
         /// Checks, if Beaver's Detection has triggered collider. If so, invoke Beaver to fetch the stick.
         /// </summary>
@@ -220,29 +226,9 @@ namespace Props.Sticks
             
             Debug.Log("Detected by stick");
             beaver.state.StickDetected(transform);
-            */
+            *
             
             return true;
-        }
-        
-        
-        #endregion
-        
-        
-
-        #endregion
-        #region HelperMethods
-        
-        public void PickStick(Transform targetParent)
-        {
-            // disable trigger
-            _trigger.enabled = false;
-            _collider.enabled = false;
-
-            // move to duck
-            Transform transform1;
-            (transform1 = transform).SetPositionAndRotation(new Vector3(0,0,0), Quaternion.identity);
-            transform1.SetParent(targetParent, false);
         }
         
         //Checks if the inner "BoxCollider" is a trigger
@@ -261,6 +247,23 @@ namespace Props.Sticks
                 BeaverIsTrigger(other);
             }
             return true;
+        }
+        */
+        #endregion
+
+        #endregion
+        #region HelperMethods
+        
+        public void PickStick(Transform targetParent)
+        {
+            // disable trigger
+            _trigger.enabled = false;
+            _collider.enabled = false;
+
+            // move to duck
+            Transform transform1;
+            (transform1 = transform).SetPositionAndRotation(new Vector3(0,0,0), Quaternion.identity);
+            transform1.SetParent(targetParent, false);
         }
 
         /// <summary>

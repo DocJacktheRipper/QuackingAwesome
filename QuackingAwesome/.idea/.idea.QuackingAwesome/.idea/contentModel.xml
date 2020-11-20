@@ -25,14 +25,6 @@
             </e>
           </e>
         </e>
-        <e p="Catartsys" t="Include">
-          <e p="LargeWater_URP" t="Include">
-            <e p="Catartsys_LargeWater_URP_Doc.txt" t="Include" />
-            <e p="Scripts" t="Include">
-              <e p="LargeWater_Grids_instanciator.cs" t="Include" />
-            </e>
-          </e>
-        </e>
         <e p="Fonts" t="Include">
           <e p="Documentation" t="Include">
             <e p="JazzCreateAltKeys_BubbleFont.txt" t="Include" />
@@ -47,6 +39,7 @@
             <e p="readme_en.txt" t="Include" />
             <e p="readme_jp.txt" t="Include" />
           </e>
+          <e p="NewSurfaceShader.shader" t="Include" />
           <e p="ToonBasicOutline.shader" t="Include" />
         </e>
         <e p="plugins" t="Include">
@@ -175,6 +168,7 @@
                 <e p="EggButtons.cs" t="Include" />
                 <e p="NestButton.cs" t="Include" />
                 <e p="NestButtonTrigger.cs" t="Include" />
+                <e p="NestInfoText.cs" t="Include" />
               </e>
               <e p="PauseMenu.cs" t="Include" />
               <e p="PopUps.cs" t="Include" />
@@ -253,6 +247,69 @@
             <e p="UpdateTutorialAdvicesText.cs" t="Include" />
           </e>
         </e>
+        <e p="Shaders" t="Include">
+          <e p="Stylized Water For URP" t="Include">
+            <e p="Demos" t="Include">
+              <e p="Buoyancy" t="Include">
+                <e p="BuoyantObject.cs" t="Include" />
+                <e p="GerstnerWaveDisplacement.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Scripts" t="Include">
+              <e p="Editor" t="Include">
+                <e p="Reflections" t="Include">
+                  <e p="PlanarReflectionsEditor.cs" t="Include" />
+                </e>
+                <e p="Stylized Water For URP Editor.asmdef" t="Include" />
+                <e p="Support" t="Include">
+                  <e p="SupportWindow.cs" t="Include" />
+                </e>
+                <e p="Water" t="Include">
+                  <e p="GradientTextureMaker.cs" t="Include" />
+                  <e p="StylizedWaterURPEditor.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Runtime" t="Include">
+                <e p="Caustics" t="Include">
+                  <e p="CausticsFeature.cs" t="Include" />
+                  <e p="CausticsPass.cs" t="Include" />
+                </e>
+                <e p="Reflections" t="Include">
+                  <e p="PlanarReflections.cs" t="Include" />
+                </e>
+                <e p="Stylized Water For URP Runtime.asmdef" t="Include" />
+                <e p="Water" t="Include">
+                  <e p="StylizedWaterURP.cs" t="Include" />
+                </e>
+              </e>
+              <e p="UI" t="Include">
+                <e p="About.uss" t="Include" />
+                <e p="About.uxml" t="Include" />
+                <e p="Acknowledgements.uss" t="Include" />
+                <e p="Acknowledgements.uxml" t="Include" />
+                <e p="Find Errors.uss" t="Include" />
+                <e p="Find Errors.uxml" t="Include" />
+                <e p="Support.uss" t="Include" />
+                <e p="Support.uxml" t="Include" />
+                <e p="Toolbar.uss" t="Include" />
+                <e p="Toolbar.uxml" t="Include" />
+              </e>
+            </e>
+            <e p="Shaders" t="Include">
+              <e p="Libraries" t="Include">
+                <e p="Caustics" t="Include">
+                  <e p="Caustics.shader" t="Include" />
+                </e>
+                <e p="StylizedWaterForURP.hlsl" t="Include" />
+                <e p="WaterCaustics.hlsl" t="Include" />
+                <e p="WaterColor.hlsl" t="Include" />
+                <e p="WaterFoam.hlsl" t="Include" />
+                <e p="WaterLighting.hlsl" t="Include" />
+                <e p="WaterWaves.hlsl" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="UI Elements" t="Include">
           <e p="Joystick Pack" t="Include">
             <e p="Examples" t="Include">
@@ -289,6 +346,8 @@
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="QuackingAwesome.sln" t="IncludeFlat" />
+      <e p="StylizedWaterForURP.csproj" t="IncludeRecursive" />
+      <e p="StylizedWaterForURPEditor.csproj" t="IncludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
   </component>
