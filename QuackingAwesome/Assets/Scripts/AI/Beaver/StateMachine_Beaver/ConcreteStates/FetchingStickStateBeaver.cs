@@ -42,7 +42,6 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
             if (base.StickIsTrigger(other))
             {
                 AnotherStickDetected(other.transform);
-                // won't do anything - as it has always only the new value?
             }
         }
 
