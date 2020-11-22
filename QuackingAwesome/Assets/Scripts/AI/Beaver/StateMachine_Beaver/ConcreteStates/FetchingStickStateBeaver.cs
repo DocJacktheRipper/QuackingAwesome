@@ -1,9 +1,10 @@
-﻿using Inventory;
+﻿using System.Data;
+using Inventory;
 using UnityEngine;
 
 namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
 {
-    public class FetchingStickBeaver : IStateBeaver
+    public class FetchingStickStateBeaver : IStateBeaver
     {
         public Transform stickPosition;
         public StickInventory inventory;
@@ -14,8 +15,8 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
         {
             base.Enter();
             
-            methods.Chase(stickPosition);
-            methods.StartMovement();
+            ConcreteMethods.Chase(stickPosition);
+            ConcreteMethods.StartMovement();
         }
 
         public override void Execute()
@@ -31,10 +32,35 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
         {
             base.Exit();
             
-            methods.GotoNextPoint();
+            ConcreteMethods.GotoNextPoint();
         }
 
-        private void StickDetected(Transform stickPositionNew)
+        public override void DetectionTriggerEntered(Collider other)
+        {
+            base.DetectionTriggerEntered(other);
+
+            if (base.StickIsTrigger(other))
+            {
+                AnotherStickDetected(other.transform);
+            }
+        }
+
+        public override void MouthTriggerEntered(Collider other)
+        {
+            base.MouthTriggerEntered(other);
+
+            if (StickIsTrigger(other))
+            {
+                //Debug.Log("Beaver has collected stick.");
+                ConcreteMethods.CollectStick(other);
+                StateHandler.ChangeState(StateHandler.goingHome);
+            }
+        }
+
+        #endregion
+        #region HelperMethods
+
+        private void AnotherStickDetected(Transform stickPositionNew)
         {
             // check if other stick is closer
             // [not necessary, because always further away?]
@@ -46,16 +72,6 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
             {
                 this.stickPosition = stickPositionNew;
                 StateHandler.ChangeState(StateHandler.fetching);
-            }
-        }
-        
-        public override void DetectionTriggerEntered(Collider other)
-        {
-            base.DetectionTriggerEntered(other);
-
-            if (StickIsTrigger(other))
-            {
-                StickDetected(other.transform);
             }
         }
 

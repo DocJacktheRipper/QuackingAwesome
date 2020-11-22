@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
 {
-    public class ScaredBeaver : IStateBeaver
+    public class ScaredStateBeaver : IStateBeaver
     {
         public ScaredAway scaredAway;
         private float _waitUntil;

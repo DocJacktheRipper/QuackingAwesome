@@ -168,10 +168,10 @@
               <e p="StateMachine_Beaver" t="Include">
                 <e p="BehaviourMethodsBeaver.cs" t="Include" />
                 <e p="ConcreteStates" t="Include">
-                  <e p="FetchingStickBeaver.cs" t="Include" />
-                  <e p="GoingHomeBeaver.cs" t="Include" />
+                  <e p="FetchingStickStateBeaver.cs" t="Include" />
+                  <e p="GoingHomeStateBeaver.cs" t="Include" />
                   <e p="IdleStateBeaver.cs" t="Include" />
-                  <e p="ScaredBeaver.cs" t="Include" />
+                  <e p="ScaredStateBeaver.cs" t="Include" />
                   <e p="SwimmingStateBeaver.cs" t="Include" />
                 </e>
                 <e p="IStateBeaver.cs" t="Include" />
@@ -284,64 +284,66 @@
             <e p="UpdateTutorialAdvicesText.cs" t="Include" />
           </e>
         </e>
-        <e p="Stylized Water For URP" t="Include">
-          <e p="Demos" t="Include">
-            <e p="Buoyancy" t="Include">
-              <e p="BuoyantObject.cs" t="Include" />
-              <e p="GerstnerWaveDisplacement.cs" t="Include" />
-            </e>
-          </e>
-          <e p="Scripts" t="Include">
-            <e p="Editor" t="Include">
-              <e p="Reflections" t="Include">
-                <e p="PlanarReflectionsEditor.cs" t="Include" />
-              </e>
-              <e p="Stylized Water For URP Editor.asmdef" t="Include" />
-              <e p="Support" t="Include">
-                <e p="SupportWindow.cs" t="Include" />
-              </e>
-              <e p="Water" t="Include">
-                <e p="GradientTextureMaker.cs" t="Include" />
-                <e p="StylizedWaterURPEditor.cs" t="Include" />
+        <e p="Shaders" t="Include">
+          <e p="Stylized Water For URP" t="Include">
+            <e p="Demos" t="Include">
+              <e p="Buoyancy" t="Include">
+                <e p="BuoyantObject.cs" t="Include" />
+                <e p="GerstnerWaveDisplacement.cs" t="Include" />
               </e>
             </e>
-            <e p="Runtime" t="Include">
-              <e p="Caustics" t="Include">
-                <e p="CausticsFeature.cs" t="Include" />
-                <e p="CausticsPass.cs" t="Include" />
+            <e p="Scripts" t="Include">
+              <e p="Editor" t="Include">
+                <e p="Reflections" t="Include">
+                  <e p="PlanarReflectionsEditor.cs" t="Include" />
+                </e>
+                <e p="Stylized Water For URP Editor.asmdef" t="Include" />
+                <e p="Support" t="Include">
+                  <e p="SupportWindow.cs" t="Include" />
+                </e>
+                <e p="Water" t="Include">
+                  <e p="GradientTextureMaker.cs" t="Include" />
+                  <e p="StylizedWaterURPEditor.cs" t="Include" />
+                </e>
               </e>
-              <e p="Reflections" t="Include">
-                <e p="PlanarReflections.cs" t="Include" />
+              <e p="Runtime" t="Include">
+                <e p="Caustics" t="Include">
+                  <e p="CausticsFeature.cs" t="Include" />
+                  <e p="CausticsPass.cs" t="Include" />
+                </e>
+                <e p="Reflections" t="Include">
+                  <e p="PlanarReflections.cs" t="Include" />
+                </e>
+                <e p="Stylized Water For URP Runtime.asmdef" t="Include" />
+                <e p="Water" t="Include">
+                  <e p="StylizedWaterURP.cs" t="Include" />
+                </e>
               </e>
-              <e p="Stylized Water For URP Runtime.asmdef" t="Include" />
-              <e p="Water" t="Include">
-                <e p="StylizedWaterURP.cs" t="Include" />
+              <e p="UI" t="Include">
+                <e p="About.uss" t="Include" />
+                <e p="About.uxml" t="Include" />
+                <e p="Acknowledgements.uss" t="Include" />
+                <e p="Acknowledgements.uxml" t="Include" />
+                <e p="Find Errors.uss" t="Include" />
+                <e p="Find Errors.uxml" t="Include" />
+                <e p="Support.uss" t="Include" />
+                <e p="Support.uxml" t="Include" />
+                <e p="Toolbar.uss" t="Include" />
+                <e p="Toolbar.uxml" t="Include" />
               </e>
             </e>
-            <e p="UI" t="Include">
-              <e p="About.uss" t="Include" />
-              <e p="About.uxml" t="Include" />
-              <e p="Acknowledgements.uss" t="Include" />
-              <e p="Acknowledgements.uxml" t="Include" />
-              <e p="Find Errors.uss" t="Include" />
-              <e p="Find Errors.uxml" t="Include" />
-              <e p="Support.uss" t="Include" />
-              <e p="Support.uxml" t="Include" />
-              <e p="Toolbar.uss" t="Include" />
-              <e p="Toolbar.uxml" t="Include" />
-            </e>
-          </e>
-          <e p="Shaders" t="Include">
-            <e p="Libraries" t="Include">
-              <e p="Caustics" t="Include">
-                <e p="Caustics.shader" t="Include" />
+            <e p="Shaders" t="Include">
+              <e p="Libraries" t="Include">
+                <e p="Caustics" t="Include">
+                  <e p="Caustics.shader" t="Include" />
+                </e>
+                <e p="StylizedWaterForURP.hlsl" t="Include" />
+                <e p="WaterCaustics.hlsl" t="Include" />
+                <e p="WaterColor.hlsl" t="Include" />
+                <e p="WaterFoam.hlsl" t="Include" />
+                <e p="WaterLighting.hlsl" t="Include" />
+                <e p="WaterWaves.hlsl" t="Include" />
               </e>
-              <e p="StylizedWaterForURP.hlsl" t="Include" />
-              <e p="WaterCaustics.hlsl" t="Include" />
-              <e p="WaterColor.hlsl" t="Include" />
-              <e p="WaterFoam.hlsl" t="Include" />
-              <e p="WaterLighting.hlsl" t="Include" />
-              <e p="WaterWaves.hlsl" t="Include" />
             </e>
           </e>
         </e>

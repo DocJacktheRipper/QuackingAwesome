@@ -10,9 +10,9 @@ namespace AI.Beaver.StateMachine_Beaver
         
         public IdleStateBeaver idle;
         public SwimmingStateBeaver swimming;
-        public FetchingStickBeaver fetching;
-        public GoingHomeBeaver goingHome;
-        public ScaredBeaver scared;
+        public FetchingStickStateBeaver fetching;
+        public GoingHomeStateBeaver goingHome;
+        public ScaredStateBeaver scared;
 
         #endregion
         

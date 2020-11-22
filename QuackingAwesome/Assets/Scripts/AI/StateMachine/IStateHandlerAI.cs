@@ -54,6 +54,11 @@ namespace AI.StateMachine
         public virtual void BiteTriggerExited(Collider other)
         {
         }
+
+        public virtual void MouthTriggerEntered(Collider other)
+        {
+            state.MouthTriggerEntered(other);
+        }
         
         #endregion
     }

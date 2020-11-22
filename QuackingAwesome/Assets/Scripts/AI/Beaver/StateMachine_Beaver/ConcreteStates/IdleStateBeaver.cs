@@ -12,14 +12,14 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
         public override void Enter()
         {
             base.Enter();
-            methods.StopMovement();
-            //methods.animator.SetBool(IsIdle, true);
+            ConcreteMethods.StopMovement();
+            //ConcreteMethods.animator.SetBool(IsIdle, true);
         }
 
         public override void Exit()
         {
             base.Exit();
-            //methods.animator.SetBool(IsIdle, false);
+            //ConcreteMethods.animator.SetBool(IsIdle, false);
         }
 
         public override void Execute()

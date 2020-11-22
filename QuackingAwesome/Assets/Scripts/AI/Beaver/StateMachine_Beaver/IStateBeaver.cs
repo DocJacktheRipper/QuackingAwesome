@@ -16,17 +16,21 @@ namespace AI.Beaver.StateMachine_Beaver
             ConcreteMethods = ai.GetComponent<BehaviourMethodsBeaver>();
         }
 
-        protected bool StickIsTrigger(Collider other)
+        protected bool StickTriggeredDetection(Collider other)
         {
             if (other.CompareTag("Stick"))
             {
-                Debug.Log("Yes, beaver has seen stick.");
-                StateHandler.fetching.stickPosition = other.transform;
-                StateHandler.ChangeState(StateHandler.fetching);
+                //Debug.Log("Yes, beaver has seen stick.");
+                StateHandler.StickDetected(other.transform);
                 return true;
             }
 
             return false;
+        }
+
+        protected bool StickIsTrigger(Collider other)
+        {
+            return other.CompareTag("Stick");
         }
     }
 }
