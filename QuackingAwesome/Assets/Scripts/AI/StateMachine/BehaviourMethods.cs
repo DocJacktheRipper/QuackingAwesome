@@ -57,7 +57,7 @@ namespace AI.StateMachine
             navigation.SetDestination(currentTarget);
         }
         
-        public void SetDestination(Vector3 dest)
+        public virtual void SetDestination(Vector3 dest)
         {
             currentTarget = dest;
             navigation.SetDestination(dest);
@@ -72,7 +72,7 @@ namespace AI.StateMachine
             navigation.speed += chaseSpeedBonus;
         }
 
-        public void Chase(Transform target)
+        public virtual void Chase(Transform target)
         {
             currentTarget = target.position;
             SetDestination(currentTarget);

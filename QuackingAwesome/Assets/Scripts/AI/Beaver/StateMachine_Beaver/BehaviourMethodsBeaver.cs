@@ -42,7 +42,6 @@ namespace AI.Beaver.StateMachine_Beaver
             navigation.SetPath(_path);
         }
         
-        
         private Vector3 GetReachablePointInRadius()
         {
             _path = new NavMeshPath();
@@ -69,6 +68,48 @@ namespace AI.Beaver.StateMachine_Beaver
                 Debug.Log("No path to that position, picking a new point");
                 //return GetReachablePointInRadius();
                 return Vector3.zero;
+            }
+        }
+        
+        public bool CheckDestinationIsReachable(Vector3 position)
+        {
+            NavMesh.CalculatePath(transform.position, position, NavMesh.AllAreas, _path);
+            if (_path.status == NavMeshPathStatus.PathComplete) 
+            {
+                //Debug.Log ("Valid path has been found");
+                return true;
+            } 
+            else 
+            {
+                Debug.Log("No path to that position, picking a new point");
+                //return GetReachablePointInRadius();
+                return false;
+            }
+        }
+
+        public override void Chase(Transform target)
+        {
+            if (CheckDestinationIsReachable(target.position))
+            {
+                base.Chase(target);
+            }
+            else
+            {
+                // if not reachable, set target to current position
+                // so it switches next time automatically
+                base.Chase(transform);
+            }
+        }
+
+        public override void SetDestination(Vector3 dest)
+        {
+            if (CheckDestinationIsReachable(dest))
+            {
+                base.SetDestination(dest);
+            }
+            else
+            {
+                base.SetDestination(transform.position);
             }
         }
 
