@@ -29,7 +29,7 @@ namespace Controllers.Buttons.StartMenu
 
         public void StartFadeOut()
         {
-            StartCoroutine(FadeMusic.StartFade(audioMixer, "music_fade", 3f, 0));
+            StartCoroutine(FadeMusic.StartFade(audioMixer, "music_volume", 3f, 0));
         }
         
         void Update()
