@@ -49,10 +49,10 @@ namespace AI.Beaver.StateMachine_Beaver
             var position = transform.position;
             
             // calculate random position
-            Vector3 randomDirection = Random.insideUnitSphere * randomSwimRadius;
-            randomDirection += position;
-            randomDirection.y = 0;
-            
+            Vector3 randomDirection = Random.insideUnitSphere * randomSwimRadius; // random position within sphere
+            randomDirection += position;       // sphere is around current object now
+            randomDirection.y = 0;             // it shall not fly or be underwater
+
             // get closest point reachable from that position
             NavMesh.SamplePosition(randomDirection, out var hit, 3, 1);
             Vector3 finalPosition = hit.position;
@@ -61,7 +61,7 @@ namespace AI.Beaver.StateMachine_Beaver
             NavMesh.CalculatePath(position, finalPosition, NavMesh.AllAreas, _path);
             if (_path.status == NavMeshPathStatus.PathComplete) 
             {
-                Debug.Log ("Valid path has been found");
+                //Debug.Log ("Valid path has been found");
                 return finalPosition;
             } 
             else 

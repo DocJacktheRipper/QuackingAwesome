@@ -20,7 +20,7 @@ namespace AI.Beaver.StateMachine_Beaver
         {
             if (other.CompareTag("Stick"))
             {
-                Debug.Log("Yes, beaver has seen stick.");
+                //Debug.Log("Yes, beaver has seen stick.");
                 StateHandler.StickDetected(other.transform);
                 return true;
             }

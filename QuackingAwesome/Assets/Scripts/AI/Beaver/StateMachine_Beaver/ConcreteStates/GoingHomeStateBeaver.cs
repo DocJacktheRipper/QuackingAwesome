@@ -45,6 +45,7 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
             base.MouthTriggerEntered(other);
             if(BeaverNestIsTrigger(other))
             {
+                Debug.Log("Sticks: " + ConcreteMethods.stickInventory.numberOfSticks);
                 return;
             }
         }
@@ -62,7 +63,6 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
 
             var nest = other.GetComponent<BeaverNest>();
             var n = nest.TransferSticksToNest(ConcreteMethods.stickInventory);
-            Debug.Log(n + ", new number: " + ConcreteMethods.stickInventory.numberOfSticks);
             return true;
         }
 

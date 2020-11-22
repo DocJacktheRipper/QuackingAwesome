@@ -56,7 +56,7 @@ namespace Nest.NPC_Nests
         {
             var number = inventory.numberOfSticks;
             
-            Debug.Log("Moving stick to nest");
+            // Debug.Log("Moving stick to nest");
             inventory.MoveSticksToNest(number, transform);
 
             return number;

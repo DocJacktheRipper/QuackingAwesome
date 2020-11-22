@@ -51,7 +51,7 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
 
             if (StickIsTrigger(other))
             {
-                Debug.Log("Beaver has collected stick.");
+                //Debug.Log("Beaver has collected stick.");
                 ConcreteMethods.CollectStick(other);
                 StateHandler.ChangeState(StateHandler.goingHome);
             }
