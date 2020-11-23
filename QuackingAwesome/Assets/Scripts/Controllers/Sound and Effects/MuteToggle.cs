@@ -41,24 +41,26 @@ namespace Controllers.Sound_and_Effects
 
         public void ToggleSoundOnValueChange()
         {
-            ToggleSoundOnValueChange((_soundIsOn = !_soundIsOn));
+            //ToggleSoundOnValueChange((_soundIsOn = !_soundIsOn));
+            audioMixer.SetFloat("sound_volume", soundToggle.isOn ? soundVolume : -80f);
         }
 
         public void ToggleSoundOnValueChange(bool audioIn)
         {
             //AudioListener.volume = audioIn ? 1 : 0;
-            audioMixer.SetFloat("sound_volume", audioIn ? soundVolume : -80f);
+            audioMixer.SetFloat("sound_volume", soundToggle.isOn ? soundVolume : -80f);
         }
 
         public void ToggleMusicOnValueChange()
         {
-            ToggleMusicOnValueChange((_musicIsOn = !_musicIsOn));
+            // ToggleMusicOnValueChange((_musicIsOn = !_musicIsOn));
+            audioMixer.SetFloat("music_volume", musicToggle.isOn ? musicVolume : -80f);
         }
 
         public void ToggleMusicOnValueChange(bool audioIn)
         {
             //AudioListener.volume = audioIn ? 1 : 0;
-            audioMixer.SetFloat("music_volume", audioIn ? musicVolume : -80f);
+            audioMixer.SetFloat("music_volume", musicToggle.isOn ? musicVolume : -80f);
         }
         
         #endregion
