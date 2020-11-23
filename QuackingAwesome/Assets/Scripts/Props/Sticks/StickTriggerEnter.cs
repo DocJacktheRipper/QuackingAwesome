@@ -3,6 +3,8 @@ using Inventory;
 using Props.spawning;
 using UnityEngine;
 
+using Analytics;
+
 namespace Props.Sticks
 {
     public class StickTriggerEnter : MonoBehaviour
@@ -26,6 +28,8 @@ namespace Props.Sticks
         private Animator _duckAnimator;
         private static readonly int DoPickAndKeep = Animator.StringToHash("DoPickAndKeep");
 
+        // analytics
+        private TutorialAnalytics _analytics;
         void Start()
         {
             _trigger = gameObject.GetComponent<BoxCollider>();
@@ -35,6 +39,8 @@ namespace Props.Sticks
             
             _duckCarriedSticks = duck.transform.Find("CarriedSticks");
             positionPool = GameObject.Find("StickSpawnSpots").transform;
+            
+            _analytics = GameObject.Find("Analytics").GetComponent<TutorialAnalytics>();
         }
 
         private void Awake()
@@ -124,6 +130,7 @@ namespace Props.Sticks
 
             if (inventory.AddStick())
             {
+                _analytics.IncrementSticks();
                 PickStick(_duckCarriedSticks);
                 // animation for stick picking
                 _duckAnimator.SetTrigger(DoPickAndKeep); //TODO: make dynamically for other animals

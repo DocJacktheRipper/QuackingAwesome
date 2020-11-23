@@ -1,6 +1,8 @@
-﻿using Inventory;
+﻿using UnityEngine;
+
+using Inventory;
+using Analytics;
 using Props.spawning;
-using UnityEngine;
 
 namespace Nest
 {
@@ -17,11 +19,14 @@ namespace Nest
 
         private Transform _nbContainer;
         private NestEffectTrigger _effectTrigger;
+        
+        private TutorialAnalytics _analytics;
 
         private void Start()
         {
             _nbContainer = transform.Find("NestBuildingContainer");
             _effectTrigger = GetComponent<NestEffectTrigger>();
+            _analytics = GameObject.Find("Analytics").GetComponent<TutorialAnalytics>();
         }
 
         private void OnTriggerEnter(Collider other)
@@ -61,6 +66,8 @@ namespace Nest
 
         private void SetNestFinished()
         {
+            _analytics.SetLevelPlayState(TutorialAnalytics.LevelPlayState.NestCompleted);
+            
             if (!NestIsFinished)
             {
                 Debug.Log("nest is finished!");

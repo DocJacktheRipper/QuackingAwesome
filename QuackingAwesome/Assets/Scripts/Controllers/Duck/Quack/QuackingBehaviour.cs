@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
+using UnityEngine;
+
 using Controllers.Sound_and_Effects;
 using Controllers.Sound_and_Effects.Duck;
 using Inventory;
-using UnityEngine;
+using Analytics;
 
 namespace Controllers.Duck.Quack
 {
@@ -22,6 +24,8 @@ namespace Controllers.Duck.Quack
 
         private StickInventory _stickInventory;
         
+        private TutorialAnalytics _analytics;
+        
         // animation
         private Animator _animator;
         private static readonly int DoQuack = Animator.StringToHash("DoQuack");
@@ -40,6 +44,8 @@ namespace Controllers.Duck.Quack
 
             _animator = GetComponent<Animator>();
             _quackEffect = effects.quackEffect;
+
+            _analytics = GameObject.Find("Analytics").GetComponent<TutorialAnalytics>();
         }
 
         private void Update()
@@ -59,6 +65,8 @@ namespace Controllers.Duck.Quack
 
         public void Quack()
         {
+            _analytics.IncrementQuacks();
+            
             // sound
             audioManager.PlayRandomSound();
             // animation

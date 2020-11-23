@@ -1,13 +1,25 @@
-﻿using Inventory;
-using Props.spawning;
+﻿using System;
+using System.Collections;
 using UnityEngine;
+
+using Inventory;
+using Analytics;
+using Props.spawning;
+
 
 namespace Props
 {
     public class PeaCollecting : MonoBehaviour
     {
         public int nutritiousValue = 1;
-            
+        
+        private TutorialAnalytics _analytics;
+
+        private void Start()
+        {
+            _analytics = GameObject.Find("Analytics").GetComponent<TutorialAnalytics>();
+        }
+
         private void OnTriggerEnter(Collider other)
         {
             if (PlayerIsTrigger(other))
@@ -37,8 +49,9 @@ namespace Props
             }
 
             inventory.IncreaseEnergy(nutritiousValue);
+            _analytics.IncreaseScore(nutritiousValue);
             Destroy(gameObject);
-        
+
             // spawn another pea
             var nbContainer = GameObject.Find("SpawningBehaviour");
             var spawner = nbContainer.GetComponent<PeaSpawner>();
