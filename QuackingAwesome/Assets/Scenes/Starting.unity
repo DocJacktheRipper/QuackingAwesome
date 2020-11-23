@@ -52328,10 +52328,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 6586676773656439836, guid: b51857b31ca727344804cebf0959d70e,
-        type: 3}
-      propertyPath: m_Text
-      value: 8 Peas needed
     - target: {fileID: 6585831428339960807, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
@@ -52356,6 +52352,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6586676773656439836, guid: b51857b31ca727344804cebf0959d70e,
+        type: 3}
+      propertyPath: m_Text
+      value: 8 Peas needed
       objectReference: {fileID: 0}
     - target: {fileID: 7059619975811433539, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
@@ -52595,12 +52596,17 @@ PrefabInstance:
     - target: {fileID: 8826835751316883244, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8922169578126567246, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
       propertyPath: m_Name
       value: Nest Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 8922169578126567246, guid: b51857b31ca727344804cebf0959d70e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8946986506195603168, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
