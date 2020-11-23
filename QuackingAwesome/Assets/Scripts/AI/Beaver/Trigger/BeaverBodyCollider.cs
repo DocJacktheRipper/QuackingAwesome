@@ -1,7 +1,5 @@
-﻿using System;
-using AI.Beaver.StateMachine_Beaver;
+﻿using AI.Beaver.StateMachine_Beaver;
 using Controllers;
-using Props.Sticks;
 using UnityEngine;
 
 namespace AI.Beaver.Trigger
@@ -12,20 +10,20 @@ namespace AI.Beaver.Trigger
         
         public void OnCollisionEnter(Collision other)
         {
-            stateHandler.MouthTriggerEntered(other.collider);
             if (PlayerIsTrigger(other.collider))
             {
                 return;
             }
+            stateHandler.MouthTriggerEntered(other.collider);
         }
 
         public void OnTriggerEnter(Collider other)
         {
-            stateHandler.MouthTriggerEntered(other);
             if (PlayerIsTrigger(other))
             {
                 return;
             }
+            stateHandler.MouthTriggerEntered(other);
         }
 
         private bool PlayerIsTrigger(Collider duckCollider)
