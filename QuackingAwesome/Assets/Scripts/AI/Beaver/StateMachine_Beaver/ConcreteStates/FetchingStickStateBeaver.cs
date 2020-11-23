@@ -26,6 +26,15 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
             {
                 StateHandler.ChangeState(StateHandler.swimming);
             }
+
+            if (ConcreteMethods.HasReachedDestination())
+            {
+                StateHandler.ChangeState(StateHandler.swimming);
+            }
+            if (!(stickPosition != null))
+            {
+                StateHandler.ChangeState(StateHandler.swimming);
+            }
         }
 
         public override void Exit()
