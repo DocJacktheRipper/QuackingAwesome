@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 20d7b5b50a3e7624796b96279da1f38f,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -208,7 +208,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: cfde137dd20f8c342aefe452b3b250ac,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: cfde137dd20f8c342aefe452b3b250ac,
         type: 3}
@@ -788,6 +788,11 @@ PrefabInstance:
       propertyPath: stickContainer
       value: 
       objectReference: {fileID: 796997646}
+    - target: {fileID: 957649025043201379, guid: 77f9ba5ff4379b347bd0df8445a7077c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1588695849845219843, guid: 77f9ba5ff4379b347bd0df8445a7077c,
         type: 3}
       propertyPath: beaverNest
