@@ -3,6 +3,7 @@ using System.Collections;
 
 using Inventory;
 using Nest;
+using Analytics;
 
 namespace Controllers
 {
@@ -25,6 +26,8 @@ namespace Controllers
 
         private Collider _enemy;
 
+        private TutorialAnalytics _analytics;
+
         void Start()
         {
             _duck = GameObject.FindWithTag("Player");
@@ -35,6 +38,8 @@ namespace Controllers
             
             _nestBuilding    = GameObject.FindWithTag("Nest").GetComponent<NestBuilding>();
             _maxSticks       = _nestBuilding.neededSticks;
+            
+            _analytics = GameObject.Find("Analytics").GetComponent<TutorialAnalytics>();
 
         }
 
@@ -42,6 +47,8 @@ namespace Controllers
         {
             Time.timeScale = 0;
             controls.SetActive(false);
+            
+            _analytics.IncrementDeaths(enemy.tag);
 
             _enemy = enemy;
 
@@ -51,8 +58,10 @@ namespace Controllers
             // todo: invoke animation
             
             // Reduce the player energy
-            _energyInventory.energy -= _energyInventory.energy * percentEnergyLost / 100;
-            
+            float peasLost = _energyInventory.energy * percentEnergyLost / 100;
+            _energyInventory.energy -= peasLost;
+            _analytics.LostPeas(peasLost);
+
             // Destroy the nest
             if (_nestBuilding.NestIsFinished)
             {

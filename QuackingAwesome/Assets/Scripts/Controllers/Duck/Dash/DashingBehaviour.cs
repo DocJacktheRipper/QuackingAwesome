@@ -2,6 +2,8 @@
 using Controllers.Sound_and_Effects.Duck;
 using UnityEngine;
 
+using Analytics;
+
 namespace Controllers.Duck.Dash
 {
     public class DashingBehaviour : MonoBehaviour
@@ -23,17 +25,21 @@ namespace Controllers.Duck.Dash
         private ParticleSystem _dashEffect;
         // sound
         public DashAudioManager audioManager;
-
-
+        
+        private TutorialAnalytics _analytics;
+        
         void Start()
         {
             _duck = GetComponent<Rigidbody>();
             _animator = GetComponent<Animator>();
             _dashEffect = effects.dashEffect;
+
+            _analytics = GameObject.Find("Analytics").GetComponent<TutorialAnalytics>();
         }
 
         public void Dash()
         {
+            _analytics.IncrementDashes();
             // sound
             audioManager.PlayRandomSound();
             // trigger animation
