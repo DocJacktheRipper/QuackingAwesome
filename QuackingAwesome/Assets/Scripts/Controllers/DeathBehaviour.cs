@@ -4,6 +4,8 @@ using System.Collections;
 using Inventory;
 using Nest;
 using Analytics;
+using Controllers.Duck.Dash;
+using Controllers.Duck.Quack;
 
 namespace Controllers
 {
@@ -81,7 +83,7 @@ namespace Controllers
 
         }
 
-        public void BackToNest(int lostHatchlings)
+        private void BackToNest(int lostHatchlings)
         {
             _ducklings.RemoveDucklings(lostHatchlings);
             
@@ -89,18 +91,22 @@ namespace Controllers
             _duck.transform.SetPositionAndRotation(duckStartingSpot.position, duckStartingSpot.rotation);
             _duck.GetComponent<Rigidbody>().velocity = Vector3.zero;
             
+            // Reset cooldowns
+            var dashBehavior = _duck.GetComponent<DashingBehaviour>();
+            dashBehavior.nextDash = Time.time;
+            var quackBehaviour = _duck.GetComponent<QuackingBehaviour>();
+            quackBehaviour.overHeat = 0;
+            
             respawnToNest.SetActive(false);
             
             // Randomly respawn the killing enemy (only alligator for the moment)
             if (_enemy.CompareTag("Alligator"))
             {
-                GameObject.Find("Alligator")
-                    .transform
+                _enemy.transform
                     .SetPositionAndRotation(
                         alligatorMoveSpots.GetChild(
                             UnityEngine.Random.Range(0, alligatorMoveSpots.childCount)).position,
-                        Quaternion.identity
-                    );
+                        Quaternion.identity);
             }
 
             Time.timeScale = 1;
