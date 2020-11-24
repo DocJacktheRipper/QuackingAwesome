@@ -1,5 +1,4 @@
-﻿using Controllers.Duck;
-using Controllers.Duck.Dash;
+﻿using Controllers.Duck.Dash;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,15 +11,20 @@ namespace Controllers.Buttons
         
         private bool _interactable = true;
         private Button _button;
-        private GameObject _cooldownOverlay;
-
-        public KeyCode _Key;
+        private Image _filling;
         
+        private Color _recoverColor;
+        private Color _normalColor;
+
+        public KeyCode key;
+        private Graphic _graphic;
+
         void Start()
         {
+            _graphic = GetComponent<Graphic>();
             _control = player.GetComponent<DashingBehaviour>();
             _button = GetComponent<Button>();
-            _cooldownOverlay = transform.Find("cooldown_overlay").gameObject;
+            _filling = transform.GetChild(0).GetComponent<Image>();
         }
         
         void Update()
@@ -28,25 +32,16 @@ namespace Controllers.Buttons
             _interactable = (_control.nextDash < Time.time);
             _button.enabled = _interactable;
 
-            if (_interactable)
-            {
-                _cooldownOverlay.SetActive(false);
-            }
-            else
-            {
-                _cooldownOverlay.SetActive(true);
-            }
+            _filling.fillAmount = (_control.nextDash - Time.time) / _control.cooldown;
             
-            if (Input.GetKeyDown(_Key) && _button.enabled)
+            if (Input.GetKeyDown(key) && _button.enabled)
             {
                 FadeToColor(_button.colors.pressedColor);
-                _cooldownOverlay.SetActive(true);
             }
-            else if (Input.GetKeyUp(_Key) && _button.enabled)
+            else if (Input.GetKeyUp(key) && _button.enabled)
             {
                 _button.onClick.Invoke();
                 FadeToColor(_button.colors.normalColor);
-                _cooldownOverlay.SetActive(true);
             }
             /*
             // to look, if it was changed afterwards
@@ -70,8 +65,7 @@ namespace Controllers.Buttons
         
         private void FadeToColor(Color color)
         {
-            var graphic = GetComponent<Graphic>();
-            graphic.CrossFadeColor(color, _button.colors.fadeDuration, true, true);
+            _graphic.CrossFadeColor(color, _button.colors.fadeDuration, true, true);
         }
 
         public void Dash()
