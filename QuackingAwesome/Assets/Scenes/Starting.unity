@@ -52418,7 +52418,7 @@ PrefabInstance:
     - target: {fileID: 8103859394261048295, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8103859394261048295, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
@@ -52468,6 +52468,31 @@ PrefabInstance:
     - target: {fileID: 8103859394261048295, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103859394261048295, guid: b51857b31ca727344804cebf0959d70e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103859394261048295, guid: b51857b31ca727344804cebf0959d70e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103859394261048295, guid: b51857b31ca727344804cebf0959d70e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 453069313}
+    - target: {fileID: 8103859394261048295, guid: b51857b31ca727344804cebf0959d70e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: UpgradeNestCapacity
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103859394261048295, guid: b51857b31ca727344804cebf0959d70e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8230672762788716087, guid: b51857b31ca727344804cebf0959d70e,

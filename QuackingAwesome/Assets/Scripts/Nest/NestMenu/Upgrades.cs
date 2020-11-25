@@ -54,7 +54,7 @@ namespace Nest.NestMenu
 
             _characterControl = d.GetComponent<CharacterControl>();
             _dashingBehaviour = d.GetComponent<DashingBehaviour>();
-            _quackingArea = d.GetComponent<QuackingArea>();
+            _quackingArea = d.transform.Find("QuackingCone").GetComponent<QuackingArea>();
 
             _layAndHatchEgg = nest.GetComponent<LayAndHatchEgg>();
 
