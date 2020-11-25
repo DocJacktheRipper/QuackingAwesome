@@ -1,7 +1,5 @@
-﻿using System;
-using Controllers.Duck.Dash;
+﻿using Controllers.Duck.Dash;
 using Inventory;
-using UnityEditor.U2D;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -24,15 +22,15 @@ namespace Nest.NestMenu
         private int _neededAmountForNest;
                 
         private int[] _dashCosts = {2, 4};
-        private int _dashStep;
+        private int _dashStep = 0;
         private int[] _beakCosts = {1, 3};
-        private int _beakStep;
+        private int _beakStep = 0;
         private int[] _speedCosts = {5, 10};
-        private int _speedStep;
+        private int _speedStep = 0;
         private int[] _scareCosts = {3, 5};
-        private int _scareStep;
+        private int _scareStep = 0;
         private int[] _nestCosts = {1, 1};  
-        private int _nestStep;      
+        private int _nestStep = 0;      
 
         #endregion
         
@@ -89,25 +87,19 @@ namespace Nest.NestMenu
             // make upgrade
             _dashingBehaviour.cooldown -= cooldownReduce[_dashStep];
             
+            // increase cost
+            if (_dashStep + 1 < _dashCosts.Length)
+            {
+                _dashStep++;
+            }
+            _neededAmountForDash = _dashCosts[_dashStep];
+            ShowCost(_neededAmountForDash, dashUpgrade);
             
-            // adjust for next level
-            var toggleHandler = GetToggleHandler(dashUpgrade.gameObject);
-            if (toggleHandler.MoreUpgradesPossible())
+            
+            // adjust toggle
+            if (!MoreUpgradesPossible(dashUpgrade))
             {
                 _neededAmountForDash = int.MaxValue;
-                DisableUpgrade(dashUpgrade);
-            }
-            else
-            {
-                // increase cost
-                if (_dashStep + 1 > _dashCosts.Length)
-                    return;
-                
-                _dashStep++;
-                _neededAmountForDash = _dashCosts[_dashStep];
-                
-                // show visuals
-                toggleHandler.EnableNextStep();
             }
         }
 
@@ -148,7 +140,7 @@ namespace Nest.NestMenu
             var text = upgradeButton.transform.Find("CostText").GetComponent<Text>();
             text.text = "MAX";
             upgradeButton.interactable = false;
-            upgradeButton.enabled = false;
+            //upgradeButton.enabled = false;
         }
 
         private static int ShowCost(int newCost, Button upgradeButton)
@@ -165,6 +157,24 @@ namespace Nest.NestMenu
                 return null; 
 
             return levelSystem.GetComponent<UpgradeVisualToggle>();
+        }
+
+        private static bool MoreUpgradesPossible(Button button)
+        {
+            var toggleHandler = GetToggleHandler(button.gameObject);
+            if (toggleHandler.MoreUpgradesPossible())
+            {
+                // show visuals
+                toggleHandler.EnableNextStep();
+            }
+            
+            if(!toggleHandler.MoreUpgradesPossible())
+            {
+                DisableUpgrade(button);
+                return false;
+            }
+
+            return true;
         }
         
         private static bool ToggleVisuals(GameObject button)

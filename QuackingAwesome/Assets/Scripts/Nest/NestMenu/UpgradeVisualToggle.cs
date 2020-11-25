@@ -24,6 +24,7 @@ namespace Nest.NestMenu
         {
             if (MoreUpgradesPossible())
             {
+                Debug.Log("Upgrade Toggle activated: " + countEnabledSteps);
                 visualSteps[countEnabledSteps].isOn = true;
                 countEnabledSteps++;
             }
@@ -31,6 +32,7 @@ namespace Nest.NestMenu
 
         public bool MoreUpgradesPossible()
         {
+            Debug.Log(countEnabledSteps+"/"+visualSteps.Count);
             return (countEnabledSteps < visualSteps.Count);
         }
     }

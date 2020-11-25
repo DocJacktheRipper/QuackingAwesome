@@ -87,7 +87,7 @@ namespace Nest
             int numOfTransferedStick;
             if ((diff - player.GetNumberOfSticks()) < 0)
             {
-                Debug.Log("More sticks in inventory than needed");
+                //Debug.Log("More sticks in inventory than needed");
                 numberOfSticks = neededSticks;
                 
                 numOfTransferedStick = diff;
