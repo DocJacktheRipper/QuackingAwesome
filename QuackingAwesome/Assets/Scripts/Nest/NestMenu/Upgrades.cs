@@ -1,4 +1,6 @@
-﻿using Controllers.Duck.Dash;
+﻿using Controllers.Duck;
+using Controllers.Duck.Dash;
+using Controllers.Duck.Quack;
 using Inventory;
 using UnityEngine;
 using UnityEngine.UI;
@@ -21,23 +23,28 @@ namespace Nest.NestMenu
         private int _neededAmountForScare;
         private int _neededAmountForNest;
                 
-        private int[] _dashCosts = {2, 4};
+        private readonly int[] _dashCosts = {2, 4};
         private int _dashStep = 0;
-        private int[] _beakCosts = {1, 3};
+        private readonly int[] _beakCosts = {1, 3};
         private int _beakStep = 0;
-        private int[] _speedCosts = {5, 10};
+        private readonly int[] _speedCosts = {5, 10};
         private int _speedStep = 0;
-        private int[] _scareCosts = {3, 5};
+        private readonly int[] _scareCosts = {3, 5};
         private int _scareStep = 0;
-        private int[] _nestCosts = {1, 1};  
+        private readonly int[] _nestCosts = {1, 1};  
         private int _nestStep = 0;      
 
         #endregion
         
 
         private DucklingsInventory _ducklings;
-        private DashingBehaviour _dashingBehaviour;
         private StickInventory _stickInventory;
+        private DashingBehaviour _dashingBehaviour;
+        private QuackingArea _quackingArea;
+        private CharacterControl _characterControl;
+
+        public GameObject nest;
+        private LayAndHatchEgg _layAndHatchEgg;
 
         private void Start()
         {
@@ -45,7 +52,11 @@ namespace Nest.NestMenu
             _ducklings = d.GetComponent<DucklingsInventory>();
             _stickInventory = d.GetComponent<StickInventory>();
 
+            _characterControl = d.GetComponent<CharacterControl>();
             _dashingBehaviour = d.GetComponent<DashingBehaviour>();
+            _quackingArea = d.GetComponent<QuackingArea>();
+
+            _layAndHatchEgg = nest.GetComponent<LayAndHatchEgg>();
 
             InitCostsAndButtons();
         }
@@ -102,35 +113,111 @@ namespace Nest.NestMenu
                 _neededAmountForDash = int.MaxValue;
             }
         }
-
-        /******** Button functions ********
-        public void UpgradeDashCooldown(float amount)
+        
+        public void UpgradeBeakCapacity()
         {
-            var button = dashUpgrade;
-            
-            _dashingBehaviour.cooldown -= amount;
-            _ducklings.RemoveDucklings(_neededAmountForDash);
+            int[] newCapacity = {2, 3};
 
-            _neededAmountForDash += 1;
+            // remove ducklings from inventory
+            _ducklings.RemoveDucklings(_neededAmountForBeak);
             
-            //ShowVisuals(button, _neededAmountForDash);
-        }
-
-        public void UpgradeCarryCapacity(int amount)
-        {
-            var button = beakUpgrade;
+            // make upgrade
+            _stickInventory.maxCapacityOfSticks = newCapacity[_beakStep];
             
-            _stickInventory.maxCapacityOfSticks += amount;
-            Debug.Log("New capacity: " + _stickInventory.maxCapacityOfSticks);
-            _ducklings.RemoveDucklings(_neededAmountForBeak++);
-
-            _neededAmountForBeak = ShowCost(_neededAmountForBeak, button);
-            if (!ToggleVisuals(button.gameObject))
+            // increase cost
+            if (_beakStep + 1 < _beakCosts.Length)
             {
-                DisableUpgrade(button);
+                _beakStep++;
             }
-        }*/
+            _neededAmountForBeak = _beakCosts[_beakStep];
+            ShowCost(_neededAmountForBeak, beakUpgrade);
+            
+            
+            // adjust toggle
+            if (!MoreUpgradesPossible(beakUpgrade))
+            {
+                _neededAmountForBeak = int.MaxValue;
+            }
+        }
+        
+        public void UpgradeDuckSpeed()
+        {
+            float[] multiplier = {1.2f, 1.5f};
 
+            // remove ducklings from inventory
+            _ducklings.RemoveDucklings(_neededAmountForSpeed);
+            
+            // make upgrade
+            _characterControl.AddSpeedModifier(multiplier[_speedStep]);
+            
+            // increase cost
+            if (_speedStep + 1 < _speedCosts.Length)
+            {
+                _speedStep++;
+            }
+            _neededAmountForSpeed = _speedCosts[_speedStep];
+            ShowCost(_neededAmountForSpeed, speedUpgrade);
+            
+            
+            // adjust toggle
+            if (!MoreUpgradesPossible(speedUpgrade))
+            {
+                _neededAmountForSpeed = int.MaxValue;
+            }
+        }
+        
+        public void UpgradeScareChance()
+        {
+            float[] scareChance = {2, 3};
+
+            // remove ducklings from inventory
+            _ducklings.RemoveDucklings(_neededAmountForScare);
+            
+            // make upgrade
+            _quackingArea.SetVolumeMultiplier(scareChance[_scareStep]);
+            
+            // increase cost
+            if (_scareStep + 1 < _scareCosts.Length)
+            {
+                _scareStep++;
+            }
+            _neededAmountForScare = _scareCosts[_scareStep];
+            ShowCost(_neededAmountForScare, scareUpgrade);
+            
+            
+            // adjust toggle
+            if (!MoreUpgradesPossible(scareUpgrade))
+            {
+                _neededAmountForScare = int.MaxValue;
+            }
+        }
+        
+        public void UpgradeNestCapacity()
+        {
+            int[] addCapacity = {1, 1};
+
+            // remove ducklings from inventory
+            _ducklings.RemoveDucklings(_neededAmountForNest);
+            
+            // make upgrade
+            _layAndHatchEgg.maxEggsInNest += addCapacity[_nestStep];
+            
+            // increase cost
+            if (_nestStep + 1 < _nestCosts.Length)
+            {
+                _nestStep++;
+            }
+            _neededAmountForNest = _nestCosts[_nestStep];
+            ShowCost(_neededAmountForNest, nestUpgrade);
+            
+            
+            // adjust toggle
+            if (!MoreUpgradesPossible(nestUpgrade))
+            {
+                _neededAmountForNest = int.MaxValue;
+            }
+        }
+        
         #endregion
 
         #region HelperMethods
@@ -176,21 +263,7 @@ namespace Nest.NestMenu
 
             return true;
         }
-        
-        private static bool ToggleVisuals(GameObject button)
-        {
-            var visualToggle = GetToggleHandler(button);
 
-            // check if possible
-            var isPossible = visualToggle.MoreUpgradesPossible();
-            if (isPossible)
-            {
-                visualToggle.EnableNextStep();
-            }
-
-            return isPossible;
-        }
-        
         #endregion
     }
 }

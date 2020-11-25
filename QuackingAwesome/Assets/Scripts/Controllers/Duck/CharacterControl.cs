@@ -10,7 +10,9 @@ namespace Controllers.Duck
         private Rigidbody _duck;
 
         public float rotation = 3.8f; //value how fast duck rotates
-        public float duckSpeed; //for debugging to see the speed
+
+        private readonly float _baseSpeed = 2f;
+        private float _speed;
 
         private Vector3 _lookDir;
         private Vector3 _movement;
@@ -21,11 +23,11 @@ namespace Controllers.Duck
         void Start()
         {
             _duck = GetComponent<Rigidbody>();
+            _speed = _baseSpeed;
         }
 
         void Update()
         {
-            duckSpeed = _duck.velocity.magnitude;
             x = Input.GetAxis("Horizontal");
             z = Input.GetAxis("Vertical");
 
@@ -42,9 +44,15 @@ namespace Controllers.Duck
         }
         void FixedUpdate()
         {
-            _movement = new Vector3(x, 0f, z) * (2f * Time.deltaTime);
+            _movement = new Vector3(x, 0f, z) * (_speed * Time.deltaTime);
             _duck.AddForce(_movement, ForceMode.VelocityChange);
         }
 
+        public void AddSpeedModifier(float multiplier)
+        {
+            _speed = _baseSpeed * multiplier;
+            
+            Debug.Log("New speed: "+_speed);
+        }
     }
 }

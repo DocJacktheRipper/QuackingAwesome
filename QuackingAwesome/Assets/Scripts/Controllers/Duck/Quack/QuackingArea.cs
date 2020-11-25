@@ -7,6 +7,8 @@ namespace Controllers.Duck.Quack
     public class QuackingArea : MonoBehaviour
     {
         // How heavy is the quack? "damage"
+        private float _baseVolume = 10;
+        private float _volumeMultiplier;
         public float volume;
         private Collider _quackArea;
 
@@ -46,19 +48,11 @@ namespace Controllers.Duck.Quack
 
             _quackArea.enabled = false;
         }
-        
-        /* OLD ONE 
-        private void QuackToBeaver()
-        {
-            if (_beaver.GetComponent<ScaredAway>().AttemptScare(volume))
-            {
-                Debug.Log("is scared away");
-                float dist = _beaver.GetComponent<ScaredAway>().howFarAway;
-                _beaver.GetComponent<BeaverAI>().InvokeScared(transform.parent, dist);
-            }
 
-            GetComponent<Collider>().enabled = false;
+        public void SetVolumeMultiplier(float multiplier)
+        {
+            _volumeMultiplier = multiplier;
+            volume = _baseVolume * multiplier;
         }
-        */
     }
 }
