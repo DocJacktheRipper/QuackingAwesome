@@ -29,7 +29,7 @@ namespace Nest
             _analytics = GameObject.Find("Analytics").GetComponent<TutorialAnalytics>();
         }
 
-        private void OnTriggerEnter(Collider other)
+        private void OnTriggerStay(Collider other)
         {
             PlayerIsTrigger(other);
         }
@@ -43,24 +43,22 @@ namespace Nest
             {
                 return;
             }
-
-
             // check for sticks in duck's inventory and needed for upgrade
-            if (player.GetNumberOfSticks() > 0)
-            {
-                //Debug.Log("Transfering sticks now");
-                TransferSticks(player);
-                
-                if (numberOfSticks >= neededSticks)
-                {
-                    SetNestFinished();
-                }
+            if (player.GetNumberOfSticks() <= 0) return;
             
-                // visually showing progress (?)
-                if (enableDynamicBuilding)
-                {
-                    BuildNestDynamically();
-                }
+            
+            //Debug.Log("Transferring sticks now");
+            TransferSticks(player);
+                
+            if (numberOfSticks >= neededSticks)
+            {
+                SetNestFinished();
+            }
+            
+            // visually showing progress (?)
+            if (enableDynamicBuilding)
+            {
+                BuildNestDynamically();
             }
         }
 
