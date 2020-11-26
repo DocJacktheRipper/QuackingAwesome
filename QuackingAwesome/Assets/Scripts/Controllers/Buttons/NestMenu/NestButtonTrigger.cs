@@ -6,12 +6,12 @@ namespace Controllers.Buttons.NestMenu
     public class NestButtonTrigger : MonoBehaviour
     {
         public NestButton nestMenu;
-        public StickBar stickBar;
+        // public StickBar stickBar;
 
         private void Start()
         {
             nestMenu.ActivateNestButton();
-            stickBar.DisplayStickStatistics(true);
+            // stickBar.DisplayStickStatistics(true);
         }
 
         private void OnTriggerEnter(Collider other)
@@ -25,7 +25,7 @@ namespace Controllers.Buttons.NestMenu
             if (other.CompareTag("Player"))
             {
                 nestMenu.ActivateNestButton();
-                stickBar.DisplayStickStatistics(true);
+                // stickBar.DisplayStickStatistics(true);
             }
         }
     
@@ -40,7 +40,7 @@ namespace Controllers.Buttons.NestMenu
             if (other.CompareTag("Player"))
             {
                 nestMenu.DeactivateNestButton();
-                if (!stickBar.stayVisible) stickBar.DisplayStickStatistics(false);
+                // if (!stickBar.stayVisible) stickBar.DisplayStickStatistics(false);
             }
         }
     }

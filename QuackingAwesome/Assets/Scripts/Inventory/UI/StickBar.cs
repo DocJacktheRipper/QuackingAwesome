@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Controllers.Buttons.NestMenu;
+using UnityEngine;
 using UnityEngine.UI;
 using Nest;
 
@@ -8,6 +9,7 @@ namespace Inventory.UI
     {
         public GameObject stickStatistic;
         public NestBuilding nest;
+        public GameObject nestButton;
 
         public bool stayVisible;
 
@@ -27,16 +29,17 @@ namespace Inventory.UI
         {
             if (nest.NestIsFinished)
             {
-                _text.text = "Enter nest";
-                _text.fontSize = 50;
-                this.GetComponent<Button>().enabled = true;
+                stickStatistic.SetActive(false);
+                nestButton.SetActive(true);
             }
-            
+
             else if (_numberSticksInNest != nest.numberOfSticks)
             {
                 _numberSticksInNest = nest.numberOfSticks;
                 _text.text          = _numberSticksInNest.ToString() + " / " + _numberSticksNeeded;
             }
+
+            
         }
 
         public void DisplayStickStatistics(bool visible)

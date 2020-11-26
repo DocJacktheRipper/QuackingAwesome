@@ -1967,7 +1967,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 4808378788423664165}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 880339910}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -12980,6 +12980,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc8a75a3ef2d2ab4cac09e5597a3e085, type: 3}
+--- !u!1 &880339910 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8946986506195603168, guid: b51857b31ca727344804cebf0959d70e,
+    type: 3}
+  m_PrefabInstance: {fileID: 4808378788423664165}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &883547548
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16011,12 +16017,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca9b6c824a06f7a46af748db64d6caa5, type: 3}
---- !u!1 &1017681545 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1896083893846588863, guid: f406a50b810c1da4ea5642912f70020d,
-    type: 3}
-  m_PrefabInstance: {fileID: 8548730545255092270}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1018319719
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52259,7 +52259,7 @@ PrefabInstance:
         type: 3}
       propertyPath: nestButton
       value: 
-      objectReference: {fileID: 1017681545}
+      objectReference: {fileID: 880339910}
     - target: {fileID: 6243043676791719530, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
       propertyPath: Controls
@@ -52280,6 +52280,11 @@ PrefabInstance:
       propertyPath: statistics
       value: 
       objectReference: {fileID: 1049771584}
+    - target: {fileID: 6243043676791719530, guid: b51857b31ca727344804cebf0959d70e,
+        type: 3}
+      propertyPath: stickBar
+      value: 
+      objectReference: {fileID: 2115409474}
     - target: {fileID: 6585831428339960807, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -52533,12 +52538,12 @@ PrefabInstance:
     - target: {fileID: 8567324596793550571, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -20
+      value: -38
       objectReference: {fileID: 0}
     - target: {fileID: 8567324596793550571, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 85.8
+      value: 133
       objectReference: {fileID: 0}
     - target: {fileID: 8567324596793550571, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
@@ -54052,6 +54057,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 189
       objectReference: {fileID: 0}
+    - target: {fileID: 6943159915549520018, guid: f406a50b810c1da4ea5642912f70020d,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6943159915549520018, guid: f406a50b810c1da4ea5642912f70020d,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6943159915549520018, guid: f406a50b810c1da4ea5642912f70020d,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8293797933335767842, guid: f406a50b810c1da4ea5642912f70020d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -54102,6 +54122,11 @@ PrefabInstance:
       propertyPath: nest
       value: 
       objectReference: {fileID: 1369831723}
+    - target: {fileID: 8632427952567579905, guid: f406a50b810c1da4ea5642912f70020d,
+        type: 3}
+      propertyPath: nestButton
+      value: 
+      objectReference: {fileID: 880339910}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f406a50b810c1da4ea5642912f70020d, type: 3}
 --- !u!224 &8548730545255092271 stripped
