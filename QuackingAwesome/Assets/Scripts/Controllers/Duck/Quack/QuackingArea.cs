@@ -1,4 +1,5 @@
-﻿using AI.Beaver.StateMachine_Beaver;
+﻿using AI;
+using AI.Beaver.StateMachine_Beaver;
 using AI.Beaver.Trigger;
 using UnityEngine;
 

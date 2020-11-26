@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace AI.Beaver.Trigger
+namespace AI
 {
     public class ScaredAway : MonoBehaviour
     {

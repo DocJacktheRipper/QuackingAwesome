@@ -17,7 +17,7 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
             ResetTimer();
         }
 
-        #region
+        #region StateHandler
         public override void Enter()
         {
             base.Enter();

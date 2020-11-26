@@ -145,16 +145,28 @@
                 <e p="ISwimIdleStateBeaver.cs" t="Include" />
                 <e p="StateHandlerBeaver.cs" t="Include" />
               </e>
-              <e p="ToDeleteLater" t="Include">
-                <e p="BeaverAI.cs" t="Include" />
-                <e p="DuckTrigger.cs" t="Include" />
-              </e>
               <e p="Trigger" t="Include">
                 <e p="BeaverBodyCollider.cs" t="Include" />
                 <e p="BeaverDetectionTriggered.cs" t="Include" />
-                <e p="ScaredAway.cs" t="Include" />
               </e>
             </e>
+            <e p="Frog" t="Include">
+              <e p="StateMachine_Frog" t="Include">
+                <e p="BehaviourMethodsFrog.cs" t="Include" />
+                <e p="ConcreteStates" t="Include">
+                  <e p="CatchingPeaStateFrog.cs" t="Include" />
+                  <e p="ScaredStateFrog.cs" t="Include" />
+                  <e p="SwimmingStateFrog.cs" t="Include" />
+                </e>
+                <e p="IStateFrog.cs" t="Include" />
+                <e p="StateHandlerFrog.cs" t="Include" />
+              </e>
+              <e p="Trigger" t="Include">
+                <e p="FrogBodyCollider.cs" t="Include" />
+                <e p="FrogDetectionTrigger.cs" t="Include" />
+              </e>
+            </e>
+            <e p="ScaredAway.cs" t="Include" />
             <e p="StateMachine" t="Include">
               <e p="BehaviourMethods.cs" t="Include" />
               <e p="IState.cs" t="Include" />

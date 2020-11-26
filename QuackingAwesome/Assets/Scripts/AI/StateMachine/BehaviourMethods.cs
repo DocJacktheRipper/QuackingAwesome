@@ -25,6 +25,17 @@ namespace AI.StateMachine
         }
 
         #region Move
+        
+        public void AddSpeed(float scaredAwayRunAwaySpeedBonus)
+        {
+            navigation.speed += scaredAwayRunAwaySpeedBonus;
+        }
+
+        public float GetSpeed()
+        {
+            return navigation.speed;
+        }
+        
         public void StartMovement()
         {
             navigation.isStopped = false;

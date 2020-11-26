@@ -18,7 +18,7 @@ namespace AI.Beaver.StateMachine_Beaver
 
         protected bool StickTriggeredDetection(Collider other)
         {
-            if (other.CompareTag("Stick"))
+            if (StickIsTrigger(other))
             {
                 //Debug.Log("Yes, beaver has seen stick.");
                 StateHandler.StickDetected(other.transform);

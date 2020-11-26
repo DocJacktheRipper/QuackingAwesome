@@ -1,29 +1,21 @@
 ﻿using AI.StateMachine;
-using Inventory;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace AI.Beaver.StateMachine_Beaver
+namespace AI.Frog.StateMachine_Frog
 {
-    public class BehaviourMethodsBeaver : BehaviourMethods
+    public class BehaviourMethodsFrog : BehaviourMethods
     {
-        public StickInventory stickInventory;
-
         private NavMeshPath _path;
-
-        private void Awake()
+        
+        public void EatPea(Collider pea)
         {
-            _path = new NavMeshPath();
+            Destroy(pea.gameObject);
+            // TODO: respawn it after some time
         }
-
-        public bool CollectStick(Collider other)
-        {
-            if(stickInventory.collectingEnabled)
-                return stickInventory.AddStick(other.transform);
-            return false;
-        }
-
-
+        
+        
+        
         #region Navigation
 
         public override void GotoNextPoint()
