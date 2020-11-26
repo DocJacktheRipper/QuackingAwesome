@@ -20,23 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb082888-ab6d-41db-a40b-24e16e1dbeec" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Animals/Beaver.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Animals/Beaver.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/Sounds/DuckSounds/Other_Animals.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/Sounds/DuckSounds/Other_Animals/Beaver_fail.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/Sounds/DuckSounds/Other_Animals/Beaver_fail.mp3.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Test Area/BeaverTestMap.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Test Area/BeaverTestMap.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/BehaviourMethodsBeaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/BehaviourMethodsBeaver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/SwimmingStateBeaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/SwimmingStateBeaver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/IStateBeaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/IStateBeaver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/ToDeleteLater.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/ToDeleteLater/BeaverAI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/ToDeleteLater/BeaverAI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/ToDeleteLater/DuckTrigger.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/ToDeleteLater/DuckTrigger.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/Trigger/ScaredAway.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/Trigger/ScaredAway.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/StateMachine/BehaviourMethods.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/StateMachine/BehaviourMethods.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingArea.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Frog/StateMachine_Frog/ConcreteStates/CatchingPeaStateFrog.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Frog/StateMachine_Frog/ConcreteStates/CatchingPeaStateFrog.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Frog/Trigger/FrogBodyCollider.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Frog/Trigger/FrogBodyCollider.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,17 +111,17 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/ScaredAway.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Frog/StateMachine_Frog/IStateFrog.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Frog/StateMachine_Frog/ConcreteStates/IdleStateFrog.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Frog/StateMachine_Frog/ConcreteStates/CatchingPeaStateFrog.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Frog/StateMachine_Frog/StateHandlerFrog.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/SwimmingStateBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/IStateBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/BehaviourMethodsBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/StateMachine/BehaviourMethods.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Frog/StateMachine_Frog/ConcreteStates/ScaredStateFrog.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Frog/Trigger/FrogDetectionTrigger.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Frog/Trigger/FrogBodyCollider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Frog/StateMachine_Frog/BehaviourMethodsFrog.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Frog/StateMachine_Frog/StateHandlerFrog.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Frog/StateMachine_Frog/ConcreteStates/SwimmingStateFrog.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Frog/StateMachine_Frog/ConcreteStates/CatchingPeaStateFrog.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Frog/Trigger/FrogBodyCollider.cs" />
       </list>
     </option>
   </component>
@@ -235,7 +225,7 @@
       <workItem from="1606130998563" duration="2229000" />
       <workItem from="1606228846691" duration="1536000" />
       <workItem from="1606302707953" duration="11079000" />
-      <workItem from="1606392828049" duration="4252000" />
+      <workItem from="1606392828049" duration="5944000" />
     </task>
     <servers />
   </component>

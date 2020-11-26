@@ -20,7 +20,11 @@ namespace AI.Frog.StateMachine_Frog.ConcreteStates
         {
             base.Execute();
             
-            if (!(peaPosition != null))
+            if (ConcreteMethods.HasReachedDestination())
+            {
+                StateHandler.ChangeState(StateHandler.swimming);
+            }
+            if ((peaPosition == null))
             {
                 StateHandler.ChangeState(StateHandler.swimming);
             }
