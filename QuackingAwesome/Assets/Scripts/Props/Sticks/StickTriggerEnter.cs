@@ -25,6 +25,7 @@ namespace Props.Sticks
         private bool _deleteOnPositionReached;
         
         // animation
+        private Animation _stickPickByDuckAnimation;
         private Animator _duckAnimator;
         private static readonly int DoPickAndKeep = Animator.StringToHash("DoPickAndKeep");
 
@@ -36,6 +37,7 @@ namespace Props.Sticks
             _collider = gameObject.GetComponent<SphereCollider>();
             var duck = GameObject.FindWithTag("Player");
             _duckAnimator = duck.GetComponent<Animator>();
+            _stickPickByDuckAnimation = GetComponent<Animation>();
             
             _duckCarriedSticks = duck.transform.Find("CarriedSticks");
             positionPool = GameObject.Find("StickSpawnSpots").transform;
@@ -130,10 +132,12 @@ namespace Props.Sticks
 
             if (inventory.AddStick())
             {
-                _analytics.IncrementSticks();
                 PickStick(_duckCarriedSticks);
                 // animation for stick picking
                 _duckAnimator.SetTrigger(DoPickAndKeep); //TODO: make dynamically for other animals
+                _stickPickByDuckAnimation.Play();
+                Debug.Log("Animation should have played");
+                _analytics.IncrementSticks();
             }
             else
             {

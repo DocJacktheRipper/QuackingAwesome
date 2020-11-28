@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 947556906637796895}
   - component: {fileID: -9109192893763330523}
   - component: {fileID: -4461138531952986509}
+  - component: {fileID: 2559538831103402700}
   m_Layer: 0
   m_Name: StickV1
   m_TagString: Stick
@@ -140,3 +141,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.01
   m_Center: {x: -0.017610911, y: 0.00006954372, z: 0.0053145587}
+--- !u!111 &2559538831103402700
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4532185491533887296}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 7469b8c22fa7dec45ad371a041919211, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 7469b8c22fa7dec45ad371a041919211, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
