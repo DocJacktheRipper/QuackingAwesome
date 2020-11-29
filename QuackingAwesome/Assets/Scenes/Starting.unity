@@ -37690,12 +37690,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -51275,6 +51275,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4966003075768817030}
     m_Modifications:
+    - target: {fileID: 227902073693997574, guid: 6309e6e9d11f68a4083d047c2aba84a1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 524059270370346353, guid: 6309e6e9d11f68a4083d047c2aba84a1,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -53129,8 +53134,8 @@ MonoBehaviour:
   KnobBackground: {fileID: 4966003076860249277}
   knobBackgroundFollowKnob: 1
   AnchoredAreaBounds:
-    m_Center: {x: 671.35004, y: 357.05084, z: 0}
-    m_Extent: {x: 822.70605, y: 531.3129, z: 0}
+    m_Center: {x: 671.35004, y: 285.52805, z: 0}
+    m_Extent: {x: 822.70605, y: 424.88278, z: 0}
   NormalizedAnchoredAreaBounds:
     m_Center: {x: 0.30240992, y: 0.2572325, z: 0}
     m_Extent: {x: 0.3705883, y: 0.38277727, z: 0}
