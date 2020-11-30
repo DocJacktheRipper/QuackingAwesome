@@ -14,6 +14,9 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
             base.Enter();
             InvokeScared(scaredAway.source, scaredAway.howFarAway);
             ConcreteMethods.AddSpeed(scaredAway.runAwaySpeedBonus);
+            
+            // drop sticks
+            ConcreteMethods.LetSticksFall();
 
             if (divingEnabled)
             {

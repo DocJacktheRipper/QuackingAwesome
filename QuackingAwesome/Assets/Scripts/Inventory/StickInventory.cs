@@ -1,5 +1,4 @@
-using System;
-using Props.Sticks;
+using Spawning.Props.PropTrigger;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -13,6 +12,7 @@ namespace Inventory
         public int maxCapacityOfSticks = 1;
 
         public Transform carriedSticks;
+        public float dropRadius = 1.5f;
 
         private Transform _stickEnvironmentContainer;
 
@@ -70,7 +70,7 @@ namespace Inventory
             if (numberOfSticks <= maxCapacityOfSticks) 
                 return 0;
         
-            var overflow = numberOfSticks - maxCapacityOfSticks ;
+            var overflow = numberOfSticks - maxCapacityOfSticks;
             numberOfSticks = maxCapacityOfSticks;
             return overflow;
         }
@@ -117,7 +117,11 @@ namespace Inventory
                 return;
 
             // drop it within radius
-            var targetPos = (Vector3) Random.insideUnitCircle * 1.5f;
+            var targetPos = (Vector3) Random.insideUnitCircle;
+            targetPos.Normalize();
+            targetPos *= dropRadius;
+            targetPos.z = targetPos.y;
+            // around Inventory
             targetPos += transform.position;
             targetPos.y = 0f;    
 

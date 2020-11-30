@@ -1,11 +1,8 @@
-﻿using AI.Beaver.StateMachine_Beaver;
+﻿using Analytics;
 using Inventory;
-using Props.spawning;
 using UnityEngine;
 
-using Analytics;
-
-namespace Props.Sticks
+namespace Spawning.Props.PropTrigger
 {
     public class StickTriggerEnter : MonoBehaviour
     {

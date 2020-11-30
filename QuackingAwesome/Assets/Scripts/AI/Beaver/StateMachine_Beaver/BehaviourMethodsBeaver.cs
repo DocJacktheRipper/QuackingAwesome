@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using AI.StateMachine;
+﻿using AI.StateMachine;
 using Inventory;
 using Spawning.Animals;
 using UnityEngine;
@@ -12,17 +11,25 @@ namespace AI.Beaver.StateMachine_Beaver
         public StickInventory stickInventory;
 
         private NavMeshPath _path;
+        private static readonly int DoDive = Animator.StringToHash("DoDive");
 
         private void Awake()
         {
             _path = new NavMeshPath();
         }
 
+        #region Others
+
         public bool CollectStick(Collider other)
         {
             if(stickInventory.collectingEnabled)
                 return stickInventory.AddStick(other.transform);
             return false;
+        }
+
+        public void LetSticksFall()
+        {
+            stickInventory.DropSticks(stickInventory.GetNumberOfSticks());
         }
 
         public void DiveAndRespawnAtNest(float respawnTime)
@@ -35,7 +42,7 @@ namespace AI.Beaver.StateMachine_Beaver
             }
             
             // dive
-            currentTarget.y += -2;
+            animator.SetTrigger(DoDive);
             
             // Invoke respawn
             var spawner = GameObject.Find("SpawningBehaviour").GetComponent<BeaverSpawner>();
@@ -44,15 +51,16 @@ namespace AI.Beaver.StateMachine_Beaver
             spawner.SpawnWithDelay(respawnTime);
             
             // Delete BeaverObject after some time
-            Wait(respawnTime);
-            Destroy(beaverObject);
+            Invoke(nameof(DestroyBeaver), respawnTime);
         }
 
-        private IEnumerable<WaitForSeconds> Wait(float seconds)
+        private void DestroyBeaver()
         {
-            yield return new WaitForSeconds(seconds);
+            Destroy(transform.parent.gameObject);
         }
 
+
+        #endregion
 
         #region Navigation
 

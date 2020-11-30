@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 20d7b5b50a3e7624796b96279da1f38f,
     type: 2}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -798,6 +798,16 @@ PrefabInstance:
       propertyPath: beaverNest
       value: 
       objectReference: {fileID: 1000256667}
+    - target: {fileID: 3210897502140052039, guid: 77f9ba5ff4379b347bd0df8445a7077c,
+        type: 3}
+      propertyPath: divingEnabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3210897502140052039, guid: 77f9ba5ff4379b347bd0df8445a7077c,
+        type: 3}
+      propertyPath: respawnTime
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4242092220193179900, guid: 77f9ba5ff4379b347bd0df8445a7077c,
         type: 3}
       propertyPath: m_Name
@@ -2750,8 +2760,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnOnStart: 1
-  minItemsInWorld: 1
-  maxItemsInWorld: 0
+  minItemsInWorld: 0
+  maxItemsInWorld: 2
   objectsToSpawn:
   - {fileID: 4242092220193179900, guid: 77f9ba5ff4379b347bd0df8445a7077c, type: 3}
   targetParent: {fileID: 1744510205}
