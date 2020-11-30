@@ -40,7 +40,7 @@ namespace AI.Alligator.StateMachine_Alligator.ConcreteStates
 
             if(other.transform.Equals(target))
             {
-                stateHandler.ChangeState(stateHandler.idle);
+                StateHandler.ChangeState(StateHandler.idle);
             }
         }
     }

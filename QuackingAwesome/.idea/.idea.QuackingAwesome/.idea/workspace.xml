@@ -21,10 +21,16 @@
   <component name="ChangeListManager">
     <list default="true" id="cb082888-ab6d-41db-a40b-24e16e1dbeec" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/BehaviourMethodsBeaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/BehaviourMethodsBeaver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/ScaredStateBeaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/ScaredStateBeaver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/StickInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/StickInventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawning/Props/PropTrigger/StickTriggerEnter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawning/Props/PropTrigger/StickTriggerEnter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Animals/Alligator.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Animals/Alligator.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Starting.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Starting.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/BehaviourMethodsAlligator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/BehaviourMethodsAlligator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/ConcreteStates/ChasingStateAlligator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/ConcreteStates/ChasingStateAlligator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/ConcreteStates/IdleStateAlligator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/ConcreteStates/IdleStateAlligator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/ConcreteStates/ScaredStateAlligator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/ConcreteStates/ScaredStateAlligator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/ConcreteStates/SwimmingStateAlligator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/ConcreteStates/SwimmingStateAlligator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/IStateAlligator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/IStateAlligator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Frog/StateMachine_Frog/IStateFrog.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Frog/StateMachine_Frog/IStateFrog.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingArea.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,8 +75,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/Trigger/ScaredAway.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/StateMachine/IState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/ScaredBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/IdleStateBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Camera/PlayerFollow.cs" />
@@ -95,7 +99,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/CharacterControl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Nest/NestMenu/Upgrades.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Frog/StateMachine_Frog/IStateFrog.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Frog/StateMachine_Frog/ConcreteStates/IdleStateFrog.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/SwimmingStateBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/IStateBeaver.cs" />
@@ -109,17 +112,20 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Frog/Trigger/FrogBodyCollider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Props/Sticks/StickTriggerEnter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/ScaredAway.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/StateHandlerAlligator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/ConcreteStates/ScaredStateAlligator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Props/spawning/Spawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Spawning/Spawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Spawning/Animals/BeaverSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Camera/SimpleCameraController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/BehaviourMethodsBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/ScaredStateBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Spawning/Props/PropTrigger/StickTriggerEnter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/StickInventory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/BehaviourMethodsBeaver.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/IStateAlligator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/ConcreteStates/ScaredStateAlligator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingArea.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/BehaviourMethodsAlligator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Frog/StateMachine_Frog/IStateFrog.cs" />
       </list>
     </option>
   </component>
@@ -225,7 +231,7 @@
       <workItem from="1606302707953" duration="11079000" />
       <workItem from="1606392828049" duration="5944000" />
       <workItem from="1606566691829" duration="2960000" />
-      <workItem from="1606727724346" duration="6016000" />
+      <workItem from="1606727724346" duration="9086000" />
     </task>
     <servers />
   </component>

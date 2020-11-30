@@ -21,7 +21,7 @@ namespace AI.Alligator.StateMachine_Alligator.ConcreteStates
             if (base.SwitchStatesAfterTime())
             {
                 ResetWaitingTime();
-                stateHandler.ChangeState(stateHandler.idle);
+                StateHandler.ChangeState(StateHandler.idle);
             }
             if (methods.HasReachedDestination())
             {
@@ -42,8 +42,8 @@ namespace AI.Alligator.StateMachine_Alligator.ConcreteStates
 
             if (other.CompareTag("Player"))
             {
-                stateHandler.chasing.target = other.transform;
-                stateHandler.ChangeState(stateHandler.chasing);
+                StateHandler.chasing.target = other.transform;
+                StateHandler.ChangeState(StateHandler.chasing);
             }
         }
         #endregion

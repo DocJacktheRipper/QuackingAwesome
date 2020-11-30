@@ -561,6 +561,7 @@ MonoBehaviour:
   numberOfSticks: 0
   maxCapacityOfSticks: 1
   carriedSticks: {fileID: 1050548652506878050}
+  dropRadius: 1.5
 --- !u!1 &7120258515362013496
 GameObject:
   m_ObjectHideFlags: 0
@@ -698,6 +699,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scaredAway: {fileID: 8989431789419713009}
+  divingEnabled: 1
+  respawnTime: 3
 --- !u!1 &8593404517860725340
 GameObject:
   m_ObjectHideFlags: 0

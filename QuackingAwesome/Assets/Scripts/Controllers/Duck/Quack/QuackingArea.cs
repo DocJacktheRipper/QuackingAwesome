@@ -33,7 +33,7 @@ namespace Controllers.Duck.Quack
             var ai = animal.transform.parent.Find("AI");
             if (ai == null)
             {
-                Debug.Log("AI not found!");
+                //Debug.Log("AI not found!");
                 return;
             }
             ScaredAway scared = ai.Find("Scare").GetComponent<ScaredAway>();
@@ -83,7 +83,7 @@ namespace Controllers.Duck.Quack
 
         private void ScareAlligator(ScaredAway scared, Transform ai)
         {
-            Debug.Log("Beaver is scared away");
+            Debug.Log("Alligator is scared away");
             var stateHandler = ai.GetComponent<StateHandlerAlligator>();
                 
             // prepare and change states

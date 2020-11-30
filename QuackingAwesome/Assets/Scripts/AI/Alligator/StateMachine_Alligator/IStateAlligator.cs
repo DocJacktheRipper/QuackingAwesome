@@ -4,16 +4,16 @@ namespace AI.Alligator.StateMachine_Alligator
 {
     public class IStateAlligator : IState
     {
-        protected StateHandlerAlligator stateHandler;
-        protected BehaviourMethodsAlligator concreteMethods;
+        protected StateHandlerAlligator StateHandler;
+        protected BehaviourMethodsAlligator ConcreteMethods;
 
         protected override void Awake()
         {
             base.Awake();
             
-            stateHandler = ai.GetComponent<StateHandlerAlligator>();
+            StateHandler = ai.GetComponent<StateHandlerAlligator>();
 
-            concreteMethods = ai.GetComponent<BehaviourMethodsAlligator>();
+            ConcreteMethods = ai.GetComponent<BehaviourMethodsAlligator>();
         }
     }
 }

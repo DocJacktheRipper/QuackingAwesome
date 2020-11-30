@@ -26,5 +26,10 @@ namespace AI.Alligator.StateMachine_Alligator
         }
         
         #endregion
+
+        public void DiveAndRespawnAtNest(float respawnTime)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

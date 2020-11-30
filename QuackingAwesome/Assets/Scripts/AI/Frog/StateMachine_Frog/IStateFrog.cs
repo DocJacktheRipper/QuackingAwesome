@@ -8,7 +8,7 @@ namespace AI.Frog.StateMachine_Frog
         protected StateHandlerFrog StateHandler;
         protected BehaviourMethodsFrog ConcreteMethods;
 
-        private void Awake()
+        protected override void Awake()
         {
             base.Awake();
         
