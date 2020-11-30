@@ -20,8 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb082888-ab6d-41db-a40b-24e16e1dbeec" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Interface Canvas/Main Menu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Interface Canvas/Main Menu.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/StateHandlerAlligator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/StateHandlerAlligator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/BehaviourMethodsBeaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/BehaviourMethodsBeaver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/ScaredStateBeaver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/ScaredStateBeaver.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/ScaredAway.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/ScaredAway.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingArea.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +51,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EE47BE73-F7EF-409C-A5E5-CE4B121745B7/d7/a4a66fbb/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EE47BE73-F7EF-409C-A5E5-CE4B121745B7/d1/46dc56a7/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/StateMachine/IStateHandlerAI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/ConcreteStates/ScaredStateAlligator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/BehaviourMethodsAlligator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/BehaviourMethodsBeaver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/Beaver/Trigger/BeaverDetectionTriggered.cs" root0="FORCE_HIGHLIGHTING" />
@@ -66,9 +73,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Dash/DashingBehaviour.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/BehaviourMethodsAlligator.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/StateHandlerAlligator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/Trigger/AlligatorPreyInReach.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/StateMachine/IStateHandlerAI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/Trigger/AlligatorDetectionTriggered.cs" />
@@ -99,15 +103,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Nest/NestBuilding.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Nest/NestMenu/UpgradeVisualToggle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/CharacterControl.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingArea.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingBehaviour.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Nest/NestMenu/Upgrades.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/ScaredAway.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Frog/StateMachine_Frog/IStateFrog.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Frog/StateMachine_Frog/ConcreteStates/IdleStateFrog.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/SwimmingStateBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/IStateBeaver.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/BehaviourMethodsBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/StateMachine/BehaviourMethods.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Frog/StateMachine_Frog/ConcreteStates/ScaredStateFrog.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Frog/Trigger/FrogDetectionTrigger.cs" />
@@ -117,6 +118,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Frog/StateMachine_Frog/ConcreteStates/CatchingPeaStateFrog.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Frog/Trigger/FrogBodyCollider.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Props/Sticks/StickTriggerEnter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/ScaredAway.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingArea.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/StateHandlerAlligator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/ConcreteStates/ScaredStateAlligator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/ScaredStateBeaver.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/BehaviourMethodsBeaver.cs" />
       </list>
     </option>
   </component>
@@ -222,6 +229,7 @@
       <workItem from="1606302707953" duration="11079000" />
       <workItem from="1606392828049" duration="5944000" />
       <workItem from="1606566691829" duration="2960000" />
+      <workItem from="1606727724346" duration="2359000" />
     </task>
     <servers />
   </component>

@@ -1,5 +1,4 @@
-﻿using AI.Beaver.Trigger;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
 {
@@ -7,12 +6,20 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
     {
         public ScaredAway scaredAway;
         private float _waitUntil;
+        public bool divingEnabled;
 
         public override void Enter()
         {
             base.Enter();
             InvokeScared(scaredAway.source, scaredAway.howFarAway);
             ConcreteMethods.AddSpeed(scaredAway.runAwaySpeedBonus);
+
+            if (divingEnabled)
+            {
+                // disable colliders and trigger diving animation (or move body under surface)
+                
+                // at the end delete animal and set spawner
+            }
 
             // calculate when to switch to different state again
             _waitUntil = Time.time + (scaredAway.howFarAway / ConcreteMethods.GetSpeed());

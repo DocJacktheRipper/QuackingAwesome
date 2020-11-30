@@ -23,6 +23,21 @@ namespace AI.Beaver.StateMachine_Beaver
             return false;
         }
 
+        public void DiveAndRespawnAtNest()
+        {
+            var beaverObject = transform.parent.gameObject;
+            // disable colliders
+            foreach(var c in beaverObject.GetComponentsInChildren<Collider>())
+            {
+                c.enabled = false;
+            }
+            
+            // dive
+            currentTarget.y += -2;
+            
+            
+        }
+
 
         #region Navigation
 

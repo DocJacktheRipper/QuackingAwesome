@@ -13,6 +13,7 @@ namespace AI.Alligator.StateMachine_Alligator
         public IdleStateAlligator idle;
         public ChasingStateAlligator chasing;
         public SwimmingStateAlligator swimming;
+        public ScaredStateAlligator scared;
 
         #endregion
         

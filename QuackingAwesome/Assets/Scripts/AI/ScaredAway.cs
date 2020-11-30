@@ -12,6 +12,7 @@ namespace AI
         public float currentChance;
         public float minChance;
         public float chanceDropRate;
+        
         public float howFarAway;
         public float runAwaySpeedBonus;
 
