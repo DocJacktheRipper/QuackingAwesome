@@ -1,4 +1,6 @@
-﻿namespace Props.spawning
+﻿using Spawning;
+
+namespace Props.spawning
 {
     public class StickSpawner : Spawner
     {

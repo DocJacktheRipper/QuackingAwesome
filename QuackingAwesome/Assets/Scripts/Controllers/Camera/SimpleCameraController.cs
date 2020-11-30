@@ -22,12 +22,14 @@ namespace UnityTemplateProjects
 
             public void SetFromTransform(Transform t)
             {
-                pitch = t.eulerAngles.x;
-                yaw = t.eulerAngles.y;
-                roll = t.eulerAngles.z;
-                x = t.position.x;
-                y = t.position.y;
-                z = t.position.z;
+                var eulerAngles = t.eulerAngles;
+                pitch = eulerAngles.x;
+                yaw = eulerAngles.y;
+                roll = eulerAngles.z;
+                var position = t.position;
+                x = position.x;
+                y = position.y;
+                z = position.z;
             }
 
             public void Translate(Vector3 translation)

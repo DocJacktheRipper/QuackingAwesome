@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 20d7b5b50a3e7624796b96279da1f38f,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2671,6 +2671,7 @@ GameObject:
   - component: {fileID: 148753686}
   - component: {fileID: 148753687}
   - component: {fileID: 148753688}
+  - component: {fileID: 148753689}
   m_Layer: 0
   m_Name: SpawningBehaviour
   m_TagString: Untagged
@@ -2712,8 +2713,8 @@ MonoBehaviour:
   - {fileID: 6664525395264644254, guid: 46425fd1a7cd6364c9c714d6c0e092f9, type: 3}
   - {fileID: 7218634431413887039, guid: 44614086633d99748aa21b43468905d7, type: 3}
   targetParent: {fileID: 1302999286}
-  enableSpawnRadius: 1
   spawningDelay: 1
+  spawnRadius: 1.5
   spawningPointParent: {fileID: 1422837318}
 --- !u!114 &148753688
 MonoBehaviour:
@@ -2733,9 +2734,30 @@ MonoBehaviour:
   objectsToSpawn:
   - {fileID: 5076473282928104849, guid: a8cfe5bfbf722fb4d8646eb7545feead, type: 3}
   targetParent: {fileID: 1513328459}
-  enableSpawnRadius: 1
   spawningDelay: 0
+  spawnRadius: 1.5
   spawningPointParent: {fileID: 773221474}
+--- !u!114 &148753689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148753685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d634a5346bc0fcc49a03b208c5fee4d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnOnStart: 1
+  minItemsInWorld: 1
+  maxItemsInWorld: 0
+  objectsToSpawn:
+  - {fileID: 4242092220193179900, guid: 77f9ba5ff4379b347bd0df8445a7077c, type: 3}
+  targetParent: {fileID: 1744510205}
+  spawningDelay: 0
+  spawnRadius: 0.2
+  spawningPointParent: {fileID: 1808989886}
 --- !u!1001 &149321681
 PrefabInstance:
   m_ObjectHideFlags: 0

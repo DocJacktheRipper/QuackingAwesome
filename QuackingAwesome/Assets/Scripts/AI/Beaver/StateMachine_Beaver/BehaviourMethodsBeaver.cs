@@ -1,5 +1,7 @@
-﻿using AI.StateMachine;
+﻿using System.Collections.Generic;
+using AI.StateMachine;
 using Inventory;
+using Spawning.Animals;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -23,7 +25,7 @@ namespace AI.Beaver.StateMachine_Beaver
             return false;
         }
 
-        public void DiveAndRespawnAtNest()
+        public void DiveAndRespawnAtNest(float respawnTime)
         {
             var beaverObject = transform.parent.gameObject;
             // disable colliders
@@ -35,7 +37,20 @@ namespace AI.Beaver.StateMachine_Beaver
             // dive
             currentTarget.y += -2;
             
+            // Invoke respawn
+            var spawner = GameObject.Find("SpawningBehaviour").GetComponent<BeaverSpawner>();
+            if (spawner == null)
+                return;
+            spawner.SpawnWithDelay(respawnTime);
             
+            // Delete BeaverObject after some time
+            Wait(respawnTime);
+            Destroy(beaverObject);
+        }
+
+        private IEnumerable<WaitForSeconds> Wait(float seconds)
+        {
+            yield return new WaitForSeconds(seconds);
         }
 
 

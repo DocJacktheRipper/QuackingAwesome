@@ -249,18 +249,20 @@
               <e p="BeaverNest.cs" t="Include" />
             </e>
           </e>
-          <e p="Props" t="Include">
-            <e p="PeaCollecting.cs" t="Include" />
-            <e p="spawning" t="Include">
-              <e p="OnSpawnableDelete.cs" t="Include" />
+          <e p="spawning" t="Include">
+            <e p="Animals" t="Include">
+              <e p="BeaverSpawner.cs" t="Include" />
+            </e>
+            <e p="Props" t="Include">
               <e p="PeaSpawner.cs" t="Include" />
-              <e p="Spawner.cs" t="Include" />
-              <e p="SpawnPoint.cs" t="Include" />
+              <e p="PropTrigger" t="Include">
+                <e p="PeaCollecting.cs" t="Include" />
+                <e p="StickTriggerEnter.cs" t="Include" />
+              </e>
               <e p="StickSpawner.cs" t="Include" />
             </e>
-            <e p="Sticks" t="Include">
-              <e p="StickTriggerEnter.cs" t="Include" />
-            </e>
+            <e p="Spawner.cs" t="Include" />
+            <e p="SpawnPoint.cs" t="Include" />
           </e>
           <e p="Tutorial" t="Include">
             <e p="DisplayTutorialAdvices.cs" t="Include" />

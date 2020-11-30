@@ -7,6 +7,7 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
         public ScaredAway scaredAway;
         private float _waitUntil;
         public bool divingEnabled;
+        public float respawnTime;
 
         public override void Enter()
         {
@@ -16,9 +17,7 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
 
             if (divingEnabled)
             {
-                // disable colliders and trigger diving animation (or move body under surface)
-                
-                // at the end delete animal and set spawner
+                ConcreteMethods.DiveAndRespawnAtNest(respawnTime);
             }
 
             // calculate when to switch to different state again
