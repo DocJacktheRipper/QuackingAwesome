@@ -133,7 +133,6 @@ namespace Spawning.Props.PropTrigger
                 // animation for stick picking
                 _duckAnimator.SetTrigger(DoPickAndKeep); //TODO: make dynamically for other animals
                 _stickPickByDuckAnimation.Play();
-                Debug.Log("Animation should have played");
                 _analytics.IncrementSticks();
             }
             else
