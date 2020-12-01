@@ -48,7 +48,7 @@ namespace AI.StateMachine
 
         public bool HasReachedDestination()
         {
-            if (!navigation.pathPending && navigation.remainingDistance < 0.5f)
+            if (!navigation.pathPending && navigation.remainingDistance < 0.05f)
             {
                 return true;
             }

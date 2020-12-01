@@ -7,9 +7,13 @@ namespace AI.Frog.StateMachine_Frog
     public class BehaviourMethodsFrog : BehaviourMethods
     {
         private NavMeshPath _path;
-        
+        private static readonly int DoEat = Animator.StringToHash("DoEat");
+
         public void EatPea(Collider pea)
         {
+            animator.SetTrigger(DoEat);
+            
+            
             Destroy(pea.gameObject);
             // TODO: respawn it after some time
         }

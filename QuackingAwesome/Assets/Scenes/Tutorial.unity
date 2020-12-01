@@ -2480,8 +2480,13 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5599453207781221003, guid: e8d4d70fcab311d4eb38206011073b6f,
         type: 3}
-      propertyPath: m_Volume
-      value: 0.815
+      propertyPath: MinDistance
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5599453207781221003, guid: e8d4d70fcab311d4eb38206011073b6f,
+        type: 3}
+      propertyPath: MaxDistance
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8800581050668046100, guid: e8d4d70fcab311d4eb38206011073b6f,
         type: 3}
@@ -53363,25 +53368,10 @@ PrefabInstance:
       propertyPath: m_AABB.m_Extent.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1409627447054719117, guid: fcb40f7152cb34640aabb80e2fcd6053,
-        type: 3}
-      propertyPath: cooldown
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 1697284118700025538, guid: fcb40f7152cb34640aabb80e2fcd6053,
         type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1888710541441914567, guid: fcb40f7152cb34640aabb80e2fcd6053,
-        type: 3}
-      propertyPath: recoverySpeed
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1888710541441914567, guid: fcb40f7152cb34640aabb80e2fcd6053,
-        type: 3}
-      propertyPath: amountOfHeatPerQuack
-      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1958209474295322817, guid: fcb40f7152cb34640aabb80e2fcd6053,
         type: 3}
@@ -53679,16 +53669,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7459977290224357818, guid: fcb40f7152cb34640aabb80e2fcd6053,
-        type: 3}
-      propertyPath: soundClips.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7459977290224357818, guid: fcb40f7152cb34640aabb80e2fcd6053,
-        type: 3}
-      propertyPath: soundClips.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: 75b4aba22a651d8469137a9e7e463909, type: 3}
     - target: {fileID: 7459977290224357818, guid: fcb40f7152cb34640aabb80e2fcd6053,
         type: 3}
       propertyPath: soundClips.Array.data[1]
