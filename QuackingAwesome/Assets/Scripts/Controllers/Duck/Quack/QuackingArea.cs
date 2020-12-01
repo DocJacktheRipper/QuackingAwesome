@@ -38,6 +38,7 @@ namespace Controllers.Duck.Quack
             }
             ScaredAway scared = ai.Find("Scare").GetComponent<ScaredAway>();
 
+            Debug.Log("Tag: "+animal.tag);
             if (scared.AttemptScare(volume))
             {
                 if (animal.CompareTag("Beaver"))

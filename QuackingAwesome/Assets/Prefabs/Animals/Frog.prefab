@@ -119,7 +119,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f05a029cb06e28478e3a1170994e23d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaredAway: {fileID: 0}
+  scaredAway: {fileID: 4341436114905402905}
+  divingEnabled: 1
+  respawnTime: 40
 --- !u!1 &4016901155599224244
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,6 +285,8 @@ MonoBehaviour:
   currentTarget: {x: 0, y: 0, z: 0}
   animator: {fileID: 6047961649727621174}
   chaseSpeedBonus: 0.2
+  peaSpawner: {fileID: 0}
+  respawnDelayPea: 60
 --- !u!114 &8246377050759785518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -554,7 +558,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 0.1
-  m_BaseOffset: -0.1
+  m_BaseOffset: -0.2
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 2
 --- !u!54 &8800581050668046099
