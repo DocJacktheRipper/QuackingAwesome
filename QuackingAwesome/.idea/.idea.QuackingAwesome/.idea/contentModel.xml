@@ -215,14 +215,18 @@
             <e p="fps_showing.cs" t="Include" />
             <e p="ReverseWallCollider.cs" t="Include" />
             <e p="Sound and Effects" t="Include">
-              <e p="AudioManager.cs" t="Include" />
               <e p="Duck" t="Include">
                 <e p="DashAudioManager.cs" t="Include" />
                 <e p="QuackAudioManager.cs" t="Include" />
               </e>
               <e p="EffectAccessorDuck.cs" t="Include" />
-              <e p="FadeMusic.cs" t="Include" />
-              <e p="MuteToggle.cs" t="Include" />
+              <e p="Sounds" t="Include">
+                <e p="AudioManager.cs" t="Include" />
+                <e p="FadeMusic.cs" t="Include" />
+                <e p="MusicLooper.cs" t="Include" />
+                <e p="MusicManager.cs" t="Include" />
+                <e p="MuteToggle.cs" t="Include" />
+              </e>
             </e>
           </e>
           <e p="Inventory" t="Include">

@@ -2,29 +2,35 @@
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace Controllers.Sound_and_Effects
+namespace Controllers.Sound_and_Effects.Sounds
 {
     [RequireComponent(typeof(AudioSource))]
     public class AudioManager : MonoBehaviour
     {
-        private AudioSource _audio;
+        protected AudioSource Audio;
         
         public List<AudioClip> soundClips;
 
         private void Start()
         {
-            _audio = GetComponent<AudioSource>();
+            Audio = GetComponent<AudioSource>();
         }
 
         public void PlaySound()
         {
-            _audio.Play();
+            Audio.Play();
         }
 
         public void PlaySound(AudioClip clip)
         {
             ApplyAudioClip(clip);
             PlaySound();
+        }
+
+        public void PlaySoundAfterDelay(AudioClip clip, float delay)
+        {
+            ApplyAudioClip(clip);
+            Audio.PlayDelayed(delay);
         }
 
         public void PlayRandomSound()
@@ -35,7 +41,7 @@ namespace Controllers.Sound_and_Effects
 
         public void ApplyAudioClip(AudioClip clip)
         {
-            _audio.clip = clip;
+            Audio.clip = clip;
         }
         
         public void ApplyRandomAudioClip()
@@ -43,7 +49,7 @@ namespace Controllers.Sound_and_Effects
             var clip = GetAudioClip();
             if (clip != null)
             {
-                _audio.clip = clip;
+                Audio.clip = clip;
             }
         }
         

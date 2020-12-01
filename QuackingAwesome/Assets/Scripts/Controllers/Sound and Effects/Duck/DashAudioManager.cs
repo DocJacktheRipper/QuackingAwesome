@@ -1,4 +1,6 @@
-﻿namespace Controllers.Sound_and_Effects.Duck
+﻿using Controllers.Sound_and_Effects.Sounds;
+
+namespace Controllers.Sound_and_Effects.Duck
 {
     public class DashAudioManager : AudioManager
     {

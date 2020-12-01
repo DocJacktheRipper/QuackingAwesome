@@ -22,7 +22,18 @@
     <list default="true" id="cb082888-ab6d-41db-a40b-24e16e1dbeec" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/SFX/AudioMixer/MainMenu.mixer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Audio/SFX/AudioMixer/MainMenu.mixer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Animals/Alligator.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Animals/Alligator.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/UI/Interface Canvas/Main Menu.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/UI/Interface Canvas/Main Menu.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Starting.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Starting.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/Sound and Effects/AudioManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/Sound and Effects/AudioManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/Sound and Effects/Duck/DashAudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/Sound and Effects/Duck/DashAudioManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/Sound and Effects/Duck/QuackAudioManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Controllers/Sound and Effects/Duck/QuackAudioManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/Sound and Effects/FadeMusic.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/Sound and Effects/FadeMusic.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/Sound and Effects/MuteToggle.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Controllers/Sound and Effects/MuteToggle.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,13 +45,13 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/StickInventory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Sound and Effects/Sounds/MusicManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/IStateAlligator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/StateHandlerBeaver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ISwimIdleStateBeaver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Duck/Quack/QuackingBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Nest/NestMenu/InspectableNest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/DeathBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controllers/Sound and Effects/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Nest/ArrowPointing.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Inventory/DucklingsInventory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../UnityUI/2019.4.9f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
@@ -68,8 +79,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/IdleStateBeaver.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Camera/PlayerFollow.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/StateHandlerBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/GoingHomeBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/Trigger/BeaverDetectionTriggered.cs" />
@@ -110,7 +119,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Spawning/Animals/BeaverSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Camera/SimpleCameraController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/ConcreteStates/ScaredStateBeaver.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Spawning/Props/PropTrigger/StickTriggerEnter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/StickInventory.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Beaver/StateMachine_Beaver/BehaviourMethodsBeaver.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/IStateAlligator.cs" />
@@ -119,6 +127,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Alligator/StateMachine_Alligator/BehaviourMethodsAlligator.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Frog/StateMachine_Frog/IStateFrog.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Nest/ArrowPointing.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Spawning/Props/PropTrigger/StickTriggerEnter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Sound and Effects/Sounds/AudioManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Sound and Effects/Sounds/MusicManager.cs" />
       </list>
     </option>
   </component>
@@ -224,7 +235,9 @@
       <workItem from="1606302707953" duration="11079000" />
       <workItem from="1606392828049" duration="5944000" />
       <workItem from="1606566691829" duration="2960000" />
-      <workItem from="1606727724346" duration="11161000" />
+      <workItem from="1606727724346" duration="11915000" />
+      <workItem from="1606774133868" duration="91000" />
+      <workItem from="1606813979514" duration="4421000" />
     </task>
     <servers />
   </component>
