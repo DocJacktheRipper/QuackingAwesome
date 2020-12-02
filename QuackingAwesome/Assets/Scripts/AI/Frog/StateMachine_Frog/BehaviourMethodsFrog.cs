@@ -1,4 +1,6 @@
 ﻿using AI.StateMachine;
+using Props.spawning;
+using Spawning.Animals;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -6,18 +8,47 @@ namespace AI.Frog.StateMachine_Frog
 {
     public class BehaviourMethodsFrog : BehaviourMethods
     {
+        public PeaSpawner peaSpawner;
+        public float respawnDelayPea;
+        
         private NavMeshPath _path;
         private static readonly int DoEat = Animator.StringToHash("DoEat");
+        private static readonly int DoDive = Animator.StringToHash("DoDive");
 
         public void EatPea(Collider pea)
         {
             animator.SetTrigger(DoEat);
-            
-            
+
             Destroy(pea.gameObject);
-            // TODO: respawn it after some time
+            // respawn it after some time
+            peaSpawner.SpawnWithDelay(respawnDelayPea);
         }
         
+        public void DiveAndRespawn(float respawnTime)
+        {
+            var beaverObject = transform.parent.gameObject;
+            // disable colliders
+            foreach(var c in beaverObject.GetComponentsInChildren<Collider>())
+            {
+                c.enabled = false;
+            }
+            
+            animator.SetTrigger(DoDive);
+            
+            // Invoke respawn
+            var spawner = GameObject.Find("SpawningBehaviour").GetComponent<FrogSpawner>();
+            if (spawner == null)
+                return;
+            spawner.SpawnWithDelay(respawnTime);
+            
+            // Delete Frog after some time
+            Invoke(nameof(DestroyFrog), 2);
+        }
+        
+        private void DestroyFrog()
+        {
+            Destroy(transform.parent.gameObject);
+        }
         
         
         #region Navigation

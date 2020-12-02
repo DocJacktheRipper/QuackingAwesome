@@ -18,6 +18,19 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!65 &5223232921570042312
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1028317612829755638}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.11626828, y: 0.1103847, z: 0.08843055}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2463254408902754000
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,7 +132,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f05a029cb06e28478e3a1170994e23d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scaredAway: {fileID: 0}
+  scaredAway: {fileID: 4341436114905402905}
+  divingEnabled: 1
+  respawnTime: 40
 --- !u!1 &4016901155599224244
 GameObject:
   m_ObjectHideFlags: 0
@@ -283,6 +298,8 @@ MonoBehaviour:
   currentTarget: {x: 0, y: 0, z: 0}
   animator: {fileID: 6047961649727621174}
   chaseSpeedBonus: 0.2
+  peaSpawner: {fileID: 0}
+  respawnDelayPea: 60
 --- !u!114 &8246377050759785518
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -554,7 +571,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 0.1
-  m_BaseOffset: -0.1
+  m_BaseOffset: -0.2
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 2
 --- !u!54 &8800581050668046099
@@ -710,6 +727,12 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 19dcc2a471450be47bd5fda75f10497b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70d2534bf6ca59d4792326240d7b2000, type: 3}
+--- !u!1 &1028317612829755638 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 70d2534bf6ca59d4792326240d7b2000,
+    type: 3}
+  m_PrefabInstance: {fileID: 181332257740682663}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &6047961649727621174 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 70d2534bf6ca59d4792326240d7b2000,
@@ -719,12 +742,6 @@ Animator:
 --- !u!4 &364371312473182796 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 70d2534bf6ca59d4792326240d7b2000,
-    type: 3}
-  m_PrefabInstance: {fileID: 181332257740682663}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1028317612829755638 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 70d2534bf6ca59d4792326240d7b2000,
     type: 3}
   m_PrefabInstance: {fileID: 181332257740682663}
   m_PrefabAsset: {fileID: 0}

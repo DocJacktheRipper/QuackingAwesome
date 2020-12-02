@@ -6,13 +6,20 @@ namespace AI.Frog.StateMachine_Frog.ConcreteStates
     {
         public ScaredAway scaredAway;
         private float _waitUntil;
+        public bool divingEnabled;
+        public float respawnTime;
 
         public override void Enter()
         {
             base.Enter();
             InvokeScared(scaredAway.source, scaredAway.howFarAway);
             ConcreteMethods.AddSpeed(scaredAway.runAwaySpeedBonus);
-
+            
+            if (divingEnabled)
+            {
+                ConcreteMethods.DiveAndRespawn(respawnTime);
+            }
+            
             // calculate when to switch to different state again
             _waitUntil = Time.time + (scaredAway.howFarAway / ConcreteMethods.GetSpeed());
             
