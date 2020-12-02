@@ -46,19 +46,31 @@ namespace Spawning
         }
         
        
-        public void Spawn()
+        public virtual void Spawn()
         {
             if (spawningPointParent.childCount <= 0) return;
             
             var spawnPoint = GetRandomPosition();
+            var positionInRadius = ApplyRadiusToRandomPosition(spawnPoint);
 
-            
+            InstantiateSpawnObject(positionInRadius);
+        }
+
+        protected Vector3 ApplyRadiusToRandomPosition(Transform spawnPoint)
+        {
             var positionInRadius = (Vector3) Random.insideUnitSphere * spawnRadius;
             positionInRadius += spawnPoint.position;
-            positionInRadius.y = 0f; 
-            var spawned = Instantiate(GetRandomSkin(), positionInRadius, Quaternion.identity); 
+            positionInRadius.y = 0f;
+            return positionInRadius;
+        }
+        
+        protected GameObject InstantiateSpawnObject(Vector3 position)
+        {
+            var spawned = Instantiate(GetRandomSkin(), position, Quaternion.identity); 
             spawned.transform.parent = targetParent.transform;
             RotateObjectRandomly(spawned.transform);
+
+            return spawned;
         }
 
         private GameObject GetRandomSkin()
@@ -77,7 +89,7 @@ namespace Spawning
             spawnPoint.parent = o.transform;                // move spawn point to be child of new object
         }
 
-        private Transform GetRandomPosition()
+        protected Transform GetRandomPosition()
         {
             var ranPos = (int) Random.Range(0, spawningPointParent.childCount);
             return spawningPointParent.GetChild(ranPos);
