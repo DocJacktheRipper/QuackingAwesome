@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.CodeDom;
+using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -11,18 +13,22 @@ namespace Spawning
         public int minItemsInWorld;
         public int maxItemsInWorld;
 
-        public List<GameObject> objectsToSpawn;
-        public GameObject targetParent;
-
+        // automatic spawns with delay etc.
+        public bool updateSpawnsEnabled;
         // time between spawns
         public float spawningDelay;
+        private readonly float _spawnCheckTime = 0.5f;
+        private float _nextSpawnCheck;
+        private int _remainingNumberOfObjectsToSpawn;
+        
+        public List<GameObject> objectsToSpawn;
+        public GameObject targetParent;
+        
         public float spawnRadius = 1.5f;
 
         // positions to spawn
         //public List<SpawnPoint> spawningPoints;
         public Transform spawningPointParent;
-
-        //private int numberOfObjectsToSpawn = 0;
 
         private void Start()
         {
@@ -30,7 +36,19 @@ namespace Spawning
             {
                 SpawnAtOnce(minItemsInWorld);
             }
+
+            _remainingNumberOfObjectsToSpawn = 0;
         }
+
+        private void Update()
+        {
+            if (updateSpawnsEnabled)
+            {
+                AutoSpawn();
+            }
+        }
+
+        #region SpawnInvokes
 
         public void SpawnAtOnce(int numberOfObjects)
         {
@@ -54,7 +72,13 @@ namespace Spawning
             var positionInRadius = ApplyRadiusToRandomPosition(spawnPoint);
 
             InstantiateSpawnObject(positionInRadius);
+            
+            // for auto-update
+            _remainingNumberOfObjectsToSpawn--;
         }
+
+        #endregion
+        #region HelperMethodsToSpawn
 
         protected Vector3 ApplyRadiusToRandomPosition(Transform spawnPoint)
         {
@@ -75,7 +99,7 @@ namespace Spawning
 
         private GameObject GetRandomSkin()
         {
-            return objectsToSpawn[Random.Range(0, objectsToSpawn.Count - 1)];
+            return objectsToSpawn[Random.Range(0, objectsToSpawn.Count)];
         }
 
         private static void RotateObjectRandomly(Transform obj)
@@ -94,6 +118,39 @@ namespace Spawning
             var ranPos = (int) Random.Range(0, spawningPointParent.childCount);
             return spawningPointParent.GetChild(ranPos);
         } 
-        
+
+        #endregion
+
+        #region AutoSpawn
+
+        private void AutoSpawn()
+        {
+            // only check every [time] seconds
+            if (_nextSpawnCheck > Time.time)
+                return;
+            _nextSpawnCheck = Time.time + _spawnCheckTime;
+            
+            // check, if more are spawn-able
+            var currentObjectsInWorld = targetParent.transform.childCount;
+            if (currentObjectsInWorld >= maxItemsInWorld) return;
+
+            // calculate how many can still be spawned
+            var numberOfObjectsToSpawn = maxItemsInWorld - (currentObjectsInWorld + _remainingNumberOfObjectsToSpawn);
+            _remainingNumberOfObjectsToSpawn += numberOfObjectsToSpawn;
+            
+            AutoSpawnLoopWithDelay(numberOfObjectsToSpawn);
+        }
+
+        private void AutoSpawnLoopWithDelay(int numberOfNewObjects)
+        {
+            float waitingTime = 0;
+            for (int i = 0; i < numberOfNewObjects; i++)
+            {
+                Invoke(nameof(Spawn), waitingTime);
+                waitingTime += spawningDelay;
+            }
+        }
+
+        #endregion
     }
 }
