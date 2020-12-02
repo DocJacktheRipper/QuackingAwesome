@@ -2,8 +2,6 @@
 using AI;
 using AI.Alligator.StateMachine_Alligator;
 using AI.Beaver.StateMachine_Beaver;
-using AI.Beaver.StateMachine_Beaver.ConcreteStates;
-using AI.Beaver.Trigger;
 using AI.Frog.StateMachine_Frog;
 using JetBrains.Annotations;
 using UnityEngine;
@@ -38,7 +36,6 @@ namespace Controllers.Duck.Quack
             }
             ScaredAway scared = ai.Find("Scare").GetComponent<ScaredAway>();
 
-            Debug.Log("Tag: "+animal.tag);
             if (scared.AttemptScare(volume))
             {
                 if (animal.CompareTag("Beaver"))
@@ -91,31 +88,6 @@ namespace Controllers.Duck.Quack
             scared.source = transform;
             stateHandler.ChangeState(stateHandler.scared);
         }
-        
-        /*
-        private void QuackToBeaver(GameObject beaver)
-        {
-            var ai = beaver.transform.parent.Find("AI");
-            if (ai == null)
-            {
-                Debug.Log("AI not found!");
-                return;
-            }
-            ScaredAway scared = ai.Find("Scare").GetComponent<ScaredAway>();
-
-            if (scared.AttemptScare(volume))
-            {
-                Debug.Log("Beaver is scared away");
-                var stateHandler = ai.GetComponent<StateHandlerBeaver>();
-                
-                // prepare and change states
-                scared.source = transform;
-                stateHandler.ChangeState(stateHandler.scared);
-            }
-
-            _quackArea.enabled = false;
-        }
-        */
 
         public void SetVolumeMultiplier(float multiplier)
         {

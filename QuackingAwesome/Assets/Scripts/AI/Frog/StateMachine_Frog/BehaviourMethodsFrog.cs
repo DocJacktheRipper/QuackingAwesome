@@ -41,8 +41,8 @@ namespace AI.Frog.StateMachine_Frog
                 return;
             spawner.SpawnWithDelay(respawnTime);
             
-            // Delete BeaverObject after some time
-            Invoke(nameof(DestroyFrog), respawnTime);
+            // Delete Frog after some time
+            Invoke(nameof(DestroyFrog), 2);
         }
         
         private void DestroyFrog()

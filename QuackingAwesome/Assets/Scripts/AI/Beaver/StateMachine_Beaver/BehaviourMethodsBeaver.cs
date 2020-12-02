@@ -51,7 +51,7 @@ namespace AI.Beaver.StateMachine_Beaver
             spawner.SpawnWithDelay(respawnTime);
             
             // Delete BeaverObject after some time
-            Invoke(nameof(DestroyBeaver), respawnTime);
+            Invoke(nameof(DestroyBeaver), 2);
         }
 
         private void DestroyBeaver()
