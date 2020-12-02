@@ -20,9 +20,7 @@ namespace Inventory.UI
         void Start()
         {
             _text               = GetComponent<Text>();
-            _numberSticksInNest = nest.numberOfSticks;
-            _numberSticksNeeded = nest.neededSticks.ToString();
-            _text.text          = _numberSticksInNest.ToString() + " / " + _numberSticksNeeded;
+            Init();
         }
 
         void Update()
@@ -36,10 +34,20 @@ namespace Inventory.UI
             else if (_numberSticksInNest != nest.numberOfSticks)
             {
                 _numberSticksInNest = nest.numberOfSticks;
-                _text.text          = _numberSticksInNest.ToString() + " / " + _numberSticksNeeded;
+                SetText();
             }
+        }
+        
+        public void Init()
+        {
+            _numberSticksInNest = nest.numberOfSticks;
+            _numberSticksNeeded = nest.neededSticks.ToString();
+            SetText();   
+        }
 
-            
+        private void SetText()
+        {
+            _text.text          = _numberSticksInNest + " / " + _numberSticksNeeded;
         }
 
         public void DisplayStickStatistics(bool visible)
