@@ -1,6 +1,4 @@
-﻿using System;
-using System.CodeDom;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -44,13 +42,13 @@ namespace Spawning
         {
             if (updateSpawnsEnabled)
             {
-                AutoSpawn();
+                AutoSpawnCheck();
             }
         }
-
+        
         #region SpawnInvokes
 
-        public void SpawnAtOnce(int numberOfObjects)
+        private void SpawnAtOnce(int numberOfObjects)
         {
             for (var i = 0; i < numberOfObjects; i++)
             {
@@ -58,13 +56,12 @@ namespace Spawning
             }
         }
 
-        public void SpawnWithDelay(float seconds)
+        private void SpawnWithDelay(float seconds)
         {
             Invoke(nameof(Spawn), seconds);
         }
         
-       
-        public virtual void Spawn()
+        protected virtual void Spawn()
         {
             if (spawningPointParent.childCount <= 0) return;
             
@@ -75,6 +72,33 @@ namespace Spawning
             
             // for auto-update
             _remainingNumberOfObjectsToSpawn--;
+        }
+
+        #endregion
+        #region RespawnInvokes
+        // Only enable respawn, when not done automatically
+        
+        public void Respawn()
+        {
+            // only respawn immediately, when not automatically done
+            if (updateSpawnsEnabled)
+                return;
+
+            Spawn();
+        }
+        
+        public void RespawnWithDelay(float seconds)
+        {
+            if (updateSpawnsEnabled)
+                return;
+            SpawnWithDelay(seconds);
+        }
+
+        public void RespawnAtOnce(int numberOfObjects)
+        {
+            if (updateSpawnsEnabled)
+                return;
+            SpawnAtOnce(numberOfObjects);
         }
 
         #endregion
@@ -123,7 +147,7 @@ namespace Spawning
 
         #region AutoSpawn
 
-        private void AutoSpawn()
+        private void AutoSpawnCheck()
         {
             // only check every [time] seconds
             if (_nextSpawnCheck > Time.time)
@@ -143,7 +167,7 @@ namespace Spawning
 
         private void AutoSpawnLoopWithDelay(int numberOfNewObjects)
         {
-            float waitingTime = 0;
+            float waitingTime = spawningDelay;
             for (int i = 0; i < numberOfNewObjects; i++)
             {
                 Invoke(nameof(Spawn), waitingTime);

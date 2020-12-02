@@ -21,7 +21,7 @@ namespace AI.Frog.StateMachine_Frog
 
             Destroy(pea.gameObject);
             // respawn it after some time
-            peaSpawner.SpawnWithDelay(respawnDelayPea);
+            peaSpawner.RespawnWithDelay(respawnDelayPea);
         }
         
         public void DiveAndRespawn(float respawnTime)
@@ -39,7 +39,7 @@ namespace AI.Frog.StateMachine_Frog
             var spawner = GameObject.Find("SpawningBehaviour").GetComponent<FrogSpawner>();
             if (spawner == null)
                 return;
-            spawner.SpawnWithDelay(respawnTime);
+            spawner.RespawnWithDelay(respawnTime);
             
             // Delete Frog after some time
             Invoke(nameof(DestroyFrog), 2);

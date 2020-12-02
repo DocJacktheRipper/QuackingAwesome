@@ -55,7 +55,7 @@ namespace Props
             // spawn another pea
             var nbContainer = GameObject.Find("SpawningBehaviour");
             var spawner = nbContainer.GetComponent<PeaSpawner>();
-            spawner.Spawn();
+            spawner.Respawn();
 
             return true;
         }

@@ -114,7 +114,7 @@ namespace Nest
                 return;
             var sp = spawner.GetComponent<StickSpawner>();
             
-            sp.SpawnAtOnce(numberOfTransferedSticks);
+            sp.RespawnAtOnce(numberOfTransferedSticks);
         }
 
         private void BuildNestDynamically()

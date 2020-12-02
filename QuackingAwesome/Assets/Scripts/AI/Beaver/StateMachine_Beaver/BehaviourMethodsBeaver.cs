@@ -48,7 +48,7 @@ namespace AI.Beaver.StateMachine_Beaver
             var spawner = GameObject.Find("SpawningBehaviour").GetComponent<BeaverSpawner>();
             if (spawner == null)
                 return;
-            spawner.SpawnWithDelay(respawnTime);
+            spawner.RespawnWithDelay(respawnTime);
             
             // Delete BeaverObject after some time
             Invoke(nameof(DestroyBeaver), 2);

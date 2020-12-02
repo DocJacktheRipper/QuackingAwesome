@@ -6,7 +6,7 @@ namespace Spawning.Animals
 {
     public class FrogSpawner : Spawner
     {
-        public override void Spawn()
+        protected override void Spawn()
         {
             if (spawningPointParent.childCount <= 0) return;
             
