@@ -7,8 +7,6 @@ namespace AI.Alligator
 {
     public class AlligatorMouthTrigger : MonoBehaviour
     {
-        public bool reloadOnDeath;
-        
         private void OnTriggerEnter(Collider other)
         {
             if(PlayerIsTrigger(other))
@@ -31,28 +29,13 @@ namespace AI.Alligator
             {
                 return false;
             }
-
+            
             //DuckDied();
             DeathOfDuck();
 
             return true;
         }
-/*
-        private void DuckDied()
-        {
-            if (reloadOnDeath)
-            {
-                // load current scene
-                var scene = SceneManager.GetActiveScene().name;
 
-                SceneManager.LoadScene(scene);
-            }
-            else
-            {
-                DeathOfDuck();
-            }
-        }
-*/
         private void DeathOfDuck()
         {
             DeathBehaviour deathEvent = GameObject.Find("DeathBehaviour").GetComponent<DeathBehaviour>();

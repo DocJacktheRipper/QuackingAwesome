@@ -99,18 +99,22 @@ namespace Controllers
             
             respawnToNest.SetActive(false);
             
+            RespawnKiller();
+            
+            Time.timeScale = 1;
+            controls.SetActive(true);
+        }
+
+        private void RespawnKiller()
+        {
             // Randomly respawn the killing enemy (only alligator for the moment)
             if (_enemy.CompareTag("Alligator"))
             {
-                _enemy.transform
-                    .SetPositionAndRotation(
-                        alligatorMoveSpots.GetChild(
-                            UnityEngine.Random.Range(0, alligatorMoveSpots.childCount)).position,
-                        Quaternion.identity);
+                var alligator = _enemy.transform.parent.parent;
+                alligator.position = alligatorMoveSpots.GetChild(Random.Range(0, alligatorMoveSpots.childCount))
+                    .position;
             }
 
-            Time.timeScale = 1;
-            controls.SetActive(true);
         }
 
     }
