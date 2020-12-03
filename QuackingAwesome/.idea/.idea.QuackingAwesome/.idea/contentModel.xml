@@ -34,6 +34,7 @@
             <e p="scriptTexttest.cs" t="Include" />
           </e>
         </e>
+        <e p="loo.cs" t="Include" />
         <e p="Materials" t="Include">
           <e p="ConeCollider" t="Include">
             <e p="readme_en.txt" t="Include" />
@@ -181,23 +182,6 @@
             <e p="TutorialAnalytics.cs" t="Include" />
           </e>
           <e p="Controllers" t="Include">
-            <e p="Buttons" t="Include">
-              <e p="DashButton.cs" t="Include" />
-              <e p="NestMenu" t="Include">
-                <e p="EggButtons.cs" t="Include" />
-                <e p="NestButton.cs" t="Include" />
-                <e p="NestButtonTrigger.cs" t="Include" />
-                <e p="NestInfoText.cs" t="Include" />
-              </e>
-              <e p="PauseMenu.cs" t="Include" />
-              <e p="PopUps.cs" t="Include" />
-              <e p="PopUpsTutorialPrefabs.cs" t="Include" />
-              <e p="QuackButton.cs" t="Include" />
-              <e p="StartMenu" t="Include">
-                <e p="LoadingScene.cs" t="Include" />
-                <e p="MenuHandler.cs" t="Include" />
-              </e>
-            </e>
             <e p="Camera" t="Include">
               <e p="PlayerFollow.cs" t="Include" />
               <e p="SimpleCameraController.cs" t="Include" />
@@ -275,7 +259,33 @@
           </e>
           <e p="Tutorial" t="Include">
             <e p="DisplayTutorialAdvices.cs" t="Include" />
+            <e p="PopUps.cs" t="Include" />
+            <e p="PopUpsTutorialPrefabs.cs" t="Include" />
             <e p="UpdateTutorialAdvicesText.cs" t="Include" />
+          </e>
+          <e p="UI" t="Include">
+            <e p="Buttons" t="Include">
+              <e p="DashButton.cs" t="Include" />
+              <e p="QuackButton.cs" t="Include" />
+            </e>
+            <e p="Main Menu" t="Include">
+              <e p="PauseMenu" t="Include">
+                <e p="MainMenu.cs" t="Include" />
+                <e p="PauseMenuHandler.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Nest Menu" t="Include">
+              <e p="NestMenu" t="Include">
+                <e p="EggButtons.cs" t="Include" />
+                <e p="NestButton.cs" t="Include" />
+                <e p="NestButtonTrigger.cs" t="Include" />
+                <e p="NestInfoText.cs" t="Include" />
+              </e>
+            </e>
+            <e p="StartMenu" t="Include">
+              <e p="LoadingScene.cs" t="Include" />
+              <e p="MenuHandler.cs" t="Include" />
+            </e>
           </e>
         </e>
         <e p="Shaders" t="Include">
