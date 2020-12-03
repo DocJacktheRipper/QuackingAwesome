@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 namespace Controllers.Buttons
 {
-    public class PauseMenu : MonoBehaviour
+    public class MainMenu : MonoBehaviour
     {
         public static bool GameIsPaused;
 
