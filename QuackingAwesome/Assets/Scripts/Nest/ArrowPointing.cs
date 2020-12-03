@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Controllers.Buttons.NestMenu;
+﻿using System.Collections.Generic;
 using Inventory.UI;
 using UnityEngine;
 
@@ -24,6 +22,7 @@ namespace Nest
         {
             SetClosestNest(); 
             MessageMultipleNestsHandler();
+            SetStickBar();
         }
 
         private void Update()

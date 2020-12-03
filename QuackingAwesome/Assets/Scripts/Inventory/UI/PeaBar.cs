@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace Inventory
+namespace Inventory.UI
 {
     public class PeaBar : MonoBehaviour
     {
@@ -13,6 +13,7 @@ namespace Inventory
     
         void Start()
         {
+            duck = GameObject.Find("Duck");
             _inventory = duck.GetComponent<EnergyInventory>();
             _text = GetComponent<Text>();
             _energy = (int) _inventory.energy;
