@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 9164053061364842986}
   - component: {fileID: 5336095355340086129}
   - component: {fileID: 7943113326241066505}
-  - component: {fileID: 3011896846467014676}
   - component: {fileID: -9173809458980893292}
   - component: {fileID: 2414969311664204892}
   m_Layer: 0
@@ -63,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ab475c08cdd10d249be9a75e001be2e3, type: 2}
+  - {fileID: 2100000, guid: 80d8e9066a8353b4082d702e411fcbb8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -110,24 +109,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   positionPool: {fileID: 0}
---- !u!114 &3011896846467014676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7218634431413887039}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 0, g: 0, b: 0, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
 --- !u!135 &-9173809458980893292
 SphereCollider:
   m_ObjectHideFlags: 0
