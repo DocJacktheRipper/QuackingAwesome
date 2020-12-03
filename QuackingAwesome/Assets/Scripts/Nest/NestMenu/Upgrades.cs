@@ -1,4 +1,5 @@
-﻿using Controllers.Duck;
+﻿using System.Collections.Generic;
+using Controllers.Duck;
 using Controllers.Duck.Dash;
 using Controllers.Duck.Quack;
 using Inventory;
@@ -43,8 +44,9 @@ namespace Nest.NestMenu
         private QuackingArea _quackingArea;
         private CharacterControl _characterControl;
 
-        public GameObject nest;
-        private LayAndHatchEgg _layAndHatchEgg;
+        // applied ba MultipleNestHandler
+        public Transform nestsParent;
+        private List<LayAndHatchEgg> _layAndHatchEggList;
 
         private void Start()
         {
@@ -56,7 +58,17 @@ namespace Nest.NestMenu
             _dashingBehaviour = d.GetComponent<DashingBehaviour>();
             _quackingArea = d.transform.Find("QuackingCone").GetComponent<QuackingArea>();
 
-            _layAndHatchEgg = nest.GetComponent<LayAndHatchEgg>();
+            var nestContainer = GameObject.Find("DuckNests");
+            if (nestContainer != null)
+            {
+                nestsParent = nestContainer.transform;
+            }
+
+            _layAndHatchEggList = new List<LayAndHatchEgg>();
+            for (int i = 0; i < nestsParent.childCount; i++)
+            {
+                _layAndHatchEggList.Add(nestsParent.GetComponent<LayAndHatchEgg>());
+            }
 
             InitCostsAndButtons();
         }
@@ -200,7 +212,10 @@ namespace Nest.NestMenu
             _ducklings.RemoveDucklings(_neededAmountForNest);
             
             // make upgrade
-            _layAndHatchEgg.maxEggsInNest += addCapacity[_nestStep];
+            foreach (var nest in _layAndHatchEggList)
+            {
+                nest.maxEggsInNest += addCapacity[_nestStep];
+            }
             
             // increase cost
             if (_nestStep + 1 < _nestCosts.Length)

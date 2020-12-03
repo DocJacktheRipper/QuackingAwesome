@@ -912,7 +912,7 @@ MonoBehaviour:
   speedUpgrade: {fileID: 321983850475179920}
   scareUpgrade: {fileID: 8464052966379545731}
   nestUpgrade: {fileID: 8103859394261048295}
-  nest: {fileID: 0}
+  nestsParent: {fileID: 0}
 --- !u!1 &1486604233543673741
 GameObject:
   m_ObjectHideFlags: 0
@@ -7591,6 +7591,7 @@ GameObject:
   - component: {fileID: 4380170353125579716}
   - component: {fileID: 6243043676791719530}
   - component: {fileID: 6143372374340547582}
+  - component: {fileID: 4810964819660802553}
   m_Layer: 5
   m_Name: Nest Menu
   m_TagString: Untagged
@@ -7633,11 +7634,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nest: {fileID: 0}
-  statistics: {fileID: 0}
+  controls: {fileID: 0}
+  mainMenuButton: {fileID: 0}
   nestButton: {fileID: 8946986506195603168}
   nestMenuUI: {fileID: 8826835751316883244}
-  mainMenuButton: {fileID: 0}
-  controls: {fileID: 0}
+  statistics: {fileID: 0}
+  stickBar: {fileID: 0}
 --- !u!114 &6143372374340547582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7650,9 +7652,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb923dab7c27d2b4ea6f71b037ccd2f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nest: {fileID: 5353627499907380609, guid: d612d710e605aac42993c2d10abe3119, type: 3}
+  nest: {fileID: 0}
   layButton: {fileID: 6585831428339960807}
   hatchButton: {fileID: 3062001503686794455}
+--- !u!114 &4810964819660802553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8922169578126567246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 071510ac1e3c70348a08a9164d346442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nestParent: {fileID: 0}
+  nestButton: {fileID: 6243043676791719530}
+  eggButtons: {fileID: 6143372374340547582}
+  upgrades: {fileID: 8036733549038005063}
+  nestInfoText: {fileID: 4421270093871755161}
 --- !u!1 &8946986506195603168
 GameObject:
   m_ObjectHideFlags: 0

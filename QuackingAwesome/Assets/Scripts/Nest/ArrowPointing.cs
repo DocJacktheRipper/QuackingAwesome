@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Controllers.Buttons.NestMenu;
 using Inventory.UI;
 using UnityEngine;
 
@@ -13,7 +14,17 @@ namespace Nest
         private float _distance;
         public List<NestBuilding> nests;
         public float distanceForActivating = 3f;
+        
+        // Update other Handler
         public StickBar stickBar;
+        public MultipleNestsHandler multipleNestsHandler;
+
+
+        private void Start()
+        {
+            SetClosestNest(); 
+            MessageMultipleNestsHandler();
+        }
 
         private void Update()
         {
@@ -25,6 +36,7 @@ namespace Nest
             if (previousClosest != _currentNest)
             {
                 SetStickBar();
+                MessageMultipleNestsHandler();
             }
             
             if (_distance < distanceForActivating)
@@ -60,6 +72,11 @@ namespace Nest
         {
             stickBar.nest = _currentNest;
             stickBar.Init();
+        }
+
+        private void MessageMultipleNestsHandler()
+        {
+            multipleNestsHandler.ApplyClosestNest(_currentNest.gameObject);
         }
 
         private void DeactivateArrow()
