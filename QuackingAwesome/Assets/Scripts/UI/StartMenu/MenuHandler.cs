@@ -1,8 +1,7 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace Controllers.Buttons.StartMenu
+namespace UI.StartMenu
 {
     public class MenuHandler : MonoBehaviour
     {
@@ -16,9 +15,19 @@ namespace Controllers.Buttons.StartMenu
         public GameObject cloudCoverLevel2;
         public GameObject cloudCoverLevel3;
 
+        private GlobalControl globalControl;
+
         private void Start()
         {
             TogglePondMapOn(false);
+        }
+
+        void Awake()
+        {
+            GameObject gc = GameObject.Find("GlobalControl");
+            globalControl = gc.GetComponent<GlobalControl>();
+
+            CheckLevels();
         }
 
         private void TogglePondMapOn(bool openPond)
@@ -34,17 +43,49 @@ namespace Controllers.Buttons.StartMenu
 
         #region PondMap
 
-        public void UnlockLevel2(bool unlock)
+        private void CheckLevels()
         {
-            level1.interactable = !unlock;
+            var sceneCompleteID= globalControl.savedPlayerData.higherSceneCompletedID;
+
+            switch (sceneCompleteID)
+            {
+                case 0:
+                    UnlockLevel1(true);
+                    UnlockLevel2(false);
+                    UnlockLevel3(false);
+                    break;
+                case 1:    
+                    UnlockLevel1(false);
+                    UnlockLevel2(true);
+                    UnlockLevel3(false);
+                    break;
+                case 2:    
+                    UnlockLevel1(false);
+                    UnlockLevel2(false);
+                    UnlockLevel3(true);
+                    break;
+                default:
+                    UnlockLevel1(true);
+                    UnlockLevel2(true);
+                    UnlockLevel3(true);
+                    break;
+            }
+        }
+
+        private void UnlockLevel1(bool unlock)
+        {
+            level1.interactable = unlock;
+        }
+        
+        private void UnlockLevel2(bool unlock)
+        {
             level2.interactable = unlock;
             
             EnableCloudCoverLevel2(!unlock);
         }
-        
-        public void UnlockLevel3(bool unlock)
+
+        private void UnlockLevel3(bool unlock)
         {
-            level2.interactable = !unlock;
             level3.interactable = unlock;
             
             EnableCloudCoverLevel3(!unlock);
