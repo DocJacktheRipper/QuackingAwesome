@@ -4714,6 +4714,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1572210390}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &487214783 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4810964819660802553, guid: b51857b31ca727344804cebf0959d70e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1572210390}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 487214779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 071510ac1e3c70348a08a9164d346442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &487886006 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ef352434534037544a17e30195970022,
@@ -11599,7 +11611,7 @@ MonoBehaviour:
   - {fileID: 1369831723}
   distanceForActivating: 3
   stickBar: {fileID: 2020462039}
-  multipleNestsHandler: {fileID: 0}
+  multipleNestsHandler: {fileID: 487214783}
 --- !u!1001 &1114032332
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27517,6 +27529,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4810964819660802553, guid: b51857b31ca727344804cebf0959d70e,
+        type: 3}
+      propertyPath: nestParent
+      value: 
+      objectReference: {fileID: 1332497992}
     - target: {fileID: 5379586579845869765, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
       propertyPath: m_AnchorMin.x

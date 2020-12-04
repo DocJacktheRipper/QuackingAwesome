@@ -1,5 +1,4 @@
-﻿using Controllers.Buttons.NestMenu;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using Nest;
 
@@ -10,16 +9,15 @@ namespace Inventory.UI
         public GameObject stickStatistic;
         public NestBuilding nest;
         public GameObject nestButton;
+        public Text text;
 
         public bool stayVisible;
 
-        private Text _text;
         private int _numberSticksInNest;
         private string _numberSticksNeeded;
 
         void Start()
         {
-            _text               = GetComponent<Text>();
             Init();
         }
 
@@ -47,7 +45,7 @@ namespace Inventory.UI
 
         private void SetText()
         {
-            _text.text          = _numberSticksInNest + " / " + _numberSticksNeeded;
+            text.text          = _numberSticksInNest + " / " + _numberSticksNeeded;
         }
 
         public void DisplayStickStatistics(bool visible)
