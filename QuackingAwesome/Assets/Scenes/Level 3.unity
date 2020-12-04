@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 20d7b5b50a3e7624796b96279da1f38f,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1902,7 +1902,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 98cec8bc9f9f0384d8dfa3b6f28967ff, type: 2}
+      objectReference: {fileID: 2100000, guid: 3453672832f301e439acdd8bcf592975, type: 2}
     - target: {fileID: 919132149155446097, guid: fcd1eab3a6137ec4387e51098a7c847b,
         type: 3}
       propertyPath: m_Name
@@ -32391,6 +32391,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 55b1399f6fc43834281cbbbb166ff27b,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 55b1399f6fc43834281cbbbb166ff27b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8aaa66d84e5e3734c9d80569abe197e6, type: 2}
     - target: {fileID: 919132149155446097, guid: 55b1399f6fc43834281cbbbb166ff27b,
         type: 3}
       propertyPath: m_Name
@@ -32400,6 +32410,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 55b1399f6fc43834281cbbbb166ff27b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55b1399f6fc43834281cbbbb166ff27b, type: 3}
@@ -32428,6 +32443,180 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1149227954}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &1149227958 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 55b1399f6fc43834281cbbbb166ff27b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1149227954}
+  m_PrefabAsset: {fileID: 0}
+--- !u!33 &1149227959 stripped
+MeshFilter:
+  m_CorrespondingSourceObject: {fileID: -5754084199372789682, guid: 55b1399f6fc43834281cbbbb166ff27b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1149227954}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1149227960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1149227955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16629e6f345891348b53ecc2ace028bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  refractionExpanded: 0
+  vertexPaintingExpanded: 0
+  surfaceFoamExpanded: 0
+  foamShadowsExpanded: 0
+  intersectionEffectsExpanded: 0
+  planarReflectionsExpanded: 0
+  causticsExpanded: 0
+  reflectionStrength: 0
+  reflectionFresnel: 1
+  causticsStrength: 0
+  causticsTexture: {fileID: 0}
+  causticsSplit: 0
+  causticsSpeed: 0
+  causticsScale: 0
+  causticsShadowMask: 0
+  causticsLightMatrix:
+    e00: 0
+    e01: 0
+    e02: 0
+    e03: 0
+    e10: 0
+    e11: 0
+    e12: 0
+    e13: 0
+    e20: 0
+    e21: 0
+    e22: 0
+    e23: 0
+    e30: 0
+    e31: 0
+    e32: 0
+    e33: 0
+  useLegacyCaustics: 0
+  causticsDepth: 0
+  useColorGradient: 0
+  colorGradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  colorGradientTexture: {fileID: 0}
+  shallowColor: {r: 0.25, g: 0.72352934, b: 1, a: 1}
+  deepColor: {r: 0, g: 0.16689691, b: 0.6784314, a: 1}
+  colorDepth: 2.78
+  horizonColor: {r: 0, g: 0.227451, b: 0.8, a: 1}
+  horizonDistance: 20
+  shoreFade: 0
+  shoreColor: {r: 0, g: 0.9803922, b: 0.3019608, a: 0}
+  shoreStrength: 0
+  shoreBlend: 0
+  shoreDepth: 0
+  waveColor: {r: 0, g: 0, b: 0, a: 0}
+  underwaterColor: {r: 0, g: 0, b: 0, a: 0}
+  underwaterColorStrength: 0
+  underwaterRefractionStrength: 0
+  surfaceFoamTexture: {fileID: 2800000, guid: 5293ac8cd3dd6f6478585f4f30abddf7, type: 3}
+  surfaceFoamSampling: {x: 0.28, y: 0.73}
+  surfaceFoamCutoff: 0.28
+  surfaceFoamDistortion: 0.73
+  surfaceFoamBlend: 1
+  surfaceFoamColor1: {r: 1, g: 1, b: 1, a: 0.3215686}
+  surfaceFoamColor2: {r: 1, g: 1, b: 1, a: 0.7294118}
+  surfaceFoamMovement: {x: 0.1, y: 0.01, z: 0.1, w: 0.01}
+  surfaceFoamDirection1: 0.1
+  surfaceFoamDirection2: 0.1
+  surfaceFoamSpeed1: 0.01
+  surfaceFoamSpeed2: 0.01
+  surfaceFoamTilingAndOffset: {x: 0, y: -1, z: 0.22, w: 0.12}
+  surfaceFoamOffsetX: 0
+  surfaceFoamOffsetY: -1
+  surfaceFoamScale1: 0.22
+  surfaceFoamScale2: 0.12
+  enableSurfaceFoam: 1
+  surfaceFoamHeightMask: 0
+  surfaceFoamHeightMaskSmoothness: 0
+  enableHeightMask: 0
+  foamShadowStrength: 0
+  foamShadowDepth: 0
+  surfaceFoamShadowProjection: 0
+  intersectionFoamShadowProjection: 0
+  foamMovement: 0
+  intersectionFoamDepth: 0
+  intersectionFoamTexture: {fileID: 0}
+  intersectionFoamColor: {r: 0, g: 0, b: 0, a: 0}
+  intersectionFoamMovement: {x: 0, y: 0}
+  intersectionFoamDirection: 0
+  intersectionFoamSpeed: 0
+  intersectionFoamScale: 0
+  intersectionFoamSampling: {x: 0, y: 0}
+  intersectionFoamCutoff: 0
+  intersectionFoamDistortion: 0
+  enableIntersectionEffects: 0
+  intersectionFoamBlend: 0
+  intersectionWaterBlend: 0
+  shoreFoamSpeed: 0
+  shoreFoamWidth: 0
+  shoreFoamFrequency: 0
+  shoreFoamBreakupStrength: 0
+  shoreFoamBreakupScale: 0
+  lighting: 0
+  lightingSmoothness: 0
+  lightingSpecularColor: {r: 0, g: 0, b: 0, a: 0}
+  lightingDiffuseColor: {r: 0, g: 0, b: 0, a: 0}
+  lightingHardness: 0
+  normalsTexture: {fileID: 0}
+  normalsMovement: {x: 0.005, y: 2}
+  normalsStrength: 0
+  normalsScale: 2
+  normalsSpeed: 0.005
+  refractionStrength: 0.053
+  waveVisuals: {x: 0.02, y: 1, z: 0.17}
+  waveSteepness: 0.02
+  waveLength: 1
+  waveSpeed: 0.17
+  waveDirections: {x: 0, y: 0.64, z: 1, w: 0.33}
+  waveDirection1: 0
+  waveDirection2: 0.64
+  waveDirection3: 1
+  waveDirection4: 0.33
+  waterUVs: 1
+  hideComponents: 0
+  enableFoamShadows: 0
+  enableRefraction: 0
+  meshRenderer: {fileID: 1149227958}
+  meshFilter: {fileID: 1149227959}
+  material: {fileID: 2100000, guid: 97b94a25afeb27c43b909eb713988168, type: 2}
 --- !u!4 &1153650344 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8598992634336898019, guid: ca9b6c824a06f7a46af748db64d6caa5,
