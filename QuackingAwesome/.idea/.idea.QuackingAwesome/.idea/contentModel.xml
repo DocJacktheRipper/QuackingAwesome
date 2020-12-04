@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\sebas\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\sebas\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_QuackingAwesome.-1986533184.00" t="ExcludeRecursive" />
-    <e p="C:\Users\sebas\Desktop\Programmieren_Privat\Unity\GitHub\QuackingAwesome\QuackingAwesome" t="IncludeRecursive">
+    <e p="C:\Users\Erell\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Erell\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_QuackingAwesome.-1197733770.00" t="ExcludeRecursive" />
+    <e p="D:\Users\Erell Choulette\Documents\GitHub\QuackingAwesome\QuackingAwesome" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
@@ -175,12 +175,6 @@
               <e p="IStateHandlerAI.cs" t="Include" />
             </e>
           </e>
-          <e p="Analytics" t="Include">
-            <e p="MenuAnalytics.cs" t="Include" />
-            <e p="NestAnalytics.cs" t="Include" />
-            <e p="StartMenuAnalytics.cs" t="Include" />
-            <e p="TutorialAnalytics.cs" t="Include" />
-          </e>
           <e p="Controllers" t="Include">
             <e p="Camera" t="Include">
               <e p="PlayerFollow.cs" t="Include" />
@@ -226,6 +220,25 @@
               <e p="StickBar.cs" t="Include" />
             </e>
           </e>
+          <e p="LeavingScene" t="Include">
+            <e p="Analytics" t="Include">
+              <e p="MenuAnalytics.cs" t="Include" />
+              <e p="NestAnalytics.cs" t="Include" />
+              <e p="StartMenuAnalytics.cs" t="Include" />
+              <e p="TutorialAnalytics.cs" t="Include" />
+            </e>
+            <e p="Save" t="Include">
+              <e p="GlobalControl.cs" t="Include" />
+              <e p="MillstonesData.cs" t="Include" />
+              <e p="NestData.cs" t="Include" />
+              <e p="PlayerData.cs" t="Include" />
+              <e p="PlayerInventoryData.cs" t="Include" />
+              <e p="SaveScene.cs" t="Include" />
+              <e p="SceneData.cs" t="Include" />
+              <e p="TasksProgression.cs" t="Include" />
+              <e p="UpgradesProgression.cs" t="Include" />
+            </e>
+          </e>
           <e p="Nest" t="Include">
             <e p="ArrowPointing.cs" t="Include" />
             <e p="NestBuilding.cs" t="Include" />
@@ -234,12 +247,20 @@
             <e p="NestMenu" t="Include">
               <e p="InspectableNest.cs" t="Include" />
               <e p="LayAndHatchEgg.cs" t="Include" />
+              <e p="TestUpgrades.cs" t="Include" />
               <e p="Upgrades.cs" t="Include" />
               <e p="UpgradeVisualToggle.cs" t="Include" />
             </e>
             <e p="NPC Nests" t="Include">
               <e p="BeaverNest.cs" t="Include" />
             </e>
+          </e>
+          <e p="Save" t="Include">
+            <e p="GlobalControl.cs" t="Include" />
+            <e p="MillstonesData.cs" t="Include" />
+            <e p="PlayerData.cs" t="Include" />
+            <e p="PlayerInventoryData.cs" t="Include" />
+            <e p="UpgradesProgression.cs" t="Include" />
           </e>
           <e p="spawning" t="Include">
             <e p="Animals" t="Include">
@@ -256,6 +277,9 @@
             </e>
             <e p="Spawner.cs" t="Include" />
             <e p="SpawnPoint.cs" t="Include" />
+          </e>
+          <e p="Tasks" t="Include">
+            <e p="Tasks.cs" t="Include" />
           </e>
           <e p="Tutorial" t="Include">
             <e p="DisplayTutorialAdvices.cs" t="Include" />

@@ -1301,7 +1301,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &970056270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2327,75 +2327,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1595923489}
   m_CullTransparentMesh: 0
---- !u!1 &1604226889
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1604226891}
-  - component: {fileID: 1604226890}
-  m_Layer: 0
-  m_Name: GlobalControl
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1604226890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1604226889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e35a2d13fcc1cba4a9c3a6cca52c217b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  savedPlayerData:
-    higherSceneCompletedID: 0
-    currentScene:
-      id: 0
-      savedNest:
-        nestIsFinished: 0
-        eggs: 0
-      saveTasksProgression:
-        tasksAreCompleted: 0
-        nestsBuild: 0
-    savedInventoryData:
-      ducklings: 0
-      energy: 0
-    savedUpgradesProgression:
-      dashStep: 0
-      beakStep: 0
-      speedStep: 0
-      scareStep: 0
-      nestStep: 0
-    savedMillstonesData:
-      frogsEaten: 0
-      beaverScared: 0
-      nestBuild: 0
-      hatchEggs: 0
-      peasEaten: 0
-  IsSceneBeingLoaded: 0
---- !u!4 &1604226891
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1604226889}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -304.13745, y: -218.65424, z: 172.9357}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1604328158
 GameObject:
   m_ObjectHideFlags: 0
@@ -2658,7 +2589,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 888e7ee71f3dbac46a54c23fc6efb6de, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1670eea8f8c4c8041b8192287786e0e6, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2750,6 +2681,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1703087937}
   m_CullTransparentMesh: 0
+--- !u!1 &1757862640
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1757862642}
+  - component: {fileID: 1757862641}
+  m_Layer: 0
+  m_Name: GlobalObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1757862641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757862640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e35a2d13fcc1cba4a9c3a6cca52c217b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  savedInventoryData: {fileID: 0}
+  savedMillstoneProgression: {fileID: 0}
+  savedUpgradesProgression: {fileID: 0}
+--- !u!4 &1757862642
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757862640}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -304.13745, y: -218.65424, z: 172.9357}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1932630702
 GameObject:
   m_ObjectHideFlags: 0

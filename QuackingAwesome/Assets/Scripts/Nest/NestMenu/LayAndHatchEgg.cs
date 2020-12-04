@@ -1,5 +1,6 @@
 ﻿using Inventory;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Nest.NestMenu
 {
@@ -17,12 +18,20 @@ namespace Nest.NestMenu
 
         private int _currentEggs = 0;
         public int maxEggsInNest = 3;
+        
+        private SceneData _savedScene;
 
         public void Start()
         {
             duck = GameObject.FindWithTag("Player");
             _energyInventory = duck.GetComponent<EnergyInventory>();
             _ducklings = duck.GetComponent<DucklingsInventory>();
+
+            _savedScene = GlobalControl.Instance.savedPlayerData.currentScene;
+            
+            if (_savedScene.id == SceneManager.GetActiveScene().buildIndex)
+                // load the saved eggs if there is some
+                _currentEggs = _savedScene.savedNest.eggs;
         }
 
         public int GetNumEggs()
@@ -80,6 +89,12 @@ namespace Nest.NestMenu
         public bool CanHatchEgg()
         {
             return (_currentEggs>0) && HasEnoughEnergyForHatching();
+        }
+        
+        // saving the eggs
+        private void OnDestroy()
+        {
+            _savedScene.savedNest.eggs = _currentEggs;
         }
     }
 }

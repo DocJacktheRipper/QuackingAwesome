@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Inventory
 {
@@ -8,12 +9,19 @@ namespace Inventory
 
         private void Start()
         {
-            energy = 0;
+            // load the player energy
+            energy = GlobalControl.Instance.savedPlayerData.savedInventoryData.energy;
         }
 
         public void IncreaseEnergy(int value)
         {
             energy += value;
+        }
+
+        // saving the player energry
+        private void OnDestroy()
+        {
+            GlobalControl.Instance.savedPlayerData.savedInventoryData.energy = energy;
         }
     }
 }

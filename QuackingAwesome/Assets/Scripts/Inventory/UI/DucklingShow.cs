@@ -21,7 +21,7 @@ public class DucklingShow : MonoBehaviour
     {
         var temp = _count;
 
-        _count = _ducklingsInventory.DucklingCount;
+        _count = _ducklingsInventory.ducklingCount;
 
         if (_count != temp)
         {

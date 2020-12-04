@@ -1,22 +1,33 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class DucklingsInventory : MonoBehaviour
 {
-    public int DucklingCount;
+    public int ducklingCount;
+
+    private void Start()
+    {
+        ducklingCount = GlobalControl.Instance.savedPlayerData.savedInventoryData.ducklings;
+    }
 
     public void RemoveDucklings(int number)
     {
-        DucklingCount -= number;
-        if (DucklingCount < 0)
+        ducklingCount -= number;
+        if (ducklingCount < 0)
         {
-            DucklingCount = 0;
+            ducklingCount = 0;
         }
     }
 
     public void AddDucklings(int number)
     {
-        DucklingCount += number;
+        ducklingCount += number;
+    }
+
+    private void OnDestroy()
+    {
+        GlobalControl.Instance.savedPlayerData.savedInventoryData.ducklings = ducklingCount;
     }
 }

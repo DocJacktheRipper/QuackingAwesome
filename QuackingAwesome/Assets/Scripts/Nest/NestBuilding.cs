@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 using Inventory;
 using Analytics;
@@ -21,12 +22,19 @@ namespace Nest
         private NestEffectTrigger _effectTrigger;
         
         private TutorialAnalytics _analytics;
+        
+        private SceneData _savedScene;
 
         private void Start()
         {
             _nbContainer = transform.Find("NestBuildingContainer");
             _effectTrigger = GetComponent<NestEffectTrigger>();
             _analytics = GameObject.Find("Analytics").GetComponent<TutorialAnalytics>();
+            
+            _savedScene = GlobalControl.Instance.savedPlayerData.currentScene;
+            if (_savedScene.id == SceneManager.GetActiveScene().buildIndex)
+                // load the save state of the nest
+                NestIsFinished = _savedScene.savedNest.nestIsFinished;
         }
 
         private void OnTriggerStay(Collider other)
@@ -77,7 +85,7 @@ namespace Nest
             }
             
             NestIsFinished = true;
-           
+
         }
 
         private void TransferSticks(StickInventory player)
@@ -142,6 +150,12 @@ namespace Nest
             }
             
             BuildNestDynamically();
+        }
+        
+        // saving the nest state
+        private void OnDestroy()
+        {
+            _savedScene.savedNest.nestIsFinished = NestIsFinished;
         }
     }
 }
