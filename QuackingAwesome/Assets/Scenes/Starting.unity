@@ -9860,8 +9860,8 @@ MonoBehaviour:
   underwaterColorStrength: 0
   underwaterRefractionStrength: 0.099
   surfaceFoamTexture: {fileID: 2800000, guid: 5293ac8cd3dd6f6478585f4f30abddf7, type: 3}
-  surfaceFoamSampling: {x: 0.776, y: 0.73}
-  surfaceFoamCutoff: 0.776
+  surfaceFoamSampling: {x: 0.28, y: 0.73}
+  surfaceFoamCutoff: 0.28
   surfaceFoamDistortion: 0.73
   surfaceFoamBlend: 1
   surfaceFoamColor1: {r: 1, g: 1, b: 1, a: 0.3215686}
@@ -9915,8 +9915,8 @@ MonoBehaviour:
   normalsScale: 2
   normalsSpeed: 0.005
   refractionStrength: 0.053
-  waveVisuals: {x: 0, y: 1, z: 0.17}
-  waveSteepness: 0
+  waveVisuals: {x: 0.02, y: 1, z: 0.17}
+  waveSteepness: 0.02
   waveLength: 1
   waveSpeed: 0.17
   waveDirections: {x: 0, y: 0.64, z: 1, w: 0.33}
@@ -17578,6 +17578,7 @@ MonoBehaviour:
   - {fileID: 0}
   distanceForActivating: 3
   stickBar: {fileID: 0}
+  multipleNestsHandler: {fileID: 0}
 --- !u!4 &1108115619 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8598992634336898019, guid: ca9b6c824a06f7a46af748db64d6caa5,
@@ -52038,7 +52039,7 @@ PrefabInstance:
     - target: {fileID: 7027507373786263043, guid: 6309e6e9d11f68a4083d047c2aba84a1,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7027507373786263068, guid: 6309e6e9d11f68a4083d047c2aba84a1,
         type: 3}
@@ -52384,12 +52385,12 @@ PrefabInstance:
     - target: {fileID: 1414459407584468638, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5
+      value: 1.45
       objectReference: {fileID: 0}
     - target: {fileID: 1414459407584468638, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5
+      value: 1.45
       objectReference: {fileID: 0}
     - target: {fileID: 1414459407584468638, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
@@ -52759,12 +52760,12 @@ PrefabInstance:
     - target: {fileID: 5379586579845869765, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 730
+      value: 720
       objectReference: {fileID: 0}
     - target: {fileID: 5379586579845869765, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 355
+      value: 335
       objectReference: {fileID: 0}
     - target: {fileID: 5379586579845869765, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
@@ -52809,7 +52810,7 @@ PrefabInstance:
     - target: {fileID: 6013164010778163994, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -100
+      value: -120
       objectReference: {fileID: 0}
     - target: {fileID: 6013164010778163994, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
@@ -52974,7 +52975,7 @@ PrefabInstance:
     - target: {fileID: 7059619975811433539, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 355
+      value: 335
       objectReference: {fileID: 0}
     - target: {fileID: 7059619975811433539, guid: b51857b31ca727344804cebf0959d70e,
         type: 3}
