@@ -12729,10 +12729,10 @@ MonoBehaviour:
   arrowMesh: {fileID: 736956131}
   duck: {fileID: 543450653703095207}
   nests:
-  - {fileID: 0}
+  - {fileID: 1369831723}
   distanceForActivating: 3
-  stickBar: {fileID: 0}
-  multipleNestsHandler: {fileID: 0}
+  stickBar: {fileID: 2115409474}
+  multipleNestsHandler: {fileID: 4808378788423664166}
 --- !u!1 &1107642476
 GameObject:
   m_ObjectHideFlags: 0
@@ -42593,6 +42593,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b51857b31ca727344804cebf0959d70e, type: 3}
+--- !u!114 &4808378788423664166 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4810964819660802553, guid: b51857b31ca727344804cebf0959d70e,
+    type: 3}
+  m_PrefabInstance: {fileID: 4808378788423664165}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29141482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 071510ac1e3c70348a08a9164d346442, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4966003075768817024
 MonoBehaviour:
   m_ObjectHideFlags: 0
