@@ -4,7 +4,6 @@ namespace Controllers.Duck
 {
     public class CharacterControl : MonoBehaviour
     {
-
         //DONT CHANGE THE SPEED OR REMOVE GRAVITY FROM UNITY
         //DUCK DOESNT FLY AWAY WHEN USING GRAVITY AND A BOX COLLIDER FOR WATER
         private Rigidbody _duck;
@@ -19,11 +18,15 @@ namespace Controllers.Duck
         private float x;
         private float z;
 
+        private Animator _animator;
+        private int IsSwimming = Animator.StringToHash("IsSwimming");
+
 
         void Start()
         {
             _duck = GetComponent<Rigidbody>();
             _speed = _baseSpeed;
+            _animator = GetComponent<Animator>();
         }
 
         void Update()
@@ -40,8 +43,14 @@ namespace Controllers.Duck
                 // create a smooth direction to look at using Slerp()
                 Vector3 smoothDir = Vector3.Slerp(transform.forward, _lookDir, rotation * Time.deltaTime);
                 transform.rotation = Quaternion.LookRotation(smoothDir);
+                _animator.SetBool(IsSwimming, true);
+            }
+            else
+            {
+                _animator.SetBool(IsSwimming, false);
             }
         }
+
         void FixedUpdate()
         {
             _movement = new Vector3(x, 0f, z) * (_speed * Time.deltaTime);
