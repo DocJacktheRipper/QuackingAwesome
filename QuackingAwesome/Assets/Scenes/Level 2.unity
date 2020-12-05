@@ -36054,7 +36054,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundClips:
-  - {fileID: 8300000, guid: 9b886c703ce7e514da4f78bff78265f2, type: 3}
+  - {fileID: 8300000, guid: ebed5bde5d8c8354bb33f198cc7c6095, type: 3}
   waitForSeconds: 40
 --- !u!82 &923614096
 AudioSource:
@@ -36067,7 +36067,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -4154622505843925636, guid: 75eb54af43e2abf4cb015c0d7b477163,
     type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ebed5bde5d8c8354bb33f198cc7c6095, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -63552,6 +63552,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1040836305}
     m_Modifications:
+    - target: {fileID: 8598992634336898019, guid: ca9b6c824a06f7a46af748db64d6caa5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
     - target: {fileID: 620738349240889799, guid: f2ec5e138a2aa3f4db1e9724cd847ba2,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -63676,11 +63681,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8598992634336898019, guid: ca9b6c824a06f7a46af748db64d6caa5,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 19
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca9b6c824a06f7a46af748db64d6caa5, type: 3}
