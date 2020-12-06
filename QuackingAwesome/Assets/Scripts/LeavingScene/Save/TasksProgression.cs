@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System.Collections.Generic;
 
 [System.Serializable]
 public class TasksProgression
 {
     public bool tasksAreCompleted = false;
-    public int nestsBuild   = 0;
+    public List<Task> levelTasks;
 }
