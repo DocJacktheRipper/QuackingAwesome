@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 20d7b5b50a3e7624796b96279da1f38f,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -13744,6 +13744,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 814204996}
   m_CullTransparentMesh: 0
+--- !u!1 &819538810
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 819538812}
+  - component: {fileID: 819538811}
+  m_Layer: 0
+  m_Name: Tasks
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &819538811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819538810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36ead00d405c5c44ab264e373498e36a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tasksAreCompleted: 0
+  levelTasks: []
+  nestsParent: {fileID: 1332497991}
+  stickInventory: {fileID: 969745191}
+--- !u!4 &819538812
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819538810}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 431.52722, y: 224.86002, z: -36.90625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &821845681
 GameObject:
   m_ObjectHideFlags: 0
@@ -30347,26 +30394,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d14e763e597c58419918609da7245cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _tasksUpdater: {fileID: 819538811}
   uiTasks:
   - {fileID: 1421139370}
   - {fileID: 2025063216}
   - {fileID: 1534500244}
---- !u!114 &1421139373
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1421139371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36ead00d405c5c44ab264e373498e36a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tasksAreCompleted: 0
-  levelTasks: []
-  nestsParent: {fileID: 1332497991}
-  stickInventory: {fileID: 969745191}
 --- !u!1 &1422837317
 GameObject:
   m_ObjectHideFlags: 0

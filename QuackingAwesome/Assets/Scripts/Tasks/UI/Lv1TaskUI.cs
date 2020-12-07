@@ -6,7 +6,7 @@ namespace Tasks.UI
 {
     public class Lv1TaskUI : MonoBehaviour
     {
-        private TasksUpdater _tasksUpdater;
+        public TasksUpdater _tasksUpdater;
         private List<Task> _levelTasks;
         public List<GameObject> uiTasks;
         private List<Text> _uiProgressionTexts;
@@ -14,7 +14,6 @@ namespace Tasks.UI
     
         void Start()
         {
-            _tasksUpdater = GetComponent<TasksUpdater>();
             _levelTasks = _tasksUpdater.levelTasks;
         
             InitTasks();
