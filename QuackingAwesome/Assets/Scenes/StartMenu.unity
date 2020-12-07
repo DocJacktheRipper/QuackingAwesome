@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -547,7 +547,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &507474664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1301,7 +1301,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &970056270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1610,6 +1610,8 @@ GameObject:
   - component: {fileID: 1139409279}
   - component: {fileID: 1139409281}
   - component: {fileID: 1139409280}
+  - component: {fileID: 1139409283}
+  - component: {fileID: 1139409282}
   m_Layer: 5
   m_Name: CoverLevelThree
   m_TagString: Untagged
@@ -1675,6 +1677,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1139409278}
   m_CullTransparentMesh: 0
+--- !u!114 &1139409282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139409278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 637d578e4bf8719469c401360650edfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuHandler: {fileID: 191192846}
+--- !u!111 &1139409283
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139409278}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 26acd5fd476d2a84a8ea9290ad667be3, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 26acd5fd476d2a84a8ea9290ad667be3, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1176982156
 GameObject:
   m_ObjectHideFlags: 0
@@ -2365,7 +2396,7 @@ MonoBehaviour:
         eggs: 0
       saveTasksProgression:
         tasksAreCompleted: 0
-        nestsBuild: 0
+        levelTasks: []
     savedInventoryData:
       ducklings: 0
       energy: 0
@@ -3008,6 +3039,8 @@ GameObject:
   - component: {fileID: 2097418128}
   - component: {fileID: 2097418130}
   - component: {fileID: 2097418129}
+  - component: {fileID: 2097418132}
+  - component: {fileID: 2097418131}
   m_Layer: 5
   m_Name: CoverLevelTwo
   m_TagString: Untagged
@@ -3072,3 +3105,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2097418127}
   m_CullTransparentMesh: 0
+--- !u!111 &2097418131
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097418127}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 26182d562751ffd4babbcfdc65c37dc5, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 26182d562751ffd4babbcfdc65c37dc5, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!114 &2097418132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097418127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 637d578e4bf8719469c401360650edfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuHandler: {fileID: 191192846}

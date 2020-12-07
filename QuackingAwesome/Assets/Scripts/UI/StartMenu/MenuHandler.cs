@@ -15,19 +15,23 @@ namespace UI.StartMenu
         public GameObject cloudCoverLevel2;
         public GameObject cloudCoverLevel3;
 
-        private GlobalControl globalControl;
+        private GlobalControl _globalControl;
+        
+        // animation
+        private CloudAnimationEvent _cloud2Animator;
+        private CloudAnimationEvent _cloud3Animator;
 
         private void Start()
         {
             TogglePondMapOn(false);
+            _cloud2Animator = cloudCoverLevel2.GetComponent<CloudAnimationEvent>();
+            _cloud3Animator = cloudCoverLevel3.GetComponent<CloudAnimationEvent>();
         }
 
         void Awake()
         {
             GameObject gc = GameObject.Find("GlobalControl");
-            globalControl = gc.GetComponent<GlobalControl>();
-
-            CheckLevels();
+            _globalControl = gc.GetComponent<GlobalControl>();
         }
 
         private void TogglePondMapOn(bool openPond)
@@ -39,38 +43,83 @@ namespace UI.StartMenu
         public void OpenPondMap()
         {
             TogglePondMapOn(true);
+            
+            CheckLevels();
         }
 
         #region PondMap
 
-        private void CheckLevels()
+        public void CheckLevels()
         {
-            var sceneCompleteID= globalControl.savedPlayerData.higherSceneCompletedID;
+            var sceneCompleteID= _globalControl.savedPlayerData.higherSceneCompletedID;
 
+            SceneData scene;
             switch (sceneCompleteID)
             {
                 case 0:
-                    UnlockLevel1(true);
-                    UnlockLevel2(false);
-                    UnlockLevel3(false);
+                    OnlyLevel1();
+                    
+                    scene = _globalControl.savedPlayerData.currentScene;
+                    if (scene.id == 1 && scene.saveTasksProgression.tasksAreCompleted)
+                    {
+                        _globalControl.savedPlayerData.higherSceneCompletedID = scene.id;
+                        UnlockLevel1(false);
+                        // invoke animation ("Completed" over lv1?)
+                        RevealCloudsLv2();
+                    }
                     break;
-                case 1:    
-                    UnlockLevel1(false);
-                    UnlockLevel2(true);
-                    UnlockLevel3(false);
+                case 1:   
+                    OnlyLevel2();
+                    
+                    scene = _globalControl.savedPlayerData.currentScene;
+                    if (scene.id == 2 && scene.saveTasksProgression.tasksAreCompleted)
+                    {
+                        _globalControl.savedPlayerData.higherSceneCompletedID = scene.id;
+                        UnlockLevel2(false);
+                        RevealCloudsLv3();
+                    }
                     break;
                 case 2:    
-                    UnlockLevel1(false);
-                    UnlockLevel2(false);
-                    UnlockLevel3(true);
+                    OnlyLevel3();
                     break;
                 default:
-                    UnlockLevel1(true);
-                    UnlockLevel2(true);
-                    UnlockLevel3(true);
+                    AllLevelUnlocked();
                     break;
             }
         }
+
+        #region OnlyOneLevelUnlocked
+
+        private void OnlyLevel1()
+        {
+            UnlockLevel1(true);
+            UnlockLevel2(false);
+            UnlockLevel3(false);
+        }
+
+        private void OnlyLevel2()
+        {
+            UnlockLevel1(false);
+            UnlockLevel2(true);
+            UnlockLevel3(false);
+        }
+
+        private void OnlyLevel3()
+        {
+            UnlockLevel1(false);
+            UnlockLevel2(false);
+            UnlockLevel3(true);
+        }
+
+        private void AllLevelUnlocked()
+        {
+            UnlockLevel1(true);
+            UnlockLevel2(true);
+            UnlockLevel3(true);
+        }
+
+        #endregion
+        #region NoAnimation
 
         private void UnlockLevel1(bool unlock)
         {
@@ -102,5 +151,21 @@ namespace UI.StartMenu
         }
 
         #endregion
+        #region AnimatedReveal
+
+        private void RevealCloudsLv2()
+        {
+            _cloud2Animator.InvokeAnimation();
+        }
+
+        private void RevealCloudsLv3()
+        {
+            _cloud3Animator.InvokeAnimation();
+        }
+
+        #endregion
+
+        #endregion
+        
     }
 }
