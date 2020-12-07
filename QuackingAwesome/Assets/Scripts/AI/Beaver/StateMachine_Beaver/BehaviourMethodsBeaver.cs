@@ -1,5 +1,6 @@
 ﻿using AI.StateMachine;
 using Inventory;
+using Props.spawning;
 using Spawning.Animals;
 using UnityEngine;
 using UnityEngine.AI;
@@ -8,6 +9,8 @@ namespace AI.Beaver.StateMachine_Beaver
 {
     public class BehaviourMethodsBeaver : BehaviourMethods
     {
+        public StickSpawner stickSpawner;
+        public float respawnDelayStick = 20;
         public StickInventory stickInventory;
 
         private NavMeshPath _path;
@@ -22,8 +25,11 @@ namespace AI.Beaver.StateMachine_Beaver
 
         public bool CollectStick(Collider other)
         {
-            if(stickInventory.collectingEnabled)
+            if (stickInventory.collectingEnabled)
+            {
+                //stickSpawner.RespawnWithDelay(respawnDelayStick);
                 return stickInventory.AddStick(other.transform);
+            }
             return false;
         }
 

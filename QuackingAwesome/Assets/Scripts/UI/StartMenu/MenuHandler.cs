@@ -6,6 +6,8 @@ namespace UI.StartMenu
     public class MenuHandler : MonoBehaviour
     {
         public GameObject titleMenu;
+        private GameObject _credits;
+        private GameObject _menuButtons;
         public GameObject pondMap;
 
         public Button level1;
@@ -24,6 +26,9 @@ namespace UI.StartMenu
         private void Start()
         {
             TogglePondMapOn(false);
+            _credits = titleMenu.transform.Find("CreditsPanel").gameObject;
+            _menuButtons = titleMenu.transform.Find("MenuButtons").gameObject;
+            
             _cloud2Animator = cloudCoverLevel2.GetComponent<CloudAnimationEvent>();
             _cloud3Animator = cloudCoverLevel3.GetComponent<CloudAnimationEvent>();
         }
@@ -32,6 +37,18 @@ namespace UI.StartMenu
         {
             GameObject gc = GameObject.Find("GlobalControl");
             _globalControl = gc.GetComponent<GlobalControl>();
+        }
+
+        public void OpenCreditScreen()
+        {
+            _credits.SetActive(true);
+            _menuButtons.SetActive(false);
+        }
+
+        public void CloseCreditScreen()
+        {
+            _credits.SetActive(false);
+            _menuButtons.SetActive(true);
         }
 
         private void TogglePondMapOn(bool openPond)

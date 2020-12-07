@@ -45,7 +45,6 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
             base.MouthTriggerEntered(other);
             if(BeaverNestIsTrigger(other))
             {
-                Debug.Log("Sticks: " + ConcreteMethods.stickInventory.numberOfSticks);
                 return;
             }
         }

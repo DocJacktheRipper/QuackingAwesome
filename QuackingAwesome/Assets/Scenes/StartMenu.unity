@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1247,6 +1247,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 191192846}
+        m_MethodName: OpenCreditScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &757760924
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1995,6 +2006,8 @@ GameObject:
   - component: {fileID: 1139409279}
   - component: {fileID: 1139409281}
   - component: {fileID: 1139409280}
+  - component: {fileID: 1139409283}
+  - component: {fileID: 1139409282}
   m_Layer: 5
   m_Name: CoverLevelThree
   m_TagString: Untagged
@@ -2060,6 +2073,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1139409278}
   m_CullTransparentMesh: 0
+--- !u!114 &1139409282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139409278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 637d578e4bf8719469c401360650edfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuHandler: {fileID: 191192846}
+  _animation: {fileID: 1139409283}
+--- !u!111 &1139409283
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139409278}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 26acd5fd476d2a84a8ea9290ad667be3, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 26acd5fd476d2a84a8ea9290ad667be3, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1176982156
 GameObject:
   m_ObjectHideFlags: 0
@@ -3640,7 +3683,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1962146229}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 191192846}
+        m_MethodName: CloseCreditScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1305583921}
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1962146229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3763,6 +3828,8 @@ GameObject:
   - component: {fileID: 2097418128}
   - component: {fileID: 2097418130}
   - component: {fileID: 2097418129}
+  - component: {fileID: 2097418132}
+  - component: {fileID: 2097418131}
   m_Layer: 5
   m_Name: CoverLevelTwo
   m_TagString: Untagged
@@ -3827,3 +3894,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2097418127}
   m_CullTransparentMesh: 0
+--- !u!114 &2097418131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097418127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 637d578e4bf8719469c401360650edfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuHandler: {fileID: 191192846}
+  _animation: {fileID: 2097418132}
+--- !u!111 &2097418132
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097418127}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 26182d562751ffd4babbcfdc65c37dc5, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 26182d562751ffd4babbcfdc65c37dc5, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
