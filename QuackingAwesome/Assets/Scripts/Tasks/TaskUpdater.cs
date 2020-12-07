@@ -8,7 +8,8 @@ public class TasksUpdater : MonoBehaviour
 
     public List<Task> levelTasks = new List<Task>();
 
-    private SceneData _savedScene;
+    private TasksProgression _savedTasksProgression;
+    private bool _initialize = false;
     
     public GameObject nestsParent;
     
@@ -19,27 +20,23 @@ public class TasksUpdater : MonoBehaviour
         #endregion
 
         #region load save
-        _savedScene = GlobalControl.Instance.savedPlayerData.currentScene;
-        
-        // if the player loaded the scene he was previously playing, load his progression data
-        if (_savedScene.id == SceneManager.GetActiveScene().buildIndex)
+        _savedTasksProgression = GlobalControl.Instance.savedGame
+            .savedScenes[SceneManager.GetActiveScene().buildIndex]
+            .saveTasksProgression;
+        // load saved data
+        tasksAreCompleted = _savedTasksProgression.tasksAreCompleted;
+
+        // if the tasks have already been completed it is not useful to keep updating them
+        if (tasksAreCompleted) return;
+   
+        if (_savedTasksProgression.levelTasks == null)
         {
-            // load saved data
-            tasksAreCompleted = _savedScene.saveTasksProgression.tasksAreCompleted;
-
-            // if the tasks have already been completed it is not useful to keep updating them
-            if (tasksAreCompleted) return;
-        
-            // if not load the progression
-            for (int i = 0; i < levelTasks.Count; i++)
-            {
-                levelTasks[i].isCompleted = _savedScene.saveTasksProgression.levelTasks[i].isCompleted;
-                levelTasks[i].progression = _savedScene.saveTasksProgression.levelTasks[i].progression;
-            }
+            _initialize = true;
+            _savedTasksProgression.levelTasks = new List<Task>(levelTasks.Count);
         }
+        if (!_initialize)
+            levelTasks = _savedTasksProgression.levelTasks;
         #endregion
-        
-
     }
     
     public bool TasksAreCompleted()
@@ -60,7 +57,7 @@ public class TasksUpdater : MonoBehaviour
     // save the tasks progression
     private void OnDestroy()
     {
-        _savedScene.saveTasksProgression.tasksAreCompleted = TasksAreCompleted();
-        if (!tasksAreCompleted) _savedScene.saveTasksProgression.levelTasks = levelTasks;
+        _savedTasksProgression.tasksAreCompleted = TasksAreCompleted();
+        if (!tasksAreCompleted) _savedTasksProgression.levelTasks = levelTasks;
     }
 }

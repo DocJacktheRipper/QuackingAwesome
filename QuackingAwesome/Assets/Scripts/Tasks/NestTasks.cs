@@ -23,7 +23,7 @@ public class SticksToRock : Task
     {
         int newProgression = 0;
         foreach (var nest in _nests)
-            newProgression += nest.numberOfSticks;
+            newProgression += nest.GETNumberOfSticks();
 
         progression = newProgression;
         return IsCompleted();
@@ -54,7 +54,7 @@ public class BuildAllNests : Task
     {
         int newProgression = 0;
         foreach (var nest in _nests)
-            if (nest.NestIsFinished) newProgression++;
+            if (nest.GETNestFinished()) newProgression++;
 
         progression = newProgression;
         return IsCompleted();

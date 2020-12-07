@@ -65,7 +65,7 @@ namespace Controllers
             _analytics.LostPeas(peasLost);
 
             // Destroy the nest
-            if (_nestBuilding.NestIsFinished)
+            if (_nestBuilding.GETNestFinished())
             {
                 respawnToNest.SetActive(true);
             }

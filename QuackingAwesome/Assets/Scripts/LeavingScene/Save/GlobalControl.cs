@@ -1,9 +1,11 @@
-﻿using System;
-using System.Collections;
+﻿#define VERBOSE
+
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
+using UnityEditor;
 
 // https://www.sitepoint.com/saving-data-between-scenes-in-unity/
 
@@ -13,8 +15,13 @@ using System.IO;
 public class GlobalControl : MonoBehaviour
 {
     public static GlobalControl Instance;
-    public PlayerData savedPlayerData = new PlayerData();
+    public GameData savedGame = new GameData();
     void Awake () {
+        int sceneCount = SceneManager.sceneCountInBuildSettings;
+#if VERBOSE
+        Debug.Log("Scene index " + SceneManager.GetActiveScene().buildIndex);   
+        Debug.Log("Number of scenes " + sceneCount);
+#endif
         if (Instance == null)
         {
             DontDestroyOnLoad(gameObject);
@@ -24,6 +31,8 @@ public class GlobalControl : MonoBehaviour
         {
             Destroy (gameObject);
         }
+        
+        savedGame.savedScenes = new SceneData[sceneCount];
     }
     
     public bool IsSceneBeingLoaded = false;
@@ -33,7 +42,7 @@ public class GlobalControl : MonoBehaviour
         BinaryFormatter formatter = new BinaryFormatter();
         FileStream saveFile = File.Create (Application.persistentDataPath + "/savedGame.gd");
 
-        formatter.Serialize(saveFile, savedPlayerData);
+        formatter.Serialize(saveFile, savedGame);
 
         saveFile.Close();
     }
@@ -43,14 +52,14 @@ public class GlobalControl : MonoBehaviour
         BinaryFormatter formatter = new BinaryFormatter();
         FileStream saveFile = File.Open(Application.persistentDataPath + "/savedGame.gd", FileMode.Open);
 
-        savedPlayerData = (PlayerData)formatter.Deserialize(saveFile);
+        savedGame = (GameData)formatter.Deserialize(saveFile);
         
         saveFile.Close();
     }
     
     public void ResetData()
     {
-        savedPlayerData = new PlayerData();
+        savedGame = new GameData();
     }
 
     private void OnDestroy()

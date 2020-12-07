@@ -9,32 +9,30 @@ namespace Nest
 {
     public class NestBuilding : MonoBehaviour
     {
-        public int numberOfSticks;
+        // public int numberOfSticks;
         public int neededSticks;
 
         public bool enableDynamicBuilding;
         public float heightForDynBuilding;
 
         // true, when nest is built
-        public bool NestIsFinished { get; private set; }
+        // public bool NestIsFinished { get; private set; }
 
         private Transform _nbContainer;
         private NestEffectTrigger _effectTrigger;
         
         private TutorialAnalytics _analytics;
         
-        private SceneData _savedScene;
+        public NestData nestDataToSave;
 
         private void Start()
         {
             _nbContainer = transform.Find("NestBuildingContainer");
             _effectTrigger = GetComponent<NestEffectTrigger>();
             _analytics = GameObject.Find("Analytics").GetComponent<TutorialAnalytics>();
-            
-            _savedScene = GlobalControl.Instance.savedPlayerData.currentScene;
-            if (_savedScene.id == SceneManager.GetActiveScene().buildIndex)
-                // load the save state of the nest
-                NestIsFinished = _savedScene.savedNest.nestIsFinished;
+
+            Debug.Log("nestDataToSave.numberOfSticks " + nestDataToSave.numberOfSticks);
+            BuildNestDynamically();
         }
 
         private void OnTriggerStay(Collider other)
@@ -58,7 +56,7 @@ namespace Nest
             //Debug.Log("Transferring sticks now");
             TransferSticks(player);
                 
-            if (numberOfSticks >= neededSticks)
+            if (nestDataToSave.numberOfSticks >= neededSticks)
             {
                 SetNestFinished();
             }
@@ -74,7 +72,7 @@ namespace Nest
         {
             _analytics.SetLevelPlayState(TutorialAnalytics.LevelPlayState.NestCompleted);
             
-            if (!NestIsFinished)
+            if (!nestDataToSave.nestIsFinished)
             {
                 Debug.Log("nest is finished!");
             
@@ -84,26 +82,26 @@ namespace Nest
                 _effectTrigger.NestFinishedEffect();
             }
             
-            NestIsFinished = true;
+            nestDataToSave.nestIsFinished = true;
 
         }
 
         private void TransferSticks(StickInventory player)
         {
             // only use as much sticks as needed for the nest
-            var diff = neededSticks - numberOfSticks;
+            var diff = neededSticks - nestDataToSave.numberOfSticks;
             int numOfTransferedStick;
             if ((diff - player.GetNumberOfSticks()) < 0)
             {
                 //Debug.Log("More sticks in inventory than needed");
-                numberOfSticks = neededSticks;
+                nestDataToSave.numberOfSticks = neededSticks;
                 
                 numOfTransferedStick = diff;
             }
             else
             {
                 numOfTransferedStick = player.GetNumberOfSticks();
-                numberOfSticks += numOfTransferedStick;
+                nestDataToSave.numberOfSticks += numOfTransferedStick;
                 //player.DeleteAllVisualSticks();
             }
             
@@ -130,32 +128,38 @@ namespace Nest
             _nbContainer.GetChild(0).gameObject.SetActive(true);
         
             // set y pos based on heightForDynBuilding and number of sticks in nest
-            var percentageOfBeingFinished = 1 - (neededSticks - numberOfSticks) * 1.0f / neededSticks;
+            var percentageOfBeingFinished = 1 - (neededSticks - nestDataToSave.numberOfSticks) * 1.0f / neededSticks;
             _nbContainer.GetChild(0).transform.localPosition 
                 = new Vector3(0f, percentageOfBeingFinished * heightForDynBuilding, 0f);
         }
 
         public void RemoveSticks(int numberOfSticksLostInNest)
         {
-            numberOfSticks -= numberOfSticksLostInNest;
+            nestDataToSave.numberOfSticks -= numberOfSticksLostInNest;
 
-            if (numberOfSticks < 0)
+            if (nestDataToSave.numberOfSticks < 0)
             {
-                numberOfSticks = 0;
+                nestDataToSave.numberOfSticks = 0;
             }
 
-            if (numberOfSticks < neededSticks)
+            if (nestDataToSave.numberOfSticks < neededSticks)
             {
-                NestIsFinished = false;
+                nestDataToSave.nestIsFinished = false;
             }
             
             BuildNestDynamically();
         }
         
-        // saving the nest state
-        private void OnDestroy()
+        #region GET
+        public int GETNumberOfSticks()
         {
-            _savedScene.savedNest.nestIsFinished = NestIsFinished;
+            return nestDataToSave.numberOfSticks;
         }
+        
+        public bool GETNestFinished()
+        {
+            return nestDataToSave.nestIsFinished;
+        }
+        #endregion
     }
 }

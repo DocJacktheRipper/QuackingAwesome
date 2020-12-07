@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 20d7b5b50a3e7624796b96279da1f38f,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -20413,6 +20413,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 757141169}
+  - component: {fileID: 757141170}
   m_Layer: 0
   m_Name: DuckNests
   m_TagString: Untagged
@@ -20436,6 +20437,18 @@ Transform:
   m_Father: {fileID: 759576358}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &757141170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757141168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1757a51a1fe47c4cb0256f02ed728f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &759479641
 GameObject:
   m_ObjectHideFlags: 0

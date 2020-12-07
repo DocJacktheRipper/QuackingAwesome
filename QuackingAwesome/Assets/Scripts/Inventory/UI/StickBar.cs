@@ -23,22 +23,22 @@ namespace Inventory.UI
 
         void Update()
         {
-            if (nest.NestIsFinished)
+            if (nest.GETNestFinished())
             {
                 stickStatistic.SetActive(false);
                 nestButton.SetActive(true);
             }
 
-            else if (_numberSticksInNest != nest.numberOfSticks)
+            else if (_numberSticksInNest != nest.GETNumberOfSticks())
             {
-                _numberSticksInNest = nest.numberOfSticks;
+                _numberSticksInNest = nest.GETNumberOfSticks();
                 SetText();
             }
         }
         
         public void Init()
         {
-            _numberSticksInNest = nest.numberOfSticks;
+            _numberSticksInNest = nest.GETNumberOfSticks();
             _numberSticksNeeded = nest.neededSticks.ToString();
             SetText();   
         }

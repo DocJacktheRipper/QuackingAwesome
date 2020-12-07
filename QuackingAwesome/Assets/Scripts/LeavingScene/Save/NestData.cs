@@ -6,5 +6,6 @@ using UnityEngine;
 public class NestData
 {
     public bool nestIsFinished = false;
-    public int  eggs          = 0;
+    public int  numberOfSticks = 0;
+    public int  eggs           = 0;
 }

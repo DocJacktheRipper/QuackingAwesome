@@ -68,18 +68,16 @@ namespace UI.StartMenu
 
         public void CheckLevels()
         {
-            var sceneCompleteID= _globalControl.savedPlayerData.higherSceneCompletedID;
-
-            SceneData scene;
+            var sceneCompleteID= _globalControl.savedGame.higherSceneCompletedID;
+            
             switch (sceneCompleteID)
             {
                 case 0:
                     OnlyLevel1();
                     
-                    scene = _globalControl.savedPlayerData.currentScene;
-                    if (scene.id == 1 && scene.saveTasksProgression.tasksAreCompleted)
+                    if (_globalControl.savedGame.savedScenes[sceneCompleteID+1].saveTasksProgression.tasksAreCompleted)
                     {
-                        _globalControl.savedPlayerData.higherSceneCompletedID = scene.id;
+                        _globalControl.savedGame.higherSceneCompletedID = sceneCompleteID+1;
                         UnlockLevel1(false);
                         // invoke animation ("Completed" over lv1?)
                         RevealCloudsLv2();
@@ -88,10 +86,9 @@ namespace UI.StartMenu
                 case 1:   
                     OnlyLevel2();
                     
-                    scene = _globalControl.savedPlayerData.currentScene;
-                    if (scene.id == 2 && scene.saveTasksProgression.tasksAreCompleted)
+                    if (_globalControl.savedGame.savedScenes[sceneCompleteID+1].saveTasksProgression.tasksAreCompleted)
                     {
-                        _globalControl.savedPlayerData.higherSceneCompletedID = scene.id;
+                        _globalControl.savedGame.higherSceneCompletedID = sceneCompleteID+1;
                         UnlockLevel2(false);
                         RevealCloudsLv3();
                     }

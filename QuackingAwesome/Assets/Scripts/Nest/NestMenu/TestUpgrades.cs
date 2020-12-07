@@ -47,6 +47,8 @@ namespace Nest.NestMenu
         public GameObject nest;
         private LayAndHatchEgg _layAndHatchEgg;
 
+        private UpgradesProgression _savedUpgradesProgression;
+
         private void Start()
         {
             var d = GameObject.Find("Duck");
@@ -59,32 +61,20 @@ namespace Nest.NestMenu
 
             _layAndHatchEgg = nest.GetComponent<LayAndHatchEgg>();
 
+            _savedUpgradesProgression = GlobalControl.Instance.savedGame.savedUpgradesProgression;
+
             InitCostsAndButtons();
         }
 
         private void InitCostsAndButtons()
         {
-            Debug.Log("in init");
-            Debug.Log("dashStep initial" + GlobalControl.Instance.savedPlayerData.savedUpgradesProgression.dashStep);
-            UpgradeDashCooldown(GlobalControl.Instance.savedPlayerData.savedUpgradesProgression.dashStep, true);
-            Debug.Log("_neededAmountForDash" + _neededAmountForDash);
-            UpgradeBeakCapacity(GlobalControl.Instance.savedPlayerData.savedUpgradesProgression.beakStep, true);
-            UpgradeDuckSpeed(GlobalControl.Instance.savedPlayerData.savedUpgradesProgression.speedStep, true);
-            UpgradeScareChance(GlobalControl.Instance.savedPlayerData.savedUpgradesProgression.scareStep, true);
-            UpgradeNestCapacity(GlobalControl.Instance.savedPlayerData.savedUpgradesProgression.nestStep, true);
+            UpgradeDashCooldown(_savedUpgradesProgression.dashStep, true);
+            UpgradeBeakCapacity(_savedUpgradesProgression.beakStep, true);
+            UpgradeDuckSpeed(_savedUpgradesProgression.speedStep, true);
+            UpgradeScareChance(_savedUpgradesProgression.scareStep, true);
+            UpgradeNestCapacity(_savedUpgradesProgression.nestStep, true);
 
         }
-
-        /*
-        private void InitCostsAndButtons()
-        {
-            _neededAmountForDash = ShowCost(_dashCosts[_dashStep], dashUpgrade);
-            _neededAmountForBeak = ShowCost(_beakCosts[_beakStep], beakUpgrade);
-            _neededAmountForSpeed = ShowCost(_speedCosts[_speedStep], speedUpgrade);
-            _neededAmountForScare = ShowCost(_scareCosts[_scareStep], scareUpgrade);
-            _neededAmountForNest = ShowCost(_nestCosts[_nestStep], nestUpgrade);
-        }
-        */
 
         private void Update()
         {
@@ -322,11 +312,11 @@ namespace Nest.NestMenu
 
         private void OnDestroy()
         {
-            GlobalControl.Instance.savedPlayerData.savedUpgradesProgression.dashStep = _dashStep;
-            GlobalControl.Instance.savedPlayerData.savedUpgradesProgression.beakStep = _beakStep;
-            GlobalControl.Instance.savedPlayerData.savedUpgradesProgression.speedStep = _speedStep;
-            GlobalControl.Instance.savedPlayerData.savedUpgradesProgression.scareStep = _scareStep;
-            GlobalControl.Instance.savedPlayerData.savedUpgradesProgression.nestStep = _nestStep;
+            _savedUpgradesProgression.dashStep  = _dashStep;
+            _savedUpgradesProgression.beakStep  = _beakStep;
+            _savedUpgradesProgression.speedStep = _speedStep;
+            _savedUpgradesProgression.scareStep = _scareStep;
+            _savedUpgradesProgression.nestStep  = _nestStep;
         }
     }
 }

@@ -20,7 +20,7 @@ namespace Controllers.Buttons.NestMenu
   
         public void ActivateNestButton()
         {
-            if (nest.NestIsFinished) 
+            if (nest.GETNestFinished()) 
                 nestButton.SetActive(true);
             else stickBar.DisplayStickStatistics(true);
         }

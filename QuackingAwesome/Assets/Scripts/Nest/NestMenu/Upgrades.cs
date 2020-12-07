@@ -81,7 +81,7 @@ namespace Nest.NestMenu
             }
 
 
-            _globalControl = GlobalControl.Instance.savedPlayerData.savedUpgradesProgression;
+            _globalControl = GlobalControl.Instance.savedGame.savedUpgradesProgression;
 
             InitCostsAndButtons();
         }

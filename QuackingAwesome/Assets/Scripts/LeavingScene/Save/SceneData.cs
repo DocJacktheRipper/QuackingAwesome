@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System.Collections.Generic;
 
 [System.Serializable]
 public class SceneData
 {
-    public int id = -1;
-    public NestData savedNest = new NestData();
-    public TasksProgression saveTasksProgression = new TasksProgression();
+    public List<NestData>      savedNests           = new List<NestData>();
+    public TasksProgression    saveTasksProgression = new TasksProgression();
+    public PlayerInventoryData savedInventoryData   = new PlayerInventoryData();
 }
