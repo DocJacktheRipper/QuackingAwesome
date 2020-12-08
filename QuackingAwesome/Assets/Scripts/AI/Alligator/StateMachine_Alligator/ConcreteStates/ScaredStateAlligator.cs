@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using LeavingScene.Save;
+
+using UnityEngine;
 
 namespace AI.Alligator.StateMachine_Alligator.ConcreteStates
 {
@@ -24,6 +26,9 @@ namespace AI.Alligator.StateMachine_Alligator.ConcreteStates
             _waitUntil = Time.time + (scaredAway.howFarAway / ConcreteMethods.GetSpeed());
             
             ConcreteMethods.StartMovement();
+            
+            // increase the millstone "alligator scared"
+            GlobalControl.Instance.savedGame.savedMillstonesData.alligatorScared++;
         }
 
         public override void Execute()

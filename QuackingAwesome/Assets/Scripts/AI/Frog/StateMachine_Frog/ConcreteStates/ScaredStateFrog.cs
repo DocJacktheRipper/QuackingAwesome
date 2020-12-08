@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using LeavingScene.Save;
+
+using UnityEngine;
 
 namespace AI.Frog.StateMachine_Frog.ConcreteStates
 {
@@ -24,6 +26,9 @@ namespace AI.Frog.StateMachine_Frog.ConcreteStates
             _waitUntil = Time.time + (scaredAway.howFarAway / ConcreteMethods.GetSpeed());
             
             ConcreteMethods.StartMovement();
+
+            // increase the millstone "frog scared"
+            GlobalControl.Instance.savedGame.savedMillstonesData.frogScared++;
         }
 
         public override void Execute()

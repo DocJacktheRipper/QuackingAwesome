@@ -4,6 +4,7 @@ using UnityEngine;
 
 using Inventory;
 using Analytics;
+using LeavingScene.Save;
 using Props.spawning;
 
 
@@ -50,6 +51,11 @@ namespace Props
 
             inventory.IncreaseEnergy(nutritiousValue);
             _analytics.IncreaseScore(nutritiousValue);
+            
+            // increase the millstone "number of peas eaten"
+            GlobalControl.Instance.savedGame.savedMillstonesData.peasEaten++;
+
+            
             Destroy(gameObject);
 
             // spawn another pea

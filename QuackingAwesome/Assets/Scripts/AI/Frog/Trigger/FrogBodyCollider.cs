@@ -1,6 +1,7 @@
 ﻿using AI.Frog.StateMachine_Frog;
 using Controllers.Sound_and_Effects;
 using Inventory;
+using LeavingScene.Save;
 using UnityEngine;
 
 namespace AI.Frog.Trigger
@@ -31,6 +32,10 @@ namespace AI.Frog.Trigger
             TriggerDuckAnimationAndSound(other.gameObject);
             
             DeleteFrog();
+
+            // increase the millstone "frog eaten"
+            GlobalControl.Instance.savedGame.savedMillstonesData.frogsEaten++;
+            
             return true;
         }
 
