@@ -14,28 +14,15 @@ namespace Tasks.TaskUpdater
         public List<Task> levelTasks;
 
         private TasksProgression _savedTasksProgression;
-        protected bool Initialize;
-    
+
         public GameObject nestsParent;
 
-        public void Start()
+        public bool LoadSave()
         {
             #region load save
             LoadTaskProgressionFromSave();
 
-            // if the tasks have already been completed it is not useful to keep updating them
-            if (tasksAreCompleted) return;
-
-            if (LoadTasksFromSave())
-            {
-#if VERBOSE
-                Debug.Log("--- Tasks were loaded by save... ---");               
-#endif
-                return;
-            }
-#if VERBOSE
-            Debug.Log("--- Tasks are created ---");
-#endif
+            return LoadTasksFromSave();
             #endregion
         }
 
@@ -44,30 +31,34 @@ namespace Tasks.TaskUpdater
             _savedTasksProgression = GlobalControl.Instance.savedGame
                 .savedScenes[SceneManager.GetActiveScene().buildIndex]
                 .saveTasksProgression;
-            // load saved data
-            tasksAreCompleted = _savedTasksProgression.tasksAreCompleted;
         }
 
         private bool LoadTasksFromSave()
         {
             if (_savedTasksProgression.levelTasks == null || _savedTasksProgression.levelTasks.Count <= 0)
             {
-                Initialize = true;
-                _savedTasksProgression.levelTasks = new List<Task>(levelTasks.Count);
+#if VERBOSE
+                Debug.Log("--- Saved level tasks are initialized ---");
+#endif
+                _savedTasksProgression.levelTasks = new List<Task>();
                 return false;
             }
-            if (!Initialize)
-                levelTasks = _savedTasksProgression.levelTasks;
 
-            return true;
+            else
+            {
+#if VERBOSE
+                Debug.Log("--- Tasks were loaded by save... ---");               
+#endif
+                // load saved data
+                levelTasks = _savedTasksProgression.levelTasks;
+                tasksAreCompleted = _savedTasksProgression.tasksAreCompleted;
+                return true;
+            }
         }
 
         protected void AddGlobalTasks()
         {
-            if (Initialize)
-            {
-                levelTasks.Add(new BuildAllNests(nestsParent));
-            }
+            levelTasks.Add(new BuildAllNests(nestsParent));
         }
 
         private bool TasksAreCompleted()
@@ -93,7 +84,7 @@ namespace Tasks.TaskUpdater
         // save the tasks progression
         private void OnDestroy()
         {
-            _savedTasksProgression.tasksAreCompleted = TasksAreCompleted();
+            _savedTasksProgression.tasksAreCompleted = tasksAreCompleted;
             if (!tasksAreCompleted) _savedTasksProgression.levelTasks = levelTasks;
         }
     }
