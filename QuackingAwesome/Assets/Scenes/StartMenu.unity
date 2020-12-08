@@ -305,8 +305,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 60}
-  m_SizeDelta: {x: 686.5921, y: 48.74685}
+  m_AnchoredPosition: {x: 0, y: 25}
+  m_SizeDelta: {x: 873.1801, y: 165.24045}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &182503797
 MonoBehaviour:
@@ -329,7 +329,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 45
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 4
@@ -340,7 +340,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Special Thanks to Joonas Siermala
+  m_Text: 'Special Thanks to
+
+    Elias Hamm for the music &
+
+    Joonas Siermala
+    for the button press sound'
 --- !u!222 &182503798
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -566,84 +571,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 301905691}
-  m_CullTransparentMesh: 0
---- !u!1 &361178720
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 361178721}
-  - component: {fileID: 361178723}
-  - component: {fileID: 361178722}
-  m_Layer: 5
-  m_Name: Text
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &361178721
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 361178720}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1962146227}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 291.1166, y: 159.5834}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &361178722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 361178720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.8313726, g: 0.5254902, b: 0.24705884, a: 1}
-  m_RaycastTarget: 1
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 58b647c5b2ec4184e9a07a561cdf0644, type: 3}
-    m_FontSize: 180
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 1
-    m_MaxSize: 200
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Back
---- !u!222 &361178723
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 361178720}
   m_CullTransparentMesh: 0
 --- !u!1001 &469355398
 PrefabInstance:
@@ -2865,7 +2792,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -70, y: -40}
-  m_SizeDelta: {x: 472.7354, y: 509}
+  m_SizeDelta: {x: 472.7354, y: 452}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1600061232
 MonoBehaviour:
@@ -2901,7 +2828,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "Fleur de Groot\r\nTeemu Salonen\r\nSebastian Jack Maier\r\nErell Choulette\nJere
     Set\xE4l\xE4\r\nR\u0103zvan Savescu\r\nLaura Torvinen\r\nElisa Koivum\xE4ki\r\nAli
-    Simsek\nElias Hamm"
+    Simsek"
 --- !u!222 &1600061233
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3359,7 +3286,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 70, y: -40}
-  m_SizeDelta: {x: 460, y: 509}
+  m_SizeDelta: {x: 460, y: 452}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1794231597
 MonoBehaviour:
@@ -3409,9 +3336,7 @@ MonoBehaviour:
 
     UI Designer:
 
-    Sound and Effects:
-
-    Music:'
+    Sound and Effects:'
 --- !u!222 &1794231598
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3619,18 +3544,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1962146226}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 361178721}
+  m_Children: []
   m_Father: {fileID: 1372609599}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 547.89, y: 187.89}
-  m_SizeDelta: {x: 371.001, y: 141.1271}
+  m_SizeDelta: {x: 371.3499, y: 172.4514}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1962146228
 MonoBehaviour:
@@ -3716,7 +3640,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 7c282c588453f3d4da5682a107c0ac9a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a3541ed9ab22bb34d9812fd3ac57318c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
