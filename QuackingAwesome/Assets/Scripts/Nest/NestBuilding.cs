@@ -30,8 +30,7 @@ namespace Nest
             _nbContainer = transform.Find("NestBuildingContainer");
             _effectTrigger = GetComponent<NestEffectTrigger>();
             _analytics = GameObject.Find("Analytics").GetComponent<TutorialAnalytics>();
-
-            Debug.Log("nestDataToSave.numberOfSticks " + nestDataToSave.numberOfSticks);
+            
             BuildNestDynamically();
         }
 

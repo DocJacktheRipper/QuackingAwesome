@@ -26,7 +26,6 @@ public class SticksToRock : Task
             newProgression += nest.GETNumberOfSticks();
 
         progression = newProgression;
-        Debug.Log("StickToRock is updated");
         return IsCompleted();
     }
 }

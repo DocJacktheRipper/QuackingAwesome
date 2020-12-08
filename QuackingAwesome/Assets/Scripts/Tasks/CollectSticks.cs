@@ -16,7 +16,6 @@ namespace Tasks
 
         public override bool UpdateProgression()
         {
-            Debug.Log("StickToRock is updated");
             progression = _stickInventory.GetNumberOfSticks();
             return IsCompleted();
         }
