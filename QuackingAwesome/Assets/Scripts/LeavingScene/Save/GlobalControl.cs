@@ -1,4 +1,4 @@
-﻿#define VERBOSE
+﻿#define VERBOS
 
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;

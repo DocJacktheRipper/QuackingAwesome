@@ -8,7 +8,12 @@ namespace Tasks.TaskUpdater
         public StickInventory stickInventory;
         private new void Start()
         {
-            levelTasks = new List<Task>();
+            // Add the specific tasks of the current level to the global ones
+            base.Start();
+
+            // if it was loaded from save, do not init
+            if (!_initialize)
+                return;
             
             levelTasks.Add(new CollectSticks(stickInventory)
             {
@@ -22,8 +27,7 @@ namespace Tasks.TaskUpdater
                 goal = 1
             });
         
-            // Add the specific tasks of the current level to the global ones
-            base.Start();
+            
 
         }
 

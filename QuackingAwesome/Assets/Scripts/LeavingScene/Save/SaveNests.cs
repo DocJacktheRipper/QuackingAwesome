@@ -34,7 +34,7 @@ public class SaveNests : MonoBehaviour
             gameObject.transform.GetChild(i)
                 .GetComponent<NestBuilding>()
                 .nestDataToSave = _savedNests[i];
-            Debug.Log("nestDataToSave created for child number " + i);
+            // Debug.Log("nestDataToSave created for child number " + i);
         }
         
     }

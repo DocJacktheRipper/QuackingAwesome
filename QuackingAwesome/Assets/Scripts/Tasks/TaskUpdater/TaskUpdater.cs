@@ -12,34 +12,56 @@ namespace Tasks.TaskUpdater
         public List<Task> levelTasks;
 
         private TasksProgression _savedTasksProgression;
-        private bool _initialize;
+        protected bool _initialize;
     
         public GameObject nestsParent;
     
         public void Start()
         {
-            #region add global tasks
-            levelTasks.Add(new BuildAllNests(nestsParent));
-            #endregion
-
             #region load save
+            LoadTaskProgressionFromSave();
+
+            // if the tasks have already been completed it is not useful to keep updating them
+            if (tasksAreCompleted) return;
+
+            if (LoadTasksFromSave())
+            {
+                Debug.Log("--- Tasks were loaded by save... ---");
+                return;
+            }
+            Debug.Log("--- Tasks are created ---");
+            
+            #endregion
+            
+            #region add global tasks
+            if (_initialize)
+            {
+                levelTasks.Add(new BuildAllNests(nestsParent));
+            }
+            #endregion
+        }
+
+        private void LoadTaskProgressionFromSave()
+        {
             _savedTasksProgression = GlobalControl.Instance.savedGame
                 .savedScenes[SceneManager.GetActiveScene().buildIndex]
                 .saveTasksProgression;
             // load saved data
             tasksAreCompleted = _savedTasksProgression.tasksAreCompleted;
+        }
 
-            // if the tasks have already been completed it is not useful to keep updating them
-            if (tasksAreCompleted) return;
-   
-            if (_savedTasksProgression.levelTasks == null)
+        private bool LoadTasksFromSave()
+        {
+            if (_savedTasksProgression.levelTasks == null || _savedTasksProgression.levelTasks.Count <= 0)
             {
                 _initialize = true;
                 _savedTasksProgression.levelTasks = new List<Task>(levelTasks.Count);
+                return false;
             }
             if (!_initialize)
                 levelTasks = _savedTasksProgression.levelTasks;
-            #endregion
+
+            return true;
         }
     
         public bool TasksAreCompleted()

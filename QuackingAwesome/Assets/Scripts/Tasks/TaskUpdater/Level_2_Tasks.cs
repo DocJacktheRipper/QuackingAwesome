@@ -10,15 +10,6 @@ namespace Tasks.TaskUpdater
         
         private void Start()
         {
-            Debug.Log("LEVEL 2 TASKS");
-            
-            levelTasks = new List<Task>();
-            levelTasks.Add(new CollectSticks(stickInventory)
-            {
-                description = "Collect a stick",
-                goal = 1
-            });
-            
             base.Start();
         }
     }

@@ -1,3 +1,4 @@
+using System;
 using Spawning.Props.PropTrigger;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -66,12 +67,13 @@ namespace Inventory
 
         private int TransferSticks(int n)
         {
+            var stickSave = numberOfSticks;
             numberOfSticks += n;
             if (numberOfSticks <= maxCapacityOfSticks) 
                 return 0;
         
             var overflow = numberOfSticks - maxCapacityOfSticks;
-            numberOfSticks = maxCapacityOfSticks;
+            numberOfSticks = Math.Max(stickSave, maxCapacityOfSticks);
             return overflow;
         }
         

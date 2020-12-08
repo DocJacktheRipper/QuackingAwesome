@@ -68,6 +68,42 @@ namespace UI.StartMenu
         {
             var sceneCompleteID= _globalControl.savedGame.higherSceneCompletedID;
 
+            if (sceneCompleteID + 1 < _globalControl.savedGame.savedScenes.Length)
+            {
+                var sceneData = _globalControl.savedGame.savedScenes[sceneCompleteID + 1];
+                if (sceneData.saveTasksProgression.tasksAreCompleted)
+                {
+                    sceneCompleteID = sceneCompleteID + 1;
+                    _globalControl.savedGame.higherSceneCompletedID = sceneCompleteID;
+                }
+            }
+            
+            switch (sceneCompleteID)
+            {
+                case 0:
+                    Debug.Log("Map 1 is revealed.");
+                    OnlyLevel1();
+                    break;
+                case 1:   
+                    Debug.Log("Map 2 is revealed.");
+                    OnlyLevel2();
+                    break;
+                case 2:  
+                    Debug.Log("Map 3 is revealed.");
+                    OnlyLevel3();
+                    break;
+                default:
+                    Debug.Log("All Maps are revealed.");
+                    AllLevelUnlocked();
+                    break;
+            }
+        }
+        //********* For now, without animation **********//
+        /*
+        public void CheckLevels()
+        {
+            var sceneCompleteID= _globalControl.savedGame.higherSceneCompletedID;
+
             SceneData sceneData;
             switch (sceneCompleteID)
             {
@@ -107,7 +143,7 @@ namespace UI.StartMenu
                     AllLevelUnlocked();
                     break;
             }
-        }
+        }*/
 
         #region OnlyOneLevelUnlocked
 
