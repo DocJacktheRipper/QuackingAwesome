@@ -67,17 +67,15 @@ namespace UI.StartMenu
         public void CheckLevels()
         {
             var sceneCompleteID= _globalControl.savedGame.higherSceneCompletedID;
-            
-            var temp1 = _globalControl.savedGame;
-            var temp2 = temp1.savedScenes[sceneCompleteID + 1];
-            var tasksProgression = temp2.saveTasksProgression;
-            
+
+            SceneData sceneData;
             switch (sceneCompleteID)
             {
                 case 0:
                     OnlyLevel1();
-                   
-                    if (tasksProgression.tasksAreCompleted)
+
+                    sceneData = _globalControl.savedGame.savedScenes[sceneCompleteID + 1];
+                    if (sceneData.saveTasksProgression.tasksAreCompleted)
                     {
                         _globalControl.savedGame.higherSceneCompletedID = sceneCompleteID+1;
                         UnlockLevel1(false);
@@ -88,7 +86,8 @@ namespace UI.StartMenu
                 case 1:   
                     OnlyLevel2();
                     
-                    if (tasksProgression.tasksAreCompleted)
+                    sceneData = _globalControl.savedGame.savedScenes[sceneCompleteID + 1];
+                    if (sceneData.saveTasksProgression.tasksAreCompleted)
                     {
                         _globalControl.savedGame.higherSceneCompletedID = sceneCompleteID+1;
                         UnlockLevel2(false);

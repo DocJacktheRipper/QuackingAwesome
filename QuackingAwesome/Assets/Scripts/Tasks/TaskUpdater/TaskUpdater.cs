@@ -3,13 +3,13 @@ using LeavingScene.Save;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Tasks
+namespace Tasks.TaskUpdater
 {
     public class TasksUpdater : MonoBehaviour
     {
         public bool tasksAreCompleted;
 
-        public List<Task> levelTasks = new List<Task>();
+        public List<Task> levelTasks;
 
         private TasksProgression _savedTasksProgression;
         private bool _initialize;

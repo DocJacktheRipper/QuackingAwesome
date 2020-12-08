@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using Tasks.TaskUpdater;
+using UI.Main_Menu.PauseMenu;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +13,11 @@ namespace Tasks.UI
         public List<GameObject> uiTasks;
         private List<Text> _uiProgressionTexts;
         private bool[] _tasksCompleted;
-    
+        
+        public PauseMenuHandler pauseMenu;
+        public GameObject levelComplete;
+        private bool _completed;
+
         void Start()
         {
             _levelTasks = tasksUpdater.levelTasks;
@@ -22,6 +28,15 @@ namespace Tasks.UI
         protected virtual void Update()
         {
             UpdateProgression();
+            
+            // check for completion
+            if (!_completed && tasksUpdater.tasksAreCompleted)
+            {
+                pauseMenu.gameObject.SetActive(true);
+                levelComplete.SetActive(true);
+                transform.parent.gameObject.SetActive(false);
+                _completed = true;
+            }
         }
 
         private void InitTasks()

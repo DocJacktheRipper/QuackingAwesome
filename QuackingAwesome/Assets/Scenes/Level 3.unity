@@ -1186,7 +1186,7 @@ Transform:
   - {fileID: 1568423353}
   - {fileID: 131981907}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &71888666
 PrefabInstance:
@@ -12298,7 +12298,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &569436903
 PrefabInstance:
@@ -18131,6 +18131,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -52.9
       objectReference: {fileID: 0}
+    - target: {fileID: 4501004127392823913, guid: 6309e6e9d11f68a4083d047c2aba84a1,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Concratulation!
+
+        You finished the game.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4501004127392823913, guid: 6309e6e9d11f68a4083d047c2aba84a1,
+        type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4792216283490087060, guid: 6309e6e9d11f68a4083d047c2aba84a1,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -18195,6 +18207,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5021611926124065734, guid: 6309e6e9d11f68a4083d047c2aba84a1,
+        type: 3}
+      propertyPath: m_Text
+      value: 'Complete these tasks to complete the game:'
       objectReference: {fileID: 0}
     - target: {fileID: 5745544884615550971, guid: 6309e6e9d11f68a4083d047c2aba84a1,
         type: 3}
@@ -18523,6 +18540,53 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6309e6e9d11f68a4083d047c2aba84a1, type: 3}
+--- !u!1 &660686799 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5999679151720767790, guid: 6309e6e9d11f68a4083d047c2aba84a1,
+    type: 3}
+  m_PrefabInstance: {fileID: 660686798}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &660686800 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8275518234153308703, guid: 6309e6e9d11f68a4083d047c2aba84a1,
+    type: 3}
+  m_PrefabInstance: {fileID: 660686798}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &660686801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660686800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c9bef10531d77541ad3f3d89c67126f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tasksUpdater: {fileID: 1071602797}
+  uiTasks:
+  - {fileID: 660686799}
+  pauseMenu: {fileID: 660686802}
+  levelComplete: {fileID: 660686803}
+--- !u!114 &660686802 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7983484456354146617, guid: 6309e6e9d11f68a4083d047c2aba84a1,
+    type: 3}
+  m_PrefabInstance: {fileID: 660686798}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578457534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff1fe43244cf6645b595ba9e3723ca7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &660686803 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8110114244713492815, guid: 6309e6e9d11f68a4083d047c2aba84a1,
+    type: 3}
+  m_PrefabInstance: {fileID: 660686798}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &660711927 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ef352434534037544a17e30195970022,
@@ -20685,7 +20749,7 @@ Transform:
   - {fileID: 1865304393}
   - {fileID: 757141169}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &765767467
 GameObject:
@@ -35610,7 +35674,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1316755041
 GameObject:
@@ -35854,7 +35918,7 @@ Transform:
   - {fileID: 1853797344}
   - {fileID: 804851134}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1352422498
 PrefabInstance:
@@ -43631,7 +43695,7 @@ Transform:
   - {fileID: 1097802197}
   - {fileID: 1715075713}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1542820894 stripped
 Transform:
@@ -46857,7 +46921,7 @@ Transform:
   - {fileID: 639805148}
   - {fileID: 1408375113}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1746212554 stripped
 Transform:

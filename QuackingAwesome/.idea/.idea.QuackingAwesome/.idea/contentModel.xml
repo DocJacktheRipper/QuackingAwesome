@@ -274,12 +274,14 @@
           </e>
           <e p="Tasks" t="Include">
             <e p="CollectSticks.cs" t="Include" />
-            <e p="Level_1_Tasks.cs" t="Include" />
-            <e p="Level_2_Tasks.cs" t="Include" />
-            <e p="Level_3_Tasks.cs" t="Include" />
             <e p="NestTasks.cs" t="Include" />
             <e p="TaskDefinition.cs" t="Include" />
-            <e p="TaskUpdater.cs" t="Include" />
+            <e p="TaskUpdater" t="Include">
+              <e p="Level_1_Tasks.cs" t="Include" />
+              <e p="Level_2_Tasks.cs" t="Include" />
+              <e p="Level_3_Tasks.cs" t="Include" />
+              <e p="TaskUpdater.cs" t="Include" />
+            </e>
             <e p="UI" t="Include">
               <e p="Lv1TaskUI.cs" t="Include" />
               <e p="Lv2TaskUI.cs" t="Include" />
