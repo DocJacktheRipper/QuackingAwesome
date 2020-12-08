@@ -35837,7 +35837,6 @@ MonoBehaviour:
   tasksAreCompleted: 0
   levelTasks: []
   nestsParent: {fileID: 1328139322}
-  stickInventory: {fileID: 5161659592565311354}
 --- !u!4 &842930249
 Transform:
   m_ObjectHideFlags: 0
@@ -87636,6 +87635,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2513908489601974590, guid: 6309e6e9d11f68a4083d047c2aba84a1,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -160
+      objectReference: {fileID: 0}
     - target: {fileID: 2977520249548256488, guid: 6309e6e9d11f68a4083d047c2aba84a1,
         type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
@@ -90125,18 +90129,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fcb40f7152cb34640aabb80e2fcd6053, type: 3}
---- !u!114 &5161659592565311354 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6032344169458206697, guid: fcb40f7152cb34640aabb80e2fcd6053,
-    type: 3}
-  m_PrefabInstance: {fileID: 5161659592565311353}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 969745190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f35751e0e264eee9fa6b04b7a4f1752, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &7424151490542502689
 PrefabInstance:
   m_ObjectHideFlags: 0
