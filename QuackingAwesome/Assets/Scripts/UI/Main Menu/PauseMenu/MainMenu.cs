@@ -22,7 +22,7 @@ namespace UI.Main_Menu.PauseMenu
             pauseMenuUi = transform.Find("PauseMenu").gameObject;
             _pauseMenuHandler = pauseMenuUi.GetComponent<PauseMenuHandler>();
 
-            GameIsPaused = true;
+            GameIsPaused = false;
             ToggleMainMenu();
         }
 
