@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿#define VERBOSE
+
+using System.Collections.Generic;
 using LeavingScene.Save;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -26,18 +28,14 @@ namespace Tasks.TaskUpdater
 
             if (LoadTasksFromSave())
             {
-                Debug.Log("--- Tasks were loaded by save... ---");
+#if VERBOSE
+                Debug.Log("--- Tasks were loaded by save... ---");               
+#endif
                 return;
             }
+#if VERBOSE
             Debug.Log("--- Tasks are created ---");
-            
-            #endregion
-            
-            #region add global tasks
-            if (Initialize)
-            {
-                levelTasks.Add(new BuildAllNests(nestsParent));
-            }
+#endif
             #endregion
         }
 
@@ -62,6 +60,14 @@ namespace Tasks.TaskUpdater
                 levelTasks = _savedTasksProgression.levelTasks;
 
             return true;
+        }
+
+        protected void AddGlobalTasks()
+        {
+            if (Initialize)
+            {
+                levelTasks.Add(new BuildAllNests(nestsParent));
+            }
         }
 
         private bool TasksAreCompleted()
