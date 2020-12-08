@@ -72,6 +72,7 @@ namespace UI.StartMenu
             switch (sceneCompleteID)
             {
                 case 0:
+                    Debug.Log("Map 1 is revealed.");
                     OnlyLevel1();
 
                     sceneData = _globalControl.savedGame.savedScenes[sceneCompleteID + 1];
@@ -81,23 +82,28 @@ namespace UI.StartMenu
                         UnlockLevel1(false);
                         // invoke animation ("Completed" over lv1?)
                         RevealCloudsLv2();
+                        Invoke(nameof(OnlyLevel2), 0.2f);
                     }
                     break;
                 case 1:   
+                    Debug.Log("Map 2 is revealed.");
                     OnlyLevel2();
                     
                     sceneData = _globalControl.savedGame.savedScenes[sceneCompleteID + 1];
                     if (sceneData.saveTasksProgression.tasksAreCompleted)
                     {
                         _globalControl.savedGame.higherSceneCompletedID = sceneCompleteID+1;
-                        UnlockLevel2(false);
+                        Debug.Log("Map 3 is newly revealed.");
+                        OnlyLevel3();
                         RevealCloudsLv3();
                     }
                     break;
-                case 2:    
+                case 2:  
+                    Debug.Log("Map 3 is revealed.");
                     OnlyLevel3();
                     break;
                 default:
+                    Debug.Log("All Maps are revealed.");
                     AllLevelUnlocked();
                     break;
             }
@@ -117,6 +123,7 @@ namespace UI.StartMenu
             UnlockLevel1(false);
             UnlockLevel2(true);
             UnlockLevel3(false);
+            EnableCloudCoverLevel2(false);
         }
 
         private void OnlyLevel3()
@@ -124,6 +131,8 @@ namespace UI.StartMenu
             UnlockLevel1(false);
             UnlockLevel2(false);
             UnlockLevel3(true);
+            EnableCloudCoverLevel2(false);
+            EnableCloudCoverLevel3(false);
         }
 
         private void AllLevelUnlocked()
