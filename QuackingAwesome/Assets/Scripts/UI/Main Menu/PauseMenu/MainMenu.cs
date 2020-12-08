@@ -1,7 +1,9 @@
 ﻿using Controllers.Buttons.StartMenu;
+using LeavingScene.Save;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
+using UnityEngine.TextCore.LowLevel;
 
 namespace UI.Main_Menu.PauseMenu
 {
@@ -74,6 +76,10 @@ namespace UI.Main_Menu.PauseMenu
         public void Restart()
         {
             Resume();
+            
+            // reset the save
+            GlobalControl.Instance.savedGame
+                .savedScenes[SceneManager.GetActiveScene().buildIndex] = new SceneData();
 
             // load current scene
             loadingScene.LoadNewScene(SceneManager.GetActiveScene().name);
