@@ -21,13 +21,15 @@
   <component name="ChangeListManager">
     <list default="true" id="cb082888-ab6d-41db-a40b-24e16e1dbeec" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QuackingAwesome/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Inventory/StickInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Inventory/StickInventory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeavingScene/Save/GlobalControl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LeavingScene/Save/GlobalControl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/LeavingScene/Save/SaveNests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/LeavingScene/Save/SaveNests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level 1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tasks/CollectSticks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tasks/CollectSticks.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tasks/NestTasks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tasks/NestTasks.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tasks/TaskDefinition.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tasks/TaskDefinition.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tasks/TaskUpdater/Level_1_Tasks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tasks/TaskUpdater/Level_1_Tasks.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tasks/TaskUpdater/Level_2_Tasks.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tasks/TaskUpdater/Level_2_Tasks.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tasks/TaskUpdater/TaskUpdater.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tasks/TaskUpdater/TaskUpdater.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/StartMenu/MenuHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/StartMenu/MenuHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tasks/UI/TaskUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tasks/UI/TaskUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/PauseMenu/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/PauseMenu/MainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Stylized Water For URP/Materials/Beach.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/Stylized Water For URP/Materials/Beach.mat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,8 +84,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/AI/Frog/StateMachine_Frog/IStateFrog.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Spawning/Props/PropTrigger/StickTriggerEnter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Sound and Effects/Sounds/AudioManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Sound and Effects/Sounds/MusicManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/Sound and Effects/Duck/EatingAudioManager.cs" />
@@ -99,7 +99,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Nest/NestBuilding.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Frog/StateMachine_Frog/BehaviourMethodsFrog.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Spawning/Spawner.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/PauseMenu/MainMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/PauseMenu/PauseMenuHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Nest Menu/NestMenu/EggButtons.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Nest/NestMenu/Upgrades.cs" />
@@ -120,19 +119,22 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Tasks/UI/Lv3TaskUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tasks/TaskUpdater.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tasks/Level_1_Tasks.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Tasks/UI/TaskUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tasks/UI/Lv2TaskUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tasks/UI/Lv1TaskUI.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tasks/Level_2_Tasks.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tasks/TaskUpdater/Level_3_Tasks.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tasks/TaskUpdater/Level_2_Tasks.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Tasks/TaskUpdater/TaskUpdater.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Tasks/TaskUpdater/Level_1_Tasks.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LeavingScene/Save/SaveNests.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/StartMenu/MenuHandler.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/LeavingScene/Save/GlobalControl.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Tasks/TaskDefinition.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Inventory/StickInventory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tasks/NestTasks.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tasks/CollectSticks.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tasks/TaskDefinition.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tasks/TaskUpdater/TaskUpdater.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Tasks/UI/TaskUI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Main Menu/PauseMenu/MainMenu.cs" />
       </list>
     </option>
   </component>
@@ -343,12 +345,12 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="284" y="56" key="RollbackChangesDialog/0.0.1280.689@0.0.1280.689" timestamp="1605309059581" />
-    <state x="93" y="93" width="1095" height="504" maximized="true" key="VCS.FileHistoryDialog" timestamp="1607386017515">
+    <state x="93" y="93" width="1095" height="504" maximized="true" key="VCS.FileHistoryDialog" timestamp="1607435760403">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="93" y="93" width="1095" height="504" key="VCS.FileHistoryDialog/0.0.1280.689/0.-1080.1920.1050@0.0.1280.689" timestamp="1602233383428" />
     <state x="93" y="93" width="1095" height="504" key="VCS.FileHistoryDialog/0.0.1280.689/1100.-1080.1920.1050@0.0.1280.689" timestamp="1601986668586" />
-    <state x="93" y="93" width="1095" height="504" maximized="true" key="VCS.FileHistoryDialog/0.0.1280.689/1920.0.1920.1050@0.0.1280.689" timestamp="1607386017515" />
+    <state x="93" y="93" width="1095" height="504" maximized="true" key="VCS.FileHistoryDialog/0.0.1280.689/1920.0.1920.1050@0.0.1280.689" timestamp="1607435760403" />
     <state x="2060" y="142" width="1643" height="769" key="VCS.FileHistoryDialog/0.0.1280.689/1920.0.1920.1050@1920.0.1920.1050" timestamp="1604397699472" />
     <state x="93" y="93" width="1095" height="504" key="VCS.FileHistoryDialog/0.0.1280.689@0.0.1280.689" timestamp="1606144457208" />
     <state x="297" y="153" key="run.anything.popup" timestamp="1601292231244">

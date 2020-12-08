@@ -19,13 +19,14 @@ public class SticksToRock : Task
         }
     }
 
-    public override bool Update()
+    public override bool UpdateProgression()
     {
         int newProgression = 0;
         foreach (var nest in _nests)
             newProgression += nest.GETNumberOfSticks();
 
         progression = newProgression;
+        Debug.Log("StickToRock is updated");
         return IsCompleted();
     }
 }
@@ -50,7 +51,7 @@ public class BuildAllNests : Task
         }
     }
 
-    public override bool Update()
+    public override bool UpdateProgression()
     {
         int newProgression = 0;
         foreach (var nest in _nests)

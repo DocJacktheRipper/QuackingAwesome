@@ -12,10 +12,10 @@ namespace Tasks.TaskUpdater
         public List<Task> levelTasks;
 
         private TasksProgression _savedTasksProgression;
-        protected bool _initialize;
+        protected bool Initialize;
     
         public GameObject nestsParent;
-    
+
         public void Start()
         {
             #region load save
@@ -34,7 +34,7 @@ namespace Tasks.TaskUpdater
             #endregion
             
             #region add global tasks
-            if (_initialize)
+            if (Initialize)
             {
                 levelTasks.Add(new BuildAllNests(nestsParent));
             }
@@ -54,22 +54,27 @@ namespace Tasks.TaskUpdater
         {
             if (_savedTasksProgression.levelTasks == null || _savedTasksProgression.levelTasks.Count <= 0)
             {
-                _initialize = true;
+                Initialize = true;
                 _savedTasksProgression.levelTasks = new List<Task>(levelTasks.Count);
                 return false;
             }
-            if (!_initialize)
+            if (!Initialize)
                 levelTasks = _savedTasksProgression.levelTasks;
 
             return true;
         }
-    
-        public bool TasksAreCompleted()
+
+        private bool TasksAreCompleted()
         {
+            bool completed = true;
             foreach (var task in levelTasks)
-                if (!task.isCompleted && !task.Update())
-                    return false;
-            return true;
+            {
+                if(!task.isCompleted)
+                    task.UpdateProgression();
+                if(!task.isCompleted)
+                    completed = false;
+            }
+            return completed;
         }
     
         private void Update()

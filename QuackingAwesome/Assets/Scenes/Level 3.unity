@@ -18719,17 +18719,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &660686800 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 8275518234153308703, guid: 6309e6e9d11f68a4083d047c2aba84a1,
+  m_CorrespondingSourceObject: {fileID: 3427661194677987096, guid: 6309e6e9d11f68a4083d047c2aba84a1,
     type: 3}
   m_PrefabInstance: {fileID: 660686798}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &660686801
+--- !u!1 &660686801 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2208960760548128926, guid: 6309e6e9d11f68a4083d047c2aba84a1,
+    type: 3}
+  m_PrefabInstance: {fileID: 660686798}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &660686802
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 660686800}
+  m_GameObject: {fileID: 660686801}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c9bef10531d77541ad3f3d89c67126f, type: 3}
@@ -18738,20 +18744,8 @@ MonoBehaviour:
   tasksUpdater: {fileID: 1071602797}
   uiTasks:
   - {fileID: 660686799}
-  pauseMenu: {fileID: 660686802}
   levelComplete: {fileID: 660686803}
---- !u!114 &660686802 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7983484456354146617, guid: 6309e6e9d11f68a4083d047c2aba84a1,
-    type: 3}
-  m_PrefabInstance: {fileID: 660686798}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 578457534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ff1fe43244cf6645b595ba9e3723ca7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  tasksMenuBackground: {fileID: 660686800}
 --- !u!1 &660686803 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8110114244713492815, guid: 6309e6e9d11f68a4083d047c2aba84a1,
@@ -21089,7 +21083,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 660686798}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 660686801}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 795fe33c4e588204f8b25ae4e4603a98, type: 3}

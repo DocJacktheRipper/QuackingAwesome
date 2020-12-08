@@ -13,15 +13,15 @@ public class Task
 
     public bool IsCompleted()
     {
-        isCompleted = goal == progression;
+        isCompleted = (progression >= goal);
         #if (VERBOSE) 
             if (isCompleted) Debug.Log("tasks '" + description + "' is completed");
         #endif
         return isCompleted;
     }
 
-    public virtual bool Update()
+    public virtual bool UpdateProgression()
     {
-        return false;
+        return IsCompleted();
     }
 }

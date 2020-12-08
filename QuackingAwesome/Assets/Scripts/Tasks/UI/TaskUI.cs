@@ -14,9 +14,9 @@ namespace Tasks.UI
         private List<Text> _uiProgressionTexts;
         private bool[] _tasksCompleted;
         
-        public PauseMenuHandler pauseMenu;
         public GameObject levelComplete;
-        private bool _completed;
+        public GameObject tasksMenuBackground;
+        private bool _completed; // to prevent triggering too often, save if completion event triggered once
 
         void Start()
         {
@@ -30,13 +30,18 @@ namespace Tasks.UI
             UpdateProgression();
             
             // check for completion
-            if (!_completed && tasksUpdater.tasksAreCompleted)
-            {
-                pauseMenu.gameObject.SetActive(true);
-                levelComplete.SetActive(true);
-                transform.parent.gameObject.SetActive(false);
-                _completed = true;
-            }
+            CheckForCompletion();
+        }
+
+        private void CheckForCompletion()
+        {
+            if (_completed || !tasksUpdater.tasksAreCompleted) return;
+            
+            // Trigger CompletionEvent
+            GetComponent<MainMenu>().OpenTask();
+            levelComplete.SetActive(true);
+            tasksMenuBackground.SetActive(false);
+            _completed = true;
         }
 
         private void InitTasks()
@@ -71,7 +76,7 @@ namespace Tasks.UI
             var progr = _levelTasks[index].progression + "/" + _levelTasks[index].goal;
             _uiProgressionTexts[index].text = progr;
 
-            if (_levelTasks[index].IsCompleted())
+            if (_levelTasks[index].isCompleted)
             {
                 _tasksCompleted[index] = true;
                 

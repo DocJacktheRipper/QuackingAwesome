@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 20d7b5b50a3e7624796b96279da1f38f,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -37934,7 +37934,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 2696655372063013111}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2696655372063013116}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 795fe33c4e588204f8b25ae4e4603a98, type: 3}
@@ -87560,6 +87560,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 977322754887649277, guid: 6309e6e9d11f68a4083d047c2aba84a1,
+        type: 3}
+      propertyPath: m_Name
+      value: TasksMenu
+      objectReference: {fileID: 0}
     - target: {fileID: 1195689921321434240, guid: 6309e6e9d11f68a4083d047c2aba84a1,
         type: 3}
       propertyPath: m_IsActive
@@ -88178,17 +88183,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2696655372063013115 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 8275518234153308703, guid: 6309e6e9d11f68a4083d047c2aba84a1,
+  m_CorrespondingSourceObject: {fileID: 3427661194677987096, guid: 6309e6e9d11f68a4083d047c2aba84a1,
     type: 3}
   m_PrefabInstance: {fileID: 2696655372063013111}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2696655372063013116
+--- !u!1 &2696655372063013116 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2208960760548128926, guid: 6309e6e9d11f68a4083d047c2aba84a1,
+    type: 3}
+  m_PrefabInstance: {fileID: 2696655372063013111}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2696655372063013117
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2696655372063013115}
+  m_GameObject: {fileID: 2696655372063013116}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c7f82fcf85dab941989a82ad0632bcd, type: 3}
@@ -88197,20 +88208,8 @@ MonoBehaviour:
   tasksUpdater: {fileID: 842930248}
   uiTasks:
   - {fileID: 2696655372063013113}
-  pauseMenu: {fileID: 2696655372063013117}
   levelComplete: {fileID: 2696655372063013118}
---- !u!114 &2696655372063013117 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7983484456354146617, guid: 6309e6e9d11f68a4083d047c2aba84a1,
-    type: 3}
-  m_PrefabInstance: {fileID: 2696655372063013111}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2696655372063013112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ff1fe43244cf6645b595ba9e3723ca7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  tasksMenuBackground: {fileID: 2696655372063013115}
 --- !u!1 &2696655372063013118 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8110114244713492815, guid: 6309e6e9d11f68a4083d047c2aba84a1,

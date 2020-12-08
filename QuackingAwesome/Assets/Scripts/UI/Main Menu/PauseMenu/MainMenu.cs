@@ -3,13 +3,14 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 
-namespace Controllers.Buttons
+namespace UI.Main_Menu.PauseMenu
 {
     public class MainMenu : MonoBehaviour
     {
         public static bool GameIsPaused;
 
         public GameObject pauseMenuUi;
+        private PauseMenuHandler _pauseMenuHandler;
         public GameObject statistics;
         public GameObject nestMenu;
         public GameObject controls;
@@ -19,6 +20,7 @@ namespace Controllers.Buttons
         public void Start()
         {
             pauseMenuUi = transform.Find("PauseMenu").gameObject;
+            _pauseMenuHandler = pauseMenuUi.GetComponent<PauseMenuHandler>();
 
             GameIsPaused = true;
             ToggleMainMenu();
@@ -36,6 +38,12 @@ namespace Controllers.Buttons
             }
         }
 
+        public void OpenTask()
+        {
+            Pause();
+            _pauseMenuHandler.TaskClick();
+        }
+
         private void EnableOtherUI(bool enable)
         {
             controls.SetActive(enable);
@@ -43,7 +51,7 @@ namespace Controllers.Buttons
             statistics.SetActive(enable);
         }
     
-        void Pause()
+        public void Pause()
         {
             EnableOtherUI(false);
             pauseMenuUi.SetActive(true);

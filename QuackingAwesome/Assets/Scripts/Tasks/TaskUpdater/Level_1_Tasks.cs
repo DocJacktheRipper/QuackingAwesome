@@ -12,7 +12,7 @@ namespace Tasks.TaskUpdater
             base.Start();
 
             // if it was loaded from save, do not init
-            if (!_initialize)
+            if (!Initialize)
                 return;
             
             levelTasks.Add(new CollectSticks(stickInventory)

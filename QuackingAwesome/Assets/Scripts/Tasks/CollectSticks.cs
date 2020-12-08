@@ -1,19 +1,24 @@
 ﻿using Inventory;
+using UnityEngine;
 
-public class CollectSticks : Task
+namespace Tasks
 {
-    private StickInventory _stickInventory;
-
-    public CollectSticks(StickInventory stickInventory)
+    public class CollectSticks : Task
     {
-        description = "Collect sticks";
+        private StickInventory _stickInventory;
+
+        public CollectSticks(StickInventory stickInventory)
+        {
+            description = "Collect sticks";
         
-        _stickInventory = stickInventory;
-    }
+            _stickInventory = stickInventory;
+        }
 
-    public override bool Update()
-    {
-        progression = _stickInventory.GetNumberOfSticks();
-        return IsCompleted();
+        public override bool UpdateProgression()
+        {
+            Debug.Log("StickToRock is updated");
+            progression = _stickInventory.GetNumberOfSticks();
+            return IsCompleted();
+        }
     }
 }
