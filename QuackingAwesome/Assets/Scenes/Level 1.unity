@@ -30779,11 +30779,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d14e763e597c58419918609da7245cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tasksUpdater: {fileID: 819538811}
+  tasksUpdater: {fileID: 819538811}
   uiTasks:
   - {fileID: 1421139370}
   - {fileID: 2025063216}
   - {fileID: 1534500244}
+  pauseMenu: {fileID: 1421139373}
+  levelComplete: {fileID: 1421139374}
+--- !u!114 &1421139373 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7983484456354146617, guid: 6309e6e9d11f68a4083d047c2aba84a1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1421139368}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378618523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff1fe43244cf6645b595ba9e3723ca7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1421139374 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8110114244713492815, guid: 6309e6e9d11f68a4083d047c2aba84a1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1421139368}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1422837317
 GameObject:
   m_ObjectHideFlags: 0

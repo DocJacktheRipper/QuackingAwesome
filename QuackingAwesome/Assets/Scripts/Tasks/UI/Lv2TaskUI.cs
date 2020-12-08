@@ -3,12 +3,12 @@ using UnityEngine;
 
 namespace Tasks.UI
 {
-    public class Lv1TaskUI : TaskUI
+    public class Lv2TaskUI : TaskUI
     {
         public PauseMenuHandler pauseMenu;
         public GameObject levelComplete;
         private bool _completed;
-
+        
         protected override void Update()
         {
             base.Update();

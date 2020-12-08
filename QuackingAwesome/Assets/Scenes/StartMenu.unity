@@ -2939,19 +2939,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e35a2d13fcc1cba4a9c3a6cca52c217b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  savedPlayerData:
+  savedGame:
     higherSceneCompletedID: 0
-    currentScene:
-      id: 0
-      savedNest:
-        nestIsFinished: 0
-        eggs: 0
-      saveTasksProgression:
-        tasksAreCompleted: 0
-        levelTasks: []
-    savedInventoryData:
-      ducklings: 0
-      energy: 0
+    currentSceneID: 0
+    savedScenes: []
     savedUpgradesProgression:
       dashStep: 0
       beakStep: 0

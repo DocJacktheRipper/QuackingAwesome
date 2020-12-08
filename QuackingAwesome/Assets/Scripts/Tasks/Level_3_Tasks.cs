@@ -1,4 +1,6 @@
-﻿public class Level_3_Tasks : TasksUpdater
+﻿using Tasks;
+
+public class Level_3_Tasks : TasksUpdater
 {
 
 }

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using LeavingScene.Save;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace UI.StartMenu
@@ -25,18 +26,15 @@ namespace UI.StartMenu
 
         private void Start()
         {
+            var gc = GameObject.Find("GlobalControl");
+            _globalControl = gc.GetComponent<GlobalControl>();
+            
             TogglePondMapOn(false);
             _credits = titleMenu.transform.Find("CreditsPanel").gameObject;
             _menuButtons = titleMenu.transform.Find("MenuButtons").gameObject;
             
             _cloud2Animator = cloudCoverLevel2.GetComponent<CloudAnimationEvent>();
             _cloud3Animator = cloudCoverLevel3.GetComponent<CloudAnimationEvent>();
-        }
-
-        void Awake()
-        {
-            GameObject gc = GameObject.Find("GlobalControl");
-            _globalControl = gc.GetComponent<GlobalControl>();
         }
 
         public void OpenCreditScreen()
@@ -70,12 +68,16 @@ namespace UI.StartMenu
         {
             var sceneCompleteID= _globalControl.savedGame.higherSceneCompletedID;
             
+            var temp1 = _globalControl.savedGame;
+            var temp2 = temp1.savedScenes[sceneCompleteID + 1];
+            var tasksProgression = temp2.saveTasksProgression;
+            
             switch (sceneCompleteID)
             {
                 case 0:
                     OnlyLevel1();
-                    
-                    if (_globalControl.savedGame.savedScenes[sceneCompleteID+1].saveTasksProgression.tasksAreCompleted)
+                   
+                    if (tasksProgression.tasksAreCompleted)
                     {
                         _globalControl.savedGame.higherSceneCompletedID = sceneCompleteID+1;
                         UnlockLevel1(false);
@@ -86,7 +88,7 @@ namespace UI.StartMenu
                 case 1:   
                     OnlyLevel2();
                     
-                    if (_globalControl.savedGame.savedScenes[sceneCompleteID+1].saveTasksProgression.tasksAreCompleted)
+                    if (tasksProgression.tasksAreCompleted)
                     {
                         _globalControl.savedGame.higherSceneCompletedID = sceneCompleteID+1;
                         UnlockLevel2(false);
