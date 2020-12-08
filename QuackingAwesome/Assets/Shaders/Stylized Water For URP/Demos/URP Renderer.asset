@@ -15,14 +15,14 @@ MonoBehaviour:
   m_Active: 0
   settings:
     strength: 0.07
-    rgbSplit: 0.179
+    rgbSplit: 0.54
     shadowMask: 0
     texture: {fileID: 2800000, guid: f2c40b951cee11943a1f6d5ec1b42f2c, type: 3}
     scale: 3.3
     speed: 0.077
-    waterLevel: 0
+    waterLevel: 1.37
     depth: {x: 0, y: 9.999999}
-    fade: 1
+    fade: 0.64
     renderPassEvent: 400
     debug: 0
   causticsShader: {fileID: 4800000, guid: e8cdbdcc4287bd344a1d042d8f601b9a, type: 3}
@@ -62,4 +62,4 @@ MonoBehaviour:
     passOperation: 0
     failOperation: 0
     zFailOperation: 0
-  m_ShadowTransparentReceive: 1
+  m_ShadowTransparentReceive: 0
