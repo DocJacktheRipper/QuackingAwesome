@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 using Inventory;
 using Analytics;
 using Props.spawning;
+using UnityEngine.Audio;
 
 namespace Nest
 {
@@ -25,11 +26,14 @@ namespace Nest
         
         public NestData nestDataToSave;
 
+        private AudioSource _audio;
+
         private void Start()
         {
             _nbContainer = transform.Find("NestBuildingContainer");
             _effectTrigger = GetComponent<NestEffectTrigger>();
             _analytics = GameObject.Find("Analytics").GetComponent<TutorialAnalytics>();
+            _audio = GetComponent<AudioSource>();
             
             BuildNestDynamically();
         }
@@ -82,7 +86,7 @@ namespace Nest
             }
             
             nestDataToSave.nestIsFinished = true;
-
+            _audio.Play();
         }
 
         private void TransferSticks(StickInventory player)
