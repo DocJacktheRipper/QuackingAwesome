@@ -78,7 +78,7 @@ namespace Nest.NestMenu
             _layAndHatchEggList = new List<LayAndHatchEgg>();
             for (int i = 0; i < nestsParent.childCount; i++)
             {
-                _layAndHatchEggList.Add(nestsParent.GetComponent<LayAndHatchEgg>());
+                _layAndHatchEggList.Add(nestsParent.GetChild(i).GetComponent<LayAndHatchEgg>());
             }
 
 
@@ -266,7 +266,9 @@ namespace Nest.NestMenu
             // make upgrade
             foreach (var nest in _layAndHatchEggList)
             {
-                nest.maxEggsInNest += _addNestCapacity[_nestStep];
+                Debug.Log("Nest: " + nest.name);
+                var temp = _addNestCapacity[_nestStep];
+                nest.maxEggsInNest += temp;
             }
             
             // increase cost
