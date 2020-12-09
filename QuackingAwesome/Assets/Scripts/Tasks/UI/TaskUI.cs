@@ -20,6 +20,7 @@ namespace Tasks.UI
 
         void Start()
         {
+            tasksUpdater.Start();
             _levelTasks = tasksUpdater.levelTasks;
         
             InitTasks();

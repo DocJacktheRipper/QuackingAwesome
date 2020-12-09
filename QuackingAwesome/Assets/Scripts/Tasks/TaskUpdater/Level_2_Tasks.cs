@@ -6,7 +6,7 @@ namespace Tasks.TaskUpdater
 {
     public class Level_2_Tasks : TasksUpdater
     {
-        private void Start()
+        public override void Start()
         {
             // if it was loaded from save, do not init
             if (LoadSave())
