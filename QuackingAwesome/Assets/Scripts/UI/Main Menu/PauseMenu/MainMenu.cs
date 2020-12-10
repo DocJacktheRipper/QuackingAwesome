@@ -19,10 +19,14 @@ namespace UI.Main_Menu.PauseMenu
         public LoadingScene loadingScene;
         public AudioMixer audioMixer;
 
+        private int _sceneID;
+
         public void Start()
         {
             pauseMenuUi = transform.Find("PauseMenu").gameObject;
             _pauseMenuHandler = pauseMenuUi.GetComponent<PauseMenuHandler>();
+
+            _sceneID = SceneManager.GetActiveScene().buildIndex;
 
             GameIsPaused = false;
             ToggleMainMenu();
@@ -44,6 +48,7 @@ namespace UI.Main_Menu.PauseMenu
         {
             Pause();
             _pauseMenuHandler.TaskClick();
+            
         }
 
         private void EnableOtherUI(bool enable)
@@ -79,14 +84,23 @@ namespace UI.Main_Menu.PauseMenu
             
             // reset the save
             GlobalControl.Instance.savedGame
-                .savedScenes[SceneManager.GetActiveScene().buildIndex] = new SceneData();
+                .savedScenes[_sceneID] = new SceneData();
 
             // load current scene
-            loadingScene.LoadNewScene(SceneManager.GetActiveScene().name);
+            loadingScene.LoadNewSceneInt(_sceneID);
         }
         public void ReturnToStartMenuScene()
         {
             loadingScene.LoadNewScene("StartMenu");
+        }
+        
+        public void GoToNextLevel()
+        {
+            if (_sceneID+1 < SceneManager.sceneCountInBuildSettings)
+            {
+                loadingScene.LoadNewSceneInt(_sceneID+1);
+            }
+            return;
         }
     }
 }
