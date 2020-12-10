@@ -1,14 +1,13 @@
-﻿using Inventory;
-using UnityEngine;
+﻿using System;
+using Inventory;
 
 namespace Tasks
 {
-    public class CollectSticks : Task, ISerializationCallbackReceiver
+    [Serializable]
+    public class CollectSticks : Task
     {
+        [NonSerialized]
         private StickInventory _stickInventory;
-
-        public void OnBeforeSerialize() {}
-        public void OnAfterDeserialize() {}
 
         public CollectSticks(StickInventory stickInventory)
         {

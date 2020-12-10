@@ -1,14 +1,15 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 using Nest;
 
-public class SticksToRock : Task, ISerializationCallbackReceiver
+[Serializable]
+public class SticksToRock : Task
 {
+    [NonSerialized]
     private List<NestBuilding> _nests;
     
-    public void OnBeforeSerialize() {}
-    public void OnAfterDeserialize() {}
     public SticksToRock(GameObject nestsParent)
     {
         description = "Bring sticks to a rock";
@@ -33,13 +34,13 @@ public class SticksToRock : Task, ISerializationCallbackReceiver
     }
 }
 
-public class BuildAllNests : Task, ISerializationCallbackReceiver
+[Serializable]
+public class BuildAllNests : Task
 {
+    [NonSerialized]
     private GameObject _nestsParent;
+    [NonSerialized]
     private List<NestBuilding> _nests;
-    
-    public void OnBeforeSerialize() {}
-    public void OnAfterDeserialize() {}
 
     public BuildAllNests(GameObject nestsParent)
     {
