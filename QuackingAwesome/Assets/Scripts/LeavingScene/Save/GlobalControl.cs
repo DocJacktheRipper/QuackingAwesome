@@ -37,6 +37,7 @@ namespace LeavingScene.Save
             {
                 savedGame.savedScenes[i] = new SceneData();
             }
+            LoadData();
         }
     
         public bool IsSceneBeingLoaded = false;
@@ -53,14 +54,17 @@ namespace LeavingScene.Save
 
         public void LoadData()
         {
-            BinaryFormatter formatter = new BinaryFormatter();
-            FileStream saveFile = File.Open(Application.persistentDataPath + "/savedGame.gd", FileMode.Open);
+            if (File.Exists(Application.persistentDataPath + "/savedGames.gd"))
+            {
+                BinaryFormatter formatter = new BinaryFormatter();
+                FileStream saveFile = File.Open(Application.persistentDataPath + "/savedGame.gd", FileMode.Open);
 
-            savedGame = (GameData)formatter.Deserialize(saveFile);
-        
-            saveFile.Close();
+                savedGame = (GameData) formatter.Deserialize(saveFile);
+
+                saveFile.Close();
+            }
         }
-    
+
         public void ResetData()
         {
             savedGame = new GameData();
