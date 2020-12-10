@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AliEatMask
+  m_Mask: 00000000000000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Aligator
+    m_Weight: 1
+  - m_Path: ArmatureAligator
+    m_Weight: 1
+  - m_Path: ArmatureAligator/Body
+    m_Weight: 1
+  - m_Path: ArmatureAligator/Body/BLeg.L
+    m_Weight: 1
+  - m_Path: ArmatureAligator/Body/BLeg.L/BMLeg.L
+    m_Weight: 0
+  - m_Path: ArmatureAligator/Body/BLeg.L/BMLeg.L/BFoot.L
+    m_Weight: 0
+  - m_Path: ArmatureAligator/Body/BLeg.R
+    m_Weight: 1
+  - m_Path: ArmatureAligator/Body/BLeg.R/BMLeg.R
+    m_Weight: 0
+  - m_Path: ArmatureAligator/Body/BLeg.R/BMLeg.R/BFoot.R
+    m_Weight: 0
+  - m_Path: ArmatureAligator/Body/Tail
+    m_Weight: 1
+  - m_Path: ArmatureAligator/Body/Tail/Tail.001
+    m_Weight: 0
+  - m_Path: ArmatureAligator/Body/Tail/Tail.001/Tail.002
+    m_Weight: 1
+  - m_Path: ArmatureAligator/Body/Tail/Tail.001/Tail.002/Tail.003
+    m_Weight: 1
+  - m_Path: ArmatureAligator/Leg.L
+    m_Weight: 1
+  - m_Path: ArmatureAligator/Leg.L/MLeg.L
+    m_Weight: 1
+  - m_Path: ArmatureAligator/Leg.L/MLeg.L/Foot.L
+    m_Weight: 0
+  - m_Path: ArmatureAligator/Leg.R
+    m_Weight: 1
+  - m_Path: ArmatureAligator/Leg.R/MLeg.R
+    m_Weight: 1
+  - m_Path: ArmatureAligator/Leg.R/MLeg.R/Foot.R
+    m_Weight: 0
+  - m_Path: ArmatureAligator/Neck
+    m_Weight: 0
+  - m_Path: ArmatureAligator/Neck/Lower Mouth Connect
+    m_Weight: 0
+  - m_Path: ArmatureAligator/Neck/Lower Mouth Connect/Mouth Down Back
+    m_Weight: 0
+  - m_Path: ArmatureAligator/Neck/Lower Mouth Connect/Mouth Down Back/Mouth Down
+      Front
+    m_Weight: 1
+  - m_Path: ArmatureAligator/Neck/Upper Mouth Connect
+    m_Weight: 0
+  - m_Path: ArmatureAligator/Neck/Upper Mouth Connect/Mouth Up Back
+    m_Weight: 0
+  - m_Path: ArmatureAligator/Neck/Upper Mouth Connect/Mouth Up Back/Mouth Up Front
+    m_Weight: 0
