@@ -87,19 +87,21 @@ namespace UI.StartMenu
             switch (sceneCompleteID)
             {
                 case 0:
-                    Debug.Log("Map 1 is revealed.");
+                    //Debug.Log("Map 1 is revealed.");
                     OnlyLevel1();
                     break;
                 case 1:   
-                    Debug.Log("Map 2 is revealed.");
-                    OnlyLevel2();
+                    //Debug.Log("Map 2 is revealed.");
+                    UpToLevel2();
+                    //OnlyLevel2();
                     break;
                 case 2:  
-                    Debug.Log("Map 3 is revealed.");
-                    OnlyLevel3();
+                    //Debug.Log("Map 3 is revealed.");
+                    AllLevelUnlocked();
+                    //OnlyLevel3();
                     break;
                 default:
-                    Debug.Log("All Maps are revealed.");
+                    //Debug.Log("All Maps are revealed.");
                     AllLevelUnlocked();
                     break;
             }
@@ -151,6 +153,17 @@ namespace UI.StartMenu
             }
         }*/
 
+        #region UpToLevelUnlocked
+
+        private void UpToLevel2()
+        {
+            UnlockLevel1(true);
+            UnlockLevel2(true);
+            UnlockLevel3(false);
+            EnableCloudCoverLevel2(false);
+        }
+
+        #endregion
         #region OnlyOneLevelUnlocked
 
         private void OnlyLevel1()
