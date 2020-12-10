@@ -1,5 +1,6 @@
 ﻿#define VERBOSE
 
+using System.Linq;
 using UnityEngine;
 
 using Inventory;
@@ -12,7 +13,7 @@ namespace Tasks.TaskUpdater
         public override void Start()
         {
             // if it was loaded from save, do not init
-            if (LoadSave())
+            if (levelTasks.Any() || LoadSave())
                 return;
             
 #if VERBOSE
