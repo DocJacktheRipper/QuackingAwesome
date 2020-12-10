@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using Inventory;
 using Analytics;
+using LeavingScene.Save;
 using Props.spawning;
 
 namespace Nest
@@ -90,6 +91,8 @@ namespace Nest
             }
             
             nestDataToSave.nestIsFinished = true;
+            GlobalControl.Instance.savedGame.savedMillstonesData.nestBuild++;
+
             _audio.Play();
         }
 

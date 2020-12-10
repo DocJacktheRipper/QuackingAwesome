@@ -17,6 +17,8 @@ namespace Tasks.TaskUpdater
 
         public GameObject nestsParent;
 
+        public virtual void Start()  { }
+
         public bool LoadSave()
         {
             #region load save

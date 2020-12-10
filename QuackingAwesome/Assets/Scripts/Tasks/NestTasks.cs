@@ -3,9 +3,12 @@ using UnityEngine;
 
 using Nest;
 
-public class SticksToRock : Task
+public class SticksToRock : Task, ISerializationCallbackReceiver
 {
     private List<NestBuilding> _nests;
+    
+    public void OnBeforeSerialize() {}
+    public void OnAfterDeserialize() {}
     public SticksToRock(GameObject nestsParent)
     {
         description = "Bring sticks to a rock";
@@ -30,10 +33,13 @@ public class SticksToRock : Task
     }
 }
 
-public class BuildAllNests : Task
+public class BuildAllNests : Task, ISerializationCallbackReceiver
 {
     private GameObject _nestsParent;
     private List<NestBuilding> _nests;
+    
+    public void OnBeforeSerialize() {}
+    public void OnAfterDeserialize() {}
 
     public BuildAllNests(GameObject nestsParent)
     {

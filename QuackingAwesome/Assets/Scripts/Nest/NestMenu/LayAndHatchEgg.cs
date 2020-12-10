@@ -1,4 +1,5 @@
 ﻿using Inventory;
+using LeavingScene.Save;
 using UnityEngine;
 
 namespace Nest.NestMenu
@@ -56,6 +57,9 @@ namespace Nest.NestMenu
             _energyInventory.energy -= neededEnergyForHatchingEgg;
             _ducklings.AddDucklings(_currentEggs);
             
+            // increase the millstone "number of eggs hatched"
+            GlobalControl.Instance.savedGame.savedMillstonesData.hatchEggs += _currentEggs;
+            
             DeactivateAllEggs();
 
             /* remove energy for every egg
@@ -65,7 +69,8 @@ namespace Nest.NestMenu
                 _energyInventory.energy -= neededEnergyForHatchingEgg;
                 _ducklings.AddDucklings(1);
             }*/
-        }
+            
+          }
         
         public bool HasEnoughEnergyForHatching()
         {

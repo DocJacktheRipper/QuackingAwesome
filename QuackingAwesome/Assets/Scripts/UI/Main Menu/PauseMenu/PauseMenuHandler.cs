@@ -11,9 +11,9 @@ namespace UI.Main_Menu.PauseMenu
 
         private void Start()
         {
-            settings.SetActive(true);
+            settings.SetActive(false);
             milestones.SetActive(false);
-            tasks.SetActive(false);
+            tasks.SetActive(true);
         }
 
         public void SettingClick()

@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using LeavingScene.Save;
+
+using UnityEngine;
 
 namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
 {
@@ -27,6 +29,9 @@ namespace AI.Beaver.StateMachine_Beaver.ConcreteStates
             _waitUntil = Time.time + (scaredAway.howFarAway / ConcreteMethods.GetSpeed());
             
             ConcreteMethods.StartMovement();
+            
+            // increase the millstone "beaver scared"
+            GlobalControl.Instance.savedGame.savedMillstonesData.beaverScared++;
         }
 
         public override void Execute()

@@ -5,15 +5,17 @@ using UnityEngine.SceneManagement;
 public class DucklingsInventory : MonoBehaviour
 {
     public int ducklingCount;
+    
     private int _sceneID;
+    private PlayerInventoryData _savedInventoryData;
 
     private void Start()
     {
         _sceneID = SceneManager.GetActiveScene().buildIndex;
-        ducklingCount = GlobalControl.Instance.savedGame.
-            savedScenes[_sceneID].
-            savedInventoryData.
-            ducklings;
+        _savedInventoryData = GlobalControl.Instance.savedGame
+            .savedScenes[_sceneID]
+            .savedInventoryData;
+        ducklingCount = _savedInventoryData.ducklings;
     }
 
     public void RemoveDucklings(int number)
@@ -32,9 +34,6 @@ public class DucklingsInventory : MonoBehaviour
 
     private void OnDestroy()
     {
-        GlobalControl.Instance.savedGame.
-            savedScenes[_sceneID].
-            savedInventoryData.
-            ducklings = ducklingCount;
+        _savedInventoryData.ducklings = ducklingCount;
     }
 }
