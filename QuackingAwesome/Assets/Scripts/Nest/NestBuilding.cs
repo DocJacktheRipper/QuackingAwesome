@@ -1,10 +1,7 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
-
 using Inventory;
 using Analytics;
 using Props.spawning;
-using UnityEngine.Audio;
 
 namespace Nest
 {
@@ -34,8 +31,11 @@ namespace Nest
             _effectTrigger = GetComponent<NestEffectTrigger>();
             _analytics = GameObject.Find("Analytics").GetComponent<TutorialAnalytics>();
             _audio = GetComponent<AudioSource>();
-            
-            BuildNestDynamically();
+
+            if (enableDynamicBuilding)
+            {
+                BuildNestDynamically();
+            }
         }
 
         private void OnTriggerStay(Collider other)
@@ -68,6 +68,10 @@ namespace Nest
             if (enableDynamicBuilding)
             {
                 BuildNestDynamically();
+            }
+            else
+            {
+                BuildNestOfComponents();
             }
         }
 
@@ -134,6 +138,24 @@ namespace Nest
             var percentageOfBeingFinished = 1 - (neededSticks - nestDataToSave.numberOfSticks) * 1.0f / neededSticks;
             _nbContainer.GetChild(0).transform.localPosition 
                 = new Vector3(0f, percentageOfBeingFinished * heightForDynBuilding, 0f);
+        }
+
+        private void BuildNestOfComponents()
+        {
+            var percentageOfBeingFinished = 1 - (neededSticks - nestDataToSave.numberOfSticks) * 1.0f / neededSticks;
+
+            if (percentageOfBeingFinished > 0)
+            {
+                _nbContainer.GetChild(1).gameObject.SetActive(true);
+            }
+            if (percentageOfBeingFinished > 0.6)
+            {
+                _nbContainer.GetChild(2).gameObject.SetActive(true);
+            }
+            if (percentageOfBeingFinished >= 1)
+            {
+                _nbContainer.GetChild(3).gameObject.SetActive(true);
+            }
         }
 
         public void RemoveSticks(int numberOfSticksLostInNest)
