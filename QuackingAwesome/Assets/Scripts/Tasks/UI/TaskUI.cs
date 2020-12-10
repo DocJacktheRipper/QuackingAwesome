@@ -2,6 +2,7 @@
 using Tasks.TaskUpdater;
 using UI.Main_Menu.PauseMenu;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Tasks.UI
@@ -18,6 +19,8 @@ namespace Tasks.UI
         public GameObject tasksMenuBackground;
         private bool _completed; // to prevent triggering too often, save if completion event triggered once
 
+        public Button nextLevel;
+        
         void Start()
         {
             tasksUpdater.Start();
@@ -43,6 +46,11 @@ namespace Tasks.UI
             levelComplete.SetActive(true);
             tasksMenuBackground.SetActive(false);
             _completed = true;
+
+            if (SceneManager.GetActiveScene().buildIndex+1 >= SceneManager.sceneCountInBuildSettings)
+            {
+                nextLevel.interactable = false;
+            }
         }
 
         private void InitTasks()

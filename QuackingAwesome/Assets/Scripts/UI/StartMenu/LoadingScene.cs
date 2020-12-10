@@ -25,6 +25,16 @@ namespace Controllers.Buttons.StartMenu
             
             loadingOperation = SceneManager.LoadSceneAsync(sceneName);
         }
+        
+        public void LoadNewSceneInt(int sceneID)
+        {
+            menuButtons.SetActive(false);
+            loadingScreen.SetActive(true);
+            
+            StartFadeOut();
+
+            loadingOperation = SceneManager.LoadSceneAsync(sceneID);
+        }
 
         public void StartFadeOut()
         {
