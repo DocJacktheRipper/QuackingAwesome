@@ -149,15 +149,15 @@ namespace Nest
 
             if (percentageOfBeingFinished > 0)
             {
-                _nbContainer.GetChild(1).gameObject.SetActive(true);
+                _nbContainer.GetChild(0).gameObject.SetActive(true);
             }
             if (percentageOfBeingFinished > 0.6)
             {
-                _nbContainer.GetChild(2).gameObject.SetActive(true);
+                _nbContainer.GetChild(1).gameObject.SetActive(true);
             }
             if (percentageOfBeingFinished >= 1)
             {
-                _nbContainer.GetChild(3).gameObject.SetActive(true);
+                _nbContainer.GetChild(2).gameObject.SetActive(true);
             }
         }
 
