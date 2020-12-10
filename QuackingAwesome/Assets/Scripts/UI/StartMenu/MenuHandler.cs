@@ -61,6 +61,12 @@ namespace UI.StartMenu
             
             CheckLevels();
         }
+        
+        public void ClosePondMap()
+        {
+            TogglePondMapOn(false);
+        }
+        
 
         #region PondMap
 
