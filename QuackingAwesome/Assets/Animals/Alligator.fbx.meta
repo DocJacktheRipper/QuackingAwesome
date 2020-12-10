@@ -145,8 +145,63 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
-      transformMask: []
-      maskType: 3
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Aligator
+        weight: 1
+      - path: ArmatureAligator
+        weight: 1
+      - path: ArmatureAligator/Body
+        weight: 1
+      - path: ArmatureAligator/Body/BLeg.L
+        weight: 1
+      - path: ArmatureAligator/Body/BLeg.L/BMLeg.L
+        weight: 1
+      - path: ArmatureAligator/Body/BLeg.L/BMLeg.L/BFoot.L
+        weight: 1
+      - path: ArmatureAligator/Body/BLeg.R
+        weight: 1
+      - path: ArmatureAligator/Body/BLeg.R/BMLeg.R
+        weight: 1
+      - path: ArmatureAligator/Body/BLeg.R/BMLeg.R/BFoot.R
+        weight: 1
+      - path: ArmatureAligator/Body/Tail
+        weight: 1
+      - path: ArmatureAligator/Body/Tail/Tail.001
+        weight: 1
+      - path: ArmatureAligator/Body/Tail/Tail.001/Tail.002
+        weight: 1
+      - path: ArmatureAligator/Body/Tail/Tail.001/Tail.002/Tail.003
+        weight: 1
+      - path: ArmatureAligator/Leg.L
+        weight: 1
+      - path: ArmatureAligator/Leg.L/MLeg.L
+        weight: 1
+      - path: ArmatureAligator/Leg.L/MLeg.L/Foot.L
+        weight: 1
+      - path: ArmatureAligator/Leg.R
+        weight: 1
+      - path: ArmatureAligator/Leg.R/MLeg.R
+        weight: 1
+      - path: ArmatureAligator/Leg.R/MLeg.R/Foot.R
+        weight: 1
+      - path: ArmatureAligator/Neck
+        weight: 0
+      - path: ArmatureAligator/Neck/Lower Mouth Connect
+        weight: 1
+      - path: ArmatureAligator/Neck/Lower Mouth Connect/Mouth Down Back
+        weight: 1
+      - path: ArmatureAligator/Neck/Lower Mouth Connect/Mouth Down Back/Mouth Down
+          Front
+        weight: 1
+      - path: ArmatureAligator/Neck/Upper Mouth Connect
+        weight: 1
+      - path: ArmatureAligator/Neck/Upper Mouth Connect/Mouth Up Back
+        weight: 1
+      - path: ArmatureAligator/Neck/Upper Mouth Connect/Mouth Up Back/Mouth Up Front
+        weight: 1
+      maskType: 0
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
