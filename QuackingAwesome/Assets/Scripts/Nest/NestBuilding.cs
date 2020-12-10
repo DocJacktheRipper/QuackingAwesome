@@ -37,6 +37,10 @@ namespace Nest
             {
                 BuildNestDynamically();
             }
+            else
+            {
+                BuildNestOfComponents();
+            }
         }
 
         private void OnTriggerStay(Collider other)
