@@ -21877,7 +21877,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1421139368}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1421139371}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 795fe33c4e588204f8b25ae4e4603a98, type: 3}
@@ -30688,6 +30688,26 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1820135938173110693, guid: 6309e6e9d11f68a4083d047c2aba84a1,
+        type: 3}
+      propertyPath: uiTasks.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1820135938173110693, guid: 6309e6e9d11f68a4083d047c2aba84a1,
+        type: 3}
+      propertyPath: tasksUpdater
+      value: 
+      objectReference: {fileID: 819538811}
+    - target: {fileID: 1820135938173110693, guid: 6309e6e9d11f68a4083d047c2aba84a1,
+        type: 3}
+      propertyPath: uiTasks.Array.data[1]
+      value: 
+      objectReference: {fileID: 2025063216}
+    - target: {fileID: 1820135938173110693, guid: 6309e6e9d11f68a4083d047c2aba84a1,
+        type: 3}
+      propertyPath: uiTasks.Array.data[2]
+      value: 
+      objectReference: {fileID: 1534500244}
     - target: {fileID: 1903950317039183233, guid: 6309e6e9d11f68a4083d047c2aba84a1,
         type: 3}
       propertyPath: m_Enabled
@@ -31411,68 +31431,12 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1421139368}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1421139370 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5999679151720767790, guid: 6309e6e9d11f68a4083d047c2aba84a1,
-    type: 3}
-  m_PrefabInstance: {fileID: 1421139368}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1421139371 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2208960760548128926, guid: 6309e6e9d11f68a4083d047c2aba84a1,
-    type: 3}
-  m_PrefabInstance: {fileID: 1421139368}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1421139372
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1421139371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d14e763e597c58419918609da7245cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tasksUpdater: {fileID: 819538811}
-  uiTasks:
-  - {fileID: 1421139370}
-  - {fileID: 2025063216}
-  - {fileID: 1534500244}
-  levelComplete: {fileID: 1421139374}
-  tasksMenuBackground: {fileID: 1421139373}
-  nextLevel: {fileID: 1421139376}
---- !u!1 &1421139373 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3427661194677987096, guid: 6309e6e9d11f68a4083d047c2aba84a1,
-    type: 3}
-  m_PrefabInstance: {fileID: 1421139368}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1421139374 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8110114244713492815, guid: 6309e6e9d11f68a4083d047c2aba84a1,
-    type: 3}
-  m_PrefabInstance: {fileID: 1421139368}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1421139375 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2439893817518128477, guid: 6309e6e9d11f68a4083d047c2aba84a1,
     type: 3}
   m_PrefabInstance: {fileID: 1421139368}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1421139376 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1060400411669942690, guid: 6309e6e9d11f68a4083d047c2aba84a1,
-    type: 3}
-  m_PrefabInstance: {fileID: 1421139368}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1421139378 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7031983301505578283, guid: 6309e6e9d11f68a4083d047c2aba84a1,

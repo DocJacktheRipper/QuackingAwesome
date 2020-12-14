@@ -10,6 +10,8 @@ namespace Tasks.UI
     public class TaskUI : MonoBehaviour
     {
         public TasksUpdater tasksUpdater;
+        private MainMenu _mainMenu;
+        
         private List<Task> _levelTasks;
         public List<GameObject> uiTasks;
         private List<Text> _uiProgressionTexts;
@@ -17,12 +19,14 @@ namespace Tasks.UI
         
         public GameObject levelComplete;
         public GameObject tasksMenuBackground;
+        public Button notificationButton;
         private bool _completed; // to prevent triggering too often, save if completion event triggered once
 
         public Button nextLevel;
-        
+
         void Start()
         {
+            _mainMenu = GetComponent<MainMenu>();
             tasksUpdater.Start();
             _levelTasks = tasksUpdater.levelTasks;
         
@@ -42,7 +46,7 @@ namespace Tasks.UI
             if (_completed || !tasksUpdater.tasksAreCompleted) return;
             
             // Trigger CompletionEvent
-            GetComponent<MainMenu>().OpenTask();
+            _mainMenu.OpenTask();
             levelComplete.SetActive(true);
             tasksMenuBackground.SetActive(false);
             _completed = true;
@@ -90,7 +94,15 @@ namespace Tasks.UI
                 _tasksCompleted[index] = true;
                 
                 uiTasks[index].transform.Find("Checkmark").gameObject.SetActive(true);
+                
+                notificationButton.gameObject.SetActive(true);
             }
+        }
+
+        public void NotificationButtonClicked()
+        {
+            _mainMenu.OpenTask();
+            notificationButton.gameObject.SetActive(false);
         }
     }
 }
